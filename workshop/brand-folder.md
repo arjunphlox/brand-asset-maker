@@ -1,17 +1,17 @@
 ---
 title: Brand folder
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tier: sample
 ---
 
 # Brand folder
 
-What a participant hands in before the session, and the shape it comes back in. This is the first half of **Bring**: you answer, we write the brand folder. The facilitator runs intake on it during exercise 1; the folder that comes back is the participant's to keep.
+The form for **Bring**, the first verb. You fill it in and put the files it asks for in one folder. Then your own agent reads it and writes your `brand/` folder, using the intake and encode skills (`skills/poligraf--intake.md`, `skills/poligraf--encode.md`). Nothing is sent to anyone. The folder is yours.
 
-## What to hand in
+## What to fill in
 
-A filled-in form and the files it asks for, in one folder (or zip) named after the brand. Fill it in before the session. The folder looks like this:
+Fill in this form and put the files it asks for in one folder named after the brand, at the root of your BAM fork:
 
 ```
 <your-brand>/
@@ -20,14 +20,14 @@ A filled-in form and the files it asks for, in one folder (or zip) named after t
   logo-reversed.svg   the reversed logo, if one exists (question 1)
   posts/              posts you consider on-brand (question 7)
   fonts/              font files you are licensed to use, with their licences (question 3)
-  photos/             photographs for announcements (question 8)
+  photos/             photographs, if you have them (question 8)
 ```
 
-Only `brand-folder.md` and `logo.svg` must be there. Leave out any folder you have nothing for.
+Only `brand-folder.md` and `logo.svg` must be there. Leave out any folder you have nothing for. Then ask your agent: "Read `<your-brand>/brand-folder.md` and follow `skills/poligraf--intake.md`, then `skills/poligraf--encode.md`."
 
-These are the nine intake questions, word for word; the facilitator's doctor prints the same form. Answer in your own words; we copy your answers exactly.
+These are the nine intake questions, word for word. Answer in your own words; your agent copies your answers exactly.
 
-Questions 1, 2 and 4 are required. A blank answer is not a problem: we guess, and every guess is marked **we guessed** until you pick a post that uses it.
+Questions 1, 2 and 4 are required. A blank answer is not a problem: the agent guesses, and every guess is marked **we guessed** until you pick a post that uses it.
 
 **1. Logo and wordmark** (required) \
 "Which file is the logo? SVG preferred. Is there a text wordmark, and how is it spelled and cased?" \
@@ -42,7 +42,7 @@ Answer:
 **3. Fonts** \
 "Do you have font files, or a free font you already use? If neither, I will suggest three." \
 Attach only font files you are licensed to use, with the licence name. \
-If blank: we suggest three free fonts, you pick one, and it is marked "we guessed". \
+If blank: the agent suggests three free fonts, you pick one, and it is marked "we guessed". \
 Answer:
 
 **4. Who it is for** (required) \
@@ -51,34 +51,34 @@ Answer:
 
 **5. How it sounds** \
 "Three words for how the brand sounds." \
-If blank: we guess three words from your other answers and mark them "we guessed". \
+If blank: the agent guesses three words from your other answers and marks them "we guessed". \
 Answer:
 
 **6. Never say** \
 "One thing the brand must never claim or say." \
-If blank: we guess from your other answers and mark it "we guessed". \
+If blank: the agent guesses from your other answers and marks it "we guessed". \
 Answer:
 
 **7. Posts you consider on-brand** \
 "Link three existing posts or assets you consider on-brand." \
-Files in `posts/` count: you can drop them there instead of linking. We read them, and never render them. \
-If blank: we start from the library as it is. \
+Files in `posts/` count: you can drop them there instead of linking. The agent reads them and never copies them into a post. \
+If blank: the agent starts from the library as it is. \
 Answer:
 
 **8. Photographs** \
 "Which photographs may we use for announcements, and where is the subject in each (the focal point)?" \
 Attach the photographs; for each, say where the subject is. \
-If blank: a placeholder photograph stands in, marked "we guessed", and is never approved. \
+If blank: BAM has no photograph layout yet, so a post over a photo becomes a gap note. \
 Answer:
 
 **9. Where they run first** \
 "Where will these run first: Instagram, LinkedIn, X?" \
-If blank: we make square (1:1) and portrait (4:5) feed posts and a story (9:16). Each format has its own job: a story is a reminder, one fact plus a call to action. \
+If blank: the agent makes square (1:1) and portrait (4:5) feed posts and a story (9:16). Each format has its own job: a story is a reminder, one fact plus a call to action. \
 Answer:
 
-Nothing else. A deck, a brand book or a website link can be attached as reference, but the harness reads only the form and the files it asks for; everything else the facilitator infers lands as we guessed.
+Nothing else. A deck, a brand book or a website link can be attached as reference, but the agent reads only the form and the files it asks for. Anything it takes from elsewhere is marked we guessed.
 
-## What comes back
+## What your agent writes
 
 ```
 brand/
@@ -90,13 +90,13 @@ brand/
   fonts.md          which font policy path applies and why
   fonts.css         @font-face rules
   voice.md          tone words, approved lines, never-claims
-  intake.log.md     every question asked, your answer, what we guessed from it
+  brand.json        the name, the wordmark and the logo file
+  intake.log.md     every question asked, your answer, what was guessed from it
   assets/           your logo (and photos/ if supplied)
-  proposals/        the inputs used for your first sheet
+  proposals/        the inputs for your first set of posts
 out/
-  p01/              your first contact sheet, PNGs and report.json
-  p02/              the sheet after the fixes you named
-feedback/           the breaks you named and the designer brief you wrote
+  <run>/            each post as HTML and PNG, with what was measured
+feedback/           the breaks you named and the gap notes you wrote
 rules/decisions.md  one dated line per decision you made
 ```
 

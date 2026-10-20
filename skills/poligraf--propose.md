@@ -3,7 +3,7 @@ skill: poligraf/propose
 version: 1
 state: 3
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tags: [lifecycle, propose]
 ---
 
@@ -13,13 +13,13 @@ tags: [lifecycle, propose]
 
 ## Without the engine
 
-No scripts? Do each step by hand, in the chat.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
-- `npm run propose` → for each archetype × ratio × scheme, describe the sample in words: the slot text, the scheme, and each check from `inputs.schema.json`.
-- For each check, write what you measured (a contrast ratio by the WCAG formula, a word count) or write "not measured". Never claim a render or a pass you did not measure.
-- The contact sheet is this list of described samples, with the `derived` values each one depends on. Label each one must fix, your call or fine, and ask the two-second question for each: "What do you read first? It should be the <`hierarchy[0]`>."
+- `npm run propose` → for each archetype × ratio × scheme, make the post yourself with `skills/poligraf--make-it.md`: one HTML file and one PNG in `out/p<NN>/`, named `<layout>--<ratio>--<scheme>`.
+- For each check from `inputs.schema.json`, write what you measured (a contrast ratio by the WCAG formula, a word count) or write "not measured". Never claim a pass you did not measure.
+- The contact sheet is the set of PNGs with these reports, with the `derived` values each one depends on. Label each one must fix, your call or fine, and ask the two-second question for each: "What do you read first? It should be the <`hierarchy[0]`>."
 - Every `cta` is 3 words or fewer and starts with a verb. Name the verb.
-- Formats: describe each ratio as its job (`archetypes/social-post/select.md` step 0): 1:1 feed post, the message; 4:5 tall feed post, the message with more room; 9:16 story, one fact plus a call to action. For a story, say where the text sits against the safe zone (250px top, 340px bottom at 1080×1920, an estimate) and that the layout moved, not the size. Never present a 9:16 sample as a stretched 1:1.
+- Formats: describe each ratio as its job (`archetypes/social-post/select.md` step 0): 1:1 feed post, the message; 4:5 tall feed post, the message with more room; 9:16 story, one fact plus a call to action. For a story, make it from the template with `data-ratio="9:16"` and say where the text sits against the safe zone (250px top, 340px bottom at 1080×1920, an estimate). Never present a 9:16 sample as a stretched 1:1.
 - If the brand already has a campaign's facts (a date, a place), list them as a message table of exact strings; every proposal that mentions one copies it verbatim.
 
 **Goal:** one checked sample per archetype × ratio so the brand owner approves a system, not a picture.
@@ -42,6 +42,6 @@ A contact sheet where every sample passes, or where each failure is explained as
 ## Never do
 
 - Never edit a PNG or an HTML under `out/`.
-- Never tweak a template to make one brand's sample pass. That is an upstream change with a spec.
+- Never tweak a template to make one brand's sample pass. A template change is a change to the layout for every brand: write its spec first.
 - Never approve a generator on a placeholder image.
 - Never scale a 1:1 sample to make the 9:16 one. Each ratio is rendered from the template, which adapts its layout.

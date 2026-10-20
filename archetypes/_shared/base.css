@@ -1,6 +1,6 @@
 /* Poligraf shared plumbing. Brand-agnostic: reads only --brand-* tokens.
-   (c) HueGrid Studio. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep: CC BY-NC-ND 4.0 (use and study, attribute,
-   no commercial distribution, no derivative claims). The engine under scripts/ is not part of BAM. */
+   (c) HueGrid Studio. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep: CC BY-NC-SA 4.0 (fork and change it, credit
+   HueGrid Studio, non-commercial, share changes under the same licence). The engine under scripts/ is not part of BAM. */
 html, body { margin: 0; background: transparent; }
 
 .pg-frame {

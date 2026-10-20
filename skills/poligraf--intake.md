@@ -3,7 +3,7 @@ skill: poligraf/intake
 version: 1
 state: 1
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tags: [lifecycle, intake]
 ---
 
@@ -13,12 +13,12 @@ tags: [lifecycle, intake]
 
 ## Without the engine
 
-No scripts? Do each step by hand, in the chat.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
 - `npm run doctor` → walk the nine questions in `workshop/brand-folder.md` (the fixed list below) and list each one that is blank. Ask only about those.
 - `npm run scale` → measure each paper, ink and accent pair with the WCAG contrast formula and write the table: pair, ratio, pass at 4.5:1 or 3:1.
 - `npm run fonts` → write the font name, licence and source URL in `brand/fonts.md`. The owner downloads the files. No font named? Suggest from `workshop/fonts-shortlist.md`.
-- `npm run placeholder` → write "no photograph yet" in the notes. Never describe a photograph that does not exist.
+- `npm run placeholder` → write "no photograph yet" in the notes. Never describe a photograph that does not exist. BAM has no photograph layout (`announcement` is not in it), so a post over a photo is a gap note (`workshop/gap-note.md`).
 
 **Goal:** turn whatever the brand has (minimum: a logo, a primary color, a few sentences of context) into a populated `brand/` where every inferred value is marked `derived`.
 

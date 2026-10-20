@@ -3,7 +3,7 @@ skill: poligraf/generate
 version: 1
 state: 5
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tags: [lifecycle, generate]
 ---
 
@@ -13,13 +13,13 @@ tags: [lifecycle, generate]
 
 ## Without the engine
 
-No scripts? Do each step by hand, in the chat.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
 - Count words and characters for each row against `inputs.schema.json` before anything else.
-- `npm run render` → describe each output in words: the slot text, the scheme, and each check as measured or "not measured". Never claim a render or a pass you did not measure.
-- Formats: for each format the posts go to, name its job from `archetypes/social-post/select.md` step 0 (feed post 1:1: the message; tall feed post 4:5: the message with more room; story 9:16: one fact plus a call to action) and re-run selection for it. Never describe a story as the square post made taller.
+- `npm run render` → make each post yourself with `skills/poligraf--make-it.md`: one HTML file and one PNG per row and format in `out/g<NN>/`, and a report with each check as measured or "not measured". Never claim a pass you did not measure.
+- Formats: for each format the posts go to, name its job from `archetypes/social-post/select.md` step 0 (feed post 1:1: the message; tall feed post 4:5: the message with more room; story 9:16: one fact plus a call to action) and re-run selection for it. Never make a story by stretching the square post.
 - The message: write the shared facts once, as a table of exact strings (name, date, place). `facts-consistent` → for every post, quote each fact as it appears and mark it "exact" or "differs" against the table ("Nov 8" vs "8 November" differs). Fix a "differs" by copying the table's string, never by editing the table to match the post.
-- A designer or a tool that implements `SPEC.md` makes the images. The assistant never draws or edits one.
+- The PNG comes from the HTML (headless Chrome or a screenshot). Never draw, paint or edit an image by hand.
 
 **Goal:** many outputs from one approved generator, every one checked, none hand-edited.
 
@@ -31,7 +31,7 @@ No scripts? Do each step by hand, in the chat.
 4. Widen `variation` only within the archetype's allowed values. The renderer refuses anything else. Wanting a value outside the set is a designer conversation (feedback kind `designer`).
 5. If the generator has no `useWhen`, ask the owner when it is for and add the line (optional, contract 1.4: one line, their words, e.g. "a number printed on the bag"). The contact sheet shows it, so the next person picks the right generator, not the prettiest.
 6. `npm run render -- --generator generators/<name>.json --run g<NN>`.
-7. Open the contact sheet. The header shows the message's facts when there is one. Each row's outputs should differ only in what `variation` and `inputs` changed. Anything else that differs is a bug in the template (upstream) or a token leak (brand).
+7. Open the contact sheet. The header shows the message's facts when there is one. Each row's outputs should differ only in what `variation` and `inputs` changed. Anything else that differs is a bug in the template (fix the layout and its spec) or a token leak (fix the brand file).
 8. Hand the sheet to the owner for feedback.
 
 ## Exit criterion

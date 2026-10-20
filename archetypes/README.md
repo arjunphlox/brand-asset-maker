@@ -10,4 +10,4 @@ Each archetype folder holds:
 
 `<use-case>/select.md` is the decision tree from content to archetype, with fallbacks when a budget is exceeded or a slot is missing.
 
-Adding an archetype means all three files plus a `select.md` branch, proposed upstream. Brand repos never add archetypes locally.
+Adding an archetype means all three files plus a `select.md` branch, written together, spec first. In a fork of Brand Asset Maker (BAM), the owner or a designer may add one, usually from a gap note that ended in ask (c) (`workshop/gap-note.md`). Never add a template without its spec and schema.

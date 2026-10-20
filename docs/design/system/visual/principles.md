@@ -10,7 +10,7 @@ see-also:
 implements:
   - ../../../scripts/check.mjs
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tier: sample
 ---
 
@@ -42,7 +42,7 @@ A photograph is content the harness cannot read from CSS, so it is checked from 
 
 - 2026-09-29 — Display face restricted to heading roles (HueGrid rule, adopted library-wide). Quote moved to the body face.
 
-- 2026-09-29 — Principles enter Poligraf only through archetypes. They are not taught to the operator; they are compiled into templates and checks.
+- 2026-09-29 — Principles enter Poligraf only through archetypes. They are not taught to the person making posts; they are compiled into templates and checks.
 
 ## Never do
 

@@ -3,7 +3,7 @@ skill: poligraf/encode
 version: 1
 state: 2
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tags: [lifecycle, encode]
 ---
 
@@ -13,7 +13,7 @@ tags: [lifecycle, encode]
 
 ## Without the engine
 
-No scripts? Do each step by hand, in the chat.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
 - `npm run doctor` → check by eye that every token in `brand/tokens.css` has a status in `brand/locked.json`.
 - `npm run roles` → write the `:root` values in `brand/tokens.css` by hand, one comment per line that says where the value came from.

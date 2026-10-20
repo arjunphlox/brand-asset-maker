@@ -1,7 +1,7 @@
 ---
 title: Free font shortlist
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tier: sample
 ---
 

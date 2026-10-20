@@ -3,7 +3,7 @@ skill: poligraf/feedback
 version: 1
 state: 6
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tags: [lifecycle, feedback]
 ---
 
@@ -13,10 +13,10 @@ tags: [lifecycle, feedback]
 
 ## Without the engine
 
-No scripts? Do each step by hand, in the chat.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
 - The three questions, the ladder and the feedback file need no engine.
-- Re-render → describe the affected samples again, with each check measured or marked "not measured".
+- Re-render → make the affected posts again with `skills/poligraf--make-it.md`, with each check measured or marked "not measured".
 - Append the line to `rules/decisions.md` by hand.
 
 **Goal:** every note becomes a diff in exactly one fix location, and the harness records what it learned.
@@ -35,7 +35,7 @@ No scripts? Do each step by hand, in the chat.
 2. **Ask the three participant questions first**, in order, in the owner's words; then place the note on the ladder in step 3. A note is a **break**: a failed check or a review note.
    1. "Is it the colour, or the words?" Colour (any look value: a colour, a typeface, a weight) points at `token`; the words point at `voice`. Ask alongside it: "Did something that must never move, move?" A yes lands on `locked` (a drift).
    2. "Is it this one post, or all of them?" This one post → `input`. All of them → the answer to question 1 stands (`token` or `voice`); all of them and the layout is the reason (the copy does not fit, the post is the wrong kind of post) → `budget` or `selection`.
-   3. "Do you want something new?" → `designer`: write the brief (`workshop/designer-brief.md`) and stop.
+   3. "Do you want something new?" → `designer`: write a gap note (`workshop/gap-note.md`) and stop.
    The answers are the participant's map, not the decision. The ladder decides the kind; where the two seem to disagree, ask the ladder in order and write down why.
 3. **Triage** to one of the seven kinds (`CLAUDE.md` → Feedback). Ask yourself in order:
    - Is it wrong everywhere the value appears? → `token`
@@ -47,8 +47,8 @@ No scripts? Do each step by hand, in the chat.
      A failed `image-contrast` or `crop` is `input`, never a file edit. Try in order: scrim strength (`strong`), focal point, another photograph, layout `split`.
    - Is the content in the wrong archetype? → `selection`
    - Is a new style, layout or element being asked for (type on a photograph without a scrim, a tint, a side-by-side)? → `designer`
-4. Apply the diff in that location only. For `budget` and `selection`, mark `upstream: true`: the change belongs to the shared library and is proposed there with a spec update.
-5. For `designer`, do not improvise. Write the brief in the feedback file with the template in `workshop/designer-brief.md` (six parts: what was asked and what the content is, why no layout fits, the layouts tried and why each is not enough, tokens used, what a designer would need to decide with the slot budgets, open questions). Its Kadri example is the gradient brief. Stop.
+4. Apply the diff in that location only. For `budget` and `selection`, mark `upstream: true`: the change belongs to the layout library (`archetypes/` in your fork) and comes with a spec update.
+5. For `designer`, do not improvise. Write a gap note in the feedback file with the template in `workshop/gap-note.md`: what was asked (word for word) and the facts; what BAM could not do and why (no layout, a missing input, or a missing brand value); what was tried; and exactly one ask: (a) more context from the owner, (b) a new value in the brand file, or (c) a new layout to define. Its Kadri example is the gradient note. Stop.
 6. Re-render the affected run. Compare the sheet before and after. Append to `rules/decisions.md`: date, feedback id, kind, file changed, one line on what was learned.
 
 ## Exit criterion

@@ -41,7 +41,7 @@ An image slot is an `<img data-slot="image" alt="">` wrapped in `<div class="pg-
 }
 ```
 
-An image slot declares `"kind": "image"`, `"bleed": true` (exempt from the `safe-zone` check; `crop` judges the focal point instead) and `"alpha": "any" | "required" | "none"` (any transparency allowed, an alpha channel demanded, or no transparency allowed). Fragment from `social-post/announcement`:
+An image slot declares `"kind": "image"`, `"bleed": true` (exempt from the `safe-zone` check; `crop` judges the focal point instead) and `"alpha": "any" | "required" | "none"` (any transparency allowed, an alpha channel demanded, or no transparency allowed). Fragment from `social-post/announcement` (a reference archetype: it is not in Brand Asset Maker (BAM), where a request for a post over a photograph is a gap note, `workshop/gap-note.md`):
 ```json
 "slots": { "image": { "required": true, "kind": "image", "bleed": true, "alpha": "any" }, "…": "…" },
 "checks": { "…": "…", "alpha": true, "crop": true, "image-contrast": true }
@@ -86,7 +86,7 @@ An input row's value for an image slot is a string path or an object `{ "src": "
 | budget | copy does not fit, hierarchy collapses | `archetypes/**/inputs.schema.json` (upstream candidate) or rewrite the copy, never shrink the type |
 | input | one row is wrong | `generators/<name>.json` |
 | selection | wrong archetype for the content | `archetypes/<use-case>/select.md` (upstream candidate) |
-| designer | no archetype fits; a new style or layout is being asked for | write a designer brief in `feedback/` (template: `workshop/designer-brief.md`); do not improvise a template |
+| designer | no archetype fits; a new style or layout is being asked for | write a gap note in `feedback/` (template: `workshop/gap-note.md`), ending in one ask: (a) more context, (b) a new brand value, or (c) a new layout to define; do not improvise a template |
 
 A failed `image-contrast` or `crop` is kind `input` (scrim strength, focal point, photograph, then layout); asking for type on a photograph without a scrim is kind `designer`. A failed `facts-consistent` is kind `input`: the row references the fact instead of typing it; a fact that is itself wrong is fixed once, in `messages/<name>.json`.
 
@@ -102,7 +102,7 @@ Participant-facing surfaces (the workshop files, `BRAND.md` prose, contact sheet
 - **must fix**, **your call**, **fine**: the contact sheet's three severity labels (a failed check; every check passed but a note asks the owner for a brand decision; every check passed). The check ids stay beside them in small type.
 - **share-card generator** = `generators/<name>.json`. **the two traps** = `rules/refusals.md`. **break** = a failed check or a review note.
 - **Break kinds** (four, the participant layer) map onto the seven kinds: trigger → `locked` or `voice` (a request a trap should have stopped); drift → `locked`; rendering → the checks caught it, or one value or row is off (usually `token`, sometimes `input`); voice → `voice`. `budget` and `selection` have no break kind of their own: the library is wrong. `designer` is not a break: it is a request for something new.
-- **Three questions**, asked before the ladder (`skills/poligraf--feedback.md`): "Is it the colour, or the words?" (`token` / `voice`; alongside it, "Did something that must never move, move?" → `locked`); "Is it this one post, or all of them?" (`input`, or `budget` / `selection` when the layout is the reason); "Do you want something new?" (`designer`: brief, stop).
+- **Three questions**, asked before the ladder (`skills/poligraf--feedback.md`): "Is it the colour, or the words?" (`token` / `voice`; alongside it, "Did something that must never move, move?" → `locked`); "Is it this one post, or all of them?" (`input`, or `budget` / `selection` when the layout is the reason); "Do you want something new?" (`designer`: gap note, stop).
 - **the message** = `messages/<name>.json` ("one message, many posts"). **format** = ratio, named by its job: "feed post" (1:1), "tall feed post" (4:5), "story" (9:16).
 - **Plain check phrases** (the `plain` field; the id stays beside it in small type): `contrast` → "too light to read" · `min-text` → "too small to read" · `safe-zone` → "too close to the edge" · `overflow` → "spills out of its space" · `element-count` → "an extra thing on the post" · `token-colors` → "a colour that is not yours" · `logo-integrity` → "the logo file changed" · `logo-visible` → "the logo disappears" · `font-loaded` → "your font did not load" · `role-face` → "the wrong typeface for the job" · `budget` → "too many words or characters" · `alpha` → "a fake transparency" · `crop` → "the subject got cut off" · `image-contrast` → "words are hard to read on the photo" · `facts-consistent` → "a detail does not match the other posts".
 
@@ -126,7 +126,7 @@ Every file the harness reads or writes carries `"contractVersion": "MAJOR.MINOR"
 - Never scale a sample into a new ratio. A new format re-runs selection (`select.md`), and the template adapts with `[data-ratio]` rules and `cqi`.
 - Never type a fact the message holds. Reference it (`{ "fact": "date" }`); a typed variant fails `facts-consistent`.
 - Never invent a brand value the intake did not supply; ask, then mark it `derived`.
-- Never add an archetype in a brand repo; propose it upstream with a spec first.
+- Never add an archetype without its spec: `spec.md`, `inputs.schema.json`, `template.html` and a `select.md` branch, written together. In a brand repo of the engine, propose it upstream instead; in a BAM fork, the owner or a designer may define it (`workshop/gap-note.md`, ask (c)).
 - Never tint, darken, blur or hand-crop a photograph to pass a check; change the focal point, the scrim, the layout or the photograph.
 - Never approve a generator on a placeholder image.
 - Never add engine code, the brand layer, font files or a `reference` archetype to BAM. `npm run package` refuses them; do not work around it. The one exception is the named worked example (`examples/kadri/`, its files listed in `scripts/lib/package-rules.mjs`): Kadri's two fonts ship only there, and a font ships only beside an SIL Open Font License file. HueGrid's `brand/` and its EULA fonts never ship.

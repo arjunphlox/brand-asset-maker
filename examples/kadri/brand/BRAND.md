@@ -1,6 +1,6 @@
 ---
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 credit: "Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission."
 ---
 
@@ -69,5 +69,5 @@ You said is `locked` and we guessed is `derived` in `locked.json`. Approval (you
 - "Use Bricolage for the headline." → The owner said Hubot Sans for headings; the family is locked. Ask the owner first.
 - "Add 'ethically sourced, single origin'." → Kadri never implies a sourcing story it cannot prove. Name the flavour instead.
 - "Say it boosts your focus." → Kadri never implies health benefits.
-- "Put the Velvet Hour gradient behind the headline." → There are no gradients in the tokens, and `token-colors` fails any colour outside them. A gradient is a new style: write a designer brief.
+- "Put the Velvet Hour gradient behind the headline." → There are no gradients in the tokens, and `token-colors` fails any colour outside them. A gradient is a new style: write a gap note (`workshop/gap-note.md`).
 - "Put '10,000 cups poured' on a stat." → No sourced number exists. Ask the owner.

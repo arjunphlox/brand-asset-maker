@@ -1,0 +1,41 @@
+{
+  "contractVersion": "1.3",
+  "approvedFrom": "apr-0001",
+  "archetype": "social-post/stat",
+  "name": "stat-bag",
+  "ratios": [
+    "1:1"
+  ],
+  "rows": [
+    {
+      "id": "row-1",
+      "inputs": {
+        "label": "of whole bean coffee per bag",
+        "number": "250 g",
+        "source": "As printed on the Kadri bag"
+      }
+    },
+    {
+      "id": "row-2",
+      "inputs": {
+        "number": "250 g",
+        "label": "Sunny Side: peach, citrus and honey",
+        "source": "Tasting notes printed on the bag"
+      }
+    }
+  ],
+  "themes": [
+    "light"
+  ],
+  "variation": {
+    "accent": [
+      "number"
+    ],
+    "position": [
+      "bottom"
+    ],
+    "scheme": [
+      "paper"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # Brand Asset Maker (BAM) by HueGrid
 
-Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI assistant. Brand Asset Maker (BAM) is the part of Poligraf that participants keep: the spec, the archetypes and the operating prompts.
+Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI assistant. Brand Asset Maker (BAM) is the part of Poligraf that participants keep: the spec, the archetypes and the skills your agent follows.
 
 ## What is inside
 
@@ -13,33 +13,34 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
   - `archetypes/social-post/headline/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/quote/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/stat/` (`spec.md`, `template.html`, `inputs.schema.json`)
-- `skills/`: one operating prompt per lifecycle state (intake, encode, propose, approve, generate, feedback).
+- `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback), and `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine.
 - `docs/design/system/`: the System Design router and the visual principles.
-- `workshop/`: workshop material, including the cold-handoff prompt (`workshop/cold-handoff.md`).
+- `workshop/`: workshop material: the eight Kadri scenarios (`workshop/scenarios.md`), the brand-folder form, the gap note template (`workshop/gap-note.md`) and the cold-handoff prompt (`workshop/cold-handoff.md`).
 - `examples/kadri/`: a worked example brand, start with its `README.md`. Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission.
 - `LICENSE.md` and `NOTICE`.
 
 ## What is not inside
 
-- No renderer. Commands named in the spec refer to a reference implementation that is not distributed.
+- No engine. Commands named in the spec (`npm run …`) refer to HueGrid's private reference implementation, which is not included. Your own agent makes the posts instead: `skills/poligraf--make-it.md`.
 - No brand layer but one small worked example (`examples/kadri/`). Yours is yours to write.
-- No reference archetypes (the photograph-grade ones). Only sample archetypes ship.
+- No reference archetypes. The photograph layout (`announcement`) is not in BAM, so a post over a photograph is a gap note (`workshop/gap-note.md`). Only sample archetypes ship.
 - No font files, except the worked example's two OFL fonts, each beside its licence. Fonts are licensed to their owners; bring your own.
 
 ## How to use it
 
-Attach `SPEC.md`, `skills/`, the `archetypes/` folder and your own `brand/` folder to any AI assistant, then follow the skill for the state you are in. The assistant asks, proposes and writes rules; anything that renders or checks must implement the spec. The cold-handoff prompt lives in `workshop/cold-handoff.md`: use it to test that your `brand/` folder stands on its own in a fresh chat.
+Fork or unzip BAM, put your own `brand/` folder at its root, and open the folder with your own AI assistant (Claude, Cursor, Codex or another). It reads `AGENTS.md` or `CLAUDE.md` first, then the skill for the state you are in. The agent asks, proposes, writes the brand files and makes the posts itself with `skills/poligraf--make-it.md`: one HTML file per post, saved as a PNG. When a request fits no layout, it writes a gap note (`workshop/gap-note.md`). The cold-handoff prompt lives in `workshop/cold-handoff.md`: use it to test that your `brand/` folder stands on its own in a fresh chat.
 
 ## Licence
 
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0): https://creativecommons.org/licenses/by-nc-nd/4.0/
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0): https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 - Share: copy and redistribute in any medium or format.
-- Attribute HueGrid Studio and keep the frontmatter.
+- Adapt: fork it, change it, build your own harness on it.
+- Attribute HueGrid Studio and keep the frontmatter. Say what you changed.
 - NonCommercial: not for commercial purposes without a written agreement.
-- NoDerivatives: if you remix, transform or build upon BAM, you may not distribute the modified material.
+- ShareAlike: share a changed version under the same licence.
 
-Your own brand layer and the assets you render from these archetypes are yours. The Poligraf name and the HueGrid marks are not licensed. See `LICENSE.md`.
+Your own brand layer and the posts you make from these archetypes are yours. The Poligraf name and the HueGrid marks are not licensed. See `LICENSE.md`.
 
 Poligraf is a HueGrid Studio framework. Learn more at huegrid.com.
 

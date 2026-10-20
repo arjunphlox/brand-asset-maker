@@ -14,7 +14,7 @@ see-also:
 implements:
   - ../../scripts/render.mjs (budget check + fallback suggestion)
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tier: sample
 ---
 
@@ -24,6 +24,8 @@ tier: sample
 
 Pick the format first. A format is a job, not a size: each one says what the post is for and which archetypes may do it.
 
+**`announcement` is not in Brand Asset Maker (BAM).** It is the photograph layout, a reference archetype that stays in the engine. In BAM, a request for a post over a photograph is a gap note (`workshop/gap-note.md`): ask (a) for the photograph and its focal point if none was given, or (c) for a new layout.
+
 | Format | Ratio | Job | Archetypes it allows |
 |---|---|---|---|
 | Feed post | 1:1 | The message | stat · quote · announcement · headline |
@@ -32,7 +34,7 @@ Pick the format first. A format is a job, not a size: each one says what the pos
 
 **A new format re-runs selection.** A post approved at 1:1 is never scaled into 9:16: ask the questions below again with the story's job in mind. The template then adapts the layout for the ratio; nobody resizes a picture.
 
-For a story: a quote is not a reminder (it has no call to action), so it becomes a headline with its strongest clause and a `cta`. An announcement's photograph belongs to the feed; the story says the one fact (date, place) and the call to action. A story with nothing to do ("follow us", no fact) is not a story's job: post nothing, or write a designer brief.
+For a story: a quote is not a reminder (it has no call to action), so it becomes a headline with its strongest clause and a `cta`. An announcement's photograph belongs to the feed; the story says the one fact (date, place) and the call to action. A story with nothing to do ("follow us", no fact) is not a story's job: post nothing, or write a gap note (`workshop/gap-note.md`).
 
 When the posts of one campaign share facts (a name, a date, a place), put them in a message file (`messages/<name>.json`) and reference them from the generator rows (`{ "fact": "date" }`). Every format then states each fact the same way, and the `facts-consistent` check fails a post that does not.
 
@@ -42,9 +44,9 @@ Ask the questions in order, within the archetypes the format allows. The first "
 
 1. **Is the point a single number** (a metric, a count, a percentage, a price) and does it fit 5 characters including symbols? → **stat**. If the number needs more than 5 characters, it is a sentence: go to 4.
 2. **Is it someone's words**, attributable, 30 words or fewer? → **quote**. Longer than 30 words: cut it (never shrink the type). Still too long → it is a summary, not a quote: go to 4.
-3. **Is there a photograph the post cannot do without** (a place, a launch, a product, a person) **and one line about it?** → **announcement**. No photograph → 4.
+3. **Is there a photograph the post cannot do without** (a place, a launch, a product, a person) **and one line about it?** → **announcement** (not in BAM: write a gap note). No photograph → 4.
 4. **Can it be said in one line of 8 words or fewer?** → **headline**. If it needs a second sentence, it is a caption's job, not the image's. Keep the image to the line, put the rest in the post copy.
-5. **None of the above** (a list, a comparison, a diagram): no archetype in this library fits. Write a designer brief (`skills/poligraf--feedback.md`, kind `designer`). Do not improvise a template.
+5. **None of the above** (a list, a comparison, a diagram): no archetype in this library fits. Write a gap note (`workshop/gap-note.md`, feedback kind `designer`). Do not improvise a template.
 
 ## Fallback order
 

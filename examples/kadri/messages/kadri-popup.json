@@ -1,0 +1,11 @@
+{
+  "contractVersion": "1.4",
+  "name": "kadri-popup",
+  "facts": {
+    "name": "Kadri Pop-up",
+    "date": "8 November",
+    "place": "Mill Lane Market"
+  },
+  "approvedLines": [],
+  "note": "Demo message for contract 1.4 (facts-consistent). Kadri Coffee is fictional teaching material; these three facts were written for the demo, not supplied by the owner. No approved lines: the owner has approved none."
+}

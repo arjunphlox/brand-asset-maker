@@ -1,7 +1,7 @@
 ---
 title: Month-later self-audit
 author: HueGrid Studio
-license: CC-BY-NC-ND-4.0
+license: CC-BY-NC-SA-4.0
 tier: sample
 ---
 
@@ -9,9 +9,9 @@ tier: sample
 
 A paper checklist. Print it, open your brand folder, and tick each line. No engine, no assistant. It takes about twenty minutes. Do it a month after the workshop, and again whenever someone new starts making posts.
 
-Each "no" points at the exercise that teaches it (`exercises.md`). Fix the file, not the checklist.
+Each "no" points at the skill or file that covers it. Fix the file, not the checklist.
 
-## 1. Every value has a status (exercise 1)
+## 1. Every value has a status (Bring: `skills/poligraf--encode.md`)
 
 Open `brand/BRAND.md` and `brand/locked.json`.
 
@@ -30,7 +30,7 @@ Open each `template.html` you use.
 - [ ] No typeface named. Faces come from `--brand-font-display` and `--brand-font-body`.
 - [ ] Every value is a `var(--brand-…)`, `var(--pg-…)` or `var(--v-…)`.
 
-## 3. Budgets counted (exercises 2 and 3)
+## 3. Budgets counted (Make: `skills/poligraf--make-it.md`)
 
 Take your last three posts.
 
@@ -39,7 +39,7 @@ Take your last three posts.
 - [ ] Every call to action is 3 words or fewer and starts with a verb.
 - [ ] Every fact (a name, a date, a place) is written exactly as it is in the message (`messages/<name>.json`), if you have one.
 
-## 4. Both traps are written down (exercise 3)
+## 4. Both traps are written down (Make: `skills/poligraf--feedback.md`)
 
 Open `rules/refusals.md`.
 
@@ -56,7 +56,7 @@ Open `rules/approvals.json` and `rules/decisions.md`.
 - [ ] Its share-card generator (`generators/<name>.json`) has a `useWhen` line: when to reach for it.
 - [ ] `rules/decisions.md` has a dated line for the pick and for every fix since.
 
-## 6. The brand file stands on its own (exercise 5)
+## 6. The brand file stands on its own (`cold-handoff.md`)
 
 - [ ] Hand `brand/` and `SPEC.md` to an assistant in a fresh chat with the prompt in `cold-handoff.md`. Every value comes back right.
 - [ ] If one came back wrong, you fixed `BRAND.md`, not the prompt.

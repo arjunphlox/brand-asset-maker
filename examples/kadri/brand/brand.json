@@ -1,0 +1,7 @@
+{
+  "name": "Kadri Coffee",
+  "wordmark": "",
+  "logo": "brand/assets/logo.svg",
+  "context": "People who drink coffee every day and want good coffee without the ceremony. Direct, warm, concrete. Never imply certifications, health benefits or a sourcing story we cannot prove.",
+  "notes": "Wordmark spelling supplied (locked): \"kadri\", all lowercase. The wordmark slot is left empty on purpose: the owner supplied the k symbol as the logo and no wordmark file, and typing \"kadri\" in Hubot Sans next to the k would be our drawing of their wordmark, not their file. Ask for the wordmark file. logo-reversed.svg (the dark k) is kept in brand/assets/ as a supplied file; since contract 1.4 the accent scheme renders it (poligraf.config.json brand.assets.logoReversed, tokens.css --brand-logo-variant)."
+}

@@ -23,6 +23,7 @@ Write down five things before you write any HTML:
 - **Scheme:** `paper`, `ink` or `accent`. It must be one of the values in the schema's `variation.scheme.values`.
 - **Variation:** every other key in the schema's `variation` (for the stat: `accent`, `position`). Use the `default` for any key you did not choose. A value outside `values` is not allowed.
 - **Inputs:** the text for each slot. Count words and characters against `inputs.schema.json` now, before you write HTML. Over budget means you rewrite the words or pick another layout. Never shrink the type.
+- **Facts:** if the request names a message file (`messages/<name>.json`), copy each fact you use exactly as it is written there, once. Do not change a fact to make it fit. If a fact breaks badly in a large headline (a hyphenated name such as "Kadri Pop-up" can split at the hyphen), move it to a smaller slot such as the `kicker`, or put a different fact in the headline.
 
 Name the post `<layout>--<ratio with x>--<scheme>`, for example `stat--1x1--paper`. Add `--<row id>` when one generator makes several posts, and `--<theme>` when the brand has themes and this one is not the default. Pick a run name such as `m01`.
 
@@ -48,7 +49,9 @@ Build one self-contained document in this order. The order matters: the brand's 
 </body></html>
 ```
 
-**Fix the font paths.** `brand/fonts.css` points at its files relative to `brand/` (`url("fonts/Name.ttf")`). Your HTML sits in `out/<run>/`, two folders down from the project root, so rewrite each one as `url("../../brand/fonts/Name.ttf")`. If the brand lives somewhere else, use the path from `out/<run>/` to that file. A wrong path does not show an error: the post quietly falls back to another font.
+**Find the brand folder first.** In this skill, `brand/` means the owner's brand folder. It is usually `brand/` at the project root. For the worked example it is `examples/kadri/brand/`, and its messages and generators sit beside it in `examples/kadri/`. Every path below (fonts, logo) is written from `out/<run>/` to that folder.
+
+**Fix the font paths.** `brand/fonts.css` points at its files relative to `brand/` (`url("fonts/Name.ttf")`). Your HTML sits in `out/<run>/`, two folders down from the project root, so rewrite each one as `url("../../brand/fonts/Name.ttf")`. For the Kadri example that is `url("../../examples/kadri/brand/fonts/Name.ttf")`. A wrong path does not show an error: the post quietly falls back to another font.
 
 **Fill the fragment.**
 
@@ -105,6 +108,7 @@ Write a short report next to each post. One line per check from the schema's `ch
 | `role-face` | Each slot's `data-role` matches the schema, and its class uses the right face: `pg-h1`, `pg-h2`, `pg-h3`, `pg-data` for the display face; `pg-body`, `pg-label` for the body face. |
 | `logo-integrity` | The logo file is the one in `locked.json` (compare its sha256 if you can run a command), and it is the variant `tokens.css` asks for. |
 | `element-count` | You added no element the template did not have. |
+| `facts-consistent` | Only when the request names a message file. Quote each fact as it appears in the post and mark it "exact" or "differs". A fact in a `label` slot shows in capitals because of the style; the text you wrote is still exact, so say "exact (shown in capitals)". |
 | `logo-visible`, `safe-zone`, `overflow`, `min-text` | Look at the PNG and say what you see ("the k is clear on white", "the label sits inside the margins"). Mark these "checked by eye, not measured" unless you measured them in a browser. |
 
 Then label the post the way the contact sheet does: **must fix** (a measured check failed), **your call** (nothing failed, but something needs the owner's decision), or **fine** (nothing failed and nothing is open). Say which checks were not measured. Ask the two-second question: "What do you read first? It should be the <first slot in `hierarchy`>."

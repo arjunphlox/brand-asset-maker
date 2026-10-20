@@ -1,0 +1,8 @@
+# Poligraf System Design
+
+Tessor-shaped System Design for this harness. Modules carry YAML frontmatter (`title`, `scope`, `owns`, `see-also`, `implements`), `## Decisions` and `## Never do`. Archetype specs under `archetypes/**/spec.md` follow the same contract and are the primary modules; `npm run manifest` parses both trees.
+
+- `visual/principles.md` — the five principles and their enforcing checks (shared).
+- `usecases/<use-case>.md` — per-brand notes on how this brand uses a use-case (project-owned).
+
+Working rules: every learning is a dated entry in the owning module's Decisions; archetype-level learnings are proposed upstream.

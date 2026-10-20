@@ -1,0 +1,89 @@
+{
+  "contractVersion": "1.0",
+  "id": "social-post/stat",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-ND-4.0",
+  "tier": "sample",
+  "slots": {
+    "number": {
+      "required": true,
+      "maxChars": 5,
+      "role": "data-snippet"
+    },
+    "label": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "body"
+    },
+    "source": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "number",
+    "label",
+    "source",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "accent": {
+      "values": [
+        "number",
+        "label",
+        "none"
+      ],
+      "default": "number"
+    },
+    "position": {
+      "values": [
+        "top",
+        "bottom"
+      ],
+      "default": "bottom"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "number.maxChars": {
+      "to": "social-post/headline",
+      "why": "a number longer than 5 characters reads as a sentence"
+    },
+    "label.maxWords": {
+      "to": null,
+      "why": "rewrite the label; explanation belongs in the post copy"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

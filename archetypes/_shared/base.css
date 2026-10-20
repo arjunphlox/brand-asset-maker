@@ -1,0 +1,121 @@
+/* Poligraf shared plumbing. Brand-agnostic: reads only --brand-* tokens.
+   (c) HueGrid Studio. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep: CC BY-NC-ND 4.0 (use and study, attribute,
+   no commercial distribution, no derivative claims). The engine under scripts/ is not part of BAM. */
+html, body { margin: 0; background: transparent; }
+
+.pg-frame {
+  container-type: inline-size;
+  container-name: frame;
+  position: relative;
+  overflow: hidden;
+  width: 1080px;
+  box-sizing: border-box;
+  background: var(--pg-surface);
+  color: var(--pg-on-surface);
+  font-family: var(--brand-font-body);
+}
+.pg-frame[data-ratio="1:1"] { height: 1080px; }
+.pg-frame[data-ratio="4:5"] { height: 1350px; }
+.pg-frame[data-ratio="9:16"] { height: 1920px; } /* story; added in contract 1.4 */
+
+/* Schemes: on the frame itself or on an ancestor (html). Wrapped in :where() so they carry zero
+   specificity: a brand override under .pg-frame[data-scheme="…"] in tokens.css always wins, whatever the order. */
+:where(.pg-frame[data-scheme="paper"], html[data-scheme="paper"] .pg-frame) {
+  --pg-surface: var(--brand-paper); --pg-on-surface: var(--brand-ink);
+  --pg-accent: var(--brand-accent); --pg-accent-on: var(--brand-accent-ink);
+  --pg-muted: var(--brand-muted);
+}
+:where(.pg-frame[data-scheme="ink"], html[data-scheme="ink"] .pg-frame) {
+  --pg-surface: var(--brand-ink); --pg-on-surface: var(--brand-paper);
+  --pg-accent: var(--brand-accent); --pg-accent-on: var(--brand-accent-ink);
+  --pg-muted: var(--brand-muted);
+}
+:where(.pg-frame[data-scheme="accent"], html[data-scheme="accent"] .pg-frame) {
+  --pg-surface: var(--brand-accent); --pg-on-surface: var(--brand-accent-ink);
+  --pg-accent: var(--brand-accent-ink); --pg-accent-on: var(--brand-accent);
+  --pg-muted: var(--brand-accent-ink);
+}
+
+/* Safe zone (config px at 1080 wide: 72 = 6.6667cqi, 250 = 23.1481cqi, 340 = 31.4815cqi).
+   Tokens hold cqi; they resolve where used (children of the container). */
+.pg-frame {
+  --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi;
+  --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi;
+}
+.pg-frame[data-ratio="4:5"] {
+  --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 23.1481cqi;
+}
+/* 9:16 story (1.4): 250px top clears the story header, 340px bottom clears the reply bar. An ESTIMATE, to
+   re-measure (poligraf.config.json safeZoneNotes); the config numbers are what the safe-zone check enforces. */
+.pg-frame[data-ratio="9:16"] {
+  --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 31.4815cqi;
+}
+.pg-safe {
+  position: absolute;
+  top: var(--pg-safe-top); right: var(--pg-safe-right);
+  bottom: var(--pg-safe-bottom); left: var(--pg-safe-left);
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Text roles. Sizes are set by templates in cqi. */
+/* Display-face levels: h1, h2, h3 and data snippets. Same face, no size; templates set sizes. */
+.pg-h1, .pg-h2, .pg-h3, .pg-data,
+.pg-display /* DEPRECATED alias of .pg-h1, kept for one release; remove after 2026-10 */ {
+  font-family: var(--brand-font-display);
+  font-weight: var(--brand-weight-display);
+  letter-spacing: var(--brand-tracking-display);
+  /* Optional token (contract 1.4): a font-stretch percentage for the display face, e.g. 110%. Absent, the
+     fallback `normal` is the initial value, so rendering is unchanged. The face's @font-face needs a
+     font-stretch range (brand/fonts.css) for a variable width axis to follow it. */
+  font-stretch: var(--brand-stretch-display, normal);
+  line-height: 0.95;
+}
+.pg-body {
+  font-family: var(--brand-font-body);
+  font-weight: var(--brand-weight-body);
+  line-height: 1.25;
+}
+.pg-label {
+  font-family: var(--brand-font-body);
+  font-weight: var(--brand-weight-label);
+  text-transform: uppercase;
+  letter-spacing: var(--brand-tracking-label);
+  line-height: 1.2;
+  font-size: 2.8cqi; /* floor: 30px at 1080; min-text check is 28px */
+}
+
+/* Logo group */
+.pg-logo { display: flex; flex-direction: row; align-items: center; gap: 0.6cqi; }
+.pg-logo img[data-slot="logo"] { height: 3.4cqi; width: auto; display: block; }
+.pg-logo [data-slot="wordmark"] {
+  font-family: var(--brand-font-display);
+  font-size: 4.2cqi;
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  font-weight: var(--brand-weight-display);
+  color: var(--pg-on-surface);
+}
+.pg-logo--tl, .pg-logo--tr, .pg-logo--bl, .pg-logo--br { position: absolute; }
+.pg-logo--tl { top: 0; left: 0; }
+.pg-logo--tr { top: 0; right: 0; }
+.pg-logo--bl { bottom: 0; left: 0; }
+.pg-logo--br { bottom: 0; right: 0; }
+
+/* Photo slot plumbing. A template wraps an image slot in .pg-photo; the renderer stamps the row's focal
+   point on the <img> as --pg-focal-x/--pg-focal-y (0..100%), which object-position reads, so the focal
+   point always lands at the same fraction of the box that it has in the source. Templates size and place
+   .pg-photo; they never set object-position by hand. The image may bleed past the safe zone (schema
+   `bleed: true`); the `crop` check then requires the focal point itself to sit inside the safe zone. */
+.pg-photo { position: absolute; overflow: hidden; }
+.pg-photo img[data-slot] {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: var(--pg-focal-x, 50%) var(--pg-focal-y, 50%);
+}
+
+/* Accent bar */
+.pg-bar { width: 0.4cqi; background: var(--pg-accent); border-radius: var(--brand-radius); }
+/* Text painted in the accent reads --pg-accent-text, which defaults to --pg-accent. A brand may
+   override it per scheme in tokens.css when its accent fails text contrast on a surface. */
+.pg-frame { --pg-accent-text: var(--pg-accent); }

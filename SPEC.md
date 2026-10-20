@@ -1,0 +1,138 @@
+# Poligraf Spec
+
+The contracts an on-brand asset harness is built to: tokens, fonts, template, inputs schema, checks, report, locked values, approvals, generators, and the seven feedback kinds. This is the format. It ships in Brand Asset Maker (BAM), the part of Poligraf that participants keep; a renderer that implements it does not.
+
+This document describes contract 1.4.
+
+## Contracts (scripts and templates are built to these)
+
+### Tokens (`brand/tokens.css`)
+`:root` declares, at minimum:
+`--brand-paper`, `--brand-ink`, `--brand-accent`, `--brand-accent-ink`, `--brand-muted`, `--brand-font-display`, `--brand-font-body`, `--brand-weight-display`, `--brand-weight-body`, `--brand-weight-label`, `--brand-tracking-display`, `--brand-radius`.
+Optional: `--brand-accent-2..n`, `--brand-scale-1..12` (from `npm run scale`), and (1.4) `--brand-stretch-display`, a `font-stretch` percentage (`110%`) that `base.css` applies to the display roles (`.pg-h1`–`.pg-h3`, `.pg-data`); absent, the fallback is `normal` and rendering is unchanged. A variable width axis follows it only when the face's `@font-face` in `fonts.css` declares a `font-stretch` range. `role-face` is unaffected.
+**Alternate logo (1.4).** A brand may supply a second mark at `brand.assets.logoReversed` in `poligraf.config.json` (`brand.json` `logoReversed` overrides it, as `logo` does) and choose it per scheme or theme in `tokens.css` with `--brand-logo-variant: reversed` (values `default` | `reversed`; absent = `default`), e.g. `.pg-frame[data-scheme="accent"] { --brand-logo-variant: reversed; }`. Templates are untouched: they keep one `<img data-slot="logo">`. The renderer resolves the choice from `tokens.css` (unqualified rules set the base, rules qualified by `[data-scheme]`/`[data-theme]` that apply to the sample override it) and puts that file in the slot; a variant the brand cannot supply (no file configured, file missing, unknown value) is a refusal. The choice lives in the brand layer, next to the other per-scheme overrides, so a vanishing mark is fixed where the colour that hides it is set, and the template stays token-only. A sample that renders the reversed mark lists `--brand-logo-variant` in its `derivedDependencies` until it is `locked`.
+Colors are hex or `rgb()`; no `color-mix()` (checks resolve colors literally).
+When the brand already has a token universe (HueGrid: `--site-*`), `brand/roles.json` binds each role to it and `npm run roles` **generates** the `:root` block of `tokens.css` from the consumer's CSS for one pinned theme, literally, one provenance comment per line; hand-written scheme rules live below the `/* BEGIN CURATED */` line. Bindings are `{ "token": "--site-paper" }`, `{ "literal": "400", "source": "…" }` when the consumer has no token for the role, or `{ "token": …, "override": "#767676", "why": "…" }` when a Poligraf brand decision replaced the consumer value (the generator keeps the consumer value in the comment and warns on drift). A token resolving to `color-mix()` or an unresolved `var()` is refused. Role names are camelCase and kebab to `--brand-*` (`accentInk` → `--brand-accent-ink`). `npm run roles -- --check` fails when `tokens.css` is stale.
+**Themes (1.2).** The map's `source.themes` names the consumer's themes and their selectors; `source.theme` is the default. Every role is resolved per theme; `literal` and `override` take one value or `{ "light": …, "dark": … }`. The `:root` block holds the default theme; each other theme gets a `.pg-frame[data-theme="<name>"]` block holding only the roles whose value differs. A sample renders in one theme: the renderer stamps `data-theme` on `<html>` and the frame, the sample id gains `--<theme>` when it is not the default, `report.json` samples carry `theme`, a generator may list `themes`, and `npm run render`/`propose` take `--theme <name|all>`. HueGrid's dark theme inverts paper and ink, so the WHITE surface is the paper scheme in light and the ink scheme in dark; the curated rule in `tokens.css` gives that surface the darkened accent text and `--brand-muted-on-white` under both selectors (p11: 60/60 across both themes).
+Schemes are resolved in `base.css` from these tokens onto `--pg-surface`, `--pg-on-surface`, `--pg-accent`, `--pg-accent-on`, `--pg-muted`: `paper` (surface=paper), `ink` (surface=ink), `accent` (surface=accent). Text painted in the accent reads `--pg-accent-text`, which defaults to `--pg-accent`; surfaces (bars, marks) read `--pg-accent`. A brand may override a scheme mapping, or `--pg-accent-text` per scheme, in `tokens.css` under `.pg-frame[data-scheme="…"]` (HueGrid does this for paper, where full amber fails text contrast).
+
+### Ratios, safe zones and formats (`poligraf.config.json` → `useCases.<uc>`)
+`ratios` maps each ratio to its frame in px and `safeZone` gives each ratio its own margins in px; `base.css` sets the frame height and the `--pg-safe-*` insets per `[data-ratio]`, and the `safe-zone` check enforces the config numbers. social-post: `1:1` 1080×1080 (72 all round), `4:5` 1080×1350 (250 top and bottom, 72 sides), and (1.4) `9:16` 1080×1920, the story: 250 top, 340 bottom, 72 sides. The 9:16 numbers are an **estimate, to re-measure** (`safeZoneNotes` in the config): they clear the story header and the reply bar; Meta's ads guide asks for roughly the top and bottom 14% (about 270px) to stay free of text and logos, but its page could not be fetched to cite, and secondary guides put the Reels bottom at 35% (672px), so Reels would need its own zone.
+**A format is a job, not a size.** Each ratio names its job and the archetypes it allows in `archetypes/<use-case>/select.md` (social-post: 1:1 the message, 4:5 the message with more room, 9:16 a reminder: one fact plus a call to action). A new ratio re-runs selection; a sample is never scaled into it. Templates adapt per ratio with token-only CSS: `[data-ratio]` selectors and `cqi` (sizes stay in `cqi`, so line length is the same at every ratio of the same width; position and structure change). At 9:16 the headline sits on the centre line and its CTA drops to the foot of the safe zone; the stat's default position sits on the centre line; the quote is unchanged.
+
+### Fonts (`brand/fonts.md`, `brand/fonts.css`, `brand/fonts/`)
+Policy, in order: **(a)** font files supplied in `brand/fonts/` (licensed; committed only when the repo is private, as here); **(b)** a named free font with its license and source URL, fetched by `npm run fonts` into `brand/fonts/`; **(c)** only if neither is given, the agent proposes up to three free pairs from the curated OFL 1.1 shortlist (`workshop/fonts-shortlist.md`, display + body, each with its source URL) with reasons and marks the choice `derived`. `fonts.md` records which path applies and why. `fonts.css` holds the `@font-face` rules pointing at `brand/fonts/`. The `font-loaded` check fails a render whose brand families did not load.
+
+### Template (`template.html`)
+A fragment, not a document. Root is `<div class="pg-frame" data-archetype="<id>">`. Text slots are elements with `data-slot="<name>"`; optional slots also carry `data-slot-optional`. The logo is `<img data-slot="logo">`. Text slots take their typography from the `.pg-*` role classes in `base.css`: `.pg-h1`, `.pg-h2`, `.pg-h3` and `.pg-data` (display face), `.pg-body` and `.pg-label` (body face); `.pg-display` is a deprecated alias of `.pg-h1`, kept one release. The class must match the slot's schema `role` (`h1` | `h2` | `h3` | `body` | `label` | `data-snippet`). Styles live in a `<style>` next to the fragment and reference only `--pg-*`, `--brand-*`, `--v-*` and `cqi` units. The renderer composes `fonts.css` → `base.css` → `tokens.css` (brand last) → template into one document. The scheme rules in `base.css` are wrapped in `:where()` (zero specificity), so a brand override under `.pg-frame[data-scheme="…"]` in `tokens.css` always wins, whatever the order or selector weight. It fills slots (text escaped), stamps `data-role="<level>"` (the slot's schema role) on every filled text slot so a downstream Tessor stage can read levels off the DOM (`data-role` is a contract: templates never set it by hand, and wordmark and logo carry none), removes empty optional slots, sets `data-ratio`, `data-scheme` and `--v-*` on the frame, and captures the frame at `render.scale`.
+
+An image slot is an `<img data-slot="image" alt="">` wrapped in `<div class="pg-photo">`. `base.css` sets `object-fit: cover` and `object-position: var(--pg-focal-x, 50%) var(--pg-focal-y, 50%)` on it; templates never set `object-position` by hand. The renderer stamps `--pg-focal-x` and `--pg-focal-y` (percentages, from the row's focal point) and `alt` on the `<img>`. A `bleed` image runs to the frame edge, outside the safe zone. Image slots carry no `data-role`.
+
+### Inputs schema (`inputs.schema.json`)
+```json
+{
+  "contractVersion": "1.0",
+  "id": "social-post/stat",
+  "slots": { "number": { "required": true, "maxChars": 5, "role": "data-snippet" }, "label": { "required": true, "maxWords": 6, "role": "body" }, "source": { "required": false, "maxWords": 8, "role": "label" }, "logo": { "required": true, "kind": "asset" } },
+  "hierarchy": ["number", "label", "source", "logo"],
+  "variation": { "scheme": { "values": ["paper", "ink", "accent"], "default": "paper" }, "accent": { "values": ["number", "label", "none"], "default": "number" } },
+  "checks": { "contrast": true, "min-text": true, "safe-zone": true, "overflow": true, "element-count": true, "token-colors": true, "logo-integrity": true, "logo-visible": true, "font-loaded": true, "role-face": true, "budget": true },
+  "fallbacks": { "number.maxChars": { "to": "social-post/headline", "why": "a number longer than 5 characters reads as a headline" } }
+}
+```
+
+An image slot declares `"kind": "image"`, `"bleed": true` (exempt from the `safe-zone` check; `crop` judges the focal point instead) and `"alpha": "any" | "required" | "none"` (any transparency allowed, an alpha channel demanded, or no transparency allowed). Fragment from `social-post/announcement`:
+```json
+"slots": { "image": { "required": true, "kind": "image", "bleed": true, "alpha": "any" }, "…": "…" },
+"checks": { "…": "…", "alpha": true, "crop": true, "image-contrast": true }
+```
+An input row's value for an image slot is a string path or an object `{ "src": "brand/assets/photos/<file>", "focal": [x, y], "alt": "..." }`. `focal` is 0..1 of the source image and defaults to `[0.5, 0.5]`. The file must live under the directory named by `poligraf.config.json` → `brand.assets.images` (`brand/assets/photos`) and be WebP, PNG, JPEG, AVIF, GIF or SVG. A file outside that directory, a missing file or a bad focal point is a refusal under the budget rule `image`, formatted `image.image: <reason>`.
+
+`alpha`, `crop` and `image-contrast` run only when the schema has an image slot: the announcement runs 14 checks, the other three archetypes still run 11. `facts-consistent` (1.4) is off by default: it runs only on samples whose generator names a message (below), adding one check; a schema may switch it off with `"facts-consistent": false`.
+
+`alpha` decodes the real pixels of every image asset, the logo included. It fails a painted checkerboard (two light greys alternating at one period in both axes: the picture of a transparency, not a transparency), a missing alpha channel where the slot says `alpha: required`, and any transparency where it says `none`.
+
+`crop` maps the row's focal point through the `object-fit: cover` crop and the computed `object-position`. It fails when the focal point is cropped away (a template that ignores `--pg-focal-*`), lands outside the safe zone, sits under text or the logo, or when the source is smaller than the box it fills at 1× (upscaled). Softness at the export scale (`render.scale`) is a note in `detail`, not a failure.
+
+`image-contrast` takes a second screenshot of the frame with text and logo hidden. That is the ground: photograph plus scrim plus surface. Every text element that meets the image is measured against the pixels under its own box, and passes when the 10th-percentile pixel clears the size threshold (4.5:1 normal, 3:1 at 36px and above). `logo-visible` likewise uses the measured ground when the mark sits on the image. The CSS `contrast` check cannot see a photograph; this one can.
+
+`logo-visible` draws `img[data-slot=logo]` (with its computed filter) into an offscreen canvas at its rendered size and takes the opaque pixels (alpha >= 0.5). Logos are exempt from text-contrast rules (a brand mark may sit at 1.8:1 on its own paper by design), so the check **fails only when the mark vanishes**: fewer than 0.4 of its opaque pixels reach 1.5:1 against the logo's effective background (0.1 when the logo group also shows a wordmark). Marks that are visible but under 3:1 pass with a "low contrast, a brand call" note in `detail`. A mark that vanishes on a scheme is fixed in the brand layer (a scheme override in `tokens.css`, or the alternate logo: `brand.assets.logoReversed` plus `--brand-logo-variant: reversed` for that scheme), never in a template. `logo-visible` measures the mark that rendered; `logo-integrity` hashes the file that rendered against its own `locked.json` entry, and fails when the live `--brand-logo-variant` on the frame disagrees with the file the renderer chose.
+
+`role-face` checks every `[data-slot]` that has a role: the computed font-family's first family must equal the brand's display family (`--brand-font-display` in `tokens.css`) when the role is `h1`, `h2`, `h3` or `data-snippet`, and the body family (`--brand-font-body`) for `body` and `label`; the element's `data-role` must also equal the slot's schema role. Role-less slots (wordmark) are skipped.
+
+### Message (`messages/<name>.json`, 1.4, optional)
+`{ contractVersion, name, facts: { "<key>": "<exact string>" }, approvedLines: [], note? }`. One message, many assets: the facts every post of a campaign must state the same way (the Kadri pop-up: `name` "Kadri Pop-up", `date` "8 November", `place` "Mill Lane Market"). `name` equals the file name. A generator names it with `"message": "<name>"`; a row input value `{ "fact": "<key>" }` resolves to the fact's exact string before budgets run, and a key the message lacks (or a fact reference with no message) refuses that row. `approvedLines` holds the owner's approved lines for the campaign, verbatim. The folder is `poligraf.config.json` → `messages.dir` (default `messages`).
+`facts-consistent` runs on every sample of a generator that names a message. It reads each rendered text slot, removes every whole-word occurrence of each fact's exact string, and fails when what is left still states the fact in another form: every word of the fact is there in another order, case, abbreviation or punctuation ("Nov 8", "8 NOVEMBER" for "8 November"), or, for a date fact, a different day and month ("9 November"). Weekday names and small words ("the", "at") are ignored. A fact stated exactly passes; a slot that does not mention a fact is not judged for it; a variant that drops a word of a multi-word fact is the reviewer's to catch. The fix for a failure is kind `input`: reference the fact (`{ "fact": "date" }`) instead of typing it.
+
+### Report (`out/<run>/report.json`)
+`{ contractVersion, run, generatedAt, brand: { tokensHash, logoHash, logoReversedHash? }, generator?: { name, useWhen? }, message?: { name, facts }, samples: [ { id, archetype, ratio, scheme, theme, logoVariant?, variation, inputs, factRefs?, html, png, checks: [ { id, pass, detail, plain? } ], pass, derivedDependencies: [] } ], summary: { total, passed, failed }, note }`. A run from a generator that names a message carries `message` (the facts in force; the contact sheet shows them) and each sample's `inputs` hold the resolved strings, with `factRefs` (slot → fact key) naming the ones that came from the message (1.4, optional). 1.4 adds the optional `brand.logoReversedHash` (when the brand has a reversed mark), `generator` (when the run came from a generator; the contact sheet shows its `useWhen`) and a sample's `logoVariant` (only when it is not `default`). `plain` (1.3, optional) is the participant's line for the same result: the check's phrase (Participant vocabulary below) and, for a failure, the measured pair in plain numbers, built from the same values as `detail` ("Grey source text is too light to read on white at this small size: 3.5, it needs 4.5."). `detail` is unchanged and stays the expert line; a reader that does not know `plain` ignores it, and the contact sheet falls back to `detail` when it is absent. `derivedDependencies` is scheme-aware: the not-yet-`locked` tokens referenced (transitively through `var()`) by the rules that apply to that sample, meaning rules with no `[data-scheme]` in the selector plus rules whose `[data-scheme="X"]` equals the sample's scheme, across `base.css`, `tokens.css` and the template style. Tokens only another scheme reads are not listed.
+
+### Locked (`brand/locked.json`)
+`{ contractVersion, tokens: { "--brand-accent": { status: "locked"|"derived", source: "<where it came from>" } }, assets: { "logo.svg": { sha256, status: "locked"|"derived", promotedBy? }, "logo-reversed.svg"?: { … } }, fonts: { source: "files"|"free"|"suggested", families: [], status: "derived"|"locked", promotedBy? } }`. `assets` is keyed by file name and may hold both marks (1.4). Approval promotes the entry of the mark the sample rendered when it passed `logo-integrity` and `logo-visible`, and `fonts.status` when it passed `font-loaded` (a missing `fonts.status` reads as `derived`); each records `promotedBy: <approval id>`.
+
+### Approvals (`rules/approvals.json`)
+`{ contractVersion, approvals: [ … ] }`; each entry is `{ id, run, sample, archetype, ratio, scheme, logoVariant?, variation, inputs, pngSha256, approvedAt, promoted: ["--brand-…"], promotedAssets: ["logo.svg"], promotedFonts: true|false, generator, why? }`. `why` (1.4, optional) is the owner's reason for the pick, in their words, verbatim, one line (`npm run approve -- --why "…"`); approve also appends it to the `rules/decisions.md` line.
+
+### Generator (`generators/<name>.json`)
+`{ contractVersion, name, archetype, ratios, themes?: ["light","dark"], variation: { scheme: ["paper","ink"], accent: ["number"] }, message?: "<name>", rows: [ { id, inputs: {} } ], approvedFrom, useWhen? }`. `message` (1.4, optional) names `messages/<name>.json`; a row input may then be `{ "fact": "<key>" }`, and `facts-consistent` runs on every sample. `npm run approve` on a sample from such a run keeps `message` and turns the inputs that came from it back into `{ "fact": … }` references. Values in `variation` must be subsets of the archetype's allowed values; the renderer refuses anything outside. `useWhen` (1.4, optional) is one line saying when to reach for this generator ("a number printed on the bag"), so a non-designer picks the right generator, not the prettiest; `npm run approve -- --use-when "…"` writes it, and the contact sheet of every run from the generator shows it.
+
+## Feedback: the seven fix locations
+
+| Kind | Symptom | Fix location |
+|---|---|---|
+| token | a color, size or font is wrong everywhere | `brand/tokens.css` (+ `locked.json` status) |
+| voice | looks right, says the wrong thing | `brand/voice.md`, `rules/refusals.md` |
+| locked | something that must never move, moved | `brand/locked.json` |
+| budget | copy does not fit, hierarchy collapses | `archetypes/**/inputs.schema.json` (upstream candidate) or rewrite the copy, never shrink the type |
+| input | one row is wrong | `generators/<name>.json` |
+| selection | wrong archetype for the content | `archetypes/<use-case>/select.md` (upstream candidate) |
+| designer | no archetype fits; a new style or layout is being asked for | write a designer brief in `feedback/` (template: `workshop/designer-brief.md`); do not improvise a template |
+
+A failed `image-contrast` or `crop` is kind `input` (scrim strength, focal point, photograph, then layout); asking for type on a photograph without a scrim is kind `designer`. A failed `facts-consistent` is kind `input`: the row references the fact instead of typing it; a fact that is itself wrong is fixed once, in `messages/<name>.json`.
+
+Archetype-level fixes are flagged `upstream: true` in `rules/decisions.md` so they can be proposed back to the shared library.
+
+## Participant vocabulary
+
+Participant-facing surfaces (the workshop files, `BRAND.md` prose, contact sheets, the `plain` field) speak the participant's words. **Labels only:** every key, file name, field name, check id, threshold, state and the seven kinds above stay exactly as they are; the words below sit on top of them.
+
+- **Three verbs** for the six states: **Bring** (1 Intake, 2 Encode), **Pick** (3 Propose, 4 Approve; "you pick one"), **Make** (5 Generate, 6 Feedback). Each skill's first line names its verb.
+- **you said** = `locked`, **we guessed** = `derived`. `BRAND.md` shows "you said (locked)" and "we guessed (derived)" once, then the plain label; `locked.json` keys never change.
+- **layout** = archetype. **encoded** = the `brand/` folder after Encode ("your encoded brand").
+- **must fix**, **your call**, **fine**: the contact sheet's three severity labels (a failed check; every check passed but a note asks the owner for a brand decision; every check passed). The check ids stay beside them in small type.
+- **share-card generator** = `generators/<name>.json`. **the two traps** = `rules/refusals.md`. **break** = a failed check or a review note.
+- **Break kinds** (four, the participant layer) map onto the seven kinds: trigger → `locked` or `voice` (a request a trap should have stopped); drift → `locked`; rendering → the checks caught it, or one value or row is off (usually `token`, sometimes `input`); voice → `voice`. `budget` and `selection` have no break kind of their own: the library is wrong. `designer` is not a break: it is a request for something new.
+- **Three questions**, asked before the ladder (`skills/poligraf--feedback.md`): "Is it the colour, or the words?" (`token` / `voice`; alongside it, "Did something that must never move, move?" → `locked`); "Is it this one post, or all of them?" (`input`, or `budget` / `selection` when the layout is the reason); "Do you want something new?" (`designer`: brief, stop).
+- **the message** = `messages/<name>.json` ("one message, many posts"). **format** = ratio, named by its job: "feed post" (1:1), "tall feed post" (4:5), "story" (9:16).
+- **Plain check phrases** (the `plain` field; the id stays beside it in small type): `contrast` → "too light to read" · `min-text` → "too small to read" · `safe-zone` → "too close to the edge" · `overflow` → "spills out of its space" · `element-count` → "an extra thing on the post" · `token-colors` → "a colour that is not yours" · `logo-integrity` → "the logo file changed" · `logo-visible` → "the logo disappears" · `font-loaded` → "your font did not load" · `role-face` → "the wrong typeface for the job" · `budget` → "too many words or characters" · `alpha` → "a fake transparency" · `crop` → "the subject got cut off" · `image-contrast` → "words are hard to read on the photo" · `facts-consistent` → "a detail does not match the other posts".
+
+## Versioning (`contractVersion`)
+
+Every file the harness reads or writes carries `"contractVersion": "MAJOR.MINOR"` as its first field: `inputs.schema.json`, `report.json`, `generators/*.json`, `brand/locked.json`, `rules/approvals.json` (`{ contractVersion, approvals: [] }`), `poligraf.config.json`, `brand/roles.json`. The current contract is **1.4** (1.0 + the optional `brand/roles.json` (1.1) + per-sample theme (1.2): `generator.themes`, `sample.theme`, `data-theme` on the frame, per-theme values in the roles map + the optional `plain` on every check result in `report.json` (1.3; only reports gain it, so no input file is re-stamped) + optional additions only (1.4): the alternate logo (`brand.assets.logoReversed`, `--brand-logo-variant`, `logoVariant` and `logoReversedHash` in reports, both marks in `locked.json` assets), `--brand-stretch-display`, approval `why`, generator `useWhen` and `report.generator`, the `9:16` story ratio with its own safe zone (config + a new `[data-ratio]` rule in `base.css`; no existing class or variable changed), the optional `messages/<name>.json` file (stamped 1.4), generator `message`, row values `{ "fact": … }`, `report.message`, sample `factRefs`, and the check `facts-consistent`, off unless a message is in play; 1.3 files stay valid and are not re-stamped) (`CONTRACT_VERSION` in `scripts/lib/contract.mjs`); `SPEC.md` in BAM names the contract it describes.
+
+- **Major** (a field renamed or removed, a check removed, a threshold changed, a meaning changed): readers refuse an unknown major with a message naming the fix, and the script that reads the file ships the migration in the same change. Nothing silently reinterprets an old file.
+- **Minor** (an optional field or optional file added, a check added that defaults off): older readers warn once and continue; fields they do not know are ignored. Files stamped at an older minor stay valid inputs and are not re-stamped.
+- A file with no `contractVersion` is refused, except the two pre-1.0 shapes the harness migrates itself once: `poligraf.config.json` `"version": 1` and a bare-array `rules/approvals.json`.
+- Templates and `base.css` are versioned through the spec, not a field; a change to a `.pg-*` class or `--pg-*` variable is a contract change and bumps the version like any other.
+- Evidence under `docs/evidence/` predates 1.0 and is not migrated; it is a record, not an input.
+
+## Never do
+- Never hand-edit a PNG, or edit HTML under `out/`.
+- Never put a raw color, size or font name inside a template. Tokens and `--v-*` only.
+- Never promote a `derived` value without an approval entry.
+- Never render a generator whose variation values fall outside the archetype's allowed set.
+- Never give a `body` or `label` slot the display face, or an `h1`–`h3`/`data-snippet` slot the body face. The `role-face` check fails it.
+- Never shrink type to make copy fit. Rewrite the copy or change archetype.
+- Never scale a sample into a new ratio. A new format re-runs selection (`select.md`), and the template adapts with `[data-ratio]` rules and `cqi`.
+- Never type a fact the message holds. Reference it (`{ "fact": "date" }`); a typed variant fails `facts-consistent`.
+- Never invent a brand value the intake did not supply; ask, then mark it `derived`.
+- Never add an archetype in a brand repo; propose it upstream with a spec first.
+- Never tint, darken, blur or hand-crop a photograph to pass a check; change the focal point, the scrim, the layout or the photograph.
+- Never approve a generator on a placeholder image.
+- Never add engine code, the brand layer, font files or a `reference` archetype to BAM. `npm run package` refuses them; do not work around it. The one exception is the named worked example (`examples/kadri/`, its files listed in `scripts/lib/package-rules.mjs`): Kadri's two fonts ship only there, and a font ships only beside an SIL Open Font License file. HueGrid's `brand/` and its EULA fonts never ship.
+
+## About BAM
+
+This spec ships in Brand Asset Maker (BAM) by HueGrid.
+
+Commands mentioned in this document (`npm run …`) refer to a reference implementation that is not included. Any renderer or AI assistant may implement the spec.

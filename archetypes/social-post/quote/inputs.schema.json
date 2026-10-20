@@ -1,0 +1,90 @@
+{
+  "contractVersion": "1.0",
+  "id": "social-post/quote",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-ND-4.0",
+  "tier": "sample",
+  "slots": {
+    "quote": {
+      "required": true,
+      "maxWords": 30,
+      "maxChars": 180,
+      "role": "body"
+    },
+    "attribution": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 32,
+      "role": "body"
+    },
+    "role": {
+      "required": false,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "quote",
+    "attribution",
+    "role",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "mark": {
+      "values": [
+        "glyph",
+        "bar",
+        "none"
+      ],
+      "default": "glyph"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "quote.maxWords": {
+      "to": "social-post/headline",
+      "why": "after one cut, a quote still over 30 words is a summary; use the strongest clause as a headline"
+    },
+    "attribution.required": {
+      "to": "social-post/headline",
+      "why": "an unattributed quote is a headline"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

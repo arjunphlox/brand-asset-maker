@@ -1,0 +1,33 @@
+<style>
+.pg-frame[data-archetype="social-post/quote"] .pg-safe { justify-content: center; }
+.pg-frame[data-archetype="social-post/quote"] .pg-block { display: flex; flex-direction: row; align-items: stretch; gap: 2.4cqi; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="social-post/quote"] .pg-block-text { display: flex; flex-direction: column; min-width: 0; text-align: start; align-items: flex-start; }
+.pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-block { align-self: center; }
+.pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-block-text { text-align: center; align-items: center; }
+.pg-frame[data-archetype="social-post/quote"] .pg-bar { display: none; flex: 0 0 auto; }
+.pg-frame[data-archetype="social-post/quote"][data-mark="bar"] .pg-bar { display: block; }
+.pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-bar { display: none; } /* bar is a start-side device; centered blocks carry no bar (spec) */
+.pg-frame[data-archetype="social-post/quote"] .pg-quote-mark { display: none; font-family: var(--brand-font-body); font-weight: var(--brand-weight-body); font-size: 14cqi; line-height: 0.7; height: 6cqi; color: var(--pg-accent-text); margin-bottom: 2cqi; }
+.pg-frame[data-archetype="social-post/quote"][data-mark="glyph"] .pg-quote-mark { display: block; }
+.pg-frame[data-archetype="social-post/quote"] [data-slot="quote"] { text-wrap: balance; font-size: 7cqi; line-height: 1.05; max-width: 78cqi; overflow-wrap: break-word; }
+.pg-frame[data-archetype="social-post/quote"] .pg-attrib { display: flex; flex-direction: column; gap: 0.6cqi; margin-top: 4cqi; }
+.pg-frame[data-archetype="social-post/quote"] [data-slot="attribution"] { font-size: 3.6cqi; font-weight: var(--brand-weight-label); }
+.pg-frame[data-archetype="social-post/quote"] [data-slot="role"] { color: var(--pg-muted); }
+.pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-logo { top: auto; left: 50%; bottom: 0; transform: translateX(-50%); }
+</style>
+<div class="pg-frame" data-archetype="social-post/quote">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-block">
+      <div class="pg-bar" aria-hidden="true"></div>
+      <div class="pg-block-text">
+        <span class="pg-quote-mark" aria-hidden="true">“</span>
+        <div class="pg-body" data-slot="quote"></div>
+        <div class="pg-attrib">
+          <div class="pg-body" data-slot="attribution"></div>
+          <div class="pg-label" data-slot="role" data-slot-optional></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

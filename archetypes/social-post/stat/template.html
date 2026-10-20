@@ -1,0 +1,27 @@
+<style>
+.pg-frame[data-archetype="social-post/stat"] .pg-safe { justify-content: flex-end; }
+.pg-frame[data-archetype="social-post/stat"][data-position="top"] .pg-safe { justify-content: flex-start; }
+.pg-frame[data-archetype="social-post/stat"][data-position="top"] .pg-logo { top: auto; bottom: 0; }
+.pg-frame[data-archetype="social-post/stat"] .pg-block { display: flex; flex-direction: column; min-width: 0; max-width: 100%; }
+/* The tight 0.85 line box suits figures, but the number may carry a unit with a descender ("250 g"): its ink
+   hangs up to ~0.18em below the line box and met the label. padding-bottom keeps room for it (upstream fix,
+   rules/decisions.md 2026-10-20). */
+.pg-frame[data-archetype="social-post/stat"] [data-slot="number"] { font-size: 22cqi; line-height: 0.85; padding-bottom: 0.15em; }
+.pg-frame[data-archetype="social-post/stat"] [data-slot="label"] { font-size: 4.6cqi; margin-top: 1.4cqi; }
+.pg-frame[data-archetype="social-post/stat"] [data-slot="source"] { color: var(--pg-muted); margin-top: 2.4cqi; }
+.pg-frame[data-archetype="social-post/stat"][data-accent="number"] [data-slot="number"] { color: var(--pg-accent-text); }
+.pg-frame[data-archetype="social-post/stat"][data-accent="label"] [data-slot="label"] { color: var(--pg-accent-text); }
+/* 9:16 story (1.4): adapted, not scaled. Sizes stay in cqi; the default position (bottom) sits on the story's
+   centre line, because the foot of a story belongs to the reply bar and the thumb. Top stays top. */
+.pg-frame[data-archetype="social-post/stat"][data-ratio="9:16"]:not([data-position="top"]) .pg-safe { justify-content: center; }
+</style>
+<div class="pg-frame" data-archetype="social-post/stat">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-block">
+      <div class="pg-data" data-slot="number"></div>
+      <div class="pg-body" data-slot="label"></div>
+      <div class="pg-label" data-slot="source" data-slot-optional></div>
+    </div>
+  </div>
+</div>

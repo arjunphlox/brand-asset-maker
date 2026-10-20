@@ -1,0 +1,41 @@
+/* Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep. (c) HueGrid Studio, CC BY-NC-ND 4.0. */
+/* Kadri Coffee brand tokens for Poligraf.
+   Supplied: --brand-accent (#FF603E) and the two font families (Hubot Sans, Mona Sans). Everything else is derived
+   from `npm run scale -- "#FF603E"` (then `--on "#ffffff,#4b1f15,#ff603e"`) or inferred at intake; the status of each
+   value lives in brand/locked.json and the measurements in brand/intake.log.md. */
+:root {
+  --brand-paper: #ffffff;          /* derived: the scale's contrast basis ("on white"); the owner gave no paper colour */
+  --brand-ink: #4b1f15;            /* derived: scale step 12 (13.94:1 on paper) */
+  --brand-accent: #FF603E;         /* supplied primary colour; scale step 9 (3.00:1 on paper, 4.64:1 on ink) */
+  --brand-accent-ink: #4b1f15;     /* derived: the scale's recommended text on #ff603e, step 12 = the ink (4.64:1) */
+  --brand-muted: #cb492d;          /* derived: scale step 11, the scale's textOnWhite (4.64:1 on paper) */
+
+  /* Step-11 muted is 3.01:1 on the ink surface and fails 30px labels there, so the ink scheme reads its own muted.
+     The accent (4.64:1 on ink) needs no ink override. */
+  --brand-muted-on-ink: #ff876d;   /* derived: scale step 8, the darkest step lighter than the accent that clears 4.5 on ink (5.94:1) */
+
+  /* The accent is 3.00:1 on paper: large text only. Coral words under 36px fail 4.5 there (feedback/0001), so text
+     painted in the accent on paper reads its own colour. Surfaces (bars) and the logo keep the full coral. */
+  --brand-accent-text-on-paper: #cb492d; /* derived: scale step 11, the scale's textOnWhite (4.64:1 on paper) */
+
+  --brand-font-display: "Hubot Sans", sans-serif;
+  --brand-font-body: "Mona Sans", sans-serif;
+  --brand-weight-display: 700;     /* derived: variable file defaults to 200; bold carries display sizes, 800/900 kept back */
+  --brand-weight-body: 400;        /* derived */
+  --brand-weight-label: 600;       /* derived: uppercase labels at 30px */
+  --brand-tracking-display: 0em;   /* derived: the face's own spacing */
+  --brand-tracking-label: 0.06em;  /* derived: uppercase labels open slightly */
+  --brand-radius: 0px;             /* derived: the k is drawn with square corners */
+}
+
+.pg-frame[data-scheme="ink"] {
+  --pg-muted: var(--brand-muted-on-ink);
+}
+
+.pg-frame[data-scheme="paper"] { /* feedback/0001 */
+  --pg-accent-text: var(--brand-accent-text-on-paper);
+}
+
+.pg-frame[data-scheme="accent"] { /* feedback/0002: the coral k vanishes on the coral surface; the dark k does not */
+  --brand-logo-variant: reversed;
+}

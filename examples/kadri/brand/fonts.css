@@ -1,0 +1,7 @@
+/* Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep. (c) HueGrid Studio, CC BY-NC-ND 4.0. */
+/* Hubot Sans and Mona Sans (GitHub), SIL Open Font License 1.1. Policy path (a): files supplied by the owner in the
+   hand-in (fonts/), copied unchanged into brand/fonts/. Both are variable fonts. The weight and width ranges below
+   describe the files' own axes (Hubot Sans: wdth 80-120, wght 200-900; Mona Sans: wght 200-900, opsz 0-100), so the
+   browser drives the axes from font-weight and font-stretch. See brand/fonts.md. */
+@font-face { font-family: "Hubot Sans"; src: url("fonts/HubotSansVF-Regular.ttf") format("truetype"); font-weight: 200 900; font-stretch: 80% 120%; font-style: normal; font-display: block; }
+@font-face { font-family: "Mona Sans"; src: url("fonts/MonaSansVF.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: block; }

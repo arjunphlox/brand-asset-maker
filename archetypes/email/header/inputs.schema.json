@@ -1,0 +1,93 @@
+{
+  "contractVersion": "1.4",
+  "id": "email/header",
+  "useCase": "email",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "3:1"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "headline": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "h1"
+    },
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "mark": {
+      "values": [
+        "bar",
+        "none"
+      ],
+      "default": "bar"
+    },
+    "rule": {
+      "values": [
+        "none",
+        "hairline"
+      ],
+      "default": "none"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": null,
+      "why": "a header line is 8 words or fewer; the email body says the rest"
+    },
+    "headline.maxChars": {
+      "to": null,
+      "why": "a header line is 48 characters or fewer; the email body says the rest"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

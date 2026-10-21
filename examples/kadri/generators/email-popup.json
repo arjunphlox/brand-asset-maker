@@ -1,0 +1,31 @@
+{
+  "contractVersion": "1.4",
+  "name": "email-popup",
+  "archetype": "email/header",
+  "ratios": [
+    "3:1"
+  ],
+  "variation": {
+    "scheme": [
+      "paper"
+    ],
+    "rule": [
+      "hairline"
+    ]
+  },
+  "message": "kadri-popup",
+  "rows": [
+    {
+      "id": "popup",
+      "inputs": {
+        "kicker": {
+          "fact": "name"
+        },
+        "headline": "Taste both coffees at Mill Lane Market"
+      }
+    }
+  ],
+  "approvedFrom": null,
+  "useWhen": "the top of a newsletter email",
+  "note": "Example generator for the email header. The kicker is the message's name; the headline types the place exactly. Not approved."
+}

@@ -1,0 +1,43 @@
+<style>
+/* 1200x630: 1cqi = 12px. The title sits on the centre line, where a centre crop keeps it. */
+.pg-frame[data-archetype="banner/link-preview"] .pg-safe { justify-content: center; }
+.pg-frame[data-archetype="banner/link-preview"] .pg-block { display: flex; flex-direction: row; align-items: stretch; gap: 2cqi; max-width: 100%; min-width: 0; }
+.pg-frame[data-archetype="banner/link-preview"] .pg-block-text { display: flex; flex-direction: column; gap: 2cqi; min-width: 0; flex: 1 1 auto; text-align: start; align-items: flex-start; }
+.pg-frame[data-archetype="banner/link-preview"][data-align="center"] .pg-block { align-self: center; }
+.pg-frame[data-archetype="banner/link-preview"][data-align="center"] .pg-block-text { text-align: center; align-items: center; }
+.pg-frame[data-archetype="banner/link-preview"][data-align="center"] .pg-logo { left: 50%; transform: translateX(-50%); }
+.pg-frame[data-archetype="banner/link-preview"] .pg-bar { display: none; flex: 0 0 auto; }
+.pg-frame[data-archetype="banner/link-preview"][data-mark="bar"] .pg-bar { display: block; }
+.pg-frame[data-archetype="banner/link-preview"][data-align="center"] .pg-bar { display: none; }
+.pg-frame[data-archetype="banner/link-preview"] [data-slot="kicker"] { font-size: 2.6cqi; color: var(--pg-accent-text); }
+.pg-frame[data-archetype="banner/link-preview"] [data-slot="title"] { font-size: 6.4cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="banner/link-preview"] [data-slot="cta"] { margin-top: 1cqi; }
+.pg-frame[data-archetype="banner/link-preview"][data-cta="pill"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 1.2cqi 2.2cqi; border-radius: var(--brand-radius); width: fit-content; }
+.pg-frame[data-archetype="banner/link-preview"] .pg-rule { display: none; }
+/* rule="hairline": the top row becomes logo, a hairline, and the kicker at the far edge. The block and its text
+   column dissolve (display: contents) so the kicker can sit in that row; the title and CTA stay on the centre line. */
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] .pg-safe { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto 1fr auto auto 1fr; column-gap: 2cqi; row-gap: 2cqi; align-items: center; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] .pg-logo { position: static; transform: none; grid-area: 1 / 1; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] .pg-rule { display: block; grid-area: 1 / 2; height: 0.2cqi; background: var(--pg-muted); }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] .pg-block,
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] .pg-block-text { display: contents; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] .pg-bar { display: none; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] [data-slot="kicker"] { grid-area: 1 / 3; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] [data-slot="title"] { grid-area: 3 / 1 / 4 / 4; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"] [data-slot="cta"] { grid-area: 4 / 1 / 5 / 4; justify-self: start; }
+.pg-frame[data-archetype="banner/link-preview"][data-rule="hairline"][data-align="center"] [data-slot="cta"] { justify-self: center; }
+</style>
+<div class="pg-frame" data-archetype="banner/link-preview">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-rule" aria-hidden="true"></div>
+    <div class="pg-block">
+      <div class="pg-bar" aria-hidden="true"></div>
+      <div class="pg-block-text">
+        <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+        <div class="pg-h1" data-slot="title"></div>
+        <div class="pg-label" data-slot="cta" data-slot-optional></div>
+      </div>
+    </div>
+  </div>
+</div>

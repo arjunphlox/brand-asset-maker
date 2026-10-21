@@ -1,0 +1,39 @@
+{
+  "contractVersion": "1.4",
+  "name": "contrast-way",
+  "archetype": "social-post/contrast",
+  "ratios": [
+    "1:1",
+    "4:5"
+  ],
+  "variation": {
+    "scheme": [
+      "paper"
+    ],
+    "rule": [
+      "none",
+      "hairline"
+    ]
+  },
+  "rows": [
+    {
+      "id": "your-way",
+      "inputs": {
+        "claim": "Good coffee has one right way.",
+        "counter": "Good coffee. Your way.",
+        "tagline": "Coffee for your everyday."
+      }
+    },
+    {
+      "id": "everyday",
+      "inputs": {
+        "claim": "Good coffee is for special mornings.",
+        "counter": "Coffee for your everyday.",
+        "tagline": "Good coffee. Your way."
+      }
+    }
+  ],
+  "approvedFrom": null,
+  "useWhen": "two short sentences: a belief, then Kadri's answer",
+  "note": "Example generator for the contrast layout. Demo copy: the claims are written for the layout; each counter and tagline is a line printed on the bag (derived, read off the hand-in photographs). Kadri has not posted these pairs. Not approved."
+}

@@ -1,0 +1,32 @@
+{
+  "contractVersion": "1.4",
+  "name": "link-notes",
+  "archetype": "banner/link-preview",
+  "ratios": [
+    "1.91:1"
+  ],
+  "variation": {
+    "scheme": [
+      "paper"
+    ],
+    "rule": [
+      "hairline"
+    ],
+    "cta": [
+      "pill"
+    ]
+  },
+  "rows": [
+    {
+      "id": "sunny-side",
+      "inputs": {
+        "kicker": "Tasting notes",
+        "title": "Sunny Side tastes like peach, citrus and honey",
+        "cta": "Read the notes"
+      }
+    }
+  ],
+  "approvedFrom": null,
+  "useWhen": "the image a link shows when it is shared (a page, a blog post)",
+  "note": "Example generator for the share card. The title is the brand's own tasting-note line. Not approved."
+}

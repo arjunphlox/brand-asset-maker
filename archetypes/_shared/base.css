@@ -17,6 +17,11 @@ html, body { margin: 0; background: transparent; }
 .pg-frame[data-ratio="1:1"] { height: 1080px; }
 .pg-frame[data-ratio="4:5"] { height: 1350px; }
 .pg-frame[data-ratio="9:16"] { height: 1920px; } /* story; added in contract 1.4 */
+/* Frames that are not 1080 wide (contract 1.4, additive): each sets its own width and height. 1cqi is 1% of the
+   frame width, so sizes in cqi scale with the frame; a template sets smaller cqi steps for a short, wide frame. */
+.pg-frame[data-ratio="1.91:1"] { width: 1200px; height: 630px; } /* banner: share card, link preview */
+.pg-frame[data-ratio="4:1"] { width: 1584px; height: 396px; }    /* banner: profile cover */
+.pg-frame[data-ratio="3:1"] { width: 1200px; height: 400px; }    /* email: newsletter header, shown at 600x200 */
 
 /* Schemes: on the frame itself or on an ancestor (html). Wrapped in :where() so they carry zero
    specificity: a brand override under .pg-frame[data-scheme="…"] in tokens.css always wins, whatever the order. */
@@ -49,6 +54,18 @@ html, body { margin: 0; background: transparent; }
    re-measure (poligraf.config.json safeZoneNotes); the config numbers are what the safe-zone check enforces. */
 .pg-frame[data-ratio="9:16"] {
   --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 31.4815cqi;
+}
+/* Wider frames: the insets are the config px divided by the frame width (1cqi = width / 100). */
+.pg-frame[data-ratio="1.91:1"] { /* 1200 wide: 60 = 5cqi, 72 = 6cqi */
+  --pg-safe-top: 5cqi; --pg-safe-right: 6cqi; --pg-safe-bottom: 5cqi; --pg-safe-left: 6cqi;
+}
+/* 4:1 profile cover: the 568px left margin keeps text clear of the profile photo. An ESTIMATE, to re-measure
+   (poligraf.config.json safeZoneNotes). 1584 wide: 48 = 3.0303cqi, 72 = 4.5455cqi, 568 = 35.8586cqi. */
+.pg-frame[data-ratio="4:1"] {
+  --pg-safe-top: 3.0303cqi; --pg-safe-right: 4.5455cqi; --pg-safe-bottom: 3.0303cqi; --pg-safe-left: 35.8586cqi;
+}
+.pg-frame[data-ratio="3:1"] { /* 1200 wide: 56 = 4.6667cqi, 72 = 6cqi */
+  --pg-safe-top: 4.6667cqi; --pg-safe-right: 6cqi; --pg-safe-bottom: 4.6667cqi; --pg-safe-left: 6cqi;
 }
 .pg-safe {
   position: absolute;

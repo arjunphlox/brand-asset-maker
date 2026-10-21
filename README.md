@@ -8,9 +8,17 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
 - `AGENTS.md` and `CLAUDE.md` (the same note): where an AI assistant starts when it opens this folder.
 - `SPEC.md`: the contracts (tokens, fonts, template, inputs schema, checks, report, locked values, approvals, generators, feedback kinds).
 - `archetypes/README.md` and `archetypes/_shared/base.css`: how an archetype is built and the shared plumbing it relies on.
-- `archetypes/social-post/select.md`: which archetype fits which content.
+- `archetypes/<use-case>/select.md` (`social-post`, `banner`, `email`): which archetype fits which content and format.
 - Sample archetypes:
+  - `archetypes/banner/link-preview/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/profile-cover/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/email/header/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/contrast/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/event/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/headline/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/hiring/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/list/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/offer/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/quote/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/stat/` (`spec.md`, `template.html`, `inputs.schema.json`)
 - `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback), and `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine.
@@ -46,4 +54,4 @@ Poligraf is a HueGrid Studio framework. Learn more at huegrid.com.
 
 ## Provenance
 
-BAM version v1.0.0, generated 2026-10-20. Contract 1.4.
+BAM version v1.0.0, generated 2026-10-21. Contract 1.4.

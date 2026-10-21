@@ -18,8 +18,19 @@ This whole skill is the path without the engine. It needs only files you can rea
 
 Write down five things before you write any HTML:
 
-- **Layout:** one archetype folder, for example `archetypes/social-post/stat/`.
-- **Format (ratio):** `1:1` (1080×1080), `4:5` (1080×1350) or `9:16` (1080×1920).
+- **Layout:** one archetype folder, for example `archetypes/social-post/stat/`. Pick it with the `select.md` of its use-case: `archetypes/social-post/select.md` for posts, `archetypes/banner/select.md` for a link preview or a profile cover, `archetypes/email/select.md` for a newsletter header.
+- **Format (ratio):** one of the ratios the layout serves. If its `inputs.schema.json` has a `ratios` list, pick from that list; otherwise any ratio of its use-case. The sizes:
+
+  | Use-case | Ratio | Frame (px) | What it is |
+  |---|---|---|---|
+  | social-post | `1:1` | 1080×1080 | feed post |
+  | social-post | `4:5` | 1080×1350 | tall feed post |
+  | social-post | `9:16` | 1080×1920 | story |
+  | banner | `1.91:1` | 1200×630 | link preview (share card) |
+  | banner | `4:1` | 1584×396 | profile cover |
+  | email | `3:1` | 1200×400 (shown at 600×200) | newsletter header |
+
+  The frame sizes and safe zones are in `poligraf.config.json` → `useCases`, if your copy has it, and in `archetypes/_shared/base.css`.
 - **Scheme:** `paper`, `ink` or `accent`. It must be one of the values in the schema's `variation.scheme.values`.
 - **Variation:** every other key in the schema's `variation` (for the stat: `accent`, `position`). Use the `default` for any key you did not choose. A value outside `values` is not allowed.
 - **Inputs:** the text for each slot. Count words and characters against `inputs.schema.json` now, before you write HTML. Over budget means you rewrite the words or pick another layout. Never shrink the type.
@@ -74,7 +85,7 @@ Build one self-contained document in this order. The order matters: the brand's 
 
 ## 3. Save the PNG
 
-The PNG is the frame at its full size: 1080×1080 for 1:1, 1080×1350 for 4:5, 1080×1920 for 9:16.
+The PNG is the frame at its full size, from the table in step 1: for example 1080×1080 for 1:1, 1200×630 for a link preview, 1584×396 for a profile cover.
 
 **If you can run commands**, use headless Chrome. Give it the frame size as the window size:
 
@@ -85,7 +96,7 @@ The PNG is the frame at its full size: 1080×1080 for 1:1, 1080×1350 for 4:5, 1
 - macOS: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
 - Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe"`
 - Linux: `google-chrome` or `chromium`
-- 4:5: `--window-size=1080,1350`. 9:16: `--window-size=1080,1920`.
+- Use the frame size as the window size: 4:5 `--window-size=1080,1350`, 9:16 `--window-size=1080,1920`, link preview `--window-size=1200,630`, profile cover `--window-size=1584,396`, email header `--window-size=1200,400`.
 - For a sharper image at twice the size (what the engine saves), add `--force-device-scale-factor=2`.
 - If Chrome refuses to start because it runs as root (some Linux containers), add `--no-sandbox`.
 
@@ -102,14 +113,14 @@ Write a short report next to each post. One line per check from the schema's `ch
 | Check | How to measure it here |
 |---|---|
 | `budget` | Count words and characters per slot against `inputs.schema.json`. Show the counts. |
-| `contrast` | Resolve each text colour and its surface from `tokens.css` and `base.css` for this scheme (follow each `var()` to its hex). Use the WCAG formula: relative luminance L = 0.2126 R + 0.7152 G + 0.0722 B, each channel c/255 linearised (c ≤ 0.04045 ? c/12.92 : ((c+0.055)/1.055)^2.4); ratio = (L1 + 0.05) / (L2 + 0.05), lighter on top. Text 36px and larger needs 3:1; smaller text needs 4.5:1. Sizes in `cqi` are px at 1080 wide: 1cqi = 10.8px. |
+| `contrast` | Resolve each text colour and its surface from `tokens.css` and `base.css` for this scheme (follow each `var()` to its hex). Use the WCAG formula: relative luminance L = 0.2126 R + 0.7152 G + 0.0722 B, each channel c/255 linearised (c ≤ 0.04045 ? c/12.92 : ((c+0.055)/1.055)^2.4); ratio = (L1 + 0.05) / (L2 + 0.05), lighter on top. Text 36px and larger needs 3:1; smaller text needs 4.5:1. Sizes in `cqi` are a share of the frame width: 1cqi = frame width / 100. That is 10.8px for a 1080-wide post, 12px for a link preview or an email header (1200 wide), 15.84px for a profile cover (1584 wide). |
 | `token-colors` | Every colour in the HTML comes from `tokens.css` or `base.css`. You added none. |
 | `font-loaded` | Each family in `--brand-font-display` and `--brand-font-body` has an `@font-face` in `fonts.css`, and each file it points to exists at the path you wrote. Looking at the PNG for the right face counts as a check by eye; say so. |
 | `role-face` | Each slot's `data-role` matches the schema, and its class uses the right face: `pg-h1`, `pg-h2`, `pg-h3`, `pg-data` for the display face; `pg-body`, `pg-label` for the body face. |
 | `logo-integrity` | The logo file is the one in `locked.json` (compare its sha256 if you can run a command), and it is the variant `tokens.css` asks for. |
 | `element-count` | You added no element the template did not have. |
 | `facts-consistent` | Only when the request names a message file. Quote each fact as it appears in the post and mark it "exact" or "differs". A fact in a `label` slot shows in capitals because of the style; the text you wrote is still exact, so say "exact (shown in capitals)". |
-| `logo-visible`, `safe-zone`, `overflow`, `min-text` | Look at the PNG and say what you see ("the k is clear on white", "the label sits inside the margins"). Mark these "checked by eye, not measured" unless you measured them in a browser. |
+| `logo-visible`, `safe-zone`, `overflow`, `min-text` | Look at the PNG and say what you see ("the k is clear on white", "the label sits inside the margins"). Mark these "checked by eye, not measured" unless you measured them in a browser. The smallest text is 28px for posts and banners and 32px for the email header (it shows at half size). Work it out from the cqi size and the frame width. |
 
 Then label the post the way the contact sheet does: **must fix** (a measured check failed), **your call** (nothing failed, but something needs the owner's decision), or **fine** (nothing failed and nothing is open). Say which checks were not measured. Ask the two-second question: "What do you read first? It should be the <first slot in `hierarchy`>."
 

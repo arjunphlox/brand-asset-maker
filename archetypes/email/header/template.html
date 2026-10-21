@@ -1,0 +1,37 @@
+<style>
+/* 1200x400, shown at 600x200: 1cqi = 12px here and 6px in the email. Text stays at 32px or more here (16px shown). */
+.pg-frame[data-archetype="email/header"] .pg-safe { justify-content: flex-end; }
+.pg-frame[data-archetype="email/header"] .pg-block { display: flex; flex-direction: row; align-items: stretch; gap: 2cqi; max-width: 100%; min-width: 0; }
+.pg-frame[data-archetype="email/header"] .pg-block-text { display: flex; flex-direction: column; gap: 1.4cqi; min-width: 0; flex: 1 1 auto; text-align: start; align-items: flex-start; }
+.pg-frame[data-archetype="email/header"][data-align="center"] .pg-block { align-self: center; }
+.pg-frame[data-archetype="email/header"][data-align="center"] .pg-block-text { text-align: center; align-items: center; }
+.pg-frame[data-archetype="email/header"][data-align="center"] .pg-logo { left: 50%; transform: translateX(-50%); }
+.pg-frame[data-archetype="email/header"] .pg-bar { display: none; flex: 0 0 auto; }
+.pg-frame[data-archetype="email/header"][data-mark="bar"] .pg-bar { display: block; }
+.pg-frame[data-archetype="email/header"][data-align="center"] .pg-bar { display: none; }
+.pg-frame[data-archetype="email/header"] [data-slot="kicker"] { font-size: 2.8cqi; color: var(--pg-accent-text); }
+.pg-frame[data-archetype="email/header"] [data-slot="headline"] { font-size: 5.4cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="email/header"] .pg-rule { display: none; }
+/* rule="hairline": the top row becomes logo, a hairline, and the kicker at the far edge; the headline keeps the foot. */
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] .pg-safe { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto 1fr auto; column-gap: 2cqi; align-items: center; }
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] .pg-logo { position: static; transform: none; grid-area: 1 / 1; }
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] .pg-rule { display: block; grid-area: 1 / 2; height: 0.2cqi; background: var(--pg-muted); }
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] .pg-block,
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] .pg-block-text { display: contents; }
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] .pg-bar { display: none; }
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] [data-slot="kicker"] { grid-area: 1 / 3; }
+.pg-frame[data-archetype="email/header"][data-rule="hairline"] [data-slot="headline"] { grid-area: 3 / 1 / 4 / 4; }
+</style>
+<div class="pg-frame" data-archetype="email/header">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-rule" aria-hidden="true"></div>
+    <div class="pg-block">
+      <div class="pg-bar" aria-hidden="true"></div>
+      <div class="pg-block-text">
+        <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+        <div class="pg-h1" data-slot="headline"></div>
+      </div>
+    </div>
+  </div>
+</div>

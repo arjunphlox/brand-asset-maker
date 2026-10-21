@@ -23,6 +23,14 @@ Kadri Coffee is a small brand made with Poligraf from a short form: what the own
 | `brand/assets/logo.svg` | The coral k |
 | `brand/assets/logo-reversed.svg` | The dark k, used on the coral surface |
 | `generators/stat-bag.json` | The share-card generator the owner picked: the stat layout, 1:1, paper, two rows about the bag |
+| `generators/event-popup.json` | Example generator for the event layout: the pop-up's name, date and place from the message, 1:1, 4:5 and 9:16, the CTA as a button. Not approved |
+| `generators/offer-popup.json` | Example generator for the offer layout at the pop-up. Demo copy: Kadri has made no offer. Not approved |
+| `generators/list-notes.json` | Example generator for the list layout: the tasting notes of both bags, numbered and stacked. Not approved |
+| `generators/hiring-popup.json` | Example generator for the hiring layout: a pop-up barista. Demo copy: Kadri has posted no job. Not approved |
+| `generators/link-notes.json` | Example generator for the link preview (1200×630) for a tasting-notes page, with the hairline and a CTA button. Not approved |
+| `generators/cover-line.json` | Example generator for the profile cover (1584×396) with the bag line. Not approved |
+| `generators/contrast-way.json` | Example generator for the contrast layout: a belief, then Kadri's answer on the accent panel, 1:1 and 4:5, with and without the hairline. Demo copy (the claims); the answers are the bag's lines. Not approved |
+| `generators/email-popup.json` | Example generator for the email header (1200×400) for the pop-up, with the hairline. Not approved |
 | `messages/kadri-popup.json` | The pop-up's facts (name, date, place), written once for every post that mentions them |
 
 To make a post, put `brand/` at the root of your fork (or point your agent at `examples/kadri/brand/`) and follow `skills/poligraf--make-it.md`. For the cold handoff (`workshop/cold-handoff.md`), attach `examples/kadri/brand/`.

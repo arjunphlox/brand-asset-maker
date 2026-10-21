@@ -85,7 +85,7 @@ tasting notes printed on the bag: "Cocoa, caramel and toasted almond."
 The facts: none beyond the tasting notes.
 
 ## 2. What BAM could not do, and why
-A brand value is missing. The words fit: `select.md` question 4 picks the headline (one line,
+A brand value is missing. The words fit: `select.md` question 9 picks the headline (one line,
 8 words or fewer). The ground does not. Every layout paints one flat colour from `tokens.css`
 (paper, ink or accent). The `token-colors` check fails any colour that is not in `tokens.css`,
 and the gradient's colours were never handed in.

@@ -1,0 +1,115 @@
+{
+  "contractVersion": "1.4",
+  "id": "banner/link-preview",
+  "useCase": "banner",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1.91:1"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "title": {
+      "required": true,
+      "maxWords": 10,
+      "maxChars": 70,
+      "role": "h1"
+    },
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "title",
+    "kicker",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "mark": {
+      "values": [
+        "bar",
+        "none"
+      ],
+      "default": "bar"
+    },
+    "rule": {
+      "values": [
+        "none",
+        "hairline"
+      ],
+      "default": "none"
+    },
+    "cta": {
+      "values": [
+        "text",
+        "pill"
+      ],
+      "default": "text"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "title.maxWords": {
+      "to": null,
+      "why": "a share card title is 10 words or fewer; use the page's short title, not its first sentence"
+    },
+    "title.maxChars": {
+      "to": null,
+      "why": "a share card title is 70 characters or fewer; use the page's short title"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Read the notes\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Read the notes\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

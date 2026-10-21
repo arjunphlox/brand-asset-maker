@@ -1,0 +1,86 @@
+{
+  "contractVersion": "1.4",
+  "id": "banner/profile-cover",
+  "useCase": "banner",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "4:1"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "tagline": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h1"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "tagline",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "end"
+      ],
+      "default": "start"
+    },
+    "mark": {
+      "values": [
+        "bar",
+        "none"
+      ],
+      "default": "bar"
+    },
+    "rule": {
+      "values": [
+        "none",
+        "hairline"
+      ],
+      "default": "none"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "tagline.maxWords": {
+      "to": null,
+      "why": "a cover carries one short line, 6 words or fewer; the profile's own text says the rest"
+    },
+    "tagline.maxChars": {
+      "to": null,
+      "why": "a cover carries one short line, 40 characters or fewer"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

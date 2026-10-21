@@ -1,0 +1,31 @@
+<style>
+/* 1584x396: 1cqi = 15.84px. The safe zone starts 568px from the left, clear of the profile photo (base.css).
+   Sizes are smaller cqi steps than a post: the frame is wide and short. */
+.pg-frame[data-archetype="banner/profile-cover"] .pg-safe { justify-content: center; }
+.pg-frame[data-archetype="banner/profile-cover"] .pg-block { display: flex; flex-direction: row; align-items: stretch; gap: 1.4cqi; max-width: 100%; min-width: 0; }
+.pg-frame[data-archetype="banner/profile-cover"][data-align="end"] .pg-block { align-self: flex-end; }
+.pg-frame[data-archetype="banner/profile-cover"] [data-slot="tagline"] { font-size: 4.4cqi; text-wrap: balance; overflow-wrap: break-word; min-width: 0; max-width: 100%; text-align: start; }
+.pg-frame[data-archetype="banner/profile-cover"][data-align="end"] [data-slot="tagline"] { text-align: end; }
+.pg-frame[data-archetype="banner/profile-cover"] .pg-bar { display: none; flex: 0 0 auto; width: 0.3cqi; }
+.pg-frame[data-archetype="banner/profile-cover"][data-mark="bar"] .pg-bar { display: block; }
+.pg-frame[data-archetype="banner/profile-cover"][data-align="end"] .pg-bar { display: none; } /* a bar is a start-side device */
+/* Foot row at the bottom of the safe zone: the logo in the corner opposite the line's side; with rule="hairline"
+   a hairline runs from the free area's edge to the logo. */
+.pg-frame[data-archetype="banner/profile-cover"] .pg-foot { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 1.4cqi; }
+.pg-frame[data-archetype="banner/profile-cover"][data-align="end"] .pg-foot { flex-direction: row-reverse; }
+.pg-frame[data-archetype="banner/profile-cover"] .pg-rule { display: none; flex: 1 1 auto; height: 0.15cqi; background: var(--pg-muted); }
+.pg-frame[data-archetype="banner/profile-cover"][data-rule="hairline"] .pg-rule { display: block; }
+.pg-frame[data-archetype="banner/profile-cover"] .pg-logo img[data-slot="logo"] { height: 2.6cqi; }
+</style>
+<div class="pg-frame" data-archetype="banner/profile-cover">
+  <div class="pg-safe">
+    <div class="pg-block">
+      <div class="pg-bar" aria-hidden="true"></div>
+      <div class="pg-h1" data-slot="tagline"></div>
+    </div>
+    <div class="pg-foot">
+      <div class="pg-rule" aria-hidden="true"></div>
+      <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    </div>
+  </div>
+</div>

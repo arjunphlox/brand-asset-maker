@@ -1,0 +1,199 @@
+{
+  "contractVersion": "1.4",
+  "id": "social-post/event",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1:1",
+    "4:5",
+    "9:16"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "name": {
+      "required": true,
+      "maxWords": 5,
+      "maxChars": 32,
+      "role": "h1"
+    },
+    "date": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 24,
+      "role": "h2"
+    },
+    "place": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "body"
+    },
+    "speaker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 32,
+      "role": "h3"
+    },
+    "speakerRole": {
+      "required": false,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "body"
+    },
+    "series": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "name",
+    "speaker",
+    "speakerRole",
+    "date",
+    "place",
+    "series",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "accent": {
+      "values": [
+        "date",
+        "cta",
+        "none"
+      ],
+      "default": "date"
+    },
+    "rule": {
+      "values": [
+        "none",
+        "hairline"
+      ],
+      "default": "none"
+    },
+    "cta": {
+      "values": [
+        "text",
+        "pill"
+      ],
+      "default": "text"
+    },
+    "highlight": {
+      "values": [
+        "none",
+        "block"
+      ],
+      "default": "none"
+    },
+    "head": {
+      "values": [
+        "logo",
+        "series"
+      ],
+      "default": "logo"
+    },
+    "foot": {
+      "values": [
+        "stack",
+        "split"
+      ],
+      "default": "stack"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "name.maxWords": {
+      "to": null,
+      "why": "an event name is a name, 5 words or fewer; put the description in the post copy"
+    },
+    "date.maxWords": {
+      "to": null,
+      "why": "the date is the day (and time), 4 words or fewer (\"8 November\", \"Sat 8 Nov, 10am\"); put the rest in the post copy"
+    },
+    "place.maxWords": {
+      "to": null,
+      "why": "the place is where to go, 6 words or fewer; the full address belongs in the post copy"
+    },
+    "date.required": {
+      "to": "social-post/headline",
+      "why": "an event without a date is not an event post yet; say the one line as a headline, or ask for the date"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "speaker.maxWords": {
+      "to": null,
+      "why": "the speaker is a name, 4 words or fewer; titles and credentials go in speakerRole or the post copy"
+    },
+    "speaker.maxChars": {
+      "to": null,
+      "why": "the speaker is a name, 4 words or fewer; titles and credentials go in speakerRole or the post copy"
+    },
+    "speakerRole.maxWords": {
+      "to": null,
+      "why": "the speaker's role is one short line, 6 words or fewer (\"Head roaster, Kadri\"); rewrite it"
+    },
+    "speakerRole.maxChars": {
+      "to": null,
+      "why": "the speaker's role is one short line, 6 words or fewer (\"Head roaster, Kadri\"); rewrite it"
+    },
+    "series.maxWords": {
+      "to": null,
+      "why": "the series line names the series, 4 words or fewer (\"Kadri Talks · Free\"); rewrite it"
+    },
+    "series.maxChars": {
+      "to": null,
+      "why": "the series line names the series, 4 words or fewer (\"Kadri Talks · Free\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<style>
+.pg-frame[data-archetype="social-post/list"] .pg-safe { justify-content: flex-end; }
+.pg-frame[data-archetype="social-post/list"] .pg-block { display: flex; flex-direction: column; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="social-post/list"] [data-slot="title"] { font-size: 8cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/list"] .pg-items { display: flex; flex-direction: column; gap: 2.6cqi; margin-top: 5.2cqi; }
+.pg-frame[data-archetype="social-post/list"] .pg-item { display: flex; flex-direction: row; align-items: baseline; gap: 2.4cqi; min-width: 0; }
+/* The numbers are part of the layout, not slots: always 1, 2, 3, in the display face. */
+.pg-frame[data-archetype="social-post/list"] .pg-num { flex: 0 0 5cqi; font-size: 5.6cqi; line-height: 1; }
+.pg-frame[data-archetype="social-post/list"][data-accent="numbers"] .pg-num { color: var(--pg-accent-text); }
+.pg-frame[data-archetype="social-post/list"] .pg-item [data-slot] { font-size: 4.8cqi; line-height: 1.1; min-width: 0; flex: 1 1 auto; overflow-wrap: break-word; }
+/* style="stacked": three short statements, one per line, no numbers, one step larger; the title steps down to
+   a label-sized lead-in so the statements carry the post. accent="last" puts the accent on the last line. */
+.pg-frame[data-archetype="social-post/list"][data-style="stacked"] .pg-num { display: none; }
+.pg-frame[data-archetype="social-post/list"][data-style="stacked"] .pg-items { gap: 1.2cqi; margin-top: 3.2cqi; }
+.pg-frame[data-archetype="social-post/list"][data-style="stacked"] .pg-item [data-slot] { font-size: 8.4cqi; line-height: 0.98; text-wrap: balance; }
+.pg-frame[data-archetype="social-post/list"][data-style="stacked"] [data-slot="title"] { font-size: 4.6cqi; }
+.pg-frame[data-archetype="social-post/list"][data-accent="last"] [data-slot="item3"] { color: var(--pg-accent-text); }
+</style>
+<div class="pg-frame" data-archetype="social-post/list">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-block">
+      <div class="pg-h1" data-slot="title"></div>
+      <div class="pg-items">
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">1</span><div class="pg-h3" data-slot="item1"></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">2</span><div class="pg-h3" data-slot="item2"></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">3</span><div class="pg-h3" data-slot="item3"></div></div>
+      </div>
+    </div>
+  </div>
+</div>

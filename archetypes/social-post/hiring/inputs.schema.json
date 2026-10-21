@@ -1,0 +1,127 @@
+{
+  "contractVersion": "1.4",
+  "id": "social-post/hiring",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1:1",
+    "4:5"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": true,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "role": {
+      "required": true,
+      "maxWords": 5,
+      "maxChars": 32,
+      "role": "h1"
+    },
+    "details": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "body"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "role",
+    "kicker",
+    "details",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "mark": {
+      "values": [
+        "bar",
+        "none"
+      ],
+      "default": "bar"
+    },
+    "cta": {
+      "values": [
+        "text",
+        "pill"
+      ],
+      "default": "text"
+    },
+    "highlight": {
+      "values": [
+        "none",
+        "block"
+      ],
+      "default": "none"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "role.maxWords": {
+      "to": null,
+      "why": "the role is the job title, 5 words or fewer; put the duties in the post copy"
+    },
+    "details.maxWords": {
+      "to": null,
+      "why": "details say where and what kind (\"Mill Lane, Saturdays, part time\"), 8 words or fewer; the rest goes in the post copy"
+    },
+    "kicker.maxWords": {
+      "to": null,
+      "why": "the kicker says what kind of post this is (\"We're hiring\"), 3 words or fewer"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

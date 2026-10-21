@@ -1,0 +1,124 @@
+{
+  "contractVersion": "1.4",
+  "id": "social-post/offer",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1:1",
+    "4:5",
+    "9:16"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "was": {
+      "required": false,
+      "maxChars": 8,
+      "role": "label"
+    },
+    "detail": {
+      "required": true,
+      "maxChars": 7,
+      "role": "data-snippet"
+    },
+    "offer": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h2"
+    },
+    "terms": {
+      "required": false,
+      "maxWords": 10,
+      "maxChars": 60,
+      "role": "label"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "detail",
+    "was",
+    "offer",
+    "terms",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "accent": {
+      "values": [
+        "detail",
+        "cta",
+        "none"
+      ],
+      "default": "detail"
+    },
+    "cta": {
+      "values": [
+        "text",
+        "pill"
+      ],
+      "default": "text"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "detail.maxChars": {
+      "to": "social-post/headline",
+      "why": "an offer that needs more than 7 characters (\"20% off\", \"2 for 1\", \"Free\") is a sentence; say it as a headline"
+    },
+    "offer.maxWords": {
+      "to": null,
+      "why": "the offer line names what is on offer, 6 words or fewer; rewrite it"
+    },
+    "terms.maxWords": {
+      "to": null,
+      "why": "terms longer than 10 words belong in the post copy; keep the one condition that matters"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "was.maxChars": {
+      "to": null,
+      "why": "the old price is a price, 8 characters or fewer (\"₹2699\", \"£12\"); only a previous price the owner gave"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

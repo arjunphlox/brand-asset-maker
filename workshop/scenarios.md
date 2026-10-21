@@ -143,6 +143,10 @@ Make the header image for a Kadri newsletter about the pop-up, with the email he
 
 **A good result** for each: the agent names the layout and the format, counts the budgets before it writes HTML, copies every fact from the message file exactly, and writes a report that marks what it did not measure. For the profile cover it says that the 568px margin is an estimate.
 
+## After the scenarios: rank your next assets
+
+Once you have made a few posts on your own brand, run `next-assets.md`. Your agent asks what you make in a normal month, matches each item to a layout and ranks the list by how often you need it. Bring the table and your top gap note to session two.
+
 ## Optional: the cold handoff
 
 To test that a brand folder stands on its own, run `cold-handoff.md` in a fresh chat with only that `brand/` folder and BAM attached. Try it on Kadri first, then on your own brand.

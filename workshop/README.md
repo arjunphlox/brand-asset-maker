@@ -7,7 +7,7 @@ tier: sample
 
 # Workshop
 
-This folder is the workshop half of Brand Asset Maker (BAM), the part of Poligraf that participants keep. It holds eight practice scenarios (`scenarios.md`), the brand-folder form (`brand-folder.md`), the gap note template (`gap-note.md`), the cold handoff prompt (`cold-handoff.md`), a free font shortlist (`fonts-shortlist.md`) and the month-later self-audit (`self-audit.md`). The other half of BAM is the spec, the eleven sample layouts (`headline`, `stat`, `quote`, `event`, `offer`, `list`, `hiring`, `contrast`, `link-preview`, `profile-cover` and the email `header`), `base.css`, `select.md` and the skills.
+This folder is the workshop half of Brand Asset Maker (BAM), the part of Poligraf that participants keep. It holds eight practice scenarios (`scenarios.md`), the brand-folder form (`brand-folder.md`), the gap note template (`gap-note.md`), the ranked next-assets prompt (`next-assets.md`), the cold handoff prompt (`cold-handoff.md`), a free font shortlist (`fonts-shortlist.md`) and the month-later self-audit (`self-audit.md`). The other half of BAM is the spec, the eleven sample layouts (`headline`, `stat`, `quote`, `event`, `offer`, `list`, `hiring`, `contrast`, `link-preview`, `profile-cover` and the email `header`), `base.css`, `select.md` and the skills.
 
 You fork BAM and use it with your own agent (Claude, Cursor, Codex or another) on your own brand. You never need HueGrid to make a post. Your agent writes your brand folder, makes your posts and checks them. When a request fits no layout, it writes a gap note.
 
@@ -32,7 +32,7 @@ People who own a brand's output without being designers: marketing professionals
 Two sessions of two hours, online, 8 to 10pm Singapore time (SGT).
 
 - **Session one, Thursday 22 October 2026.** Arjun shows Kadri Coffee as his practice brand in three scenarios (`scenarios.md`, 1 to 3): a post that fits, a campaign post with facts written once, and a request that fits no layout and ends in a gap note. He also shows the engine, HueGrid's private version of Poligraf, briefly. You do not need it: everything you do in the week runs on BAM and your own agent.
-- **The week between.** Try scenarios 4 to 8 on Kadri, or pick 2, 3 or 5 of them, or write your own. Then do the same on your own brand. Keep the posts that work and the gap notes for the ones that do not.
+- **The week between.** Try scenarios 4 to 8 on Kadri, or pick 2, 3 or 5 of them, or write your own. Then do the same on your own brand. Keep the posts that work and the gap notes for the ones that do not. Then run `next-assets.md` to rank the next assets your brand should make, by how often you need them.
 - **Session two, Thursday 29 October 2026.** Your journeys: what you made, where it broke, what you tried. Pitfalls and tips from the group. How to extend BAM into your own harness: new layouts from your gap notes, your own skills. Resources to help you think like a designer.
 
 **The practice brand** is Kadri Coffee, a fictional coffee brand by Madhuri Maram, included with her permission. Its files are in `examples/kadri/`.
@@ -57,6 +57,7 @@ You also need an AI agent that can read and write files in a folder. If it can r
 - BAM, under CC BY-NC-SA 4.0 (see `LICENSE.md` in the BAM root). You may fork it, change it and build on it. Credit HueGrid Studio, keep it non-commercial, and share changed versions under the same licence.
 - Your brand layer: the `brand/` folder your agent wrote (`BRAND.md`, `tokens.css`, `locked.json`, `fonts.md`, `fonts.css`, `voice.md`, `intake.log.md`, your logo and any files you brought).
 - Every post you made (`out/<run>/`: the HTML, the PNG and the report), your feedback notes and your gap notes.
+- Your ranked list of next assets (`next-assets.md` at the root of your fork).
 
 Your brand layer and everything you make from it are yours.
 

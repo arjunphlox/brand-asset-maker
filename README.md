@@ -23,7 +23,7 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
   - `archetypes/social-post/stat/` (`spec.md`, `template.html`, `inputs.schema.json`)
 - `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback), and `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine.
 - `docs/design/system/`: the System Design router and the visual principles.
-- `workshop/`: workshop material: the eight Kadri scenarios (`workshop/scenarios.md`), the brand-folder form, the gap note template (`workshop/gap-note.md`) and the cold-handoff prompt (`workshop/cold-handoff.md`).
+- `workshop/`: workshop material: the eight Kadri scenarios (`workshop/scenarios.md`), the brand-folder form, the gap note template (`workshop/gap-note.md`), the ranked next-assets prompt (`workshop/next-assets.md`) and the cold-handoff prompt (`workshop/cold-handoff.md`).
 - `examples/kadri/`: a worked example brand, start with its `README.md`. Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission.
 - `LICENSE.md` and `NOTICE`.
 

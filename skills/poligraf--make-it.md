@@ -89,7 +89,17 @@ Build one self-contained document in this order. The order matters: the brand's 
 
 The PNG is the frame at its full size, from the table in step 1: for example 1080×1080 for 1:1, 1200×630 for a link preview, 1584×396 for a profile cover.
 
-**If you can run commands**, use headless Chrome. Give it the frame size as the window size:
+**If you can run commands**, the most reliable way is Playwright, which sets the page size exactly. With Node installed:
+
+```
+npx playwright install chromium
+npx playwright screenshot --viewport-size=1080,1080 --wait-for-timeout=500 file://<absolute path to the .html> <absolute path to the .png>
+```
+
+- Use the frame size from step 1 as the viewport size: 4:5 `--viewport-size=1080,1350`, 9:16 `--viewport-size=1080,1920`, link preview `--viewport-size=1200,630`, profile cover `--viewport-size=1584,396`, email header `--viewport-size=1200,400`, A5 flyer `--viewport-size=874,1240`.
+- The first line downloads a browser once (about 150 MB). After that, only the second line is needed.
+
+Without Node, you can use Chrome itself, but check the result: recent versions of Chrome make the page about 87px shorter than the window, so the bottom of the post comes out blank.
 
 ```
 <chrome> --headless --hide-scrollbars --window-size=1080,1080 --screenshot=<absolute path to the .png> <absolute path to the .html>
@@ -98,11 +108,11 @@ The PNG is the frame at its full size, from the table in step 1: for example 108
 - macOS: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
 - Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe"`
 - Linux: `google-chrome` or `chromium`
-- Use the frame size as the window size: 4:5 `--window-size=1080,1350`, 9:16 `--window-size=1080,1920`, link preview `--window-size=1200,630`, profile cover `--window-size=1584,396`, email header `--window-size=1200,400`.
 - For a sharper image at twice the size (what the engine saves), add `--force-device-scale-factor=2`.
 - If Chrome refuses to start because it runs as root (some Linux containers), add `--no-sandbox`.
+- If the bottom of the PNG is blank or the last line is cut, do not use that PNG: use Playwright, or the developer-tools capture below.
 
-Use absolute paths. Open the PNG and look at it. If the text is in a plain system font, the font paths are wrong: fix them and save again.
+Use absolute paths. Open the PNG and look at it: the last line of the post must be whole, with the margin below it. If the text is in a plain system font, the font paths are wrong: fix them and save again.
 
 **If you cannot run commands**, tell the owner: open `out/<run>/<post>.html` in Chrome, set the window so the post fits, and take a screenshot of the post only (on a Mac: Cmd+Shift+4, then drag around the post). Or use the browser's developer tools: right-click the post, Inspect, right-click the `pg-frame` element, Capture node screenshot.
 

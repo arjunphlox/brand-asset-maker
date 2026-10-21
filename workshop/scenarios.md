@@ -13,7 +13,7 @@ In session one, Arjun shows scenarios 1, 2 and 3, and the gap note from scenario
 
 ## Before you start
 
-1. Fork BAM on GitHub, or unzip it into a folder.
+1. Fork BAM on GitHub (https://github.com/huegrid/brand-asset-maker), or download it as a zip and unzip it into a folder. You need an agent that can read and write files in that folder; to save PNGs itself it also needs to run commands, with Chrome or Node installed (`skills/poligraf--make-it.md`, step 3).
 2. To work on Kadri, copy `examples/kadri/brand/`, `examples/kadri/generators/` and `examples/kadri/messages/` to the root of the folder, so you have `brand/`, `generators/` and `messages/` beside `SPEC.md`. To work on your own brand, write your own `brand/` first (`brand-folder.md`).
 3. Open the folder with your agent: Claude, Cursor, Codex or another. It reads `AGENTS.md` or `CLAUDE.md` first.
 
@@ -35,9 +35,9 @@ Make an Instagram feed post for Kadri Coffee that says each bag holds 250 g of w
 Make a LinkedIn post for the Kadri pop-up on 8 November at Mill Lane Market. Use the facts in messages/kadri-popup.json exactly as written there. Follow AGENTS.md and make the post with skills/poligraf--make-it.md.
 ```
 
-**A good result:** the agent picks the **headline** layout at **4:5** (a tall feed post: the message with more room). It writes the facts once, from the message file, and copies them exactly: "Kadri Pop-up", "8 November", "Mill Lane Market". The headline is 8 words or fewer (for example "Taste both coffees at Mill Lane Market"). A `cta` is 3 words or fewer and starts with a verb. The report quotes each fact as it appears in the post and marks it "exact". It writes no "Nov 8" and no "Mill Lane".
+**A good result:** the agent picks the **event** layout at **4:5** (a tall feed post: the message with more room), because `select.md` asks "is it an event?" first. The name, the date and the place each get a slot, and it copies them exactly from the message file: "Kadri Pop-up", "8 November", "Mill Lane Market". A `cta` is 3 words or fewer and starts with a verb. The report quotes each fact as it appears in the post and marks it "exact". It writes no "Nov 8" and no "Mill Lane".
 
-The **event** layout at **4:5** is a good result too: the name, the date and the place each get a slot, copied exactly from the message file.
+The **headline** layout at **4:5** is a good result too, if the owner asks for one line rather than the details: 8 words or fewer (for example "Taste both coffees at Mill Lane Market"), with the facts copied the same way.
 
 ### 3. A5 printed flyer for the pop-up
 
@@ -55,7 +55,7 @@ Make an A5 printed flyer for the Kadri pop-up on 8 November at Mill Lane Market,
 Make an Instagram story for Kadri that reminds people the pop-up is tomorrow, 8 November, at Mill Lane Market. Use messages/kadri-popup.json. Follow AGENTS.md and make it with skills/poligraf--make-it.md.
 ```
 
-**A good result:** the **headline** layout at **9:16** (1080×1920). A story is a reminder: one fact plus a call to action. The agent makes it from the template with `data-ratio="9:16"`; it does not stretch a square post. The text sits on the centre line, clear of the top 250px and the bottom 340px. The date and place are copied from the message file. The `cta` starts with a verb and is 3 words or fewer. The **event** layout at **9:16** is a good result too, made the same way.
+**A good result:** the **event** layout at **9:16** (1080×1920). A story is a reminder: one fact plus a call to action. The agent makes it from the template with `data-ratio="9:16"`; it does not stretch a square post. The text sits on the centre line, clear of the top 250px and the bottom 340px. The date and place are copied from the message file. The `cta` starts with a verb and is 3 words or fewer. The **headline** layout at **9:16** with a `cta` is a good result too, made the same way; keep "8 November" on one line (put it in the kicker if the headline breaks it).
 
 ### 5. A customer quote
 

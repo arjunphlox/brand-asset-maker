@@ -22,6 +22,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the detail is the only element at display size, like the stat's number). Contrast → Distinguish (the terms are muted, so the condition is there but never competes with the offer).
 
+## Why it works
+
+- **The deal is seen first.** The `detail` is at most 7 characters and is the only display-size element (18cqi). In print ads, the attention a text element gets grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **A short time or supply raises want.** `terms` holds the one condition that matters, such as a date or "while stocks last". Things in short supply or for a short time are wanted more, and a stated end date prompted action in a study of coupons. ([Cialdini 2021](../../../docs/design/system/visual/sources.md#cialdini-2021); [Inman & McAlister 1994](../../../docs/design/system/visual/sources.md#inman-mcalister-1994))
+- **There is one thing to choose.** The post has one `detail` and at most one `cta`. The time to choose grows with the number of options. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
+- **The condition does not compete.** The `terms` are muted, so they are there to read but are smaller and quieter than the `detail`. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

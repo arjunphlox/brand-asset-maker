@@ -19,6 +19,8 @@ tier: sample
 
 # Email — selection
 
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+
 An email image is shown at half its size: a 1200×400 header appears at 600×200 in most email clients. Some clients hide images until the reader allows them, so an email image repeats what the email says.
 
 ## Step 0: the format names the job

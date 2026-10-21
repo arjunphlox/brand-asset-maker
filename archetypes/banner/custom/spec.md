@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one headline at every shape). Balance → the shape picks the flow: a row when wide, a column when square-ish or tall.
 
+## Why it works
+
+- **The headline stays the largest text.** Type is set in `cqmin`, 1% of the short side, so the `headline` keeps its size against the `sub` and `cta` at every frame size. Attention goes first to the largest region. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Each shape has one reading path.** A wide frame is one row and a tall or square-ish frame is one column, always in the order `logo`, text, `cta`. Things that line up along one path are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **One action in every shape.** The `cta` is required and there is only one, starting with a verb. The time to choose grows with the number of options. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
+- **Thin frames fail instead of shrinking.** The `min-text` check fails a frame where text falls under 12px, such as a very long thin one. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

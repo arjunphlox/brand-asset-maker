@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one headline, read in a glance at 1x). Balance → Flow (one row, read left to right: who, what, do).
 
+## Why it works
+
+- **Few things, so a glance is enough.** The row has at most four things: `logo`, `headline`, an optional `sub` and `cta`. People hold only about three to five chunks in mind, and this row stays inside that. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **The headline is the largest text.** The `headline` is 24px against 13px for the `sub` and 12.7px for the `cta`. Attention goes first to the largest region, and in print ads, text gets attention in step with its size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001); [Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **An ad gets a short look.** People looking for something else on a page often miss things that look like ads, even large bright ones. So this unit says one thing: the `logo`, one `headline` and one `cta`, in the order they are read. ([Benway 1998](../../../docs/design/system/visual/sources.md#benway-1998))
+- **Text never drops below a floor.** The sizes are set for the unit at 1x, and the `min-text` check fails any text under the floor in `poligraf.config.json`. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

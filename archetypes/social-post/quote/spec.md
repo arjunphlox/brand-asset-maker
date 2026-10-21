@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Rhythm → Flow (a fixed measure of 78cqi at the 7cqi quote step keeps a 30-word quote to 4–6 lines in the body face). Grouping → Navigate (attribution and role are one unit with tight internal spacing and a clear gap from the quote).
 
+## Why it works
+
+- **The line length stays fixed.** The `quote` has a 78cqi measure at 7cqi, which keeps 30 words to 4 to 6 lines. Line length and line spacing change how fast text is read on screen. ([Dyson 2004](../../../docs/design/system/visual/sources.md#dyson-2004))
+- **The quote is big and has room.** The `quote` is the largest text, set in the body face. Reading speed holds steady above a critical print size and drops sharply below it, and 7cqi is well above the `min-text` floor. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+- **Attribution and role form one unit.** `attribution` and `role` sit tight together with a clear gap from the `quote`. Things that sit close are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **A named source makes it believable.** `attribution` is required, and an unattributed quote goes to `headline`. In 1951 persuasion studies, the same message changed more minds when it came from a source people trusted. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

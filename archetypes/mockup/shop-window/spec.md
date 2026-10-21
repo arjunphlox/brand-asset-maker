@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The poster is read from the pavement.** The `from-pavement` and `straight-on` angles show the poster as a passer-by sees it, at a distance and for a moment. People take the gist of an image from a very brief glance. ([Potter et al. 2014](../../../docs/design/system/visual/sources.md#potter-2014))
+- **Glare must not hide the words.** The prompt allows faint reflections on the glass but never over the words, and `text-intact` checks it. Text needs enough contrast against its background to be read, and a reflection that cuts it hides the message (WCAG sets the ratios for screens, not shop glass). ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
+- **The shop front keeps one brand in view.** The interior behind is out of focus and has no signs, and `no-other-brands` checks it. The poster is the one clear figure against its ground, and easy-to-perceive things are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+- **The colours hold in any weather.** `light` (`overcast`, `evening-glow`, `bright-sun`) changes only the light, and `colours-held` checks the poster's colours did not shift. Using brand colours the same way, often, builds the link to the brand. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

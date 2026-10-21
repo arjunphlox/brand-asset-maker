@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one headline). Every size is set for the half-size view: an email client shows the 1200×400 image at 600×200, so 32px here is 16px on the reader's screen.
 
+## Why it works
+
+- **Text is sized for the half-size view.** An email client shows the image at 600×200, so the `headline` at 65px reads as 32px. The `min-text` floor of 32px here is 16px shown. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+- **The headline is seen first.** The `headline` is 65px and the `kicker` 34px, so the headline is the largest region. Attention goes first to the region that differs most in size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **The kicker shows the topic.** The `kicker` sits above the `headline` in the accent text colour and names the issue or topic. Signals that show a text's structure help readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **The logo is in the same place each issue.** By default the `logo` is top left, the same place on every issue. A logo becomes a brand asset when people link it to the brand, and that comes from using it the same way, often, over time. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

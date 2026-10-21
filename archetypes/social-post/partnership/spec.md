@@ -23,6 +23,13 @@ tier: sample
 
 From HueGrid client work, inspiration only: the "A × B" posts of Aampe × Taxfix and Finverse × Xero. No client mark or name is in this library; every example mark is a labelled demo file.
 
+## Why it works
+
+- **The two marks read as a pair.** The brand `logo`, the drawn × and the `partnerLogo` sit close in one lockup, apart from the `title`. Things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Showing both brands shares goodwill.** The post puts the two marks side by side. In studies of brand alliances, how people feel about the alliance changes how they feel about each partner brand. ([Simonin & Ruth 1998](../../../docs/design/system/visual/sources.md#simonin-ruth-1998))
+- **The line is read from the start edge.** In `row`, the lockup starts at the start edge and the `title` (7.4cqi) is the only display-size text under it. On screen, people scan down the left edge and look at the first words. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
+- **The partner mark stays visible.** The `partnerLogo` sits on a tile in the paper colour, so a dark mark reads on every scheme, and `logo-visible` fails the post if either mark vanishes. Things with clear figure and ground, and high contrast, are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

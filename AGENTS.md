@@ -19,6 +19,7 @@ This folder is Brand Asset Maker (BAM), the part of Poligraf that participants k
 ## Rules
 
 - There is no engine here. The `npm run` commands in the skills do not exist in this folder. Follow each skill's "Without the engine" section.
+- When the owner says what they want to make but not which layout, read `skills/poligraf--suggest.md`: follow the `select.md` rules, then use each layout's **Why it works** reasons to suggest one layout and a runner-up, in plain words.
 - You make the posts yourself. Read `skills/poligraf--make-it.md`: write one HTML file per post the way the renderer does, save it as a PNG (headless Chrome, or the owner takes a screenshot), then check what you can measure and mark the rest "not measured".
 - Never claim a check passed that you did not measure.
 - For a mock-up (the post on a tote bag, a phone, a shop window), read `skills/poligraf--mockup.md`: you send a passing post and the filled prompt to the owner's own image model with the owner's own key, then review the result. Never edit the image it returns.

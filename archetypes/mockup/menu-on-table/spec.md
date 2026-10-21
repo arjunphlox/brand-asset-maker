@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The menu is read in order, top to bottom.** `text-intact` and the prompt's rule that every line stays readable and unchanged keep the order the designer set. In their study, diners read a menu in order, top to bottom like a book. ([Yang 2012](../../../docs/design/system/visual/sources.md#yang-2012))
+- **The menu is shown at a diner's height.** The `three-quarter` angle sits at a seated diner's height, and `people: hands` can add hands on the menu. Pictures that help people imagine use shape how they judge a product (shown there for products, not menus). ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **Section headings keep their job.** `artwork-unchanged` keeps the headings, prices and sizes as designed. Headings and other signals that show a text's structure help readers find their way and remember it. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **The table stays plain around the menu.** The cup, plate and cutlery are asked to be unbranded, so the menu is the clear figure on its ground. Easy-to-perceive things are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

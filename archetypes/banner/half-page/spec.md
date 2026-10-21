@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the headline dominates; the line under it supports). Balance → Anchor (logo on top, call to action at the foot).
 
+## Why it works
+
+- **The headline is clearly the largest.** The `headline` is 36px and the `sub` is 16.8px, so one region stands out in size. Attention goes first to the region that differs most from its surroundings. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **An ad gets a short look.** People looking for something else on a page often miss things that look like ads, even large bright ones. So this unit says one thing: the `logo`, one `headline` and one `cta`, in the order they are read. ([Benway 1998](../../../docs/design/system/visual/sources.md#benway-1998))
+- **Extra words are left out.** The `sub` is capped at 18 words and the `headline` at 10. People learn more when extra words are left out, and working memory is limited. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009); [Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
+- **The text is easy to read.** The `contrast` check holds text to 4.5:1 against its surface, or 3:1 for large text such as the 36px `headline`. Easy-to-perceive items with high contrast are liked more. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (headline, then body). Balance → Anchor (the block sits on the foot of the safe zone, the logo at the head).
 
+## Why it works
+
+- **Headline first, body second.** The `headline` is 7.5cqi and the `body` is 2.4cqi. Attention goes first to the region that differs most in size, so the order of reading is set. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **A short headline gives a first view.** The `headline` is at most 8 words. People judge the look of a web page in about 50 ms, and that first view matches the one they form with more time. That study used web pages, not cards. ([Lindgaard et al. 2006](../../../docs/design/system/visual/sources.md#lindgaard-2006))
+- **Plain and high contrast.** Few elements, and every text and background pair must pass `contrast` (4.5:1, or 3:1 for large text). Things that are easy to perceive, such as high contrast and simplicity, are liked more. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+- **Logo at the head, text at the foot.** The `logo` sits on the top row and the text block sits on the foot of the safe zone, so the card has a top and a bottom. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -22,6 +22,13 @@ tier: sample
 
 **Principle carried:** Contrast → Emphasis (two statements at one size; the counter wins by its solid panel, not by a bigger size, so the eye reads claim then counter and lands on the answer). Proximity → Flow (`stagger` steps the counter down and toward the end edge, so the pair reads on a diagonal, top-left to lower-right).
 
+## Why it works
+
+- **The eye reads claim, then counter.** `claim` and `counter` are both `h2` at 6cqi, so they have the same shape. When two things share a structure, people line them up part by part and notice how they differ. ([Gentner & Markman 1997](../../../docs/design/system/visual/sources.md#gentner-markman-1997))
+- **The panel sets the counter apart.** The `counter` sits on a solid `--pg-accent` panel while the `claim` is on the surface. An item set apart from items that are alike is remembered better, and the two statements are alike in size and face. ([von Restorff 1933](../../../docs/design/system/visual/sources.md#von-restorff-1933))
+- **Two short statements are easy to hold.** Each statement is at most 10 words, and there are only two. The working limit is about three to five chunks, so the pair fits with room to spare. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **The panel text stays readable.** The counter's text uses `--pg-accent-on` on `--pg-accent`, and `contrast` checks the pair against 4.5:1 (3:1 at 36px and above). ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

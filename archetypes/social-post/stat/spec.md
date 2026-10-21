@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the number is the only display-size element). Balance → Anchor (the block sits top or bottom of the safe zone; the logo anchors the opposite corner, so the frame never floats).
 
+## Why it works
+
+- **The number is seen first.** The `number` is at most 5 characters and the only display-size element. Attention goes first to the region that differs most from its surroundings in size, contrast or colour. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **The label sits right under the number.** The `label` follows the `number` with a 1.4cqi gap, so the two read as one fact: things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **A source can back the figure.** The optional `source` sits at the bottom of the block. The same message changes more minds when it comes from a source people trust. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
+- **The block and logo face each other.** The block sits at the top or bottom of the safe zone and the `logo` takes the opposite corner, so the frame is balanced. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

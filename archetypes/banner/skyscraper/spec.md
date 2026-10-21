@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (a few large words). Balance → Flow (read top to bottom: who, what, do).
 
+## Why it works
+
+- **A few large words lead.** The `headline` is 20.8px, larger than the `sub` and `cta`, in lines of two or three words. Attention goes first to the largest region. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **An ad gets a short look.** People looking for something else on a page often miss things that look like ads, even large bright ones. So this unit says one thing: the `logo`, one `headline` and one `cta`, in the order they are read. ([Benway 1998](../../../docs/design/system/visual/sources.md#benway-1998))
+- **Short budgets keep chunks few.** The `headline` is capped at 6 words and the `sub` at 10. People hold about three to five chunks in mind at once. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **Small text has a floor.** The `cta` is 12.2px on one line, and the `min-text` check fails text under the floor. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

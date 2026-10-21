@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one dominant element: the headline fills the page; everything else is a step far below it). Balance → Anchor (the block sits on the foot or the head of the safe zone, never floats).
 
+## Why it works
+
+- **The gist comes at a glance.** The `headline` is 15cqi and fills the page, with six words or fewer. People take the gist of an image from a very brief glance, well under a second. ([Potter et al. 2014](../../../docs/design/system/visual/sources.md#potter-2014))
+- **One headline, no rival.** A poster has one `headline`. When two equally strong regions compete, attention splits between them, so the layout allows only one. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **A large surface gets attention.** In print ads, the attention a text element gets grows with its surface size. The `headline` is by far the largest element here. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **The block never floats.** The text block sits on the foot of the safe zone, or under the logo with `anchor: top`, so the page feels settled. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The sleeve is shown in a moment of use.** The `cafe-counter` setting and `people: hands` put the cup where it would be held. Pictures that help people imagine use shape how they judge a product (shown there for products, not sleeves). ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **Seen often, the mark becomes familiar.** A sleeve is seen again with every cup, so the mark repeats at the same size and place. People come to like things more the more often they see them, and brand awareness is built by repeated exposure to the brand's elements. ([Zajonc 1968](../../../docs/design/system/visual/sources.md#zajonc-1968); [Keller 1993](../../../docs/design/system/visual/sources.md#keller-1993))
+- **The artwork keeps its shape on the curve.** The prompt lets the panel wrap round the sleeve so its sides turn away, while `artwork-unchanged` and `text-intact` check the design and words stay as supplied. A mark used the same way each time is what people link to a brand. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+- **A plain cup keeps the brand alone.** The cup, lid and counter are asked to be unbranded, and `no-other-brands` checks it. With no rival marks in view, the sleeve is the one brand element to see. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

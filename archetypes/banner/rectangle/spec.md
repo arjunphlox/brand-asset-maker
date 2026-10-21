@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the headline is the one large element). Balance → Anchor (logo on top, call to action at the foot, the message between).
 
+## Why it works
+
+- **The headline is the largest text.** The `headline` is 25.2px, against 13.8px for the `sub` and 12.6px for the `cta`. In print ads, the attention text gets grows with its size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **An ad gets a short look.** People looking for something else on a page often miss things that look like ads, even large bright ones. So this unit says one thing: the `logo`, one `headline` and one `cta`, in the order they are read. ([Benway 1998](../../../docs/design/system/visual/sources.md#benway-1998))
+- **The button is the one filled shape.** With `cta` set to chip, the button is a filled accent shape among plain text. One item that differs by a single feature is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
+- **Copy stays short.** The `headline` is capped at 8 words and the `sub` at 12. Working memory is limited, and extra material leaves less room to take in the point. ([Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

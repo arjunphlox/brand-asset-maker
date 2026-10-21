@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The badge is shown where it is worn.** The `registration-desk`, `event-hall` and `flat-lay` settings show the badge in the places an event guest meets it, with real weight and a plain lanyard. Pictures that help people imagine use shape how they judge a product (shown there for products, not badges). ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **The name and logo read at a glance.** A badge is read in passing, face on. `text-intact` and `logo-intact` check the words and the mark are as designed, since people take the gist of an image from a very brief glance. ([Potter et al. 2014](../../../docs/design/system/visual/sources.md#potter-2014))
+- **The same look repeats across an event.** Badges are seen in the hall, at the desk and in photos, so one unchanged design builds recognition by repeated exposure. `colours-held` keeps the colours the same each time. ([Keller 1993](../../../docs/design/system/visual/sources.md#keller-1993); [Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+- **The brand stands out from a neutral setting.** The lanyard is plain, the clip is plain metal and other badges are face down, so the printed badge is the one thing that differs from its surroundings. Attention goes first to the region that differs most in size, contrast or colour. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The poster is seen as a passer-by sees it.** The upright panel with the `from-kerb` angle shows the poster at street distance, as people meet it in passing. People take the gist of an image from a very brief glance, so a poster that reads at once is the one this scene tests. ([Potter et al. 2014](../../../docs/design/system/visual/sources.md#potter-2014))
+- **The colours stay the same in every light.** `light` (`daytime`, `dusk`, `night`) changes only the light on the poster, and `colours-held` checks that the colours did not shift. A colour or logo becomes a brand asset when people link it to the brand, and that link is built by using it the same way, often. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+- **The brand stays visible to the viewer.** `logo-intact` and `text-intact` make the logo and the name show as designed. In print ads, attention to the brand element helps people remember the brand. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **A plain panel keeps the poster in front.** The prompt asks for plain metal around the glass and no other adverts or signs in the street. With nothing else competing, the poster is a clear figure on its ground, and things that are easy to perceive are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **Matching panels line up part by part.** Both panels have a label (`leftLabel`, `rightLabel`) and one `h3` line in the same places. When two things share one structure, people line them up and notice the differences in matching places. ([Gentner & Markman 1997](../../../docs/design/system/visual/sources.md#gentner-markman-1997))
+- **The marked panel stands out.** With `emphasis: right`, the right panel takes the accent surface while the left stays plain. An item set apart from items that are alike is remembered better, and a filled shape groups what is inside it. ([von Restorff 1933](../../../docs/design/system/visual/sources.md#von-restorff-1933); [Palmer 1992](../../../docs/design/system/visual/sources.md#palmer-1992))
+- **Text on the accent stays readable.** The marked panel uses its own text colour, and the pair swaps on the accent scheme. `contrast` still checks every pair: text needs 4.5:1, large text 3:1. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
+- **The better side is always on the right.** The layout puts the side that wins in the right panel and its Never do forbids marking the left. The slide is read left to right, so the side that wins is read last. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

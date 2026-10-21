@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the headline dominates). Balance → Flow (message on the left, the action at the end of the read).
 
+## Why it works
+
+- **The headline is seen first.** The `headline` is 42.7px, more than twice the `sub` and the `cta`, so it is the largest region in the frame. Attention goes first to the region that differs most in size, and in print ads, bigger text gets more attention. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001); [Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **Logo and message read as one group.** The `logo`, `headline` and `sub` sit close together in the left column, so they look like one unit, and the `cta` stands apart on the right. The left edge is also where people start each line. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923); [Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
+- **One action, nothing to choose.** The layout has a single `cta` of up to three words, starting with a verb. The time to choose grows with the number of options, and here there is only one. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
+- **The text is easy to read.** The `contrast` check holds text to 4.5:1 against its surface, or 3:1 for large text. Things that are easy to perceive, with high contrast, are liked more. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

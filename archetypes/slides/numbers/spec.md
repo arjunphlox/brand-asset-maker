@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **Three facts fit in memory.** The slide shows three number and label pairs, no more. People hold about three to five chunks at once, so all three stay in mind. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **The numbers are seen before the labels.** Each number is 146px in the display face and each label is 38px. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **Equal cells read as one set.** The three cells have the same size and treatment, and each label sits under its number. Things that look alike or sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Large accent numbers still pass contrast.** With `accent: numbers`, the three figures take the accent text colour. At 36px and above, `contrast` asks for 3:1 against the surface; smaller text needs 4.5:1. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

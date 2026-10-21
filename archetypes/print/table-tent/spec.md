@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (headline, line, call to action). Balance → Anchor (the block on the centre line, the logo at the head, the call to action at the foot).
 
+## Why it works
+
+- **Headline first, line second.** The `headline` is 11cqi and the `line` is 3.6cqi. Attention goes first to the region that differs most in size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Type kept above a reading floor.** The `line` is 3.6cqi (22px), and `min-text` fails any text under 17px (8pt). Reading slows sharply below a critical print size and holds steady above it. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+- **One call to action.** There is at most one `cta`, of three words or fewer. In their studies, fewer options led more people to act (to buy, to write an essay). ([Iyengar & Lepper 2000](../../../docs/design/system/visual/sources.md#iyengar-lepper-2000))
+- **Centred for both sides of the table.** With `align: center` the block sits on the centre line, so it reads the same from either side. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

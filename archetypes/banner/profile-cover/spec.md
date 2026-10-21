@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one line, nothing else competes). Balance → Anchor (the line sits on the centre line of the free area; the logo takes the opposite corner).
 
+## Why it works
+
+- **One line, nothing to compete with.** The cover has the `tagline` at 70px and the `logo`, and nothing else. Two equally strong regions compete for attention, and here one is far stronger. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **A simple cover is liked more.** With so few parts, the figure stands clearly against the ground. Things that are easy to perceive, with clear figure and ground and simplicity, are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+- **The hairline joins tagline and logo.** When `rule` is hairline, a line along the foot runs to the `logo`. Things that line up along one path are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Text stays clear of the profile photo.** The left margin is 568px so the `tagline` clears the photo that covers the lower left. The 568px figure is an estimate, to re-measure. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

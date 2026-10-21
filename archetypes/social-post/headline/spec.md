@@ -22,6 +22,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise. One element dominates by scale; everything else is subordinate by scale, never by weight. Contrast → Distinguish is carried by the scheme (surface vs on-surface pair from brand tokens).
 
+## Why it works
+
+- **One line is read first.** The `headline` is 12cqi (15cqi at `size` 2) and everything else is smaller. Attention goes first to the region that differs most from its surroundings in size, contrast or colour. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Short lines suit scanning.** The `headline` is at most 8 words, set at the start edge with the `kicker` above it. On screen, people scan more than they read, looking at the first words and down the left edge. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
+- **The call to action starts with a verb.** The `cta` is three words or fewer and starts with a verb, such as "Book a seat", so it says what to do. (HueGrid practice, not a research finding)
+- **The colours are easy to read.** The `scheme` pair comes from brand tokens and `contrast` checks it at 4.5:1 (3:1 at 36px and above). In one study, the same statement was judged true more often in a colour that was easier to read. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber & Schwarz 1999](../../../docs/design/system/visual/sources.md#reber-schwarz-1999))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

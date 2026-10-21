@@ -27,6 +27,8 @@ tier: sample
 
 # Print — selection
 
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+
 A print piece is held in a hand, pinned to a wall or stood on a table. Its size is a paper size, not a screen. Every print frame is its trim size at **150 dpi** (px = mm × 150 / 25.4), so one minimum text size serves every format: `minTextPx` 17 is 8pt. The proof PNG renders at `render.scale` 2, which is **300 dpi** at trim size, the resolution print shops ask for. Bleed (usually 3 mm a side) is not drawn and there is no PDF export yet: both are a later step, and the printer confirms the bleed and the colour profile. The frame is the trim line; text and logos stay 5 mm (30px) inside it.
 
 ## Step 0: the format names the job

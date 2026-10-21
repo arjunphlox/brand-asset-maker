@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The bag is shown carried and used.** The `market-stall`, `cafe-counter` and `studio-backdrop` settings, with `people: hands` or `person`, show a bag in use. Pictures that help people imagine use shape how they judge a product. ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **Touch can make the bag feel owned.** `people: hands` and the canvas weave and soft folds the prompt asks for let the owner picture holding the bag. In their studies, imagining touching an object raised the feeling that it is one's own. ([Peck & Shu 2009](../../../docs/design/system/visual/sources.md#peck-shu-2009))
+- **A tote travels, so the mark repeats.** A carried bag is seen in many places, and `artwork-unchanged` and `logo-intact` keep one design each time. People come to like things more the more often they see them. ([Zajonc 1968](../../../docs/design/system/visual/sources.md#zajonc-1968); [Keller 1993](../../../docs/design/system/visual/sources.md#keller-1993))
+- **The print holds its colours on canvas.** `natural-canvas` and `black-canvas` change the ground, and `colours-held` checks the printed colours. A colour or logo becomes a brand asset when people link it to the brand through the same use, often. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

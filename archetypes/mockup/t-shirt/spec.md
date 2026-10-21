@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The shirt shows the print as worn.** The `worn` setting with `people: person`, or `on-hanger` and `folded-flat`, shows the print in use. Pictures that help people imagine use shape how they judge a product (shown there for products, not shirts). ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **Imagined wearing can make it feel owned.** The print follows the knit and the folds of the cotton, so the owner can picture the shirt on. In their studies, imagining touching an object raised the feeling that it is one's own. ([Peck & Shu 2009](../../../docs/design/system/visual/sources.md#peck-shu-2009))
+- **The print reads against the shirt.** `white-cotton`, `black-cotton` and `grey-marl` change the ground behind the print, and `colours-held` checks the colours stay as designed. Easy-to-perceive things, with a clear figure and high contrast, are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+- **A worn logo is seen again and again.** A shirt is seen by the wearer and by others many times. People like things more the more often they see them, and `logo-intact` keeps the mark the same each time. ([Zajonc 1968](../../../docs/design/system/visual/sources.md#zajonc-1968))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

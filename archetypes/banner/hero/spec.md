@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one h1 leads; eyebrow, body and button follow in that order). Balance → Anchor (the block keeps inside the central 1280px a cover crop still shows).
 
+## Why it works
+
+- **The h1 leads the block.** The `headline` is 69px, against 24px for the `body` and about 21px for the `eyebrow` and `cta`. Attention goes first to the largest region. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **The eyebrow names the topic first.** The `eyebrow` sits above the `headline` in the accent text colour. A small signal that shows structure helps readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **Lines share one edge.** With `align` set to start, the `eyebrow`, `headline`, `body` and `cta` all start on one left edge. Things that line up along one path are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The block survives a cover crop.** The safe zone keeps text inside the central 1280px that a cover crop still shows. The 1280px figure is an estimate, to re-measure. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

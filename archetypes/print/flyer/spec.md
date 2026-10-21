@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (headline, then the date and place as one block on an accent rule, then the body). Grouping → Navigate (the facts sit together, apart from the description).
 
+## Why it works
+
+- **The headline is read first.** The `headline` is 10cqi (12.5cqi with `size: large`) and the `body` is 2.6cqi. Attention goes first to the region that differs most in size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Date and place read as one block.** The `date` and `place` share one size (5cqi), one accent rule and a tight gap. Things that sit close together are seen as one group, apart from the description. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The facts are easy to find.** The `date` and `place` are set in the display face, apart from the `body`. Headings and numbers that show a text's structure help readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **A short body.** The `body` is at most 30 words. In studies of learning, people understand more when extra words are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

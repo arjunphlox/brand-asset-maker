@@ -22,6 +22,13 @@ tier: sample
 
 A intro slide (opens the deck).
 
+## Why it works
+
+- **The first look sets the impression.** The title slide is the first thing the audience sees. In studies of web pages, people judged visual appeal in about 50 ms, and that first judgement matched the one they made with more time. ([Lindgaard et al. 2006](../../../docs/design/system/visual/sources.md#lindgaard-2006))
+- **One title dominates.** `title` is 119px, `subtitle` 42px and `kicker` a small label. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **The subtitle gives an overview.** `subtitle` says what the deck is for, in 16 words or fewer. A short overview given before the material helps people learn and keep it. ([Ausubel 1960](../../../docs/design/system/visual/sources.md#ausubel-1960))
+- **The block sits low and to the start.** The title block sits low on the start side, so the empty top of the slide frames it. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

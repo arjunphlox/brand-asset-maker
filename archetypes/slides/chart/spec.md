@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **Bars compare along one baseline.** Every bar starts at the same left edge, so the viewer compares bar ends on one common scale. People judge values most accurately that way. ([Cleveland & McGill 1984](../../../docs/design/system/visual/sources.md#cleveland-mcgill-1984))
+- **Bars start at zero.** The template draws each bar from zero on one linear scale (`scale: bars`) and refuses mixed units or negative values. A bar chart with a cut axis made readers judge differences as larger than they are, and marks should be in proportion to the numbers. ([Pandey et al. 2015](../../../docs/design/system/visual/sources.md#pandey-2015); [Tufte 2001](../../../docs/design/system/visual/sources.md#tufte-2001))
+- **Each number sits with its bar.** `label1` is left of its bar and `value1` is at the end of the bar. Related words and shapes placed together are easier to understand than ones placed apart. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+- **Two to six bars and no extra ink.** The chart has one baseline, the bars, labels and numbers, and no gridlines. Ink that shows no data is cut, and extra words and pictures leave people learning less. ([Tufte 2001](../../../docs/design/system/visual/sources.md#tufte-2001); [Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

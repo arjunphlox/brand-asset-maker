@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The card is shown ready to pick up.** The card lies on a `wooden-desk`, `stone-desk` or `linen` with real thickness and a soft contact shadow, and `people: hands` can add a pair of hands. A product shown ready for the viewer's hand helps them picture using it, and pictures that help people imagine use shape how they judge a product (shown there for products, not cards). ([Elder & Krishna 2012](../../../docs/design/system/visual/sources.md#elder-krishna-2012); [MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **Imagined touch can make the card feel owned.** The `uncoated-card` or `matte-card` stock and the close `top-down` view let the owner see the card as a thing to hold. In their studies, imagining touching an object raised the feeling that it is one's own. ([Peck & Shu 2009](../../../docs/design/system/visual/sources.md#peck-shu-2009))
+- **The same card shows up in every scene.** `artwork-unchanged`, `logo-intact` and `colours-held` make the card look the same on wood, stone or linen. Using brand elements the same way, often, is how people link them to the brand. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+- **A calm surface keeps the card as the subject.** The prompt asks for a plain surface and no other brand marks in view. A clear figure against its ground is easier to perceive, and easy-to-perceive things are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

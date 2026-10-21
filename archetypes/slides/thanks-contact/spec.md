@@ -22,6 +22,13 @@ tier: sample
 
 A outro slide (closes the deck).
 
+## Why it works
+
+- **The closing line is remembered.** `thanks` is the last slide and the largest text (134px). In free-recall tests with lists of items, people remember the first and last items best. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
+- **The contact is found at once.** `contact` is the one line in the accent text colour. One item that differs by a single feature such as colour is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
+- **Ways to reach you sit together.** `contact`, `url` and `handle` are stacked at one size (42px) and one gap. Things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Few lines are easy to copy down.** `contact` is at most six words and `url` and `handle` at most two. Material that makes people search for extra things leaves less room to take in the point. ([Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

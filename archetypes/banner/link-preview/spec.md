@@ -22,6 +22,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the title is the one dominant element). Balance → Anchor (the block sits on the centre line, so the card still reads when an app shows it small or crops it towards a square).
 
+## Why it works
+
+- **The title is seen first.** The `title` is 77px, far larger than the `kicker` and `cta`, so it is the one dominant element on the card. Attention goes first to the region that stands out most in size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **A short title survives scanning.** The `title` is limited to ten words. On screen, people scan more than they read, and look at the first words of a line. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
+- **Kicker, title and button read as one block.** The `kicker`, `title` and `cta` sit close together on one start edge, so they group into one block. Things that sit close together or line up are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The block stays readable when cropped.** The block sits on the centre line, so the card still reads when an app shows it small or crops it towards a square. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

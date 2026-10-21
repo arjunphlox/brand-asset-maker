@@ -25,6 +25,13 @@ tier: sample
 
 A carousel is an ordered set. This layout is **one slide**; the set is a generator with `frames` (contract 1.5): one frame per slide, in order, each a normal sample with its own checks. A frame may be another layout (a stat as the materials slide), as long as that layout serves the set's format.
 
+## Why it works
+
+- **The cover works on its own.** The `title` is the only display-size line (11cqi) and the spec says it must work alone, because most people see only the cover. In web page studies, people judged visual appeal in about 50 ms, so the first look has to be clear. ([Lindgaard et al. 2006](../../../docs/design/system/visual/sources.md#lindgaard-2006))
+- **Each slide makes one point.** A point slide has one `heading` (8cqi) and a `body` of at most 24 words, and a longer point is split into two slides. In learning studies, material given in parts at the viewer's own pace helps, and swiping is that pace. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+- **A fixed logo corner joins the slides.** The `logo` sits top left at the same size on every beat, and the whole set shares one scheme and format. Things that look alike are seen as one group, so the swipe reads as one set. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The first and last slides are remembered.** The cover opens the set and the close holds the only `cta`. People remember the first and last items of a sequence best, so these two slides do the most work. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
+
 ## Slots
 
 Each slot belongs to the beats named in its `when` (contract 1.5). A slot given on a beat that does not show it fails `budget` (rule `when`): the post would drop it.

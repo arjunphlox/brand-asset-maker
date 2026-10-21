@@ -22,6 +22,13 @@ tier: sample
 
 A intro slide (opens the deck).
 
+## Why it works
+
+- **A short list is easy to hold.** The agenda has three to six items (`item1` to `item6`), each at most six words. Working memory holds about three to five chunks, so the audience can keep the whole list in mind. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **It gives an overview first.** This slide opens the deck and names the parts before they come. A short overview given before the material helps people learn it and keep it. ([Ausubel 1960](../../../docs/design/system/visual/sources.md#ausubel-1960))
+- **Numbers show the order.** The template adds 01, 02, 03 beside the items. Numbers are a signal of structure, and signals help readers find their way and remember it. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **Equal rows read as one list.** Every item has the same size (54px) and gap, the number sits on the item's baseline, and a hairline closes each row. Items that look alike and sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

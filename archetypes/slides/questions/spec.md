@@ -22,6 +22,13 @@ tier: sample
 
 A outro slide (closes the deck).
 
+## Why it works
+
+- **An empty slide leaves room for the speaker.** The slide has one line (`line`, 154px) and an optional `contact`, with no summary. People learn more when extra words and pictures are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+- **The audience takes it in at once.** A single word at 154px is read in a glance. A slide that the audience can take in within a few seconds keeps them listening to the speaker. ([Duarte 2008](../../../docs/design/system/visual/sources.md#duarte-2008))
+- **The last slide is remembered.** This slide ends the deck. In free-recall tests with lists of items, people remember the first and last items best. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
+- **The contact stays with the line.** `contact` sits directly under `line` at 42px. Things that sit close together are seen as one group, so the audience knows where to ask later. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

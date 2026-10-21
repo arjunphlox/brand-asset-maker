@@ -20,6 +20,8 @@ tier: sample
 
 # Slides — selection
 
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+
 A slide is one frame of a deck, shown on a projector, in a video call or as a thumbnail in a shared file. A deck is many slides that must read as one thing: every slides layout shares the same chrome (the logo top left, the optional footer bottom left, the optional page number bottom right), set in `base.css`.
 
 ## Step 0: the format names the job

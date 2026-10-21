@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **One number fills the slide.** `number` is 307px, far larger than `label` at 54px. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **It is taken in at a glance.** There is one figure, one label and one source line. A slide that the audience can take in within a few seconds keeps them listening to the speaker. ([Duarte 2008](../../../docs/design/system/visual/sources.md#duarte-2008))
+- **The label stays with the number.** `label` and `source` sit directly under `number`. Things that sit close together are seen as one group, so the label reads as the number's meaning. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The accent colour makes it stand out.** With `accent: number`, the figure is the one element in the accent text colour. One item that differs by a single feature such as colour is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

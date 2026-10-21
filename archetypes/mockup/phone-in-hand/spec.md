@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The post is shown ready for the hand.** `people: hands` is the only option, so a hand always holds the phone. A product shown ready for the viewer's hand helps them picture using it, and in their studies it raised purchase intention. ([Elder & Krishna 2012](../../../docs/design/system/visual/sources.md#elder-krishna-2012))
+- **It shows the post as a viewer sees it.** The post sits under the glass at screen brightness, with no app interface or notifications around it, in a `cafe-table`, `street` or `sofa` setting. Pictures that help people imagine use shape how they judge a product (shown there for products, not posts). ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **The first look decides a lot.** A feed post is judged in a moment. People take the gist of an image from a very brief glance and judge the visual appeal of a page in about 50 ms, so the unchanged post must read at once. ([Potter et al. 2014](../../../docs/design/system/visual/sources.md#potter-2014); [Lindgaard et al. 2006](../../../docs/design/system/visual/sources.md#lindgaard-2006))
+- **The brand stays the same across formats.** The recipe takes a 1:1, 4:5 or 9:16 post, and `logo-intact` and `colours-held` check the same mark and colours show in each. That is the same use, often, that builds a link to the brand. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

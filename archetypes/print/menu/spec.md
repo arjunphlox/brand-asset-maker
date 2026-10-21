@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Alignment → Scan (every price on one edge, so the eye runs down a column). Repetition → Rhythm (rows of one height and one gap).
 
+## Why it works
+
+- **Prices line up on one edge.** Every `price` sits on the end edge of its row, so the prices form a column. Things that line up along one path are seen as one group, and the eye can run down them. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Rows of one height and one gap.** Each row has the same height, the same gap and, with `rule: hairline`, the same line under it. Things that look alike are seen as a set, so the rows read as one list. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Read in order, top to bottom.** The items run in one column, in the order they are given. In a study of restaurant menus, diners read in order from top to bottom and no single spot on the page drew them. ([Yang 2012](../../../docs/design/system/visual/sources.md#yang-2012))
+- **At most eight rows.** A menu has at most eight rows. The time to choose grows with the number of options, and in their studies fewer options led more people to act. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952); [Iyengar & Lepper 2000](../../../docs/design/system/visual/sources.md#iyengar-lepper-2000))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **Few short points are easy to follow.** The slide has three to five points of 12 words or fewer, and a sixth point means a new slide. People hold only a few items in mind at once, and extra material leaves less room to take in the point. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001); [Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
+- **One square marks each point.** Each point has an accent square on its baseline, at one size and one gap. Items that look alike are seen as one group, so the points read as one list. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Large type is read without effort.** Points are set at 40px, one line at 80 characters, and `min-text` stops anything under 24px. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+- **The start of each line is seen first.** Points are short and begin at the left edge, next to the square. On web pages, people scan the first words of lines down the left edge more than they read. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

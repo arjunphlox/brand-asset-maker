@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **A change of surface marks a new part.** The divider defaults to the ink surface, so the slide looks different from the content slides around it. People split an experience into parts at clear boundaries, and that helps them remember it. ([Zacks & Swallow 2007](../../../docs/design/system/visual/sources.md#zacks-swallow-2007))
+- **The number shows where we are.** `number` is 173px in the accent text colour, such as 01 or 2. Numbers are a signal of structure that helps readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **The title is the largest text.** `title` is 115px, the largest words on the slide, with `number` next and `kicker` small and muted. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **Large accent text passes contrast.** The accent number is above 36px, where `contrast` asks for 3:1 against the surface. Large text needs at least 3:1 and smaller text 4.5:1. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

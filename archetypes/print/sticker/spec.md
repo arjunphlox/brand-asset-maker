@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Restraint: one mark, at most one word. Balance → Anchor (one centred group, inside the circle when the sticker is cut round).
 
+## Why it works
+
+- **One mark and at most one word.** The sticker holds the `logo` and an optional `word` of two words or fewer. Things that are simple and easy to perceive are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+- **The same mark is seen again and again.** A sticker is seen many times, and the `logo` is drawn the same way each time. People like things more the more often they see them, and a mark becomes a brand asset through consistent repeated use. ([Zajonc 1968](../../../docs/design/system/visual/sources.md#zajonc-1968); [Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+- **The mark is the largest element.** The `logo` is 22cqi tall alone, or 14cqi with a `word` at 11cqi. In print ads, attention to the brand element helps people remember the brand. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **One group, centred.** The group is centred, and with `shape: circle` it narrows to stay inside the die cut. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

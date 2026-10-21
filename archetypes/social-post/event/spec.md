@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (three levels by size: the name in the display face, the date one step down in the display face, the place in the body face). Grouping → Navigate (name, date and place are one block; the CTA sits apart from it).
 
+## Why it works
+
+- **Name, date and place read in order.** The `name` is 11cqi, the `date` 7cqi and the `place` 4.6cqi. In print ads, the attention a text element gets grows with its surface size, so the largest text is read first. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **The details form one block.** `name`, `date` and `place` sit close together, and the `cta` sits apart from them. Things that sit close are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **A date and place make acting easy.** `date` and `place` are required slots. People who know when and where they will act are much more likely to act. ([Gollwitzer 1999](../../../docs/design/system/visual/sources.md#gollwitzer-1999))
+- **One accent marks one thing.** The `accent` variation colours the `date`, the `cta` or nothing, never two. One item that differs by a single feature, such as colour, is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

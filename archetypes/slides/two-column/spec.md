@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **Equal columns line up part by part.** Both columns have a label, a hairline and a body in the same places. When two things share one structure, people line them up and notice differences in matching places. ([Gentner & Markman 1997](../../../docs/design/system/visual/sources.md#gentner-markman-1997))
+- **Labels help the viewer find their way.** `leftLabel` and `rightLabel` open each column. Headings and similar signals help readers find their way and remember the structure. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **The left edge of each column is scanned.** Each column starts with a label at the left edge. On web pages, people scan more than they read, looking at the start of lines and the first words. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
+- **Small labels still pass contrast.** `leftLabel` is small text in the accent colour. Below 36px, `contrast` asks for 4.5:1 against the surface. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

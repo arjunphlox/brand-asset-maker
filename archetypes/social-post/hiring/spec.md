@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the role is the only element at display size). The kicker takes the accent, so the reader knows it is a job before they read the role.
 
+## Why it works
+
+- **The role is seen first.** The `role` is the only display-size element (12cqi). Attention goes first to the region that differs most from its surroundings in size, contrast or colour. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **The kicker marks it as a job.** The `kicker` ("We're hiring") is in the accent above the `role`. One item that differs by colour is found at once, so the reader sees it is a job before reading the title. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
+- **Only what the reader needs is shown.** `details` is at most 8 words (where and what kind), and pay, hours and perks go in the post copy. In learning studies, people understand more when extra words are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+- **A date can end the CTA.** The `cta` starts with a verb and may carry a date, as in "Apply by Friday". In a study of coupons, use rose as the expiry date came near, so a stated end date prompts action. ([Inman & McAlister 1994](../../../docs/design/system/visual/sources.md#inman-mcalister-1994))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

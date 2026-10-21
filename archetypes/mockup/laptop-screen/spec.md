@@ -23,6 +23,13 @@ A prompt layout (contract 1.5, `"kind": "prompt"`): no template, no frame. The o
 
 **Principle carried:** the artwork is final. The scene changes; the design, the words, the logo and the colours do not.
 
+## Why it works
+
+- **The artwork is shown as it is met.** The banner, email header or slide sits under the glass at screen brightness, on a `desk`, `cafe-table` or `meeting-room` table. Pictures that help people imagine use shape how they judge a product (shown there for products, not screens). ([MacInnis & Price 1987](../../../docs/design/system/visual/sources.md#macinnis-price-1987))
+- **Nothing else competes for the eye.** The prompt asks for no browser bar, app interface or other windows, and `no-other-brands` checks for stray marks. Material that makes people search through extra items leaves less room to take in the point. ([Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
+- **The words stay readable at a glance.** `text-intact` checks that nothing is changed or added, so the headline sits as designed. Reading slows sharply only below a critical print size, so the words stay clear when the screen is shown at `straight-on` or `three-quarter`. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+- **The mock-up holds the brand steady.** `artwork-unchanged` and `colours-held` make the banner look the same as the file the owner approved. Using a colour or logo the same way, often, builds the link to the brand. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+
 ## Slots
 
 | Slot | Required | Takes | Notes |

@@ -28,6 +28,8 @@ tier: sample
 
 # Banner — selection
 
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+
 A banner is an image that sits inside a page: a link preview, a profile cover, a display ad, the hero of the brand's own site. Its size is set by the platform, the ad network or the site. Each banner layout serves one format; `custom` serves any size the generator names.
 
 ## Step 0: the format names the job

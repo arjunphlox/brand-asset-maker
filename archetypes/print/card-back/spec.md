@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Grouping → Navigate (who, then how to reach them, as two groups). Alignment → Scan (one edge for every line).
 
+## Why it works
+
+- **Two groups, who then how.** The `name` and `role` sit together, and the contact lines sit in a second block 4.4cqi lower. Things that sit close together are seen as one group, so the card reads as the person first and the ways to reach them second. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Every line starts on one edge.** The `name`, `role` and contact lines share one start edge (or one centre line with `align: center`). Lines that follow one path are seen as one group, and the eye runs down the card without stopping. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The name is seen first.** The `name` is 6.4cqi and every other line is 3.6cqi. Attention goes first to the region that differs most in size, so the person is found before the details. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Few lines to hold in mind.** A card has at most four contact lines. People hold about three to five chunks at once, so a short list is easier to remember and use than a long one. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

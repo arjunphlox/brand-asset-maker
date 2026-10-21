@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **Left to right shows the order.** Steps sit in a row and connectors join each node to the next. Things that line up along one path are seen as one group, so the steps read as one sequence. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Few steps are easy to remember.** The slide has three to five steps, each named in four words or fewer. People hold only a few items in mind at once. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **Numbered nodes mark the order.** The template numbers each node, so the viewer does not count along the row. Numbers are a signal of structure, and signals help readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **Detail sits under its step.** `detail1` to `detail5` are small (31px) and placed directly under their step. Related words placed together are easier to understand than ones placed apart. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

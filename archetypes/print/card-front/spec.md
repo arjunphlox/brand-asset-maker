@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Balance → Anchor (one centred group, or one group on the foot of the start side). Restraint: the front carries the brand, the back carries the person.
 
+## Why it works
+
+- **One group and nothing else.** The front holds the `logo` and an optional `tagline`, centred as one group. Things that are easy to perceive, and simple, are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
+- **The mark is the largest thing.** The `logo` is 9cqi tall and the `tagline` is 3.6cqi. In print ads, the attention a brand element gets helps people remember the brand, and attention grows with surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **The same mark, the same way.** The front uses the ink scheme and the same mark on every card. A logo or colour becomes a brand asset when people link it to the brand through repeated, consistent use. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+- **The front shows the brand only.** Contact details go on the back (`print/card-back`), so the front has no competing text. (HueGrid practice, not a research finding)
+
 ## Slots
 
 | Slot | Required | Budget | Role |

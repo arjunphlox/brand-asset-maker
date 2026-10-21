@@ -22,6 +22,12 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **One sentence states the point.** `statement` is one claim of up to 14 words at 104px. A slide headed by one full-sentence claim states its point more clearly than a topic phrase over bullets (their studies also used visual evidence, which this layout leaves to the speaker). ([Alley & Neeley 2005](../../../docs/design/system/visual/sources.md#alley-neeley-2005))
+- **Nothing competes with it.** The slide has only `statement` and an optional `kicker`. Attention goes to the region that differs most from its surroundings, and two equally strong regions compete for it. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Extra words are left out.** With one element and open space around it, the audience has nothing else to read. People learn more when extra words and pictures are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

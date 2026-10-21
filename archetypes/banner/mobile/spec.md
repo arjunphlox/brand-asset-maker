@@ -23,6 +23,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (one short headline). Economy → one row of three things, no supporting line.
 
+## Why it works
+
+- **Three things fit in memory.** The row has a `logo`, a `headline` and a `cta`, and no supporting line. People hold only about three to five chunks in mind at once. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **The mark has no wordmark.** The `logo` is the mark only, because the row has no room for a wordmark. People learn more when extra words and pictures are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
+- **The headline is the largest text.** The `headline` is 17.3px and the `cta` is 12.5px. Attention goes first to the region that differs most in size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **One short button, one choice.** The `cta` is up to two words and starts with a verb. The time to choose grows with the number of options, and here there is one. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

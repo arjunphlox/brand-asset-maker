@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Repetition → Rhythm (three points, one shape, one gap). Hierarchy → Prioritise (headline, points, call to action, top to bottom: the top third shows in a rack).
 
+## Why it works
+
+- **The headline is the largest text.** The `headline` is 11cqi and each point is 4cqi. Attention goes first to the region that differs most in size, so the top of the card is read first in a rack. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **Three points look like a set.** `point1` to `point3` have one size, one gap and one marker. Things that look alike are seen as a group, so the viewer sees a list of three. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Three is within what people hold.** The card has three points. The working limit is nearer three to five chunks than seven, so all three can be held in mind at once. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
+- **First and last are remembered.** The `headline` comes first and the `cta` comes last. People remember the first and last items of a sequence best (shown with lists of items). ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

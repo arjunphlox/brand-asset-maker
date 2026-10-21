@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Rhythm → Flow (three items at one size with one gap read as a list at a glance). Grouping → Navigate (each number sits on the baseline of its item, so the eye reads the pair as one row).
 
+## Why it works
+
+- **Three items fit in mind.** The layout holds exactly three items; fewer go to `headline` and more are cut. The working limit is about three to five chunks, and grouping items into chunks raises how much people hold. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001); [Miller 1956](../../../docs/design/system/visual/sources.md#miller-1956))
+- **Equal rows read as one list.** `item1` to `item3` share one size (4.8cqi) and one gap. Things that look alike are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Numbers show the structure.** The 1, 2 and 3 sit on the baseline of each item, so number and item read as one row. Numbers and other signals of structure help readers find their way and remember the structure. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989); [Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **The title tells what the list is.** The `title` (8cqi) is larger than the items and is read first. In learning studies, a short overview given before the material helps people learn and keep it. ([Ausubel 1960](../../../docs/design/system/visual/sources.md#ausubel-1960))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

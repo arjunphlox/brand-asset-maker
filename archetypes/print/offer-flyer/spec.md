@@ -21,6 +21,13 @@ tier: sample
 
 **Principle carried:** Hierarchy → Prioritise (the detail is the dominant element; the offer names it; the terms are a step far below). Contrast → Emphasis (one element in the accent).
 
+## Why it works
+
+- **The deal is seen first.** The `detail` is 20cqi and the `offer` is 6cqi. Attention goes first to the region that differs most in size and colour, so the number is found before anything else. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
+- **One accent, found at once.** Only the `detail` takes the accent text colour. One item that differs by a single feature, such as colour, is found at once, and one item set apart from similar items is remembered better. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980); [von Restorff 1933](../../../docs/design/system/visual/sources.md#von-restorff-1933))
+- **Date and place sit together.** The `date` and `place` sit side by side in one row with one size. Things close together are seen as one group, so the viewer reads when and where as one fact. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **A stated end date can prompt action.** When the `date` is the day the offer ends, it gives a reason to act now. In coupon studies, use rose as the expiry date came near. ([Inman & McAlister 1994](../../../docs/design/system/visual/sources.md#inman-mcalister-1994))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

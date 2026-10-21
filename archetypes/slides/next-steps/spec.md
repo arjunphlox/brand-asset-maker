@@ -22,6 +22,13 @@ tier: sample
 
 A outro slide (closes the deck).
 
+## Why it works
+
+- **One solid button is found first.** `cta` is the only filled element on the slide, in the accent surface. One item that differs by a single feature such as colour is found at once, whatever else is there. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
+- **One call to action is easier to act on.** The layout allows one `cta` and at most three actions. The time to choose grows with the number of options, and in their studies fewer options led more people to act. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952); [Iyengar & Lepper 2000](../../../docs/design/system/visual/sources.md#iyengar-lepper-2000))
+- **Numbers show the order of the actions.** The template numbers `action1` to `action3` at one size (46px). Numbers are a signal of structure, and signals help readers find their way and remember it. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
+- **The close is remembered.** This slide ends the deck. In free-recall tests with lists of items, people remember the first and last items best. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

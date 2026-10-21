@@ -22,6 +22,13 @@ tier: sample
 
 A content slide (the body of the deck).
 
+## Why it works
+
+- **The words are read first.** `quote` is 61px and `attribution` is 38px, so the words come before the name. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **A named source adds trust.** `attribution` is required, and `role` says who the person is. The same message changes more minds when it comes from a source people trust. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
+- **Name and role read as a pair.** `attribution` and `role` sit together under the quote, close and in a smaller size. Things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **Quote lines stay short.** The quote is capped at 36 words and five lines at 61px. Line length and line spacing change how fast and how well text is read on screen. ([Dyson 2004](../../../docs/design/system/visual/sources.md#dyson-2004))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

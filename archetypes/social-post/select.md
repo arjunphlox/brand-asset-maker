@@ -29,6 +29,8 @@ tier: sample
 
 # Social post — selection
 
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+
 ## Step 0: the format names the job
 
 Pick the format first. A format is a job, not a size: each one says what the post is for and which archetypes may do it.

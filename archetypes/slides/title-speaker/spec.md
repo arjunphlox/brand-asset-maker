@@ -22,6 +22,13 @@ tier: sample
 
 A intro slide (opens the deck).
 
+## Why it works
+
+- **The title comes before the person.** `title` is 108px at the top and `speaker` is 58px at the foot, so the topic is read first and the person second. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
+- **Name and role read as a unit.** `speaker` and `role` sit together behind one accent bar, at a size smaller than the title. Things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
+- **A named role adds trust.** `role` is required, so the audience learns who is speaking and why. The same message changes more minds when it comes from a source people trust. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
+- **The logo is in its usual place.** The logo sits top left, where it sits on every slide of the deck. A logo becomes a brand asset when people link it to the brand, which is built by using it the same way, often. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
+
 ## Slots
 
 | Slot | Required | Budget | Role |

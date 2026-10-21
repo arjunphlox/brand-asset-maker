@@ -18,7 +18,7 @@ This whole skill is the path without the engine. It needs only files you can rea
 
 Write down five things before you write any HTML:
 
-- **Layout:** one archetype folder, for example `archetypes/social-post/stat/`. Pick it with the `select.md` of its use-case: `archetypes/social-post/select.md` for posts, `archetypes/banner/select.md` for a link preview or a profile cover, `archetypes/email/select.md` for a newsletter header.
+- **Layout:** one archetype folder, for example `archetypes/social-post/stat/`. If the owner has not chosen one, suggest it first with `skills/poligraf--suggest.md` (the rules in `select.md`, then the layouts' reasons). Otherwise pick it with the `select.md` of its use-case: `archetypes/social-post/select.md` for posts, `archetypes/banner/select.md` for a link preview or a profile cover, `archetypes/email/select.md` for a newsletter header.
 - **Format (ratio):** one of the ratios the layout serves. If its `inputs.schema.json` has a `ratios` list, pick from that list; otherwise any ratio of its use-case. The sizes:
 
   | Use-case | Ratio | Frame (px) | What it is |

@@ -9,7 +9,7 @@ tier: sample
 
 Eight requests for Kadri Coffee, the practice brand. Each one has a prompt you paste into your own agent and a description of a good result. Some fit the layouts in Brand Asset Maker (BAM). Some do not, and then the good result is a gap note (`gap-note.md`), not a post.
 
-In session one, Arjun shows scenarios 1, 2 and 3. Scenarios 4 to 8 are for the week between the sessions. You can pick 2, 3 or 5 of them, or write your own. Run them on your own brand as well as on Kadri: your brand is where the gaps that matter to you show up.
+In session one, Arjun shows scenarios 1, 2 and 3, and the gap note from scenario 7. Scenarios 4 to 8 are for the week between the sessions. You can pick 2, 3 or 5 of them, or write your own. Run them on your own brand as well as on Kadri: your brand is where the gaps that matter to you show up.
 
 ## Before you start
 
@@ -42,10 +42,10 @@ The **event** layout at **4:5** is a good result too: the name, the date and the
 ### 3. A5 printed flyer for the pop-up
 
 ```
-Make an A5 printed flyer for the Kadri pop-up on 8 November at Mill Lane Market, to hand out at the market. Follow AGENTS.md.
+Make an A5 printed flyer for the Kadri pop-up on 8 November at Mill Lane Market, to hand out at the market. Follow AGENTS.md, pick the layout with archetypes/print/select.md, and make it with skills/poligraf--make-it.md.
 ```
 
-**A good result:** no post. BAM has only social-post layouts, sized for screens in pixels. A printed A5 sheet needs a page size, a bleed and a print margin that no layout has. The agent says so, does not stretch a 4:5 post to A5, and writes a gap note with `workshop/gap-note.md`. The note ends in ask **(c), a new layout to define**, and lists what its spec needs: the slots and their budgets (name, date, place, a line, the logo), the hierarchy, the format (A5 portrait, 148×210 mm, with bleed), and the checks (contrast, minimum text size at print size, safe zone as the print margin).
+**A good result:** a flyer. The agent picks the **flyer** layout at **A5-portrait** (`archetypes/print/select.md`: an event with a name, a date and a place, handed out). It does not stretch a 4:5 post to A5: the A5 frame is the trim size at 150 dpi, 874×1240 px (148×210 mm). It takes the name, the date and the place from the message file and copies them exactly: "Kadri Pop-up" as the kicker, "8 November" and "Mill Lane Market" as the details. It counts the budgets: a headline of 8 words or fewer (for example "Good coffee. Your way."), a body of 30 words or fewer (the tasting notes from the bags), and a `cta` of 3 words or fewer that starts with a verb ("Come say hello"). Every line of text is 17px or more, which is 8 pt on paper, and sits 30px (5 mm) inside the trim. The report names each check and says measured or "not measured". It also says what is still open: bleed is not drawn, there is no PDF yet, and the printer confirms the bleed and colour profile, so the owner checks a printed proof.
 
 ## For the week
 
@@ -73,13 +73,13 @@ Make three posts for the Kadri pop-up: an Instagram feed post, a LinkedIn post a
 
 **A good result:** three posts from one message: 1:1, 4:5 and 9:16, each made from its template for its own format. Every mention of the date reads "8 November" and every mention of the place reads "Mill Lane Market", copied from the message file. The report has a small table: each post, each fact as it appears, "exact" or "differs". A "differs" is fixed in the post, never by changing the message file.
 
-### 7. Announcement over a photo of the bag
+### 7. A post over a photo of the pop-up stall (the gap note)
 
 ```
-Make an Instagram post announcing the new Velvet Hour bag, with the headline over a photo of the bag. Follow AGENTS.md.
+Make an Instagram post with a photo of the Kadri pop-up stall and one line over it. Follow AGENTS.md.
 ```
 
-**A good result:** no post. The photograph layout (`announcement`) is not in BAM, and no BAM layout places text on a photograph: that needs a scrim and a contrast check on the pixels under each line. The agent says so and writes a gap note. The note ends in **one** ask. **(a) More context** is right when the first thing missing is the photograph itself (which file, and where the bag sits in it): Kadri's example ships no photograph. **(c) A new layout** is right when the photograph exists: the note then lists the image slot, its focal point, the scrim, the text slots with budgets, and the image-contrast check.
+**A good result:** no post. The photograph layout (`announcement`) is not in BAM, and no BAM layout places text on a photograph: that needs a scrim and a contrast check on the pixels under each line. The agent says so and writes a gap note. The note ends in **one** ask. **(a) More context** is right when the first thing missing is the photograph itself (which file, and where the stall sits in it): Kadri's example ships no photograph. **(c) A new layout** is right when the photograph exists, as in the session-one demo: the note then lists the image slot, its focal point, the scrim, the line and the logo with their budgets, the hierarchy, the feed formats (1:1 and 4:5), and a contrast check measured on the photograph. It does not put the headline layout over the photo by hand.
 
 ### 8. A price card for the counter
 
@@ -87,7 +87,7 @@ Make an Instagram post announcing the new Velvet Hour bag, with the headline ove
 Make a price card for the Kadri counter that shows Velvet Hour and Sunny Side with their prices. Follow AGENTS.md.
 ```
 
-**A good result:** no post, and no invented prices. A counter card is print, and it compares two items side by side, which no layout does (every layout has one thing read first). The agent writes a gap note ending in ask **(c), a new layout to define**: the slots (two names, two prices, two tasting notes, the logo) with budgets, the hierarchy, the format (a card size in mm), and the checks. It also lists the prices as missing facts for the owner, without making them up.
+**A good result:** a menu, and no invented prices. A counter card that lists items with prices is the **menu** layout at **A4-portrait** (`archetypes/print/select.md`, step 3). The agent writes two rows, one per coffee, with the tasting notes printed on each bag. Kadri has set no prices, so it asks the owner for them, or leaves each price as a visible blank for the owner to fill, and says so in the report. It never makes a price up.
 
 ## More layouts to try
 

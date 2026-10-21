@@ -7,7 +7,7 @@ tier: sample
 
 # Workshop
 
-This folder is the workshop half of Brand Asset Maker (BAM), the part of Poligraf that participants keep. It holds eight practice scenarios (`scenarios.md`), the brand-folder form (`brand-folder.md`), the gap note template (`gap-note.md`), the ranked next-assets prompt (`next-assets.md`), the cold handoff prompt (`cold-handoff.md`), a free font shortlist (`fonts-shortlist.md`) and the month-later self-audit (`self-audit.md`). The other half of BAM is the spec, the 57 sample layouts in six forms (social post with carousel, slides, web banner, print, email header, and the image mock-up recipes), `base.css`, `select.md` and the skills.
+This folder is the workshop half of Brand Asset Maker (BAM), the part of Poligraf that participants keep. It holds eight practice scenarios (`scenarios.md`), the brand-folder form (`brand-folder.md`), the gap note template (`gap-note.md`), the ranked next-assets prompt (`next-assets.md`), the cold handoff prompt (`cold-handoff.md`), a free font shortlist (`fonts-shortlist.md`) and the month-later self-audit (`self-audit.md`). The other half of BAM is the spec, the 57 sample layouts in six forms (social post with carousel, slides, web banner, email header, the image mock-up recipes, and print), `base.css`, `select.md` and the skills.
 
 You fork BAM and use it with your own agent (Claude, Cursor, Codex or another) on your own brand. You never need HueGrid to make a post. Your agent writes your brand folder, makes your posts and checks them. When a request fits no layout, it writes a gap note.
 
@@ -31,7 +31,7 @@ People who own a brand's output without being designers: marketing professionals
 
 Two sessions of two hours, online, 8 to 10pm Singapore time (SGT).
 
-- **Session one, Thursday 22 October 2026.** Arjun shows Kadri Coffee as his practice brand in three scenarios (`scenarios.md`, 1 to 3): a post that fits, a campaign post with facts written once, and a request that fits no layout and ends in a gap note. He also shows the engine, HueGrid's private version of Poligraf, briefly. You do not need it: everything you do in the week runs on BAM and your own agent.
+- **Session one, Thursday 22 October 2026.** Arjun shows Kadri Coffee as his practice brand in four scenarios (`scenarios.md`, 1, 2, 3 and 7): a post that fits, a campaign post with facts written once, the same facts on a printed A5 flyer, and a post over a photograph, which fits no layout and ends in a gap note. He also shows the engine, HueGrid's private version of Poligraf, briefly. You do not need it: everything you do in the week runs on BAM and your own agent.
 - **The week between.** Try scenarios 4 to 8 on Kadri, or pick 2, 3 or 5 of them, or write your own. Then do the same on your own brand. Keep the posts that work and the gap notes for the ones that do not. Then run `next-assets.md` to rank the next assets your brand should make, by how often you need them.
 - **Session two, Thursday 29 October 2026.** Your journeys: what you made, where it broke, what you tried. Pitfalls and tips from the group. How to extend BAM into your own harness: new layouts from your gap notes, your own skills. Resources to help you think like a designer.
 

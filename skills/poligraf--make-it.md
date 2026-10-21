@@ -29,8 +29,10 @@ Write down five things before you write any HTML:
   | banner | `1.91:1` | 1200×630 | link preview (share card) |
   | banner | `4:1` | 1584×396 | profile cover |
   | email | `3:1` | 1200×400 (shown at 600×200) | newsletter header |
+  | print | `A5-portrait` | 874×1240 (148×210 mm at 150 dpi) | flyer to hand out |
+  | print | `A4-portrait` | 1240×1754 (210×297 mm at 150 dpi) | flyer, poster or menu for a wall |
 
-  The frame sizes and safe zones are in `poligraf.config.json` → `useCases`, if your copy has it, and in `archetypes/_shared/base.css`.
+  The other print sizes are in `archetypes/print/select.md`; a print frame is its trim size, so text stays 17px (8 pt) or larger and 30px (5 mm) inside the edge. The frame sizes and safe zones are in `poligraf.config.json` → `useCases`, if your copy has it, and in `archetypes/_shared/base.css`.
 - **Scheme:** `paper`, `ink` or `accent`. It must be one of the values in the schema's `variation.scheme.values`.
 - **Variation:** every other key in the schema's `variation` (for the stat: `accent`, `position`). Use the `default` for any key you did not choose. A value outside `values` is not allowed.
 - **Inputs:** the text for each slot. Count words and characters against `inputs.schema.json` now, before you write HTML. Over budget means you rewrite the words or pick another layout. Never shrink the type.

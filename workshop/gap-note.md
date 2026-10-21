@@ -15,7 +15,7 @@ A gap note ends in **one** ask, never two. Pick the one that would unblock the p
 
 - **(a) More context from the owner.** A fact, a file or a decision is missing. Example: "Which photograph, and where is the subject?"
 - **(b) A new value in the brand file.** The layout exists, but the brand has no value for something it needs. Example: a second accent colour, a reversed logo.
-- **(c) A new layout to define.** No layout in BAM does this job. Example: a printed flyer, a price card, a carousel.
+- **(c) A new layout to define.** No layout in BAM does this job. Example: a post over a photograph, a folded brochure, a label with legal text.
 
 ## The template
 

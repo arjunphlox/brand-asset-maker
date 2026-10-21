@@ -1,0 +1,20 @@
+<style>
+/* Business card front, 85x55mm at 150 dpi (502x325, 1cqi = 5.02px). The logo group in the centre, or at the foot of the
+   start side. The tagline is 3.6cqi: 18px, above the 17px (8pt) floor. */
+.pg-frame[data-archetype="print/card-front"] .pg-safe { justify-content: center; align-items: center; }
+.pg-frame[data-archetype="print/card-front"][data-align="start"] .pg-safe { justify-content: flex-end; align-items: flex-start; }
+.pg-frame[data-archetype="print/card-front"] .pg-group { display: flex; flex-direction: column; align-items: center; gap: 3.6cqi; max-width: 100%; min-width: 0; text-align: center; }
+.pg-frame[data-archetype="print/card-front"][data-align="start"] .pg-group { align-items: flex-start; text-align: start; }
+.pg-frame[data-archetype="print/card-front"] .pg-logo { gap: 2.4cqi; }
+.pg-frame[data-archetype="print/card-front"] .pg-logo img[data-slot="logo"] { height: 9cqi; }
+.pg-frame[data-archetype="print/card-front"] .pg-logo [data-slot="wordmark"] { font-size: 7cqi; }
+.pg-frame[data-archetype="print/card-front"] [data-slot="tagline"] { font-size: 3.6cqi; max-width: 100%; }
+</style>
+<div class="pg-frame" data-archetype="print/card-front">
+  <div class="pg-safe">
+    <div class="pg-group">
+      <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+      <div class="pg-label" data-slot="tagline" data-slot-optional></div>
+    </div>
+  </div>
+</div>

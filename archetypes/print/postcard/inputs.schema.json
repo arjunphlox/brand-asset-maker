@@ -1,0 +1,86 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/postcard",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "A6-landscape"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "headline": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 50,
+      "role": "h1"
+    },
+    "body": {
+      "required": false,
+      "maxWords": 24,
+      "maxChars": 150,
+      "role": "body"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "body",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": null,
+      "why": "a postcard headline is 8 words or fewer; rewrite it"
+    },
+    "body.maxWords": {
+      "to": null,
+      "why": "the body is 24 words or fewer; the address side carries a written note, not this one"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

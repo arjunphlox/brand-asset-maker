@@ -1,0 +1,205 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/menu",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "A4-portrait"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "title": {
+      "required": true,
+      "maxWords": 5,
+      "maxChars": 32,
+      "role": "h1"
+    },
+    "item1": {
+      "required": true,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price1": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item2": {
+      "required": true,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price2": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item3": {
+      "required": false,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price3": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item4": {
+      "required": false,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price4": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item5": {
+      "required": false,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price5": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item6": {
+      "required": false,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price6": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item7": {
+      "required": false,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price7": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "item8": {
+      "required": false,
+      "maxWords": 7,
+      "maxChars": 44,
+      "role": "body"
+    },
+    "price8": {
+      "required": false,
+      "maxChars": 8,
+      "role": "data-snippet"
+    },
+    "note": {
+      "required": false,
+      "maxWords": 20,
+      "maxChars": 120,
+      "role": "body"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "title",
+    "item1",
+    "price1",
+    "item2",
+    "price2",
+    "item3",
+    "price3",
+    "item4",
+    "price4",
+    "item5",
+    "price5",
+    "item6",
+    "price6",
+    "item7",
+    "price7",
+    "item8",
+    "price8",
+    "note",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "rule": {
+      "values": [
+        "hairline",
+        "none"
+      ],
+      "default": "hairline"
+    },
+    "price": {
+      "values": [
+        "end",
+        "under"
+      ],
+      "default": "end"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "title.maxWords": {
+      "to": null,
+      "why": "the menu's title is 5 words or fewer (\"Today at the stall\"); rewrite it"
+    },
+    "item1.maxWords": {
+      "to": null,
+      "why": "an item is 7 words or fewer; the description goes in the note or on the counter"
+    },
+    "price1.maxChars": {
+      "to": null,
+      "why": "a price is 8 characters or fewer (\"₹2,699\", \"Free\"); rewrite it"
+    },
+    "note.maxWords": {
+      "to": null,
+      "why": "the note is one line of 20 words or fewer; cut it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

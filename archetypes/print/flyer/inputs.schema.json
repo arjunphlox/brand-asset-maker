@@ -1,0 +1,147 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/flyer",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "A4-portrait",
+    "A5-portrait"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "headline": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 64,
+      "role": "h1"
+    },
+    "date": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 24,
+      "role": "h3"
+    },
+    "place": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h3"
+    },
+    "body": {
+      "required": true,
+      "maxWords": 30,
+      "maxChars": 200,
+      "role": "body"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "date",
+    "place",
+    "body",
+    "cta",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "size": {
+      "values": [
+        "regular",
+        "large"
+      ],
+      "default": "regular"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": null,
+      "why": "a flyer headline is 8 words or fewer; rewrite it, the body carries the rest"
+    },
+    "headline.maxChars": {
+      "to": null,
+      "why": "a flyer headline is 64 characters or fewer; rewrite it"
+    },
+    "body.maxWords": {
+      "to": null,
+      "why": "the body is 30 words or fewer: cut it, or move the rest to the event's other channels"
+    },
+    "body.maxChars": {
+      "to": null,
+      "why": "the body is 200 characters or fewer: cut it"
+    },
+    "date.required": {
+      "to": "print/poster",
+      "why": "a flyer without a date is not an event flyer yet; ask for the date, or make a poster"
+    },
+    "date.maxWords": {
+      "to": null,
+      "why": "the date is the day (and time), 4 words or fewer; reference the message fact"
+    },
+    "place.maxWords": {
+      "to": null,
+      "why": "the place is where to go, 6 words or fewer; the full address goes on the event page"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "kicker.maxWords": {
+      "to": null,
+      "why": "the kicker names the event or series, 4 words or fewer; rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

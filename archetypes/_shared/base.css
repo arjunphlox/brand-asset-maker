@@ -22,6 +22,28 @@ html, body { margin: 0; background: transparent; }
 .pg-frame[data-ratio="1.91:1"] { width: 1200px; height: 630px; } /* banner: share card, link preview */
 .pg-frame[data-ratio="4:1"] { width: 1584px; height: 396px; }    /* banner: profile cover */
 .pg-frame[data-ratio="3:1"] { width: 1200px; height: 400px; }    /* email: newsletter header, shown at 600x200 */
+/* Web banners (contract 1.5, additive): display ad units and the site hero, shown at 1x. Keys name the size. */
+.pg-frame[data-ratio="728x90"] { width: 728px; height: 90px; }     /* leaderboard */
+.pg-frame[data-ratio="300x250"] { width: 300px; height: 250px; }   /* medium rectangle */
+.pg-frame[data-ratio="300x600"] { width: 300px; height: 600px; }   /* half page */
+.pg-frame[data-ratio="160x600"] { width: 160px; height: 600px; }   /* skyscraper */
+.pg-frame[data-ratio="970x250"] { width: 970px; height: 250px; }   /* billboard */
+.pg-frame[data-ratio="320x100"] { width: 320px; height: 100px; }   /* large mobile banner */
+.pg-frame[data-ratio="1920x600"] { width: 1920px; height: 600px; } /* website hero band */
+/* Custom size (1.5): the renderer stamps the width, height and --pg-safe-* insets inline from the generator's
+   `size`. The frame is a size container, so a template can query its aspect ratio (@container frame (...)) and
+   size type by its short side (cqmin) as well as its width (cqi). */
+.pg-frame[data-ratio="custom"] { container-type: size; }
+/* Print frames (five forms, additive): the trim size at 150 dpi (px = mm x 150 / 25.4), so 8pt is 17px on every one.
+   Proofs render at render.scale 2 = 300 dpi. Bleed is not drawn: the frame is the trim line. */
+.pg-frame[data-ratio="A4-portrait"] { width: 1240px; height: 1754px; }  /* print: A4 210x297mm (A5 and A3 share the proportion) */
+.pg-frame[data-ratio="A5-portrait"] { width: 874px; height: 1240px; }   /* print: A5 148x210mm, the hand-out flyer */
+.pg-frame[data-ratio="A6-landscape"] { width: 874px; height: 620px; }   /* print: A6 148x105mm, the postcard */
+.pg-frame[data-ratio="A6-portrait"] { width: 620px; height: 874px; }    /* print: A6 105x148mm, a table-tent panel */
+.pg-frame[data-ratio="DL"] { width: 585px; height: 1240px; }            /* print: DL 99x210mm, the rack card */
+.pg-frame[data-ratio="card"] { width: 502px; height: 325px; }           /* print: business card 85x55mm */
+.pg-frame[data-ratio="sticker"] { width: 450px; height: 450px; }        /* print: sticker 3x3in (76.2mm) */
+.pg-frame[data-ratio="16:9"] { width: 1920px; height: 1080px; }  /* slides: one slide of a deck (contract 1.5) */
 
 /* Schemes: on the frame itself or on an ancestor (html). Wrapped in :where() so they carry zero
    specificity: a brand override under .pg-frame[data-scheme="…"] in tokens.css always wins, whatever the order. */
@@ -66,6 +88,42 @@ html, body { margin: 0; background: transparent; }
 }
 .pg-frame[data-ratio="3:1"] { /* 1200 wide: 56 = 4.6667cqi, 72 = 6cqi */
   --pg-safe-top: 4.6667cqi; --pg-safe-right: 6cqi; --pg-safe-bottom: 4.6667cqi; --pg-safe-left: 6cqi;
+}
+/* Web banners (1.5): config px over the frame width. Ad-unit margins are judgement, to re-measure (safeZoneNotes). */
+.pg-frame[data-ratio="728x90"] { /* 8 = 1.0989cqi, 12 = 1.6484cqi */
+  --pg-safe-top: 1.0989cqi; --pg-safe-right: 1.6484cqi; --pg-safe-bottom: 1.0989cqi; --pg-safe-left: 1.6484cqi;
+}
+.pg-frame[data-ratio="300x250"] { /* 16 = 5.3333cqi */
+  --pg-safe-top: 5.3333cqi; --pg-safe-right: 5.3333cqi; --pg-safe-bottom: 5.3333cqi; --pg-safe-left: 5.3333cqi;
+}
+.pg-frame[data-ratio="300x600"] { /* 20 = 6.6667cqi */
+  --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi; --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi;
+}
+.pg-frame[data-ratio="160x600"] { /* 12 = 7.5cqi */
+  --pg-safe-top: 7.5cqi; --pg-safe-right: 7.5cqi; --pg-safe-bottom: 7.5cqi; --pg-safe-left: 7.5cqi;
+}
+.pg-frame[data-ratio="970x250"] { /* 24 = 2.4742cqi, 32 = 3.299cqi */
+  --pg-safe-top: 2.4742cqi; --pg-safe-right: 3.299cqi; --pg-safe-bottom: 2.4742cqi; --pg-safe-left: 3.299cqi;
+}
+.pg-frame[data-ratio="320x100"] { /* 8 = 2.5cqi, 12 = 3.75cqi */
+  --pg-safe-top: 2.5cqi; --pg-safe-right: 3.75cqi; --pg-safe-bottom: 2.5cqi; --pg-safe-left: 3.75cqi;
+}
+/* 1920x600 hero: 320px sides keep text inside the central 1280 a cover-cropped hero still shows (an ESTIMATE). */
+.pg-frame[data-ratio="1920x600"] { /* 60 = 3.125cqi, 320 = 16.6667cqi */
+  --pg-safe-top: 3.125cqi; --pg-safe-right: 16.6667cqi; --pg-safe-bottom: 3.125cqi; --pg-safe-left: 16.6667cqi;
+}
+/* Print: 5mm inside the trim = 30px at 150 dpi on every side (an ESTIMATE, to re-measure against the printer's spec;
+   poligraf.config.json safeZoneNotes). Insets are 30px over the frame width. */
+.pg-frame[data-ratio="A4-portrait"] { --pg-safe-top: 2.4194cqi; --pg-safe-right: 2.4194cqi; --pg-safe-bottom: 2.4194cqi; --pg-safe-left: 2.4194cqi; } /* 1240 wide */
+.pg-frame[data-ratio="A5-portrait"] { --pg-safe-top: 3.4325cqi; --pg-safe-right: 3.4325cqi; --pg-safe-bottom: 3.4325cqi; --pg-safe-left: 3.4325cqi; } /* 874 wide */
+.pg-frame[data-ratio="A6-landscape"] { --pg-safe-top: 3.4325cqi; --pg-safe-right: 3.4325cqi; --pg-safe-bottom: 3.4325cqi; --pg-safe-left: 3.4325cqi; } /* 874 wide */
+.pg-frame[data-ratio="A6-portrait"] { --pg-safe-top: 4.8387cqi; --pg-safe-right: 4.8387cqi; --pg-safe-bottom: 4.8387cqi; --pg-safe-left: 4.8387cqi; } /* 620 wide */
+.pg-frame[data-ratio="DL"] { --pg-safe-top: 5.1282cqi; --pg-safe-right: 5.1282cqi; --pg-safe-bottom: 5.1282cqi; --pg-safe-left: 5.1282cqi; } /* 585 wide */
+.pg-frame[data-ratio="card"] { --pg-safe-top: 5.9761cqi; --pg-safe-right: 5.9761cqi; --pg-safe-bottom: 5.9761cqi; --pg-safe-left: 5.9761cqi; } /* 502 wide */
+.pg-frame[data-ratio="sticker"] { --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi; --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi; } /* 450 wide */
+/* 16:9 slide (1.5): 96px all round, an ESTIMATE to re-measure (meeting apps overlay the corners). 1920 wide: 96 = 5cqi. */
+.pg-frame[data-ratio="16:9"] {
+  --pg-safe-top: 5cqi; --pg-safe-right: 5cqi; --pg-safe-bottom: 5cqi; --pg-safe-left: 5cqi;
 }
 .pg-safe {
   position: absolute;
@@ -136,3 +194,22 @@ html, body { margin: 0; background: transparent; }
 /* Text painted in the accent reads --pg-accent-text, which defaults to --pg-accent. A brand may
    override it per scheme in tokens.css when its accent fails text contrast on a surface. */
 .pg-frame { --pg-accent-text: var(--pg-accent); }
+
+/* Slide chrome (contract 1.5, additive): every slides/* layout shares it, so a deck reads as one thing. The logo sits
+   top left of the safe box at one size; .pg-slide-foot holds the optional footer label (the deck title) at the start
+   and the optional page number at the end of the bottom edge; .pg-slide-body is the content box between them.
+   1cqi = 19.2px at 1920 wide; minTextPx is 24 for slides (labels here are 1.4cqi = 26.88px). */
+.pg-frame[data-ratio="16:9"] .pg-logo { gap: 0.5cqi; }
+.pg-frame[data-ratio="16:9"] .pg-logo img[data-slot="logo"] { height: 2.4cqi; }
+.pg-frame[data-ratio="16:9"] .pg-logo [data-slot="wordmark"] { font-size: 2.9cqi; }
+.pg-frame[data-ratio="16:9"] .pg-label { font-size: 1.4cqi; }
+.pg-slide-body {
+  position: absolute; top: 6.4cqi; right: 0; bottom: 4.4cqi; left: 0;
+  display: flex; flex-direction: column; justify-content: center; min-width: 0; box-sizing: border-box;
+}
+.pg-slide-foot {
+  position: absolute; right: 0; bottom: 0; left: 0;
+  display: flex; flex-direction: row; align-items: baseline; gap: 2cqi; min-width: 0;
+}
+.pg-slide-foot [data-slot] { color: var(--pg-muted); min-width: 0; overflow-wrap: break-word; }
+.pg-slide-foot [data-slot="page"] { margin-left: auto; flex: 0 0 auto; }

@@ -1,0 +1,47 @@
+<style>
+/* Any size: the renderer stamps width, height and the --pg-safe-* insets (6% of the short side). The frame is a
+   size container (base.css), so the shape is a container query on its aspect ratio, and type is sized by the short
+   side (1cqmin = 1% of it), which keeps the same proportion to the frame at every shape. */
+.pg-frame[data-archetype="banner/custom"] .pg-safe { gap: 4cqmin; }
+.pg-frame[data-archetype="banner/custom"] .pg-logo { flex: 0 0 auto; gap: 1.6cqmin; }
+.pg-frame[data-archetype="banner/custom"] .pg-logo img[data-slot="logo"] { height: 8cqmin; }
+.pg-frame[data-archetype="banner/custom"] .pg-logo [data-slot="wordmark"] { font-size: 6cqmin; }
+.pg-frame[data-archetype="banner/custom"] .pg-text { display: flex; flex-direction: column; justify-content: center; gap: 2.6cqmin; flex: 1 1 auto; min-width: 0; min-height: 0; }
+.pg-frame[data-archetype="banner/custom"] [data-slot="headline"] { font-size: 8.5cqmin; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="banner/custom"] [data-slot="sub"] { font-size: 3.8cqmin; }
+.pg-frame[data-archetype="banner/custom"] [data-slot="cta"] { font-size: 3.2cqmin; width: fit-content; flex: 0 0 auto; white-space: nowrap; }
+.pg-frame[data-archetype="banner/custom"][data-cta="chip"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 1.8cqmin 2.8cqmin; border-radius: var(--brand-radius); }
+.pg-frame[data-archetype="banner/custom"][data-cta="text"] [data-slot="cta"] { color: var(--pg-on-surface); text-decoration: underline; text-decoration-color: var(--pg-accent); text-decoration-thickness: 0.4cqmin; text-underline-offset: 0.4cqmin; }
+/* Wide (aspect 3:1 or wider): one row, logo, text, call to action. */
+@container frame (min-aspect-ratio: 3 / 1) {
+  .pg-frame[data-archetype="banner/custom"] .pg-safe { flex-direction: row; align-items: center; gap: 6cqmin; }
+  .pg-frame[data-archetype="banner/custom"] .pg-logo img[data-slot="logo"] { height: 20cqmin; }
+  .pg-frame[data-archetype="banner/custom"] .pg-logo [data-slot="wordmark"] { font-size: 12cqmin; }
+  .pg-frame[data-archetype="banner/custom"] .pg-text { gap: 3cqmin; }
+  .pg-frame[data-archetype="banner/custom"] [data-slot="headline"] { font-size: 15cqmin; }
+  .pg-frame[data-archetype="banner/custom"] [data-slot="sub"] { font-size: 6.5cqmin; }
+  .pg-frame[data-archetype="banner/custom"] [data-slot="cta"] { font-size: 6cqmin; }
+  .pg-frame[data-archetype="banner/custom"][data-cta="chip"] [data-slot="cta"] { padding: 3cqmin 5cqmin; }
+}
+/* Tall (aspect 3:5 or narrower): a column, the headline larger against the narrow side. */
+@container frame (max-aspect-ratio: 3 / 5) {
+  .pg-frame[data-archetype="banner/custom"] .pg-safe { gap: 6cqmin; }
+  .pg-frame[data-archetype="banner/custom"] .pg-logo img[data-slot="logo"] { height: 10cqmin; }
+  .pg-frame[data-archetype="banner/custom"] .pg-logo [data-slot="wordmark"] { font-size: 7.4cqmin; }
+  .pg-frame[data-archetype="banner/custom"] .pg-text { gap: 5cqmin; }
+  .pg-frame[data-archetype="banner/custom"] [data-slot="headline"] { font-size: 11cqmin; }
+  .pg-frame[data-archetype="banner/custom"] [data-slot="sub"] { font-size: 5.4cqmin; }
+  .pg-frame[data-archetype="banner/custom"] [data-slot="cta"] { font-size: 4.6cqmin; }
+  .pg-frame[data-archetype="banner/custom"][data-cta="chip"] [data-slot="cta"] { padding: 2.6cqmin 4cqmin; }
+}
+</style>
+<div class="pg-frame" data-archetype="banner/custom">
+  <div class="pg-safe">
+    <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-text">
+      <div class="pg-h2" data-slot="headline"></div>
+      <div class="pg-body" data-slot="sub" data-slot-optional></div>
+    </div>
+    <div class="pg-label" data-slot="cta"></div>
+  </div>
+</div>

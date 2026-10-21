@@ -1,0 +1,35 @@
+<style>
+/* One slide of a carousel. The logo keeps the top-left corner on every beat; the beat decides which slots show (schema
+   `when`, contract 1.5) and the composer removes the rest. The block sits on the foot of the safe zone, above the foot row. */
+.pg-frame[data-archetype="social-post/carousel"] .pg-safe { justify-content: flex-end; }
+.pg-frame[data-archetype="social-post/carousel"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="social-post/carousel"] [data-slot="kicker"] { color: var(--pg-accent-text); margin-bottom: 2.4cqi; }
+.pg-frame[data-archetype="social-post/carousel"] [data-slot="title"] { font-size: 11cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/carousel"] [data-slot="heading"] { font-size: 8cqi; line-height: 1; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/carousel"] [data-slot="body"] { font-size: 4.4cqi; margin-top: 3.2cqi; max-width: 100%; }
+.pg-frame[data-archetype="social-post/carousel"] [data-slot="cta"] { font-size: 3.4cqi; margin-top: 4cqi; color: var(--pg-accent-text); }
+/* index: the slide number, top right, opposite the logo */
+.pg-frame[data-archetype="social-post/carousel"] [data-slot="index"] { position: absolute; top: 0; right: 0; font-size: 4cqi; color: var(--pg-accent-text); font-variant-numeric: tabular-nums; }
+/* foot row: the handle on the start side (close), the swipe cue on the end side (cover) */
+.pg-frame[data-archetype="social-post/carousel"] .pg-foot { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 2.4cqi; margin-top: 5.6cqi; min-width: 0; }
+.pg-frame[data-archetype="social-post/carousel"] .pg-foot:empty { display: none; }
+.pg-frame[data-archetype="social-post/carousel"] .pg-cue { display: none; flex-direction: row; align-items: center; gap: 1.6cqi; margin-left: auto; color: var(--pg-on-surface); }
+.pg-frame[data-archetype="social-post/carousel"][data-beat="cover"] .pg-cue { display: flex; }
+/* the arrow: a stroke and a chevron, drawn in the on-surface colour (CSS only, no glyph) */
+.pg-frame[data-archetype="social-post/carousel"] .pg-cue-arrow { position: relative; display: block; width: 6.4cqi; height: 0.4cqi; background: var(--pg-on-surface); }
+.pg-frame[data-archetype="social-post/carousel"] .pg-cue-arrow::after { content: ""; position: absolute; right: 0; top: 50%; width: 1.8cqi; height: 1.8cqi; border-top: 0.4cqi solid var(--pg-on-surface); border-right: 0.4cqi solid var(--pg-on-surface); transform: translateY(-50%) rotate(45deg); transform-origin: center; box-sizing: border-box; }
+</style>
+<div class="pg-frame" data-archetype="social-post/carousel">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-label" data-slot="index" data-slot-optional></div>
+    <div class="pg-block">
+      <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+      <div class="pg-h1" data-slot="title" data-slot-optional></div>
+      <div class="pg-h2" data-slot="heading" data-slot-optional></div>
+      <div class="pg-body" data-slot="body" data-slot-optional></div>
+      <div class="pg-label" data-slot="cta" data-slot-optional></div>
+    </div>
+    <div class="pg-foot"><div class="pg-label" data-slot="handle" data-slot-optional></div><div class="pg-cue"><div class="pg-label" data-slot="cue" data-slot-optional></div><div class="pg-cue-arrow" aria-hidden="true"></div></div></div>
+  </div>
+</div>

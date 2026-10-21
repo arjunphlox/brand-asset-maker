@@ -1,0 +1,151 @@
+{
+  "contractVersion": "1.5",
+  "id": "social-post/carousel",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1:1",
+    "4:5"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "title": {
+      "required": true,
+      "maxWords": 7,
+      "maxChars": 48,
+      "role": "h1",
+      "when": { "beat": ["cover"] }
+    },
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label",
+      "when": { "beat": ["cover"] }
+    },
+    "cue": {
+      "required": true,
+      "maxWords": 1,
+      "maxChars": 5,
+      "role": "label",
+      "when": { "beat": ["cover"] }
+    },
+    "index": {
+      "required": true,
+      "maxWords": 1,
+      "maxChars": 3,
+      "role": "label",
+      "when": { "beat": ["point"] }
+    },
+    "heading": {
+      "required": true,
+      "maxWords": 10,
+      "maxChars": 64,
+      "role": "h2",
+      "when": { "beat": ["point", "close"] }
+    },
+    "body": {
+      "required": false,
+      "maxWords": 24,
+      "maxChars": 150,
+      "role": "body",
+      "when": { "beat": ["point"] }
+    },
+    "cta": {
+      "required": true,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label",
+      "when": { "beat": ["close"] }
+    },
+    "handle": {
+      "required": false,
+      "maxWords": 2,
+      "maxChars": 28,
+      "role": "label",
+      "when": { "beat": ["close"] }
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "title",
+    "heading",
+    "kicker",
+    "index",
+    "body",
+    "cta",
+    "cue",
+    "handle",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "beat": {
+      "values": [
+        "cover",
+        "point",
+        "close"
+      ],
+      "default": "cover"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "title.maxWords": {
+      "to": null,
+      "why": "the cover says one thing in 7 words or fewer; the points carry the rest"
+    },
+    "heading.maxWords": {
+      "to": null,
+      "why": "one point per slide, 10 words or fewer; split it into two slides or rewrite it"
+    },
+    "body.maxWords": {
+      "to": null,
+      "why": "24 words or fewer under a point; cut it or move the rest to the post copy, never shrink the type"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Find our stall\"); rewrite it"
+    },
+    "cue.maxChars": {
+      "to": null,
+      "why": "the cue is the slide count (\"1/5\"); a longer cue is a kicker"
+    },
+    "index.maxChars": {
+      "to": null,
+      "why": "the index is the slide number (\"02\")"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

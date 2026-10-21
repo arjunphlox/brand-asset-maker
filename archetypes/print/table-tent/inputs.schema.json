@@ -1,0 +1,101 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/table-tent",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "A6-portrait"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "headline": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h1"
+    },
+    "line": {
+      "required": true,
+      "maxWords": 16,
+      "maxChars": 100,
+      "role": "body"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "line",
+    "cta",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "center",
+        "start"
+      ],
+      "default": "center"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": null,
+      "why": "a table tent headline is 6 words or fewer; rewrite it"
+    },
+    "line.maxWords": {
+      "to": null,
+      "why": "the line is 16 words or fewer; a menu goes on a menu (`print/menu`)"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "contractVersion": "1.5",
+  "id": "banner/hero",
+  "useCase": "banner",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1920x600"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "eyebrow": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "headline": {
+      "required": true,
+      "maxWords": 10,
+      "maxChars": 60,
+      "role": "h1"
+    },
+    "body": {
+      "required": false,
+      "maxWords": 24,
+      "maxChars": 150,
+      "role": "body"
+    },
+    "cta": {
+      "required": true,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "eyebrow",
+    "headline",
+    "body",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "cta": {
+      "values": [
+        "chip",
+        "text"
+      ],
+      "default": "chip"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "eyebrow.maxWords": {
+      "to": null,
+      "why": "the eyebrow on a Website hero band, 1920×600 is 4 words or fewer and 28 characters or fewer; cut it, never shrink the type"
+    },
+    "eyebrow.maxChars": {
+      "to": null,
+      "why": "the eyebrow on a Website hero band, 1920×600 is 4 words or fewer and 28 characters or fewer; cut it, never shrink the type"
+    },
+    "headline.maxWords": {
+      "to": null,
+      "why": "the headline on a Website hero band, 1920×600 is 10 words or fewer and 60 characters or fewer; cut it, never shrink the type"
+    },
+    "headline.maxChars": {
+      "to": null,
+      "why": "the headline on a Website hero band, 1920×600 is 10 words or fewer and 60 characters or fewer; cut it, never shrink the type"
+    },
+    "body.maxWords": {
+      "to": null,
+      "why": "the body on a Website hero band, 1920×600 is 24 words or fewer and 150 characters or fewer; cut it, never shrink the type"
+    },
+    "body.maxChars": {
+      "to": null,
+      "why": "the body on a Website hero band, 1920×600 is 24 words or fewer and 150 characters or fewer; cut it, never shrink the type"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action here is 3 words or fewer and 20 characters or fewer, and starts with a verb; rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action here is 3 words or fewer and 20 characters or fewer, and starts with a verb; rewrite it"
+    },
+    "cta.required": {
+      "to": null,
+      "why": "a display banner always carries a call to action; write one, verb first"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

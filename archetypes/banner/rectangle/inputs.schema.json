@@ -1,0 +1,106 @@
+{
+  "contractVersion": "1.5",
+  "id": "banner/rectangle",
+  "useCase": "banner",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "300x250"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "headline": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "h2"
+    },
+    "sub": {
+      "required": false,
+      "maxWords": 12,
+      "maxChars": 70,
+      "role": "body"
+    },
+    "cta": {
+      "required": true,
+      "maxWords": 3,
+      "maxChars": 16,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "sub",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "cta": {
+      "values": [
+        "chip",
+        "text"
+      ],
+      "default": "chip"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": null,
+      "why": "the headline on a IAB Medium Rectangle, 300×250 is 8 words or fewer and 48 characters or fewer; cut it, never shrink the type"
+    },
+    "headline.maxChars": {
+      "to": null,
+      "why": "the headline on a IAB Medium Rectangle, 300×250 is 8 words or fewer and 48 characters or fewer; cut it, never shrink the type"
+    },
+    "sub.maxWords": {
+      "to": null,
+      "why": "the sub on a IAB Medium Rectangle, 300×250 is 12 words or fewer and 70 characters or fewer; cut it, never shrink the type"
+    },
+    "sub.maxChars": {
+      "to": null,
+      "why": "the sub on a IAB Medium Rectangle, 300×250 is 12 words or fewer and 70 characters or fewer; cut it, never shrink the type"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action here is 3 words or fewer and 16 characters or fewer, and starts with a verb; rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action here is 3 words or fewer and 16 characters or fewer, and starts with a verb; rewrite it"
+    },
+    "cta.required": {
+      "to": null,
+      "why": "a display banner always carries a call to action; write one, verb first"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

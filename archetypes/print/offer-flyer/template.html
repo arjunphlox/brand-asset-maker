@@ -1,0 +1,37 @@
+<style>
+/* Offer flyer, A4 (1cqi = 12.4px) or A5 (8.74px). The detail is the dominant element at 20cqi; the smallest text is the
+   terms at 2.1cqi: 18.4px at A5, above the 17px (8pt) floor. */
+.pg-frame[data-archetype="print/offer-flyer"] .pg-safe { justify-content: space-between; }
+.pg-frame[data-archetype="print/offer-flyer"] .pg-top { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 3cqi; min-width: 0; }
+.pg-frame[data-archetype="print/offer-flyer"] .pg-logo img[data-slot="logo"] { height: 6cqi; }
+.pg-frame[data-archetype="print/offer-flyer"] .pg-logo [data-slot="wordmark"] { font-size: 6.4cqi; }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="kicker"] { font-size: 2.2cqi; text-align: end; min-width: 0; max-width: 50%; }
+.pg-frame[data-archetype="print/offer-flyer"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; text-align: start; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="print/offer-flyer"][data-align="center"] .pg-block { align-items: center; text-align: center; }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="was"] { font-size: 3.2cqi; text-decoration: line-through; margin-bottom: 1.6cqi; }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="detail"] { font-size: 20cqi; line-height: 0.9; color: var(--pg-accent-text); max-width: 100%; overflow-wrap: anywhere; }
+.pg-frame[data-archetype="print/offer-flyer"][data-panel="block"] [data-slot="detail"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 2cqi 3.2cqi 2.6cqi; border-radius: var(--brand-radius); }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="offer"] { font-size: 6cqi; line-height: 1.02; margin-top: 4cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="print/offer-flyer"] .pg-when { display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.8cqi 2.4cqi; margin-top: 4cqi; max-width: 100%; }
+.pg-frame[data-archetype="print/offer-flyer"][data-align="center"] .pg-when { justify-content: center; }
+.pg-frame[data-archetype="print/offer-flyer"] .pg-when:not(:has([data-slot])) { display: none; }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="date"], .pg-frame[data-archetype="print/offer-flyer"] [data-slot="place"] { font-size: 2.6cqi; }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="terms"] { font-size: 2.1cqi; margin-top: 3.2cqi; max-width: 80%; }
+.pg-frame[data-archetype="print/offer-flyer"] [data-slot="cta"] { font-size: 2.4cqi; margin-top: 4cqi; }
+</style>
+<div class="pg-frame" data-archetype="print/offer-flyer">
+  <div class="pg-safe">
+    <div class="pg-top">
+      <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+      <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+    </div>
+    <div class="pg-block">
+      <div class="pg-label" data-slot="was" data-slot-optional></div>
+      <div class="pg-data" data-slot="detail"></div>
+      <div class="pg-h2" data-slot="offer"></div>
+      <div class="pg-when"><div class="pg-label" data-slot="date" data-slot-optional></div><div class="pg-label" data-slot="place" data-slot-optional></div></div>
+      <div class="pg-body" data-slot="terms" data-slot-optional></div>
+      <div class="pg-label" data-slot="cta" data-slot-optional></div>
+    </div>
+  </div>
+</div>

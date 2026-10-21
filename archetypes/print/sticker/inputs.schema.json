@@ -1,0 +1,72 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/sticker",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "sticker"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "word": {
+      "required": false,
+      "maxWords": 2,
+      "maxChars": 12,
+      "role": "h1"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "logo",
+    "word"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "accent"
+    },
+    "shape": {
+      "values": [
+        "square",
+        "circle"
+      ],
+      "default": "square"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "word.maxWords": {
+      "to": null,
+      "why": "a sticker carries one or two words; anything longer is a label or a flyer"
+    },
+    "word.maxChars": {
+      "to": null,
+      "why": "a sticker word is 12 characters or fewer"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

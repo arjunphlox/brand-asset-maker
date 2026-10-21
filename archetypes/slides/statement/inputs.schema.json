@@ -1,0 +1,101 @@
+{
+  "contractVersion": "1.4",
+  "id": "slides/statement",
+  "useCase": "slides",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "16:9"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "statement": {
+      "required": true,
+      "maxWords": 14,
+      "maxChars": 90,
+      "role": "h1"
+    },
+    "kicker": {
+      "required": false,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "label"
+    },
+    "footer": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "page": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 7,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "statement",
+    "kicker",
+    "footer",
+    "page",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "statement.maxWords": {
+      "to": "slides/bullets",
+      "why": "a statement is one line of 14 words or fewer; with more to say, make it points"
+    },
+    "statement.maxChars": {
+      "to": null,
+      "why": "a statement is 90 characters or fewer; cut it to the claim"
+    },
+    "footer.maxWords": {
+      "to": null,
+      "why": "the footer is the deck title, 8 words or fewer; use the short title"
+    },
+    "page.maxChars": {
+      "to": null,
+      "why": "the page slot is a page number such as \"3\" or \"3 / 12\""
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/offer-flyer",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "A4-portrait",
+    "A5-portrait"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "was": {
+      "required": false,
+      "maxChars": 8,
+      "role": "label"
+    },
+    "detail": {
+      "required": true,
+      "maxChars": 7,
+      "role": "data-snippet"
+    },
+    "offer": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "h2"
+    },
+    "date": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 24,
+      "role": "label"
+    },
+    "place": {
+      "required": false,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "label"
+    },
+    "terms": {
+      "required": false,
+      "maxWords": 24,
+      "maxChars": 150,
+      "role": "body"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "detail",
+    "was",
+    "offer",
+    "date",
+    "place",
+    "terms",
+    "cta",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "panel": {
+      "values": [
+        "none",
+        "block"
+      ],
+      "default": "none"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "detail.maxChars": {
+      "to": "print/flyer",
+      "why": "a detail longer than 7 characters reads as a headline: say it in the offer, or make a flyer"
+    },
+    "offer.maxWords": {
+      "to": null,
+      "why": "the offer is 8 words or fewer; the conditions go in the terms"
+    },
+    "terms.maxWords": {
+      "to": null,
+      "why": "the small print is 24 words or fewer; the rest goes on the page the CTA points to"
+    },
+    "was.maxChars": {
+      "to": null,
+      "why": "the old price is 8 characters or fewer"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

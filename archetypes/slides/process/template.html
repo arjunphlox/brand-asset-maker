@@ -1,0 +1,30 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/process"] .pg-slide-body { gap: 5cqi; }
+.pg-frame[data-archetype="slides/process"] [data-slot="title"] { font-size: 3.6cqi; line-height: 1; max-width: 84cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/process"] .pg-steps { display: flex; flex-direction: row; min-width: 0; }
+.pg-frame[data-archetype="slides/process"] .pg-step { position: relative; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 1.4cqi; padding-right: 2.4cqi; box-sizing: border-box; }
+.pg-frame[data-archetype="slides/process"] .pg-step:not(:has([data-slot^="step"])) { display: none; }
+/* The numbers are part of the layout: a filled node in the accent, the number in the accent's own text colour. */
+.pg-frame[data-archetype="slides/process"] .pg-node { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; width: 4.4cqi; height: 4.4cqi; background: var(--pg-accent); color: var(--pg-accent-on); border-radius: var(--brand-radius); font-size: 2cqi; line-height: 1; }
+/* A connector runs from a node towards the next step's node, only when a next step is drawn. */
+.pg-frame[data-archetype="slides/process"] .pg-step:has(+ .pg-step [data-slot^="step"])::after { content: ""; position: absolute; top: 2.075cqi; left: 5.4cqi; right: 1cqi; height: 0.25cqi; background: var(--pg-muted); }
+.pg-frame[data-archetype="slides/process"] .pg-step .pg-h3 { font-size: 2.8cqi; line-height: 1.05; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="slides/process"] .pg-step .pg-body { font-size: 1.6cqi; overflow-wrap: break-word; max-width: 100%; }
+</style>
+<div class="pg-frame" data-archetype="slides/process">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-h2" data-slot="title"></div>
+      <div class="pg-steps">
+        <div class="pg-step"><span class="pg-data pg-node" aria-hidden="true">1</span><div class="pg-h3" data-slot="step1"></div><div class="pg-body" data-slot="detail1" data-slot-optional></div></div>
+        <div class="pg-step"><span class="pg-data pg-node" aria-hidden="true">2</span><div class="pg-h3" data-slot="step2"></div><div class="pg-body" data-slot="detail2" data-slot-optional></div></div>
+        <div class="pg-step"><span class="pg-data pg-node" aria-hidden="true">3</span><div class="pg-h3" data-slot="step3"></div><div class="pg-body" data-slot="detail3" data-slot-optional></div></div>
+        <div class="pg-step"><span class="pg-data pg-node" aria-hidden="true">4</span><div class="pg-h3" data-slot="step4" data-slot-optional></div><div class="pg-body" data-slot="detail4" data-slot-optional></div></div>
+        <div class="pg-step"><span class="pg-data pg-node" aria-hidden="true">5</span><div class="pg-h3" data-slot="step5" data-slot-optional></div><div class="pg-body" data-slot="detail5" data-slot-optional></div></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

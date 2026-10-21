@@ -1,0 +1,31 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/title-speaker"] .pg-slide-body { justify-content: space-between; }
+.pg-frame[data-archetype="slides/title-speaker"] .pg-head { display: flex; flex-direction: column; align-items: flex-start; gap: 1.6cqi; max-width: 82cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/title-speaker"] [data-slot="event"] { color: var(--pg-accent-text); }
+.pg-frame[data-archetype="slides/title-speaker"] [data-slot="title"] { font-size: 5.6cqi; line-height: 1; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="slides/title-speaker"] .pg-who { display: flex; flex-direction: row; align-items: stretch; gap: 1.6cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/title-speaker"] .pg-who .pg-bar { flex: 0 0 auto; width: 0.3cqi; }
+.pg-frame[data-archetype="slides/title-speaker"] .pg-who-text { display: flex; flex-direction: column; gap: 0.6cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/title-speaker"] [data-slot="speaker"] { font-size: 3cqi; line-height: 1.05; }
+.pg-frame[data-archetype="slides/title-speaker"] [data-slot="role"] { font-size: 1.9cqi; color: var(--pg-muted); }
+</style>
+<div class="pg-frame" data-archetype="slides/title-speaker">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-head">
+        <div class="pg-label" data-slot="event" data-slot-optional></div>
+        <div class="pg-h1" data-slot="title"></div>
+      </div>
+      <div class="pg-who">
+        <div class="pg-bar" aria-hidden="true"></div>
+        <div class="pg-who-text">
+          <div class="pg-h3" data-slot="speaker"></div>
+          <div class="pg-body" data-slot="role"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<style>
+/* Poster, A4 (1cqi = 12.4px; A3 is this frame at render.scale 3). One dominant element: the headline at 15cqi. */
+.pg-frame[data-archetype="print/poster"] .pg-safe { justify-content: flex-start; }
+.pg-frame[data-archetype="print/poster"] .pg-logo img[data-slot="logo"] { height: 6cqi; }
+.pg-frame[data-archetype="print/poster"] .pg-logo [data-slot="wordmark"] { font-size: 6.4cqi; }
+.pg-frame[data-archetype="print/poster"][data-align="center"] .pg-logo { align-self: center; }
+.pg-frame[data-archetype="print/poster"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; text-align: start; min-width: 0; max-width: 100%; margin-top: auto; }
+.pg-frame[data-archetype="print/poster"][data-anchor="top"] .pg-block { margin-top: 8cqi; }
+.pg-frame[data-archetype="print/poster"][data-align="center"] .pg-block { align-items: center; text-align: center; }
+.pg-frame[data-archetype="print/poster"] [data-slot="headline"] { font-size: 15cqi; line-height: 0.92; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="print/poster"] [data-slot="subline"] { font-size: 3cqi; margin-top: 5cqi; max-width: 80%; }
+.pg-frame[data-archetype="print/poster"] [data-slot="cta"] { font-size: 2.6cqi; margin-top: 4cqi; }
+</style>
+<div class="pg-frame" data-archetype="print/poster">
+  <div class="pg-safe">
+    <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-block">
+      <div class="pg-h1" data-slot="headline"></div>
+      <div class="pg-body" data-slot="subline" data-slot-optional></div>
+      <div class="pg-label" data-slot="cta" data-slot-optional></div>
+    </div>
+  </div>
+</div>

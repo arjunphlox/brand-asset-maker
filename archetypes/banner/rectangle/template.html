@@ -1,0 +1,23 @@
+<style>
+/* 300x250 at 1x: 1cqi = 3px. Logo on top, message in the middle, call to action at the foot. */
+.pg-frame[data-archetype="banner/rectangle"] .pg-safe { gap: 4cqi; }
+.pg-frame[data-archetype="banner/rectangle"] .pg-logo { flex: 0 0 auto; gap: 1.6cqi; }
+.pg-frame[data-archetype="banner/rectangle"] .pg-logo img[data-slot="logo"] { height: 8cqi; }
+.pg-frame[data-archetype="banner/rectangle"] .pg-logo [data-slot="wordmark"] { font-size: 6cqi; }
+.pg-frame[data-archetype="banner/rectangle"] .pg-text { display: flex; flex-direction: column; justify-content: center; gap: 3cqi; flex: 1 1 auto; min-height: 0; }
+.pg-frame[data-archetype="banner/rectangle"] [data-slot="headline"] { font-size: 8.4cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="banner/rectangle"] [data-slot="sub"] { font-size: 4.6cqi; }
+.pg-frame[data-archetype="banner/rectangle"] [data-slot="cta"] { font-size: 4.2cqi; width: fit-content; flex: 0 0 auto; white-space: nowrap; }
+.pg-frame[data-archetype="banner/rectangle"][data-cta="chip"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 2.6cqi 4cqi; border-radius: var(--brand-radius); }
+.pg-frame[data-archetype="banner/rectangle"][data-cta="text"] [data-slot="cta"] { color: var(--pg-on-surface); text-decoration: underline; text-decoration-color: var(--pg-accent); text-decoration-thickness: 0.6cqi; text-underline-offset: 0.6cqi; }
+</style>
+<div class="pg-frame" data-archetype="banner/rectangle">
+  <div class="pg-safe">
+    <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-text">
+      <div class="pg-h2" data-slot="headline"></div>
+      <div class="pg-body" data-slot="sub" data-slot-optional></div>
+    </div>
+    <div class="pg-label" data-slot="cta"></div>
+  </div>
+</div>

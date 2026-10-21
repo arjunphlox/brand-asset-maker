@@ -1,0 +1,24 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/comparison"] .pg-slide-body { gap: 3.2cqi; }
+.pg-frame[data-archetype="slides/comparison"] [data-slot="title"] { font-size: 3.6cqi; line-height: 1; max-width: 84cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/comparison"] .pg-panels { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/comparison"] .pg-panel { display: flex; flex-direction: column; gap: 1.6cqi; padding: 3cqi; min-height: 24cqi; box-sizing: border-box; border: 0.15cqi solid var(--pg-muted); border-radius: var(--brand-radius); min-width: 0; }
+.pg-frame[data-archetype="slides/comparison"] .pg-panel .pg-label { color: var(--pg-muted); }
+.pg-frame[data-archetype="slides/comparison"] .pg-panel .pg-h3 { font-size: 3cqi; line-height: 1.08; overflow-wrap: break-word; text-wrap: balance; max-width: 100%; }
+.pg-frame[data-archetype="slides/comparison"][data-emphasis="right"] .pg-panel--b { background: var(--pg-accent); border-color: var(--pg-accent); color: var(--pg-accent-on); }
+.pg-frame[data-archetype="slides/comparison"][data-emphasis="right"] .pg-panel--b .pg-label { color: var(--pg-accent-on); }
+</style>
+<div class="pg-frame" data-archetype="slides/comparison">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-h2" data-slot="title" data-slot-optional></div>
+      <div class="pg-panels">
+        <div class="pg-panel pg-panel--a"><div class="pg-label" data-slot="leftLabel"></div><div class="pg-h3" data-slot="left"></div></div>
+        <div class="pg-panel pg-panel--b"><div class="pg-label" data-slot="rightLabel"></div><div class="pg-h3" data-slot="right"></div></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

@@ -1,0 +1,165 @@
+{
+  "contractVersion": "1.4",
+  "id": "slides/process",
+  "useCase": "slides",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "16:9"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "title": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 50,
+      "role": "h2"
+    },
+    "step1": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "h3"
+    },
+    "step2": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "h3"
+    },
+    "step3": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "h3"
+    },
+    "step4": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "h3"
+    },
+    "step5": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "h3"
+    },
+    "detail1": {
+      "required": false,
+      "maxWords": 12,
+      "maxChars": 72,
+      "role": "body"
+    },
+    "detail2": {
+      "required": false,
+      "maxWords": 12,
+      "maxChars": 72,
+      "role": "body"
+    },
+    "detail3": {
+      "required": false,
+      "maxWords": 12,
+      "maxChars": 72,
+      "role": "body"
+    },
+    "detail4": {
+      "required": false,
+      "maxWords": 12,
+      "maxChars": 72,
+      "role": "body"
+    },
+    "detail5": {
+      "required": false,
+      "maxWords": 12,
+      "maxChars": 72,
+      "role": "body"
+    },
+    "footer": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "page": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 7,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "title",
+    "step1",
+    "step2",
+    "step3",
+    "step4",
+    "step5",
+    "detail1",
+    "detail2",
+    "detail3",
+    "detail4",
+    "detail5",
+    "footer",
+    "page",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "step3.required": {
+      "to": "slides/comparison",
+      "why": "a process is three to five steps; two steps are a before and after"
+    },
+    "step1.maxWords": {
+      "to": null,
+      "why": "a step is 4 words or fewer, a verb first (\"Grind fresh\"); the detail line says the rest"
+    },
+    "step2.maxWords": {
+      "to": null,
+      "why": "a step is 4 words or fewer, a verb first; the detail line says the rest"
+    },
+    "step3.maxWords": {
+      "to": null,
+      "why": "a step is 4 words or fewer, a verb first; the detail line says the rest"
+    },
+    "footer.maxWords": {
+      "to": null,
+      "why": "the footer is the deck title, 8 words or fewer; use the short title"
+    },
+    "page.maxChars": {
+      "to": null,
+      "why": "the page slot is a page number such as \"3\" or \"3 / 12\""
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

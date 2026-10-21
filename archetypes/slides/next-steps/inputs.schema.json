@@ -1,0 +1,119 @@
+{
+  "contractVersion": "1.4",
+  "id": "slides/next-steps",
+  "useCase": "slides",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "16:9"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "title": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h2"
+    },
+    "action1": {
+      "required": true,
+      "maxWords": 10,
+      "maxChars": 64,
+      "role": "body"
+    },
+    "action2": {
+      "required": false,
+      "maxWords": 10,
+      "maxChars": 64,
+      "role": "body"
+    },
+    "action3": {
+      "required": false,
+      "maxWords": 10,
+      "maxChars": 64,
+      "role": "body"
+    },
+    "cta": {
+      "required": true,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "footer": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "page": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 7,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "title",
+    "cta",
+    "action1",
+    "action2",
+    "action3",
+    "footer",
+    "page",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "action1.maxWords": {
+      "to": null,
+      "why": "an action is 10 words or fewer, a verb first"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 4 words or fewer and starts with a verb"
+    },
+    "cta.required": {
+      "to": "slides/thanks-contact",
+      "why": "without one thing to do now, close on thanks and contact"
+    },
+    "footer.maxWords": {
+      "to": null,
+      "why": "the footer is the deck title, 8 words or fewer; use the short title"
+    },
+    "page.maxChars": {
+      "to": null,
+      "why": "the page slot is a page number such as \"3\" or \"3 / 12\""
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

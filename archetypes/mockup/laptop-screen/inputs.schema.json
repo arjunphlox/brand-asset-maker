@@ -1,0 +1,138 @@
+{
+  "contractVersion": "1.5",
+  "id": "mockup/laptop-screen",
+  "useCase": "mockup",
+  "kind": "prompt",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "proposal": "optional",
+  "slots": {
+    "artwork": {
+      "required": true,
+      "kind": "artwork",
+      "accepts": [
+        "banner/*",
+        "email/*",
+        "slides/*"
+      ]
+    }
+  },
+  "hierarchy": [
+    "artwork"
+  ],
+  "variation": {
+    "setting": {
+      "values": [
+        "desk",
+        "cafe-table",
+        "meeting-room"
+      ],
+      "default": "desk",
+      "phrases": {
+        "desk": "on a tidy wooden desk with a plant",
+        "cafe-table": "on a café table beside a cup",
+        "meeting-room": "on a meeting-room table"
+      }
+    },
+    "surface": {
+      "values": [
+        "silver-laptop",
+        "dark-laptop"
+      ],
+      "default": "silver-laptop",
+      "phrases": {
+        "silver-laptop": "the laptop is silver",
+        "dark-laptop": "the laptop is dark grey"
+      }
+    },
+    "light": {
+      "values": [
+        "daylight",
+        "warm-indoor",
+        "soft-studio"
+      ],
+      "default": "daylight",
+      "phrases": {
+        "daylight": "soft natural daylight from one side",
+        "warm-indoor": "warm indoor light, as in a café in the late afternoon",
+        "soft-studio": "even, soft studio light with gentle shadows"
+      }
+    },
+    "angle": {
+      "values": [
+        "straight-on",
+        "three-quarter"
+      ],
+      "default": "three-quarter",
+      "phrases": {
+        "straight-on": "straight on to the screen",
+        "three-quarter": "a three-quarter view from the front left"
+      }
+    },
+    "people": {
+      "values": [
+        "none",
+        "hands"
+      ],
+      "default": "none",
+      "phrases": {
+        "none": "no people in the frame",
+        "hands": "one pair of hands holding or touching the laptop naturally, no face in the frame"
+      }
+    }
+  },
+  "output": {
+    "size": "1536x1024",
+    "format": "png"
+  },
+  "checks": {},
+  "review": [
+    {
+      "id": "artwork-unchanged",
+      "plain": "the design changed",
+      "look": "Put the output beside the artwork. Same elements, in the same places and proportions, on the laptop? Only perspective and light may differ.",
+      "fix": "The design changed. Reproduce the attached artwork exactly as supplied; change only its perspective and the light that falls on it."
+    },
+    {
+      "id": "text-intact",
+      "plain": "the words changed or were added",
+      "look": "Read every word in the output against the artwork, letter by letter. A changed, missing or extra word anywhere in the image (signs, screens, packaging, clothing) fails.",
+      "fix": "The words changed. Keep every word exactly as in the artwork, and add no text anywhere else in the image."
+    },
+    {
+      "id": "logo-intact",
+      "plain": "the logo changed",
+      "look": "Compare the logo with the artwork: the same shape, proportions and colours, not redrawn or simplified.",
+      "fix": "The logo changed. Keep the logo exactly as in the artwork: its shape, its proportions and its colours."
+    },
+    {
+      "id": "colours-held",
+      "plain": "the colours shifted",
+      "look": "Under the scene's light, do the artwork's colours still read as the brand colours in brand/tokens.css? A different hue fails; a natural shadow or highlight passes.",
+      "fix": "The colours shifted. Keep the artwork's colours as supplied; only the scene's light may fall on them."
+    },
+    {
+      "id": "no-other-brands",
+      "plain": "another brand appears",
+      "look": "Look over the whole image: any other logo, brand name, maker mark, label or watermark fails.",
+      "fix": "Another brand appeared. Remove every other logo, brand name, maker mark, label and watermark; leave every object plain."
+    },
+    {
+      "id": "plausible",
+      "plain": "it doesn't look real",
+      "look": "Does the artwork sit on the laptop the way print or a screen really would: following its surface, at a believable size, nothing floating or melted?",
+      "fix": "It does not look real. Make the artwork sit on the laptop the way real print or a real screen would, at a believable size."
+    }
+  ],
+  "fallbacks": {
+    "artwork.accepts": {
+      "to": null,
+      "why": "this recipe takes a banner (link preview, profile cover, web banner), an email header or a slide; re-run selection (archetypes/mockup/select.md) or make that asset first"
+    },
+    "artwork.pass": {
+      "to": null,
+      "why": "refuse: only a sample that passed its checks is mocked up; fix the asset first"
+    }
+  }
+}

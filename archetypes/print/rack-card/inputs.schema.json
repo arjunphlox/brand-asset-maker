@@ -1,0 +1,119 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/rack-card",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "DL"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "headline": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h1"
+    },
+    "point1": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "body"
+    },
+    "point2": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "body"
+    },
+    "point3": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "body"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "point1",
+    "point2",
+    "point3",
+    "cta",
+    "kicker",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "marker": {
+      "values": [
+        "dot",
+        "none"
+      ],
+      "default": "dot"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": null,
+      "why": "a rack card headline is 6 words or fewer: the top third is all that shows in a rack"
+    },
+    "point1.maxWords": {
+      "to": null,
+      "why": "a point is 8 words or fewer; one idea per point"
+    },
+    "point3.required": {
+      "to": "print/postcard",
+      "why": "fewer than three points: make a postcard or a flyer"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

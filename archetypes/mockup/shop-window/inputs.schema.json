@@ -1,0 +1,140 @@
+{
+  "contractVersion": "1.5",
+  "id": "mockup/shop-window",
+  "useCase": "mockup",
+  "kind": "prompt",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "proposal": "optional",
+  "slots": {
+    "artwork": {
+      "required": true,
+      "kind": "artwork",
+      "accepts": [
+        "print/poster",
+        "print/flyer",
+        "print/offer-flyer",
+        "social-post/*@4:5",
+        "social-post/*@9:16"
+      ]
+    }
+  },
+  "hierarchy": [
+    "artwork"
+  ],
+  "variation": {
+    "setting": {
+      "values": [
+        "high-street",
+        "market-hall",
+        "quiet-lane"
+      ],
+      "default": "quiet-lane",
+      "phrases": {
+        "high-street": "a small shop on a busy high street",
+        "market-hall": "a stall front inside a covered market hall",
+        "quiet-lane": "a small shop on a quiet lane"
+      }
+    },
+    "surface": {
+      "values": [
+        "clear-glass",
+        "framed-window"
+      ],
+      "default": "clear-glass",
+      "phrases": {
+        "clear-glass": "a single pane of clear glass",
+        "framed-window": "a painted wooden window frame around the glass"
+      }
+    },
+    "light": {
+      "values": [
+        "overcast",
+        "evening-glow",
+        "bright-sun"
+      ],
+      "default": "overcast",
+      "phrases": {
+        "overcast": "flat overcast daylight",
+        "evening-glow": "early evening, warm light from inside the shop",
+        "bright-sun": "bright sun with soft shadows on the frame"
+      }
+    },
+    "angle": {
+      "values": [
+        "straight-on",
+        "from-pavement"
+      ],
+      "default": "straight-on",
+      "phrases": {
+        "straight-on": "straight on, at the height of the poster",
+        "from-pavement": "from the pavement, slightly to one side"
+      }
+    },
+    "people": {
+      "values": [
+        "none",
+        "person"
+      ],
+      "default": "none",
+      "phrases": {
+        "none": "no people in the frame",
+        "person": "one person, cropped at the shoulders or turned away so no face shows"
+      }
+    }
+  },
+  "output": {
+    "size": "1024x1536",
+    "format": "png"
+  },
+  "checks": {},
+  "review": [
+    {
+      "id": "artwork-unchanged",
+      "plain": "the design changed",
+      "look": "Put the output beside the artwork. Same elements, in the same places and proportions, on the poster? Only perspective and light may differ.",
+      "fix": "The design changed. Reproduce the attached artwork exactly as supplied; change only its perspective and the light that falls on it."
+    },
+    {
+      "id": "text-intact",
+      "plain": "the words changed or were added",
+      "look": "Read every word in the output against the artwork, letter by letter. A changed, missing or extra word anywhere in the image (signs, screens, packaging, clothing) fails.",
+      "fix": "The words changed. Keep every word exactly as in the artwork, and add no text anywhere else in the image."
+    },
+    {
+      "id": "logo-intact",
+      "plain": "the logo changed",
+      "look": "Compare the logo with the artwork: the same shape, proportions and colours, not redrawn or simplified.",
+      "fix": "The logo changed. Keep the logo exactly as in the artwork: its shape, its proportions and its colours."
+    },
+    {
+      "id": "colours-held",
+      "plain": "the colours shifted",
+      "look": "Under the scene's light, do the artwork's colours still read as the brand colours in brand/tokens.css? A different hue fails; a natural shadow or highlight passes.",
+      "fix": "The colours shifted. Keep the artwork's colours as supplied; only the scene's light may fall on them."
+    },
+    {
+      "id": "no-other-brands",
+      "plain": "another brand appears",
+      "look": "Look over the whole image: any other logo, brand name, maker mark, label or watermark fails.",
+      "fix": "Another brand appeared. Remove every other logo, brand name, maker mark, label and watermark; leave every object plain."
+    },
+    {
+      "id": "plausible",
+      "plain": "it doesn't look real",
+      "look": "Does the artwork sit on the poster the way print or a screen really would: following its surface, at a believable size, nothing floating or melted?",
+      "fix": "It does not look real. Make the artwork sit on the poster the way real print or a real screen would, at a believable size."
+    }
+  ],
+  "fallbacks": {
+    "artwork.accepts": {
+      "to": null,
+      "why": "this recipe takes a print poster or flyer, or a tall social post (4:5) or story (9:16); re-run selection (archetypes/mockup/select.md) or make that asset first"
+    },
+    "artwork.pass": {
+      "to": null,
+      "why": "refuse: only a sample that passed its checks is mocked up; fix the asset first"
+    }
+  }
+}

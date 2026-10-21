@@ -1,0 +1,23 @@
+<style>
+/* 300x600 at 1x: 1cqi = 3px. Logo on top, message in the middle, call to action at the foot. */
+.pg-frame[data-archetype="banner/half-page"] .pg-safe { gap: 5cqi; }
+.pg-frame[data-archetype="banner/half-page"] .pg-logo { flex: 0 0 auto; gap: 1.8cqi; }
+.pg-frame[data-archetype="banner/half-page"] .pg-logo img[data-slot="logo"] { height: 9cqi; }
+.pg-frame[data-archetype="banner/half-page"] .pg-logo [data-slot="wordmark"] { font-size: 7cqi; }
+.pg-frame[data-archetype="banner/half-page"] .pg-text { display: flex; flex-direction: column; justify-content: center; gap: 5cqi; flex: 1 1 auto; min-height: 0; }
+.pg-frame[data-archetype="banner/half-page"] [data-slot="headline"] { font-size: 12cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="banner/half-page"] [data-slot="sub"] { font-size: 5.6cqi; }
+.pg-frame[data-archetype="banner/half-page"] [data-slot="cta"] { font-size: 5cqi; width: fit-content; flex: 0 0 auto; white-space: nowrap; }
+.pg-frame[data-archetype="banner/half-page"][data-cta="chip"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 3cqi 5cqi; border-radius: var(--brand-radius); }
+.pg-frame[data-archetype="banner/half-page"][data-cta="text"] [data-slot="cta"] { color: var(--pg-on-surface); text-decoration: underline; text-decoration-color: var(--pg-accent); text-decoration-thickness: 0.6cqi; text-underline-offset: 0.6cqi; }
+</style>
+<div class="pg-frame" data-archetype="banner/half-page">
+  <div class="pg-safe">
+    <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-text">
+      <div class="pg-h2" data-slot="headline"></div>
+      <div class="pg-body" data-slot="sub" data-slot-optional></div>
+    </div>
+    <div class="pg-label" data-slot="cta"></div>
+  </div>
+</div>

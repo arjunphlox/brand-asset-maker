@@ -1,0 +1,40 @@
+<style>
+/* "A × B": the brand's mark, a × drawn as two strokes, the partner's mark on a paper tile. The lockup leads at the
+   top of the safe zone (row) or on the centre line (stack); the line sits at the foot. */
+.pg-frame[data-archetype="social-post/partnership"] .pg-safe { justify-content: space-between; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-lockup { display: flex; flex-direction: row; align-items: center; gap: 3.2cqi; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-lockup .pg-logo { position: static; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-lockup .pg-logo img[data-slot="logo"] { height: 8cqi; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-lockup .pg-logo [data-slot="wordmark"] { font-size: 4.4cqi; }
+/* the ×: two crossed strokes in the on-surface colour, drawn in CSS so it has the same weight in every brand (a display
+   face's own multiplication sign ranges from a dot to a cross) */
+.pg-frame[data-archetype="social-post/partnership"] .pg-join { position: relative; width: 4.4cqi; height: 4.4cqi; flex: 0 0 auto; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-join::before,
+.pg-frame[data-archetype="social-post/partnership"] .pg-join::after { content: ""; position: absolute; left: 50%; top: 50%; width: 5.6cqi; height: 0.8cqi; background: var(--pg-on-surface); transform: translate(-50%, -50%) rotate(45deg); }
+.pg-frame[data-archetype="social-post/partnership"] .pg-join::after { transform: translate(-50%, -50%) rotate(-45deg); }
+/* the partner's tile: the paper colour on every scheme, the colour a partner file is made for */
+.pg-frame[data-archetype="social-post/partnership"] .pg-partner { display: flex; align-items: center; background: var(--brand-paper); border-radius: var(--brand-radius); padding: 1.6cqi 2.4cqi; flex: 0 0 auto; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-partner img[data-slot="partnerLogo"] { display: block; height: 6.8cqi; width: auto; max-width: 34cqi; }
+.pg-frame[data-archetype="social-post/partnership"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="social-post/partnership"] [data-slot="kicker"] { color: var(--pg-accent-text); margin-bottom: 2.4cqi; }
+.pg-frame[data-archetype="social-post/partnership"] [data-slot="title"] { font-size: 7.4cqi; line-height: 1; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/partnership"] [data-slot="cta"] { margin-top: 4cqi; }
+/* lockup="stack": the three centred one under another on the centre line, the line centred under them */
+.pg-frame[data-archetype="social-post/partnership"][data-lockup="stack"] .pg-safe { justify-content: center; align-items: center; gap: 6.4cqi; }
+.pg-frame[data-archetype="social-post/partnership"][data-lockup="stack"] .pg-lockup { flex-direction: column; gap: 2.4cqi; }
+.pg-frame[data-archetype="social-post/partnership"][data-lockup="stack"] .pg-block { align-items: center; text-align: center; }
+</style>
+<div class="pg-frame" data-archetype="social-post/partnership">
+  <div class="pg-safe">
+    <div class="pg-lockup">
+      <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+      <div class="pg-join" aria-hidden="true"></div>
+      <div class="pg-partner"><img data-slot="partnerLogo" alt=""></div>
+    </div>
+    <div class="pg-block">
+      <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+      <div class="pg-h2" data-slot="title"></div>
+      <div class="pg-label" data-slot="cta" data-slot-optional></div>
+    </div>
+  </div>
+</div>

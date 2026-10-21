@@ -1,0 +1,41 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/chart"] .pg-slide-body { gap: 3.2cqi; }
+.pg-frame[data-archetype="slides/chart"] .pg-head { display: flex; flex-direction: row; align-items: baseline; justify-content: space-between; gap: 4cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/chart"] [data-slot="title"] { font-size: 3.4cqi; line-height: 1; text-wrap: balance; overflow-wrap: break-word; min-width: 0; flex: 1 1 auto; }
+.pg-frame[data-archetype="slides/chart"] [data-slot="note"] { color: var(--pg-muted); flex: 0 1 auto; text-align: end; }
+.pg-frame[data-archetype="slides/chart"] .pg-bars { display: flex; flex-direction: column; gap: 1.2cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row { display: grid; grid-template-columns: 24cqi 1fr; column-gap: 2cqi; align-items: center; min-width: 0; }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row:not(:has([data-slot^="label"])),
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row:not(:has([data-slot^="value"])) { display: none; }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row .pg-body { font-size: 1.9cqi; line-height: 1.1; overflow-wrap: break-word; text-align: end; min-width: 0; }
+/* One baseline at zero for every bar (a muted rule), then the bar, then its number. */
+.pg-frame[data-archetype="slides/chart"] .pg-track { display: flex; flex-direction: row; align-items: center; gap: 1.2cqi; height: 3.2cqi; border-left: 0.15cqi solid var(--pg-muted); min-width: 0; }
+.pg-frame[data-archetype="slides/chart"] .pg-fill { flex: 0 0 auto; height: 100%; background: var(--pg-accent); }
+/* The renderer stamps --pg-scale-valueN (value / largest value, 0..1) on the frame: every bar shares one linear
+   scale from zero, and the largest fills the track less the room its number needs. */
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row--1 .pg-fill { width: calc(var(--pg-scale-value1, 0) * (100% - 11cqi)); }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row--2 .pg-fill { width: calc(var(--pg-scale-value2, 0) * (100% - 11cqi)); }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row--3 .pg-fill { width: calc(var(--pg-scale-value3, 0) * (100% - 11cqi)); }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row--4 .pg-fill { width: calc(var(--pg-scale-value4, 0) * (100% - 11cqi)); }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row--5 .pg-fill { width: calc(var(--pg-scale-value5, 0) * (100% - 11cqi)); }
+.pg-frame[data-archetype="slides/chart"] .pg-bar-row--6 .pg-fill { width: calc(var(--pg-scale-value6, 0) * (100% - 11cqi)); }
+.pg-frame[data-archetype="slides/chart"] .pg-track .pg-data { font-size: 2.6cqi; line-height: 1; flex: 0 0 auto; }
+</style>
+<div class="pg-frame" data-archetype="slides/chart">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-head"><div class="pg-h2" data-slot="title"></div><div class="pg-label" data-slot="note" data-slot-optional></div></div>
+      <div class="pg-bars">
+        <div class="pg-bar-row pg-bar-row--1"><div class="pg-body" data-slot="label1"></div><div class="pg-track"><div class="pg-fill" aria-hidden="true"></div><div class="pg-data" data-slot="value1"></div></div></div>
+        <div class="pg-bar-row pg-bar-row--2"><div class="pg-body" data-slot="label2"></div><div class="pg-track"><div class="pg-fill" aria-hidden="true"></div><div class="pg-data" data-slot="value2"></div></div></div>
+        <div class="pg-bar-row pg-bar-row--3"><div class="pg-body" data-slot="label3" data-slot-optional></div><div class="pg-track"><div class="pg-fill" aria-hidden="true"></div><div class="pg-data" data-slot="value3" data-slot-optional></div></div></div>
+        <div class="pg-bar-row pg-bar-row--4"><div class="pg-body" data-slot="label4" data-slot-optional></div><div class="pg-track"><div class="pg-fill" aria-hidden="true"></div><div class="pg-data" data-slot="value4" data-slot-optional></div></div></div>
+        <div class="pg-bar-row pg-bar-row--5"><div class="pg-body" data-slot="label5" data-slot-optional></div><div class="pg-track"><div class="pg-fill" aria-hidden="true"></div><div class="pg-data" data-slot="value5" data-slot-optional></div></div></div>
+        <div class="pg-bar-row pg-bar-row--6"><div class="pg-body" data-slot="label6" data-slot-optional></div><div class="pg-track"><div class="pg-fill" aria-hidden="true"></div><div class="pg-data" data-slot="value6" data-slot-optional></div></div></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

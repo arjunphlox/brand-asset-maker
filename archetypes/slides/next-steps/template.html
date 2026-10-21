@@ -1,0 +1,26 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/next-steps"] .pg-slide-body { gap: 3.2cqi; align-items: flex-start; }
+.pg-frame[data-archetype="slides/next-steps"] [data-slot="title"] { font-size: 4cqi; line-height: 1; max-width: 84cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/next-steps"] .pg-actions { display: flex; flex-direction: column; gap: 1.6cqi; max-width: 84cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/next-steps"] .pg-action { display: flex; flex-direction: row; align-items: baseline; gap: 2cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/next-steps"] .pg-action:not(:has([data-slot])) { display: none; }
+.pg-frame[data-archetype="slides/next-steps"] .pg-num { flex: 0 0 3cqi; font-size: 2.4cqi; line-height: 1.1; color: var(--pg-accent-text); }
+.pg-frame[data-archetype="slides/next-steps"] .pg-action [data-slot] { font-size: 2.4cqi; line-height: 1.15; min-width: 0; flex: 1 1 auto; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/next-steps"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 1cqi 1.8cqi; border-radius: var(--brand-radius); width: fit-content; margin-top: 1cqi; }
+</style>
+<div class="pg-frame" data-archetype="slides/next-steps">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-h2" data-slot="title"></div>
+      <div class="pg-actions">
+        <div class="pg-action"><span class="pg-data pg-num" aria-hidden="true">1</span><div class="pg-body" data-slot="action1"></div></div>
+        <div class="pg-action"><span class="pg-data pg-num" aria-hidden="true">2</span><div class="pg-body" data-slot="action2" data-slot-optional></div></div>
+        <div class="pg-action"><span class="pg-data pg-num" aria-hidden="true">3</span><div class="pg-body" data-slot="action3" data-slot-optional></div></div>
+      </div>
+      <div class="pg-label" data-slot="cta"></div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

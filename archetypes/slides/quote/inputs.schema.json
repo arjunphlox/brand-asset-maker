@@ -1,0 +1,105 @@
+{
+  "contractVersion": "1.4",
+  "id": "slides/quote",
+  "useCase": "slides",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "16:9"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "quote": {
+      "required": true,
+      "maxWords": 36,
+      "maxChars": 200,
+      "role": "body"
+    },
+    "attribution": {
+      "required": true,
+      "maxWords": 5,
+      "maxChars": 40,
+      "role": "body"
+    },
+    "role": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "footer": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "page": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 7,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "quote",
+    "attribution",
+    "role",
+    "footer",
+    "page",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "quote.maxWords": {
+      "to": null,
+      "why": "a slide quote is 36 words or fewer; cut to the sentence that matters, and mark the cut"
+    },
+    "quote.maxChars": {
+      "to": null,
+      "why": "a slide quote is 200 characters or fewer"
+    },
+    "attribution.required": {
+      "to": "slides/statement",
+      "why": "words with nobody to attribute them to are a statement, in the brand's own voice"
+    },
+    "footer.maxWords": {
+      "to": null,
+      "why": "the footer is the deck title, 8 words or fewer; use the short title"
+    },
+    "page.maxChars": {
+      "to": null,
+      "why": "the page slot is a page number such as \"3\" or \"3 / 12\""
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

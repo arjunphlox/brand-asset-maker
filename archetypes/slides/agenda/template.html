@@ -1,0 +1,28 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/agenda"] .pg-slide-body { display: grid; grid-template-columns: 30cqi 1fr; column-gap: 6cqi; align-content: center; align-items: start; }
+.pg-frame[data-archetype="slides/agenda"] [data-slot="title"] { font-size: 4.6cqi; line-height: 1; overflow-wrap: break-word; min-width: 0; }
+.pg-frame[data-archetype="slides/agenda"] .pg-items { display: flex; flex-direction: column; gap: 1.1cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/agenda"] .pg-item { display: flex; flex-direction: row; align-items: baseline; gap: 2.4cqi; padding-bottom: 1.1cqi; border-bottom: 0.1cqi solid var(--pg-muted); min-width: 0; }
+.pg-frame[data-archetype="slides/agenda"] .pg-item:not(:has([data-slot])) { display: none; }
+/* The numbers are part of the layout, not slots: 01 to 06, in the display face. */
+.pg-frame[data-archetype="slides/agenda"] .pg-num { flex: 0 0 4cqi; font-size: 2.8cqi; line-height: 1.1; color: var(--pg-accent-text); }
+.pg-frame[data-archetype="slides/agenda"] .pg-item [data-slot] { font-size: 2.8cqi; line-height: 1.1; min-width: 0; flex: 1 1 auto; overflow-wrap: break-word; }
+</style>
+<div class="pg-frame" data-archetype="slides/agenda">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-h2" data-slot="title"></div>
+      <div class="pg-items">
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">01</span><div class="pg-h3" data-slot="item1"></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">02</span><div class="pg-h3" data-slot="item2"></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">03</span><div class="pg-h3" data-slot="item3"></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">04</span><div class="pg-h3" data-slot="item4" data-slot-optional></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">05</span><div class="pg-h3" data-slot="item5" data-slot-optional></div></div>
+        <div class="pg-item"><span class="pg-data pg-num" aria-hidden="true">06</span><div class="pg-h3" data-slot="item6" data-slot-optional></div></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

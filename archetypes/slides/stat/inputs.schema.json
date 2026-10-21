@@ -1,0 +1,108 @@
+{
+  "contractVersion": "1.4",
+  "id": "slides/stat",
+  "useCase": "slides",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "16:9"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "number": {
+      "required": true,
+      "maxWords": 2,
+      "maxChars": 6,
+      "role": "data-snippet"
+    },
+    "label": {
+      "required": true,
+      "maxWords": 10,
+      "maxChars": 64,
+      "role": "body"
+    },
+    "source": {
+      "required": false,
+      "maxWords": 10,
+      "maxChars": 64,
+      "role": "label"
+    },
+    "footer": {
+      "required": false,
+      "maxWords": 8,
+      "maxChars": 48,
+      "role": "label"
+    },
+    "page": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 7,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "number",
+    "label",
+    "source",
+    "footer",
+    "page",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "accent": {
+      "values": [
+        "number",
+        "none"
+      ],
+      "default": "number"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "number.maxChars": {
+      "to": "slides/statement",
+      "why": "a number longer than 6 characters reads as a sentence; say it as a statement"
+    },
+    "label.maxWords": {
+      "to": null,
+      "why": "the label is 10 words or fewer: what the number counts"
+    },
+    "footer.maxWords": {
+      "to": null,
+      "why": "the footer is the deck title, 8 words or fewer; use the short title"
+    },
+    "page.maxChars": {
+      "to": null,
+      "why": "the page slot is a page number such as \"3\" or \"3 / 12\""
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<style>
+/* Menu, A4 (1cqi = 12.4px). Rows: an item and its price on one baseline, every price on the end edge. A row whose item
+   is empty is hidden, so a price never stands alone. */
+.pg-frame[data-archetype="print/menu"] .pg-top { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 3cqi; min-width: 0; }
+.pg-frame[data-archetype="print/menu"] .pg-logo img[data-slot="logo"] { height: 6cqi; }
+.pg-frame[data-archetype="print/menu"] .pg-logo [data-slot="wordmark"] { font-size: 6.4cqi; }
+.pg-frame[data-archetype="print/menu"] [data-slot="kicker"] { font-size: 2.2cqi; text-align: end; min-width: 0; max-width: 50%; }
+.pg-frame[data-archetype="print/menu"] [data-slot="title"] { font-size: 9cqi; margin-top: 10cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="print/menu"] .pg-rows { display: flex; flex-direction: column; gap: 2.4cqi; margin-top: 6cqi; min-width: 0; }
+.pg-frame[data-archetype="print/menu"] .pg-row { display: flex; flex-direction: row; align-items: baseline; justify-content: space-between; gap: 4cqi; min-width: 0; padding-bottom: 2.4cqi; }
+.pg-frame[data-archetype="print/menu"][data-rule="hairline"] .pg-row { border-bottom: 0.2cqi solid var(--pg-muted); }
+.pg-frame[data-archetype="print/menu"] .pg-row:not(:has([data-slot^="item"])) { display: none; }
+.pg-frame[data-archetype="print/menu"][data-price="under"] .pg-row { flex-direction: column; align-items: flex-start; gap: 0.8cqi; }
+.pg-frame[data-archetype="print/menu"] .pg-row .pg-body { font-size: 3.2cqi; flex: 1 1 auto; min-width: 0; overflow-wrap: break-word; }
+.pg-frame[data-archetype="print/menu"] .pg-row .pg-data { font-size: 3.8cqi; flex: 0 0 auto; text-align: end; color: var(--pg-accent-text); }
+.pg-frame[data-archetype="print/menu"] [data-slot="note"] { font-size: 2.2cqi; margin-top: auto; max-width: 80%; }
+</style>
+<div class="pg-frame" data-archetype="print/menu">
+  <div class="pg-safe">
+    <div class="pg-top">
+      <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+      <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+    </div>
+    <div class="pg-h1" data-slot="title"></div>
+    <div class="pg-rows">
+      <div class="pg-row"><div class="pg-body" data-slot="item1"></div><div class="pg-data" data-slot="price1" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item2"></div><div class="pg-data" data-slot="price2" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item3" data-slot-optional></div><div class="pg-data" data-slot="price3" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item4" data-slot-optional></div><div class="pg-data" data-slot="price4" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item5" data-slot-optional></div><div class="pg-data" data-slot="price5" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item6" data-slot-optional></div><div class="pg-data" data-slot="price6" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item7" data-slot-optional></div><div class="pg-data" data-slot="price7" data-slot-optional></div></div>
+      <div class="pg-row"><div class="pg-body" data-slot="item8" data-slot-optional></div><div class="pg-data" data-slot="price8" data-slot-optional></div></div>
+    </div>
+    <div class="pg-body" data-slot="note" data-slot-optional></div>
+  </div>
+</div>

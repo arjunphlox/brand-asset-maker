@@ -1,0 +1,100 @@
+{
+  "contractVersion": "1.5",
+  "id": "social-post/partnership",
+  "useCase": "social-post",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "1:1",
+    "4:5"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "title": {
+      "required": true,
+      "maxWords": 8,
+      "maxChars": 56,
+      "role": "h2"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    },
+    "partnerLogo": {
+      "required": true,
+      "kind": "asset"
+    },
+    "kicker": {
+      "required": false,
+      "maxWords": 4,
+      "maxChars": 28,
+      "role": "label"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    }
+  },
+  "hierarchy": [
+    "title",
+    "logo",
+    "partnerLogo",
+    "kicker",
+    "cta"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "paper"
+    },
+    "lockup": {
+      "values": [
+        "row",
+        "stack"
+      ],
+      "default": "row"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "title.maxWords": {
+      "to": null,
+      "why": "what the two do together, in 8 words or fewer; the rest goes in the post copy"
+    },
+    "partnerLogo.required": {
+      "to": null,
+      "why": "refuse to render; ask the owner for the partner's own file (and the partner's written yes)"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Read the story\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Read the story\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

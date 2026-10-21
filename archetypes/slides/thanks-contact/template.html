@@ -1,0 +1,22 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/thanks-contact"] .pg-slide-body { justify-content: flex-end; gap: 4cqi; padding-bottom: 2cqi; }
+.pg-frame[data-archetype="slides/thanks-contact"] [data-slot="thanks"] { font-size: 7cqi; line-height: 0.98; max-width: 84cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/thanks-contact"] .pg-contact { display: flex; flex-direction: column; gap: 0.8cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/thanks-contact"] .pg-contact .pg-body { font-size: 2.2cqi; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/thanks-contact"] [data-slot="contact"] { color: var(--pg-accent-text); }
+</style>
+<div class="pg-frame" data-archetype="slides/thanks-contact">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-h1" data-slot="thanks"></div>
+      <div class="pg-contact">
+        <div class="pg-body" data-slot="contact"></div>
+        <div class="pg-body" data-slot="url" data-slot-optional></div>
+        <div class="pg-body" data-slot="handle" data-slot-optional></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

@@ -8,20 +8,66 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
 - `AGENTS.md` and `CLAUDE.md` (the same note): where an AI assistant starts when it opens this folder.
 - `SPEC.md`: the contracts (tokens, fonts, template, inputs schema, checks, report, locked values, approvals, generators, feedback kinds).
 - `archetypes/README.md` and `archetypes/_shared/base.css`: how an archetype is built and the shared plumbing it relies on.
-- `archetypes/<use-case>/select.md` (`social-post`, `banner`, `email`): which archetype fits which content and format.
+- `archetypes/<use-case>/select.md` (`banner`, `email`, `mockup`, `print`, `slides`, `social-post`): which archetype fits which content and format. The `mockup` layouts are prompt recipes (`prompt.md`, no template): your agent sends a passing post and the filled prompt to your own image model (`skills/poligraf--mockup.md`).
 - Sample archetypes:
+  - `archetypes/banner/billboard/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/custom/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/half-page/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/hero/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/leaderboard/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/banner/link-preview/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/mobile/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/banner/profile-cover/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/rectangle/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/banner/skyscraper/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/email/header/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/mockup/bus-shelter/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/card-on-desk/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/cup-sleeve/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/lanyard/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/laptop-screen/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/menu-on-table/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/phone-in-hand/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/shop-window/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/t-shirt/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/mockup/tote-bag/` (`spec.md`, `prompt.md`, `inputs.schema.json`)
+  - `archetypes/print/card-back/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/card-front/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/flyer/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/menu/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/offer-flyer/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/postcard/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/poster/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/rack-card/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/sticker/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/print/table-tent/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/agenda/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/bullets/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/chart/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/comparison/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/next-steps/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/numbers/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/process/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/questions/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/quote/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/section/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/stat/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/statement/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/thanks-contact/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/title/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/title-speaker/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/slides/two-column/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/carousel/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/contrast/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/event/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/headline/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/hiring/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/list/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/offer/` (`spec.md`, `template.html`, `inputs.schema.json`)
+  - `archetypes/social-post/partnership/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/quote/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/social-post/stat/` (`spec.md`, `template.html`, `inputs.schema.json`)
-- `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback), and `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine.
+- `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback); `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine, and `poligraf--mockup.md`, which tells it how to turn a passing post into a mock-up photograph with your own image model and your own key.
 - `docs/design/system/`: the System Design router and the visual principles.
 - `workshop/`: workshop material: the eight Kadri scenarios (`workshop/scenarios.md`), the brand-folder form, the gap note template (`workshop/gap-note.md`), the ranked next-assets prompt (`workshop/next-assets.md`) and the cold-handoff prompt (`workshop/cold-handoff.md`).
 - `examples/kadri/`: a worked example brand, start with its `README.md`. Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission.
@@ -54,4 +100,4 @@ Poligraf is a HueGrid Studio framework. Learn more at huegrid.com.
 
 ## Provenance
 
-BAM version v1.0.0, generated 2026-10-21. Contract 1.4.
+BAM version v1.0.0, generated 2026-10-21. Contract 1.5.

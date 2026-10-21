@@ -1,0 +1,18 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/questions"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; gap: 2.4cqi; max-width: 84cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/questions"] [data-slot="line"] { font-size: 8cqi; line-height: 0.95; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="slides/questions"] [data-slot="contact"] { font-size: 2.2cqi; }
+</style>
+<div class="pg-frame" data-archetype="slides/questions">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-block">
+        <div class="pg-h1" data-slot="line"></div>
+        <div class="pg-body" data-slot="contact" data-slot-optional></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ tier: sample
 
 # Workshop
 
-This folder is the workshop half of Brand Asset Maker (BAM), the part of Poligraf that participants keep. It holds eight practice scenarios (`scenarios.md`), the brand-folder form (`brand-folder.md`), the gap note template (`gap-note.md`), the ranked next-assets prompt (`next-assets.md`), the cold handoff prompt (`cold-handoff.md`), a free font shortlist (`fonts-shortlist.md`) and the month-later self-audit (`self-audit.md`). The other half of BAM is the spec, the eleven sample layouts (`headline`, `stat`, `quote`, `event`, `offer`, `list`, `hiring`, `contrast`, `link-preview`, `profile-cover` and the email `header`), `base.css`, `select.md` and the skills.
+This folder is the workshop half of Brand Asset Maker (BAM), the part of Poligraf that participants keep. It holds eight practice scenarios (`scenarios.md`), the brand-folder form (`brand-folder.md`), the gap note template (`gap-note.md`), the ranked next-assets prompt (`next-assets.md`), the cold handoff prompt (`cold-handoff.md`), a free font shortlist (`fonts-shortlist.md`) and the month-later self-audit (`self-audit.md`). The other half of BAM is the spec, the 57 sample layouts in six forms (social post with carousel, slides, web banner, print, email header, and the image mock-up recipes), `base.css`, `select.md` and the skills.
 
 You fork BAM and use it with your own agent (Claude, Cursor, Codex or another) on your own brand. You never need HueGrid to make a post. Your agent writes your brand folder, makes your posts and checks them. When a request fits no layout, it writes a gap note.
 

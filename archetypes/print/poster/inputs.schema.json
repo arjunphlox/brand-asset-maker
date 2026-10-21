@@ -1,0 +1,105 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/poster",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "A4-portrait"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "headline": {
+      "required": true,
+      "maxWords": 6,
+      "maxChars": 40,
+      "role": "h1"
+    },
+    "subline": {
+      "required": false,
+      "maxWords": 16,
+      "maxChars": 100,
+      "role": "body"
+    },
+    "cta": {
+      "required": false,
+      "maxWords": 3,
+      "maxChars": 20,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "headline",
+    "subline",
+    "cta",
+    "logo"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "accent"
+    },
+    "align": {
+      "values": [
+        "start",
+        "center"
+      ],
+      "default": "start"
+    },
+    "anchor": {
+      "values": [
+        "bottom",
+        "top"
+      ],
+      "default": "bottom"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "headline.maxWords": {
+      "to": "print/flyer",
+      "why": "a poster headline is 6 words or fewer; with more to say, it is a flyer"
+    },
+    "headline.maxChars": {
+      "to": null,
+      "why": "a poster headline is 40 characters or fewer; rewrite it"
+    },
+    "subline.maxWords": {
+      "to": null,
+      "why": "the subline is one line of 16 words or fewer; cut it"
+    },
+    "cta.maxWords": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "cta.maxChars": {
+      "to": null,
+      "why": "a call to action is 3 words or fewer and starts with a verb (\"Come say hello\"); rewrite it"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<style>
+/* Rack card, DL 99x210mm at 150 dpi (585x1240, 1cqi = 5.85px). The logo and the headline in the top third (a rack hides
+   the rest), three points, the call to action at the foot. The smallest text is 3.4cqi: 19.9px, above the 17px floor. */
+.pg-frame[data-archetype="print/rack-card"] .pg-logo img[data-slot="logo"] { height: 10cqi; }
+.pg-frame[data-archetype="print/rack-card"] .pg-logo [data-slot="wordmark"] { font-size: 9cqi; }
+.pg-frame[data-archetype="print/rack-card"] .pg-head { display: flex; flex-direction: column; align-items: flex-start; margin-top: 10cqi; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="print/rack-card"] [data-slot="kicker"] { font-size: 3.4cqi; color: var(--pg-accent-text); margin-bottom: 3cqi; }
+.pg-frame[data-archetype="print/rack-card"] [data-slot="headline"] { font-size: 11cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="print/rack-card"] .pg-points { display: flex; flex-direction: column; gap: 6cqi; margin-top: 14cqi; min-width: 0; }
+.pg-frame[data-archetype="print/rack-card"] .pg-point { display: flex; flex-direction: row; align-items: baseline; gap: 3cqi; min-width: 0; }
+.pg-frame[data-archetype="print/rack-card"] .pg-dot { flex: 0 0 auto; width: 2.4cqi; height: 2.4cqi; background: var(--pg-accent); border-radius: var(--brand-radius); }
+.pg-frame[data-archetype="print/rack-card"][data-marker="none"] .pg-dot { display: none; }
+.pg-frame[data-archetype="print/rack-card"] .pg-point .pg-body { font-size: 4cqi; min-width: 0; flex: 1 1 auto; overflow-wrap: break-word; }
+.pg-frame[data-archetype="print/rack-card"] [data-slot="cta"] { font-size: 3.4cqi; margin-top: auto; }
+</style>
+<div class="pg-frame" data-archetype="print/rack-card">
+  <div class="pg-safe">
+    <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-head">
+      <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+      <div class="pg-h1" data-slot="headline"></div>
+    </div>
+    <div class="pg-points">
+      <div class="pg-point"><div class="pg-dot" aria-hidden="true"></div><div class="pg-body" data-slot="point1"></div></div>
+      <div class="pg-point"><div class="pg-dot" aria-hidden="true"></div><div class="pg-body" data-slot="point2"></div></div>
+      <div class="pg-point"><div class="pg-dot" aria-hidden="true"></div><div class="pg-body" data-slot="point3"></div></div>
+    </div>
+    <div class="pg-label" data-slot="cta" data-slot-optional></div>
+  </div>
+</div>

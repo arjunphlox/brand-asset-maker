@@ -1,0 +1,20 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/statement"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; gap: 2cqi; max-width: 84cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/statement"] [data-slot="kicker"] { color: var(--pg-accent-text); }
+.pg-frame[data-archetype="slides/statement"] [data-slot="statement"] { font-size: 5.4cqi; line-height: 1.02; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="slides/statement"][data-align="center"] .pg-slide-body { align-items: center; }
+.pg-frame[data-archetype="slides/statement"][data-align="center"] .pg-block { align-items: center; text-align: center; }
+</style>
+<div class="pg-frame" data-archetype="slides/statement">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-block">
+        <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+        <div class="pg-h1" data-slot="statement"></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/numbers"] .pg-slide-body { gap: 4cqi; }
+.pg-frame[data-archetype="slides/numbers"] [data-slot="title"] { font-size: 3.6cqi; line-height: 1; max-width: 84cqi; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="slides/numbers"] .pg-cells { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 4cqi; min-width: 0; }
+.pg-frame[data-archetype="slides/numbers"] .pg-cell { display: flex; flex-direction: column; gap: 1.4cqi; padding-top: 1.6cqi; border-top: 0.15cqi solid var(--pg-muted); min-width: 0; }
+.pg-frame[data-archetype="slides/numbers"] .pg-cell .pg-data { font-size: 7.6cqi; line-height: 0.85; padding-bottom: 0.15em; }
+.pg-frame[data-archetype="slides/numbers"][data-accent="numbers"] .pg-cell .pg-data { color: var(--pg-accent-text); }
+.pg-frame[data-archetype="slides/numbers"] .pg-cell .pg-body { font-size: 2cqi; overflow-wrap: break-word; text-wrap: balance; }
+</style>
+<div class="pg-frame" data-archetype="slides/numbers">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-h2" data-slot="title" data-slot-optional></div>
+      <div class="pg-cells">
+        <div class="pg-cell"><div class="pg-data" data-slot="number1"></div><div class="pg-body" data-slot="label1"></div></div>
+        <div class="pg-cell"><div class="pg-data" data-slot="number2"></div><div class="pg-body" data-slot="label2"></div></div>
+        <div class="pg-cell"><div class="pg-data" data-slot="number3"></div><div class="pg-body" data-slot="label3"></div></div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

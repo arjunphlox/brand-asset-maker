@@ -1,0 +1,68 @@
+{
+  "contractVersion": "1.4",
+  "id": "print/card-front",
+  "useCase": "print",
+  "author": "HueGrid Studio",
+  "license": "CC-BY-NC-SA-4.0",
+  "tier": "sample",
+  "ratios": [
+    "card"
+  ],
+  "proposal": "optional",
+  "slots": {
+    "tagline": {
+      "required": false,
+      "maxWords": 5,
+      "maxChars": 32,
+      "role": "label"
+    },
+    "logo": {
+      "required": true,
+      "kind": "asset"
+    }
+  },
+  "hierarchy": [
+    "logo",
+    "tagline"
+  ],
+  "variation": {
+    "scheme": {
+      "values": [
+        "paper",
+        "ink",
+        "accent"
+      ],
+      "default": "ink"
+    },
+    "align": {
+      "values": [
+        "center",
+        "start"
+      ],
+      "default": "center"
+    }
+  },
+  "checks": {
+    "contrast": true,
+    "min-text": true,
+    "safe-zone": true,
+    "overflow": true,
+    "element-count": true,
+    "token-colors": true,
+    "logo-integrity": true,
+    "logo-visible": true,
+    "font-loaded": true,
+    "role-face": true,
+    "budget": true
+  },
+  "fallbacks": {
+    "tagline.maxWords": {
+      "to": null,
+      "why": "the line on a card front is 5 words or fewer; an approved line, or none"
+    },
+    "logo.required": {
+      "to": null,
+      "why": "refuse to render; intake is incomplete"
+    }
+  }
+}

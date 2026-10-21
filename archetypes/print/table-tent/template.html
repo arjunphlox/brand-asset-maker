@@ -1,0 +1,26 @@
+<style>
+/* Table tent panel, A6 portrait 105x148mm at 150 dpi (620x874, 1cqi = 6.2px). The logo at the head, the block on the
+   centre line, the call to action at the foot. The smallest text is 3cqi: 18.6px, above the 17px (8pt) floor. */
+.pg-frame[data-archetype="print/table-tent"] .pg-safe { justify-content: space-between; align-items: center; text-align: center; }
+.pg-frame[data-archetype="print/table-tent"][data-align="start"] .pg-safe { align-items: flex-start; text-align: start; }
+.pg-frame[data-archetype="print/table-tent"] .pg-logo img[data-slot="logo"] { height: 8cqi; }
+.pg-frame[data-archetype="print/table-tent"] .pg-logo [data-slot="wordmark"] { font-size: 7cqi; }
+.pg-frame[data-archetype="print/table-tent"] .pg-block { display: flex; flex-direction: column; align-items: inherit; min-width: 0; max-width: 100%; }
+.pg-frame[data-archetype="print/table-tent"] [data-slot="kicker"] { font-size: 3cqi; margin-bottom: 3cqi; }
+.pg-frame[data-archetype="print/table-tent"] [data-slot="headline"] { font-size: 11cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="print/table-tent"] [data-slot="line"] { font-size: 3.6cqi; margin-top: 4cqi; max-width: 90%; }
+.pg-frame[data-archetype="print/table-tent"] [data-slot="cta"] { font-size: 3.2cqi; color: var(--pg-accent-text); }
+/* With no CTA, an empty spacer keeps the block on the centre line. */
+.pg-frame[data-archetype="print/table-tent"] .pg-foot { min-height: 8cqi; display: flex; align-items: flex-end; }
+</style>
+<div class="pg-frame" data-archetype="print/table-tent">
+  <div class="pg-safe">
+    <div class="pg-logo"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-block">
+      <div class="pg-label" data-slot="kicker" data-slot-optional></div>
+      <div class="pg-h1" data-slot="headline"></div>
+      <div class="pg-body" data-slot="line"></div>
+    </div>
+    <div class="pg-foot"><div class="pg-label" data-slot="cta" data-slot-optional></div></div>
+  </div>
+</div>

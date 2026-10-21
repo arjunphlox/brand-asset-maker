@@ -1,0 +1,25 @@
+<style>
+/* 1920x1080: 1cqi = 19.2px. The logo, footer and page number are the shared slide chrome (base.css); this layout styles only its content box. */
+.pg-frame[data-archetype="slides/quote"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 80cqi; }
+.pg-frame[data-archetype="slides/quote"] .pg-quote-mark { font-size: 8cqi; line-height: 0.7; height: 4cqi; color: var(--pg-accent-text); margin-bottom: 1.6cqi; }
+.pg-frame[data-archetype="slides/quote"] [data-slot="quote"] { font-size: 3.2cqi; line-height: 1.15; text-wrap: pretty; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="slides/quote"] .pg-attrib { display: flex; flex-direction: column; gap: 0.6cqi; margin-top: 3cqi; }
+.pg-frame[data-archetype="slides/quote"] [data-slot="attribution"] { font-size: 2cqi; font-weight: var(--brand-weight-label); }
+.pg-frame[data-archetype="slides/quote"] [data-slot="role"] { color: var(--pg-muted); }
+</style>
+<div class="pg-frame" data-archetype="slides/quote">
+  <div class="pg-safe">
+    <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
+    <div class="pg-slide-body">
+      <div class="pg-block">
+        <span class="pg-data pg-quote-mark" aria-hidden="true">“</span>
+        <div class="pg-body" data-slot="quote"></div>
+        <div class="pg-attrib">
+          <div class="pg-body" data-slot="attribution"></div>
+          <div class="pg-label" data-slot="role" data-slot-optional></div>
+        </div>
+      </div>
+    </div>
+    <div class="pg-slide-foot"><div class="pg-label" data-slot="footer" data-slot-optional></div><div class="pg-label" data-slot="page" data-slot-optional></div></div>
+  </div>
+</div>

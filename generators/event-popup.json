@@ -1,0 +1,57 @@
+{
+  "contractVersion": "1.5",
+  "name": "event-popup",
+  "archetype": "social-post/event",
+  "ratios": [
+    "1:1",
+    "4:5",
+    "9:16"
+  ],
+  "variation": {
+    "scheme": [
+      "paper"
+    ],
+    "align": [
+      "start"
+    ],
+    "accent": [
+      "none"
+    ],
+    "rule": [
+      "none"
+    ],
+    "cta": [
+      "pill"
+    ],
+    "highlight": [
+      "none"
+    ],
+    "head": [
+      "logo"
+    ],
+    "foot": [
+      "stack"
+    ]
+  },
+  "message": "kadri-popup",
+  "rows": [
+    {
+      "id": "popup",
+      "inputs": {
+        "name": {
+          "fact": "name"
+        },
+        "date": {
+          "fact": "date"
+        },
+        "place": {
+          "fact": "place"
+        },
+        "cta": "Find our stall"
+      }
+    }
+  ],
+  "approvedFrom": null,
+  "useWhen": "the pop-up as an event: its name, date and place, one post per Instagram format (feed 1:1, tall feed 4:5, story 9:16)",
+  "note": "Seeded from proposal p01 (out/p01/), not approved: approvedFrom is null until the owner picks a sample. Every fact comes from the message. The cta is a draft (verb: Find); the owner has not said yes to it. accent is none because the coral is 2.77:1 on the cream paper and cannot carry text there; the coral shows as the cta pill instead. Kadri Coffee is fictional teaching material."
+}

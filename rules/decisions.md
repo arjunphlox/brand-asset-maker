@@ -1,0 +1,9 @@
+# Decisions
+
+One dated line per decision. Kadri Coffee is fictional teaching material by Madhuri Maram.
+
+- 2026-10-22 — Bring. The owner named the Kadri Coffee demo brand asset kit (aiproductdesign.co `demo-assets/kadri-coffee/`: `brand-tokens.json`, `docs/brand-guide.md`, `logos/`, `fonts/`) as the hand-in. Encoded into `brand/`: cream paper, ink, coral accent, Mona Sans 500/400/500, the dark k as logo and the cream k reversed. Values the kit states are `locked`; `accent-ink`, `muted`, both trackings, `radius` and the ink scheme's logo variant are `derived`. Log: `brand/intake.log.md`.
+- 2026-10-22 — Bring. Headings follow the kit's table (Mona Sans 500), not the workshop form in `examples/kadri/` (Hubot Sans). The two encodings differ in paper (#FFF5DF vs #ffffff), ink (#302037 vs #4b1f15) and the display face; `examples/kadri/` is untouched.
+- 2026-10-22 — Pick (suggest). "A post for the Kadri pop-up at Mill Lane Market on 8 November, for Instagram": social post · feed post 1:1 (the message) · event, by `archetypes/social-post/select.md` step 1 (an event: a date and a place). Runner-up: headline at 9:16 with a `cta`, for a story the week of the pop-up. Facts in `messages/kadri-popup.json`.
+- 2026-10-22 — Pick (propose). Run `p01`: event at 1:1 × paper, ink, accent, and at 4:5 and 9:16 on paper; 5/5 pass all twelve measured checks (`out/p01/report.md`). Variation `accent: none`, `cta: pill`: the coral is 2.77:1 on the cream, below 3:1, so coral text is off on paper and the coral shows as the button (ink text, 5.04:1). No approval: the agent does not pick for the owner. The cta "Find our stall" is a draft.
+- 2026-10-22 — Cold handoff test: not run (needs a fresh chat with only `brand/` attached). Open.

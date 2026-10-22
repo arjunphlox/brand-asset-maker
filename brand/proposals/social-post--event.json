@@ -1,0 +1,15 @@
+{
+  "contractVersion": "1.5",
+  "archetype": "social-post/event",
+  "ratios": ["1:1", "4:5", "9:16"],
+  "schemes": ["paper", "ink", "accent"],
+  "variation": { "align": "start", "accent": "none", "rule": "none", "cta": "pill", "highlight": "none", "head": "logo", "foot": "stack" },
+  "message": "kadri-popup",
+  "inputs": {
+    "name": { "fact": "name" },
+    "date": { "fact": "date" },
+    "place": { "fact": "place" },
+    "cta": "Find our stall"
+  },
+  "notes": "Proposal p01 for the owner's request (2026-10-22): a post for the Kadri pop-up at Mill Lane Market on 8 November, for Instagram. Layout by archetypes/social-post/select.md step 1 (an event: a date and a place). name 2 words 12 chars of 5/32; date 2 words 10 chars of 4/24; place 3 words 16 chars of 6/40; cta 3 words 14 chars of 3/20, verb: Find (draft, needs the owner's yes). accent: none because coral text on the cream fails 3:1 (2.77:1); cta: pill shows the coral as a surface with ink text (5.04:1). Rendered at 1:1 in all three schemes, and at 4:5 and 9:16 on paper."
+}

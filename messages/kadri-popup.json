@@ -1,0 +1,14 @@
+{
+  "contractVersion": "1.4",
+  "name": "kadri-popup",
+  "facts": {
+    "name": "Kadri Pop-up",
+    "date": "8 November",
+    "place": "Mill Lane Market"
+  },
+  "approvedLines": [
+    "COFFEE FOR YOUR EVERYDAY.",
+    "GOOD COFFEE. YOUR WAY."
+  ],
+  "note": "The owner's request of 2026-10-22: a post for the Kadri pop-up at Mill Lane Market on 8 November. The date and the place are the owner's words. The name is written as in examples/kadri/messages/kadri-popup.json (\"Kadri Pop-up\"; the owner wrote \"the Kadri pop-up\" in a sentence): confirm the casing. The approved lines are the kit's brand guide concept lines, verbatim. Kadri Coffee is fictional teaching material."
+}

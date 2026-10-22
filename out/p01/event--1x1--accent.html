@@ -1,0 +1,334 @@
+<!doctype html>
+<html data-ratio="1:1" data-scheme="accent"><head><meta charset="utf-8"><style>
+/* fonts */
+/* Kadri Coffee fonts: Hubot Sans and Mona Sans (GitHub), SIL Open Font License 1.1. Policy path (a): files supplied
+   in the Kadri Coffee demo brand asset kit (fonts/), copied unchanged into brand/fonts/ with their licence files.
+   Both are variable fonts; the ranges below are the files' own axes (Hubot Sans: wdth 80-120, wght 200-900;
+   Mona Sans: wght 200-900, opsz 0-100), so the browser drives weight from font-weight and width from font-stretch.
+   See brand/fonts.md. */
+@font-face { font-family: "Hubot Sans"; src: url("../../brand/fonts/HubotSansVF-Regular.ttf") format("truetype"); font-weight: 200 900; font-stretch: 80% 120%; font-style: normal; font-display: block; }
+@font-face { font-family: "Mona Sans"; src: url("../../brand/fonts/MonaSansVF.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: block; }
+
+/* base */
+/* Poligraf shared plumbing. Brand-agnostic: reads only --brand-* tokens.
+   (c) HueGrid Studio. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep: CC BY-NC-SA 4.0 (fork and change it, credit
+   HueGrid Studio, non-commercial, share changes under the same licence). The engine under scripts/ is not part of BAM. */
+html, body { margin: 0; background: transparent; }
+
+.pg-frame {
+  container-type: inline-size;
+  container-name: frame;
+  position: relative;
+  overflow: hidden;
+  width: 1080px;
+  box-sizing: border-box;
+  background: var(--pg-surface);
+  color: var(--pg-on-surface);
+  font-family: var(--brand-font-body);
+}
+.pg-frame[data-ratio="1:1"] { height: 1080px; }
+.pg-frame[data-ratio="4:5"] { height: 1350px; }
+.pg-frame[data-ratio="9:16"] { height: 1920px; } /* story; added in contract 1.4 */
+/* Frames that are not 1080 wide (contract 1.4, additive): each sets its own width and height. 1cqi is 1% of the
+   frame width, so sizes in cqi scale with the frame; a template sets smaller cqi steps for a short, wide frame. */
+.pg-frame[data-ratio="1.91:1"] { width: 1200px; height: 630px; } /* banner: share card, link preview */
+.pg-frame[data-ratio="4:1"] { width: 1584px; height: 396px; }    /* banner: profile cover */
+.pg-frame[data-ratio="3:1"] { width: 1200px; height: 400px; }    /* email: newsletter header, shown at 600x200 */
+/* Web banners (contract 1.5, additive): display ad units and the site hero, shown at 1x. Keys name the size. */
+.pg-frame[data-ratio="728x90"] { width: 728px; height: 90px; }     /* leaderboard */
+.pg-frame[data-ratio="300x250"] { width: 300px; height: 250px; }   /* medium rectangle */
+.pg-frame[data-ratio="300x600"] { width: 300px; height: 600px; }   /* half page */
+.pg-frame[data-ratio="160x600"] { width: 160px; height: 600px; }   /* skyscraper */
+.pg-frame[data-ratio="970x250"] { width: 970px; height: 250px; }   /* billboard */
+.pg-frame[data-ratio="320x100"] { width: 320px; height: 100px; }   /* large mobile banner */
+.pg-frame[data-ratio="1920x600"] { width: 1920px; height: 600px; } /* website hero band */
+/* Custom size (1.5): the renderer stamps the width, height and --pg-safe-* insets inline from the generator's
+   `size`. The frame is a size container, so a template can query its aspect ratio (@container frame (...)) and
+   size type by its short side (cqmin) as well as its width (cqi). */
+.pg-frame[data-ratio="custom"] { container-type: size; }
+/* Print frames (five forms, additive): the trim size at 150 dpi (px = mm x 150 / 25.4), so 8pt is 17px on every one.
+   Proofs render at render.scale 2 = 300 dpi. Bleed is not drawn: the frame is the trim line. */
+.pg-frame[data-ratio="A4-portrait"] { width: 1240px; height: 1754px; }  /* print: A4 210x297mm (A5 and A3 share the proportion) */
+.pg-frame[data-ratio="A5-portrait"] { width: 874px; height: 1240px; }   /* print: A5 148x210mm, the hand-out flyer */
+.pg-frame[data-ratio="A6-landscape"] { width: 874px; height: 620px; }   /* print: A6 148x105mm, the postcard */
+.pg-frame[data-ratio="A6-portrait"] { width: 620px; height: 874px; }    /* print: A6 105x148mm, a table-tent panel */
+.pg-frame[data-ratio="DL"] { width: 585px; height: 1240px; }            /* print: DL 99x210mm, the rack card */
+.pg-frame[data-ratio="card"] { width: 502px; height: 325px; }           /* print: business card 85x55mm */
+.pg-frame[data-ratio="sticker"] { width: 450px; height: 450px; }        /* print: sticker 3x3in (76.2mm) */
+.pg-frame[data-ratio="16:9"] { width: 1920px; height: 1080px; }  /* slides: one slide of a deck (contract 1.5) */
+
+/* Schemes: on the frame itself or on an ancestor (html). Wrapped in :where() so they carry zero
+   specificity: a brand override under .pg-frame[data-scheme="…"] in tokens.css always wins, whatever the order. */
+:where(.pg-frame[data-scheme="paper"], html[data-scheme="paper"] .pg-frame) {
+  --pg-surface: var(--brand-paper); --pg-on-surface: var(--brand-ink);
+  --pg-accent: var(--brand-accent); --pg-accent-on: var(--brand-accent-ink);
+  --pg-muted: var(--brand-muted);
+}
+:where(.pg-frame[data-scheme="ink"], html[data-scheme="ink"] .pg-frame) {
+  --pg-surface: var(--brand-ink); --pg-on-surface: var(--brand-paper);
+  --pg-accent: var(--brand-accent); --pg-accent-on: var(--brand-accent-ink);
+  --pg-muted: var(--brand-muted);
+}
+:where(.pg-frame[data-scheme="accent"], html[data-scheme="accent"] .pg-frame) {
+  --pg-surface: var(--brand-accent); --pg-on-surface: var(--brand-accent-ink);
+  --pg-accent: var(--brand-accent-ink); --pg-accent-on: var(--brand-accent);
+  --pg-muted: var(--brand-accent-ink);
+}
+
+/* Safe zone (config px at 1080 wide: 72 = 6.6667cqi, 250 = 23.1481cqi, 340 = 31.4815cqi).
+   Tokens hold cqi; they resolve where used (children of the container). */
+.pg-frame {
+  --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi;
+  --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi;
+}
+.pg-frame[data-ratio="4:5"] {
+  --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 23.1481cqi;
+}
+/* 9:16 story (1.4): 250px top clears the story header, 340px bottom clears the reply bar. An ESTIMATE, to
+   re-measure (poligraf.config.json safeZoneNotes); the config numbers are what the safe-zone check enforces. */
+.pg-frame[data-ratio="9:16"] {
+  --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 31.4815cqi;
+}
+/* Wider frames: the insets are the config px divided by the frame width (1cqi = width / 100). */
+.pg-frame[data-ratio="1.91:1"] { /* 1200 wide: 60 = 5cqi, 72 = 6cqi */
+  --pg-safe-top: 5cqi; --pg-safe-right: 6cqi; --pg-safe-bottom: 5cqi; --pg-safe-left: 6cqi;
+}
+/* 4:1 profile cover: the 568px left margin keeps text clear of the profile photo. An ESTIMATE, to re-measure
+   (poligraf.config.json safeZoneNotes). 1584 wide: 48 = 3.0303cqi, 72 = 4.5455cqi, 568 = 35.8586cqi. */
+.pg-frame[data-ratio="4:1"] {
+  --pg-safe-top: 3.0303cqi; --pg-safe-right: 4.5455cqi; --pg-safe-bottom: 3.0303cqi; --pg-safe-left: 35.8586cqi;
+}
+.pg-frame[data-ratio="3:1"] { /* 1200 wide: 56 = 4.6667cqi, 72 = 6cqi */
+  --pg-safe-top: 4.6667cqi; --pg-safe-right: 6cqi; --pg-safe-bottom: 4.6667cqi; --pg-safe-left: 6cqi;
+}
+/* Web banners (1.5): config px over the frame width. Ad-unit margins are judgement, to re-measure (safeZoneNotes). */
+.pg-frame[data-ratio="728x90"] { /* 8 = 1.0989cqi, 12 = 1.6484cqi */
+  --pg-safe-top: 1.0989cqi; --pg-safe-right: 1.6484cqi; --pg-safe-bottom: 1.0989cqi; --pg-safe-left: 1.6484cqi;
+}
+.pg-frame[data-ratio="300x250"] { /* 16 = 5.3333cqi */
+  --pg-safe-top: 5.3333cqi; --pg-safe-right: 5.3333cqi; --pg-safe-bottom: 5.3333cqi; --pg-safe-left: 5.3333cqi;
+}
+.pg-frame[data-ratio="300x600"] { /* 20 = 6.6667cqi */
+  --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi; --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi;
+}
+.pg-frame[data-ratio="160x600"] { /* 12 = 7.5cqi */
+  --pg-safe-top: 7.5cqi; --pg-safe-right: 7.5cqi; --pg-safe-bottom: 7.5cqi; --pg-safe-left: 7.5cqi;
+}
+.pg-frame[data-ratio="970x250"] { /* 24 = 2.4742cqi, 32 = 3.299cqi */
+  --pg-safe-top: 2.4742cqi; --pg-safe-right: 3.299cqi; --pg-safe-bottom: 2.4742cqi; --pg-safe-left: 3.299cqi;
+}
+.pg-frame[data-ratio="320x100"] { /* 8 = 2.5cqi, 12 = 3.75cqi */
+  --pg-safe-top: 2.5cqi; --pg-safe-right: 3.75cqi; --pg-safe-bottom: 2.5cqi; --pg-safe-left: 3.75cqi;
+}
+/* 1920x600 hero: 320px sides keep text inside the central 1280 a cover-cropped hero still shows (an ESTIMATE). */
+.pg-frame[data-ratio="1920x600"] { /* 60 = 3.125cqi, 320 = 16.6667cqi */
+  --pg-safe-top: 3.125cqi; --pg-safe-right: 16.6667cqi; --pg-safe-bottom: 3.125cqi; --pg-safe-left: 16.6667cqi;
+}
+/* Print: 5mm inside the trim = 30px at 150 dpi on every side (an ESTIMATE, to re-measure against the printer's spec;
+   poligraf.config.json safeZoneNotes). Insets are 30px over the frame width. */
+.pg-frame[data-ratio="A4-portrait"] { --pg-safe-top: 2.4194cqi; --pg-safe-right: 2.4194cqi; --pg-safe-bottom: 2.4194cqi; --pg-safe-left: 2.4194cqi; } /* 1240 wide */
+.pg-frame[data-ratio="A5-portrait"] { --pg-safe-top: 3.4325cqi; --pg-safe-right: 3.4325cqi; --pg-safe-bottom: 3.4325cqi; --pg-safe-left: 3.4325cqi; } /* 874 wide */
+.pg-frame[data-ratio="A6-landscape"] { --pg-safe-top: 3.4325cqi; --pg-safe-right: 3.4325cqi; --pg-safe-bottom: 3.4325cqi; --pg-safe-left: 3.4325cqi; } /* 874 wide */
+.pg-frame[data-ratio="A6-portrait"] { --pg-safe-top: 4.8387cqi; --pg-safe-right: 4.8387cqi; --pg-safe-bottom: 4.8387cqi; --pg-safe-left: 4.8387cqi; } /* 620 wide */
+.pg-frame[data-ratio="DL"] { --pg-safe-top: 5.1282cqi; --pg-safe-right: 5.1282cqi; --pg-safe-bottom: 5.1282cqi; --pg-safe-left: 5.1282cqi; } /* 585 wide */
+.pg-frame[data-ratio="card"] { --pg-safe-top: 5.9761cqi; --pg-safe-right: 5.9761cqi; --pg-safe-bottom: 5.9761cqi; --pg-safe-left: 5.9761cqi; } /* 502 wide */
+.pg-frame[data-ratio="sticker"] { --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi; --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi; } /* 450 wide */
+/* 16:9 slide (1.5): 96px all round, an ESTIMATE to re-measure (meeting apps overlay the corners). 1920 wide: 96 = 5cqi. */
+.pg-frame[data-ratio="16:9"] {
+  --pg-safe-top: 5cqi; --pg-safe-right: 5cqi; --pg-safe-bottom: 5cqi; --pg-safe-left: 5cqi;
+}
+.pg-safe {
+  position: absolute;
+  top: var(--pg-safe-top); right: var(--pg-safe-right);
+  bottom: var(--pg-safe-bottom); left: var(--pg-safe-left);
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Text roles. Sizes are set by templates in cqi. */
+/* Display-face levels: h1, h2, h3 and data snippets. Same face, no size; templates set sizes. */
+.pg-h1, .pg-h2, .pg-h3, .pg-data,
+.pg-display /* DEPRECATED alias of .pg-h1, kept for one release; remove after 2026-10 */ {
+  font-family: var(--brand-font-display);
+  font-weight: var(--brand-weight-display);
+  letter-spacing: var(--brand-tracking-display);
+  /* Optional token (contract 1.4): a font-stretch percentage for the display face, e.g. 110%. Absent, the
+     fallback `normal` is the initial value, so rendering is unchanged. The face's @font-face needs a
+     font-stretch range (brand/fonts.css) for a variable width axis to follow it. */
+  font-stretch: var(--brand-stretch-display, normal);
+  line-height: 0.95;
+}
+.pg-body {
+  font-family: var(--brand-font-body);
+  font-weight: var(--brand-weight-body);
+  line-height: 1.25;
+}
+.pg-label {
+  font-family: var(--brand-font-body);
+  font-weight: var(--brand-weight-label);
+  text-transform: uppercase;
+  letter-spacing: var(--brand-tracking-label);
+  line-height: 1.2;
+  font-size: 2.8cqi; /* floor: 30px at 1080; min-text check is 28px */
+}
+
+/* Logo group */
+.pg-logo { display: flex; flex-direction: row; align-items: center; gap: 0.6cqi; }
+.pg-logo img[data-slot="logo"] { height: 3.4cqi; width: auto; display: block; }
+.pg-logo [data-slot="wordmark"] {
+  font-family: var(--brand-font-display);
+  font-size: 4.2cqi;
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  font-weight: var(--brand-weight-display);
+  color: var(--pg-on-surface);
+}
+.pg-logo--tl, .pg-logo--tr, .pg-logo--bl, .pg-logo--br { position: absolute; }
+.pg-logo--tl { top: 0; left: 0; }
+.pg-logo--tr { top: 0; right: 0; }
+.pg-logo--bl { bottom: 0; left: 0; }
+.pg-logo--br { bottom: 0; right: 0; }
+
+/* Photo slot plumbing. A template wraps an image slot in .pg-photo; the renderer stamps the row's focal
+   point on the <img> as --pg-focal-x/--pg-focal-y (0..100%), which object-position reads, so the focal
+   point always lands at the same fraction of the box that it has in the source. Templates size and place
+   .pg-photo; they never set object-position by hand. The image may bleed past the safe zone (schema
+   `bleed: true`); the `crop` check then requires the focal point itself to sit inside the safe zone. */
+.pg-photo { position: absolute; overflow: hidden; }
+.pg-photo img[data-slot] {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: var(--pg-focal-x, 50%) var(--pg-focal-y, 50%);
+}
+
+/* Accent bar */
+.pg-bar { width: 0.4cqi; background: var(--pg-accent); border-radius: var(--brand-radius); }
+/* Text painted in the accent reads --pg-accent-text, which defaults to --pg-accent. A brand may
+   override it per scheme in tokens.css when its accent fails text contrast on a surface. */
+.pg-frame { --pg-accent-text: var(--pg-accent); }
+
+/* Slide chrome (contract 1.5, additive): every slides/* layout shares it, so a deck reads as one thing. The logo sits
+   top left of the safe box at one size; .pg-slide-foot holds the optional footer label (the deck title) at the start
+   and the optional page number at the end of the bottom edge; .pg-slide-body is the content box between them.
+   1cqi = 19.2px at 1920 wide; minTextPx is 24 for slides (labels here are 1.4cqi = 26.88px). */
+.pg-frame[data-ratio="16:9"] .pg-logo { gap: 0.5cqi; }
+.pg-frame[data-ratio="16:9"] .pg-logo img[data-slot="logo"] { height: 2.4cqi; }
+.pg-frame[data-ratio="16:9"] .pg-logo [data-slot="wordmark"] { font-size: 2.9cqi; }
+.pg-frame[data-ratio="16:9"] .pg-label { font-size: 1.4cqi; }
+.pg-slide-body {
+  position: absolute; top: 6.4cqi; right: 0; bottom: 4.4cqi; left: 0;
+  display: flex; flex-direction: column; justify-content: center; min-width: 0; box-sizing: border-box;
+}
+.pg-slide-foot {
+  position: absolute; right: 0; bottom: 0; left: 0;
+  display: flex; flex-direction: row; align-items: baseline; gap: 2cqi; min-width: 0;
+}
+.pg-slide-foot [data-slot] { color: var(--pg-muted); min-width: 0; overflow-wrap: break-word; }
+.pg-slide-foot [data-slot="page"] { margin-left: auto; flex: 0 0 auto; }
+
+/* tokens */
+/* Kadri Coffee is fictional teaching material by Madhuri Maram. Encoded 2026-10-22 from the Kadri Coffee demo brand
+   asset kit (aiproductdesign.co: demo-assets/kadri-coffee/brand-tokens.json and docs/brand-guide.md), which the owner
+   named as the hand-in. Supplied values are copied verbatim; every other value is derived and says where it came from.
+   Status per value: brand/locked.json. Measurements: brand/intake.log.md. */
+:root {
+  --brand-paper: #FFF5DF;          /* supplied: brand-tokens.json colors.cream; the guide: "Cream is used for large branding and label backgrounds" */
+  --brand-ink: #302037;            /* supplied: brand-tokens.json colors.ink (13.97:1 on paper) */
+  --brand-accent: #FF603E;         /* supplied: brand-tokens.json colors.coral, "Colour-logo coral" (2.77:1 on paper, 5.04:1 on ink) */
+  --brand-accent-ink: #302037;     /* derived: text on the coral surface; the ink, as the guide puts ink lettering on the coloured badges (5.04:1) */
+  --brand-muted: #302037;          /* derived: the kit has three shared colours and no muted one; the ink stands in until the owner names one */
+
+  /* The coral is 2.77:1 on the cream: below 3:1, so it cannot carry text of any size on the paper scheme. The
+     proposal keeps accent text off (variation accent: none) and shows the coral as a surface (the cta pill) instead.
+     No darker coral exists in the kit, so none is declared here: a coral that can carry text on cream is a question
+     for the owner (brand/intake.log.md). */
+
+  --brand-font-display: "Mona Sans", sans-serif;  /* supplied: the guide's typography table, "Product names, headings, small labels: Mona Sans 500" */
+  --brand-font-body: "Mona Sans", sans-serif;     /* supplied: "Tasting notes and supporting text: Mona Sans 400" */
+  --brand-weight-display: 500;     /* supplied: the guide, headings wght=500 */
+  --brand-weight-body: 400;        /* supplied: the guide, supporting text wght=400 */
+  --brand-weight-label: 500;       /* supplied: the guide, "small labels" wght=500 */
+  --brand-tracking-display: 0em;   /* derived: the guide sets tracking for the wordmark only (-0.023em); headings keep the face's own spacing */
+  --brand-tracking-label: 0.06em;  /* derived: uppercase labels opened slightly; the guide says nothing about label tracking */
+  --brand-radius: 28px;            /* derived: read from the kit's label artwork (rx="28" on the 1000x600 cream label) */
+}
+
+/* Ink scheme: the dark k vanishes on the ink surface, so this scheme renders the cream k (brand/assets/logo-reversed.svg,
+   the kit's kadri-symbol-light.svg). The kit's own rule: dark mark on a light background, cream mark on a dark one. */
+.pg-frame[data-scheme="ink"] {
+  --brand-logo-variant: reversed;
+}
+
+</style>
+<style>
+.pg-frame[data-archetype="social-post/event"] .pg-safe { justify-content: flex-end; }
+/* Top row: the logo, and with rule="hairline" a hairline running from it to the far edge of the safe zone. */
+.pg-frame[data-archetype="social-post/event"] .pg-top { position: absolute; top: 0; left: 0; right: 0; display: flex; flex-direction: row; align-items: center; gap: 2.4cqi; }
+.pg-frame[data-archetype="social-post/event"][data-align="center"][data-rule="none"] .pg-top { justify-content: center; }
+.pg-frame[data-archetype="social-post/event"] .pg-rule { display: none; flex: 1 1 auto; height: 0.2cqi; background: var(--pg-muted); }
+.pg-frame[data-archetype="social-post/event"][data-rule="hairline"] .pg-rule { display: block; }
+.pg-frame[data-archetype="social-post/event"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 100%; text-align: start; }
+.pg-frame[data-archetype="social-post/event"][data-align="center"] .pg-block { align-items: center; text-align: center; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="name"] { font-size: 11cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+/* highlight="block": the name sits on solid accent tags, one per line (box-decoration-break: clone repeats the padding and
+   radius on every line; padding 0.08em by 0.22em of the tag size, written in cqi). The wrapper is display: contents by default, so the default layout is unchanged; with block it is
+   the line's block box, and the slot turns inline inside it. line-height opens to 1.62 so tags on consecutive lines do not touch. */
+.pg-frame[data-archetype="social-post/event"] .pg-title { display: contents; }
+.pg-frame[data-archetype="social-post/event"][data-highlight="block"] .pg-title { display: block; max-width: 100%; font-size: 9.6cqi; line-height: 1.62; text-wrap: balance; }
+.pg-frame[data-archetype="social-post/event"][data-highlight="block"][data-align="center"] .pg-title { text-align: center; }
+.pg-frame[data-archetype="social-post/event"][data-highlight="block"] [data-slot="name"] { display: inline; font-size: 9.6cqi; line-height: 1.62; background: var(--pg-accent); color: var(--pg-accent-on); padding: 0.768cqi 2.112cqi; border-radius: var(--brand-radius); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+/* The date reads second: display face one step down, with room above it for the name's descenders. */
+.pg-frame[data-archetype="social-post/event"] [data-slot="date"] { font-size: 7cqi; margin-top: 3.4cqi; max-width: 100%; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="place"] { font-size: 4.6cqi; margin-top: 1.6cqi; max-width: 100%; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="cta"] { margin-top: 4.4cqi; }
+.pg-frame[data-archetype="social-post/event"][data-accent="date"] [data-slot="date"] { color: var(--pg-accent-text); }
+.pg-frame[data-archetype="social-post/event"][data-accent="cta"] [data-slot="cta"] { color: var(--pg-accent-text); }
+/* cta="pill": one solid button, the accent surface with its own text colour (on the accent scheme base.css swaps
+   the pair, so the button turns ink with accent text). After the accent rule, so the pill's text colour wins. */
+.pg-frame[data-archetype="social-post/event"][data-cta="pill"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 1.6cqi 2.8cqi; border-radius: var(--brand-radius); width: fit-content; }
+/* A talk (optional slots, 2026-10-21): the series line sits in the top row, at the end side by default; with
+   head="series" the row mirrors, so the series reads first at the start side and the logo moves to the end. The speaker
+   and their role sit under the name. The wrappers are display: contents unless foot="split", so a post without these
+   slots renders as before. A role without a speaker is dropped: it never stands alone. */
+.pg-frame[data-archetype="social-post/event"] .pg-top:has([data-slot="series"]) { justify-content: space-between; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="series"] { margin-left: auto; text-align: end; min-width: 0; }
+.pg-frame[data-archetype="social-post/event"][data-head="series"] .pg-top { flex-direction: row-reverse; }
+.pg-frame[data-archetype="social-post/event"][data-head="series"] [data-slot="series"] { margin-left: 0; margin-right: auto; text-align: start; }
+.pg-frame[data-archetype="social-post/event"] .pg-foot, .pg-frame[data-archetype="social-post/event"] .pg-who, .pg-frame[data-archetype="social-post/event"] .pg-when { display: contents; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="speaker"] { font-size: 6cqi; line-height: 1.02; margin-top: 3.4cqi; max-width: 100%; overflow-wrap: break-word; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="speakerRole"] { font-size: 4.2cqi; margin-top: 1cqi; max-width: 100%; }
+.pg-frame[data-archetype="social-post/event"] .pg-who:not(:has([data-slot="speaker"])) [data-slot="speakerRole"] { display: none; }
+/* foot="split": the speaker at the start side, the date and place at the end side, last baselines aligned at the foot
+   of the block. Not at 9:16, where the story stacks (the row would crowd the centre line). */
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) .pg-foot { display: flex; flex-direction: row; justify-content: space-between; align-items: last baseline; gap: 3cqi; align-self: stretch; margin-top: 4.4cqi; min-width: 0; }
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) .pg-who { display: flex; flex-direction: column; align-items: flex-start; text-align: start; min-width: 0; flex: 0 1 auto; max-width: 60%; }
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) .pg-when { display: flex; flex-direction: column; align-items: flex-end; text-align: end; min-width: 0; flex: 0 1 auto; max-width: 56%; margin-left: auto; }
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="speaker"],
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="date"] { margin-top: 0; }
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="date"] { font-size: 5.2cqi; line-height: 1.02; }
+.pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="speakerRole"] { font-size: 3.8cqi; }
+/* 9:16 story: adapted, not scaled. The block sits on the centre line; the CTA drops to the foot of the safe zone. */
+.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"] .pg-safe { justify-content: center; }
+.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"] [data-slot="cta"] { position: absolute; bottom: 0; left: 0; right: 0; margin-top: 0; }
+.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"][data-cta="pill"] [data-slot="cta"] { margin-right: auto; }
+.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"][data-cta="pill"][data-align="center"] [data-slot="cta"] { margin-left: auto; }
+</style>
+</head><body>
+<div class="pg-frame" data-archetype="social-post/event" data-ratio="1:1" data-scheme="accent" data-align="start" data-accent="none" data-rule="none" data-cta="pill" data-highlight="none" data-head="logo" data-foot="stack" style="--v-accent: none; --v-align: start; --v-cta: pill; --v-foot: stack; --v-head: logo; --v-highlight: none; --v-rule: none; --v-scheme: accent">
+  <div class="pg-safe">
+    <div class="pg-top">
+      <div class="pg-logo"><img data-slot="logo" alt="" src="../../brand/assets/logo.svg"></div>
+      <div class="pg-rule" aria-hidden="true"></div>
+      
+    </div>
+    <div class="pg-block">
+      <div class="pg-title"><div class="pg-h1" data-slot="name" data-role="h1">Kadri Pop-up</div></div>
+      <div class="pg-foot">
+        <div class="pg-who"></div>
+        <div class="pg-when"><div class="pg-h2" data-slot="date" data-role="h2">8 November</div><div class="pg-body" data-slot="place" data-role="body">Mill Lane Market</div></div>
+      </div>
+      <div class="pg-label" data-slot="cta" data-slot-optional data-role="label">Find our stall</div>
+    </div>
+  </div>
+</div>
+</body></html>

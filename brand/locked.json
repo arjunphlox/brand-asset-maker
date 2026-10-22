@@ -1,0 +1,92 @@
+{
+  "contractVersion": "1.5",
+  "assets": {
+    "logo.svg": {
+      "sha256": "6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c",
+      "source": "supplied in the Kadri Coffee demo brand asset kit: logos/kadri-symbol-dark.svg (the README's compact mark; dark, for a light background), bytes unchanged",
+      "status": "locked"
+    },
+    "logo-reversed.svg": {
+      "sha256": "551a9d1972fa0fc75bcafba5ba45bbd91c60b1b399b7c6bf9f7b59245373d17e",
+      "source": "supplied in the kit: logos/kadri-symbol-light.svg (cream, for a dark background), bytes unchanged; rendered on the ink scheme (tokens.css --brand-logo-variant: reversed)",
+      "status": "locked"
+    },
+    "kadri-wordmark-dark.svg": {
+      "sha256": "d6961d32fb70df409b6aa6554072b8a8bd1f316458d5be127ef05fcad21312ba",
+      "source": "supplied in the kit: logos/kadri-wordmark-dark.svg, bytes unchanged; kept, not used on posts (below the kit's 100px minimum width at the logo slot's size)",
+      "status": "locked"
+    },
+    "kadri-wordmark-light.svg": {
+      "sha256": "3f556608b66598696c8e584a3e8bd5545a4cee65cfc3dcca0a1af295daa7fdb3",
+      "source": "supplied in the kit: logos/kadri-wordmark-light.svg, bytes unchanged; kept, not used on posts",
+      "status": "locked"
+    }
+  },
+  "fonts": {
+    "families": [
+      "Mona Sans",
+      "Hubot Sans"
+    ],
+    "source": "files",
+    "sourceNote": "families, roles and weights from the kit's brand guide typography table; files from the kit's fonts/ (sha256 MonaSansVF.ttf 84aae10d4427a1947e96b1fd9b26c3109ffa0f50f2faae8ce460ca1e34889ed5, HubotSansVF-Regular.ttf 9887a667164b597693b3200fe8573e8505cf33296b8a6e3a2da4fcaba50a0492), SIL OFL 1.1; tracking stays derived",
+    "status": "locked"
+  },
+  "tokens": {
+    "--brand-paper": {
+      "source": "supplied: brand-tokens.json colors.cream \"#FFF5DF\"; the guide: cream is used for large branding and label backgrounds",
+      "status": "locked"
+    },
+    "--brand-ink": {
+      "source": "supplied: brand-tokens.json colors.ink \"#302037\"",
+      "status": "locked"
+    },
+    "--brand-accent": {
+      "source": "supplied: brand-tokens.json colors.coral \"#FF603E\" (the guide: colour-logo coral)",
+      "status": "locked"
+    },
+    "--brand-accent-ink": {
+      "source": "the ink on the coral surface, 5.04:1 (WCAG, measured at intake); the guide puts ink lettering on the coloured badges, but does not name text on coral",
+      "status": "derived"
+    },
+    "--brand-muted": {
+      "source": "the kit has three shared colours and no muted one; the ink stands in. Only the hairline rule and the slide foot read it; no proposal uses them",
+      "status": "derived"
+    },
+    "--brand-font-display": {
+      "source": "supplied: the guide's typography table, \"Product names, headings, small labels: Mona Sans, 500\"",
+      "status": "locked"
+    },
+    "--brand-font-body": {
+      "source": "supplied: the guide's typography table, \"Tasting notes and supporting text: Mona Sans, 400\"",
+      "status": "locked"
+    },
+    "--brand-weight-display": {
+      "source": "supplied: the guide, headings wght=500",
+      "status": "locked"
+    },
+    "--brand-weight-body": {
+      "source": "supplied: the guide, supporting text wght=400",
+      "status": "locked"
+    },
+    "--brand-weight-label": {
+      "source": "supplied: the guide, small labels wght=500",
+      "status": "locked"
+    },
+    "--brand-tracking-display": {
+      "source": "the guide sets tracking for the wordmark only (-9 at 390px, -0.023em); headings keep the face's own spacing",
+      "status": "derived"
+    },
+    "--brand-tracking-label": {
+      "source": "uppercase labels opened to 0.06em; the guide says nothing about label tracking",
+      "status": "derived"
+    },
+    "--brand-radius": {
+      "source": "read from the kit's label artwork: rx=\"28\" on the 1000x600 cream label (components/*-label.svg)",
+      "status": "derived"
+    },
+    "--brand-logo-variant": {
+      "source": "the dark k vanishes on the ink surface, so the ink scheme renders the cream k; the kit's own rule is dark mark on light, cream mark on dark, but it does not name a post scheme",
+      "status": "derived"
+    }
+  }
+}

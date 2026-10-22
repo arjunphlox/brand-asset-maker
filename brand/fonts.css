@@ -1,0 +1,7 @@
+/* Kadri Coffee fonts: Hubot Sans and Mona Sans (GitHub), SIL Open Font License 1.1. Policy path (a): files supplied
+   in the Kadri Coffee demo brand asset kit (fonts/), copied unchanged into brand/fonts/ with their licence files.
+   Both are variable fonts; the ranges below are the files' own axes (Hubot Sans: wdth 80-120, wght 200-900;
+   Mona Sans: wght 200-900, opsz 0-100), so the browser drives weight from font-weight and width from font-stretch.
+   See brand/fonts.md. */
+@font-face { font-family: "Hubot Sans"; src: url("fonts/HubotSansVF-Regular.ttf") format("truetype"); font-weight: 200 900; font-stretch: 80% 120%; font-style: normal; font-display: block; }
+@font-face { font-family: "Mona Sans"; src: url("fonts/MonaSansVF.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: block; }

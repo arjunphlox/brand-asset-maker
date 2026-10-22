@@ -1,0 +1,968 @@
+{
+  "contractVersion": "1.5",
+  "run": "p01",
+  "generatedAt": "2026-10-22T13:58:19.642Z",
+  "brand": {
+    "tokensHash": "c1bd1f8cc78feae71cf0b99cbbf4e689ea48f4cda9718aec5ef3f5fc833febc7",
+    "logoHash": "6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c",
+    "logoReversedHash": "551a9d1972fa0fc75bcafba5ba45bbd91c60b1b399b7c6bf9f7b59245373d17e"
+  },
+  "message": {
+    "name": "kadri-popup",
+    "facts": {
+      "name": "Kadri Pop-up",
+      "date": "8 November",
+      "place": "Mill Lane Market"
+    }
+  },
+  "samples": [
+    {
+      "id": "event--1x1--paper",
+      "archetype": "social-post/event",
+      "ratio": "1:1",
+      "scheme": "paper",
+      "variation": {
+        "align": "start",
+        "accent": "none",
+        "rule": "none",
+        "cta": "pill",
+        "highlight": "none",
+        "head": "logo",
+        "foot": "stack",
+        "scheme": "paper"
+      },
+      "inputs": {
+        "name": "Kadri Pop-up",
+        "date": "8 November",
+        "place": "Mill Lane Market",
+        "cta": "Find our stall"
+      },
+      "factRefs": {
+        "name": "name",
+        "date": "date",
+        "place": "place"
+      },
+      "html": "out/p01/event--1x1--paper.html",
+      "png": "out/p01/event--1x1--paper.png",
+      "pngSha256": "4f14324d46939609a9e6c3c0f05db4bbd26e3f6f455f126e99d6025691dca8a1",
+      "checks": [
+        {
+          "id": "budget",
+          "pass": true,
+          "detail": "name: 2 of 5 words, 12 of 32 chars; date: 2 of 4 words, 10 of 24 chars; place: 3 of 6 words, 16 of 40 chars; cta: 3 of 3 words, 14 of 20 chars",
+          "plain": "every slot is within its word and character budget"
+        },
+        {
+          "id": "contrast",
+          "pass": true,
+          "detail": "name #302037 on #fff5df at 118.8px: 13.97:1 (needs 3); date #302037 on #fff5df at 75.6px: 13.97:1 (needs 3); place #302037 on #fff5df at 49.7px: 13.97:1 (needs 3); cta #302037 on #ff603e at 30.2px: 5.04:1 (needs 4.5)",
+          "plain": "every text colour is readable on its surface"
+        },
+        {
+          "id": "min-text",
+          "pass": true,
+          "detail": "name 118.80px; date 75.60px; place 49.68px; cta 30.24px (floor 28px)",
+          "plain": "the smallest text is 30.2px, above the 28px floor"
+        },
+        {
+          "id": "safe-zone",
+          "pass": true,
+          "detail": "safe box 72,72 to 1008,1008 (config 72/72/72/72); logo 72,72-109,109; name 72,561-759,728; date 72,720-490,826; place 72,824-429,894; cta 102,950-369,993",
+          "plain": "everything sits inside the safe zone"
+        },
+        {
+          "id": "overflow",
+          "pass": true,
+          "detail": "name scroll width 687 in 687, glyph box 72,561-759,728; date scroll width 418 in 418, glyph box 72,720-490,826; place scroll width 357 in 357, glyph box 72,824-429,894; cta scroll width 327 in 327, glyph box 102,950-369,993; block 589-1008",
+          "plain": "nothing spills out of its space"
+        },
+        {
+          "id": "element-count",
+          "pass": true,
+          "detail": "14 elements inside the frame; template 18, 4 empty optional slots removed",
+          "plain": "no extra thing on the post"
+        },
+        {
+          "id": "token-colors",
+          "pass": true,
+          "detail": "colours rendered: #302037, #ff603e, #fff5df; tokens: #fff5df, #302037, #ff603e",
+          "plain": "every colour is one of yours"
+        },
+        {
+          "id": "logo-integrity",
+          "pass": true,
+          "detail": "brand/assets/logo.svg sha256 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; locked.json 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; variant default",
+          "plain": "the logo file is the one you handed in"
+        },
+        {
+          "id": "logo-visible",
+          "pass": true,
+          "detail": "313 opaque pixels at 36.7x36.7px; 100.0% reach 1.5:1 on #fff5df (100.0% reach 3:1)",
+          "plain": "the logo shows"
+        },
+        {
+          "id": "font-loaded",
+          "pass": true,
+          "detail": "document.fonts loaded: Mona Sans; check(500 Mona Sans)=true, check(400 Mona Sans)=true",
+          "plain": "your font loaded"
+        },
+        {
+          "id": "role-face",
+          "pass": true,
+          "detail": "name role=h1 face=Mona Sans weight=500; date role=h2 face=Mona Sans weight=500; place role=body face=Mona Sans weight=400; cta role=label face=Mona Sans weight=500",
+          "plain": "every slot uses the right typeface for its job"
+        },
+        {
+          "id": "facts-consistent",
+          "pass": true,
+          "detail": "name: \"Kadri Pop-up\" vs name \"Kadri Pop-up\" exact; date: \"8 November\" vs date \"8 November\" exact; place: \"Mill Lane Market\" vs place \"Mill Lane Market\" exact",
+          "plain": "every fact matches the message"
+        }
+      ],
+      "pass": true,
+      "derivedDependencies": [
+        "--brand-accent-ink",
+        "--brand-muted",
+        "--brand-tracking-display",
+        "--brand-tracking-label",
+        "--brand-radius"
+      ],
+      "measured": {
+        "logoRenderedPx": {
+          "w": 36.71875,
+          "h": 36.71875
+        },
+        "safeBox": {
+          "x": 72,
+          "y": 72,
+          "w": 936,
+          "h": 936,
+          "right": 1008,
+          "bottom": 1008
+        },
+        "slots": [
+          {
+            "slot": "logo",
+            "px": 16,
+            "rect": {
+              "x": 72,
+              "y": 72,
+              "w": 36.71875,
+              "h": 36.71875,
+              "right": 108.71875,
+              "bottom": 108.71875
+            }
+          },
+          {
+            "slot": "name",
+            "px": 118.8,
+            "rect": {
+              "x": 72,
+              "y": 588.921875,
+              "w": 687.453125,
+              "h": 112.84375,
+              "right": 759.453125,
+              "bottom": 701.765625
+            }
+          },
+          {
+            "slot": "date",
+            "px": 75.6,
+            "rect": {
+              "x": 72,
+              "y": 738.484375,
+              "w": 418.4375,
+              "h": 71.8125,
+              "right": 490.4375,
+              "bottom": 810.296875
+            }
+          },
+          {
+            "slot": "place",
+            "px": 49.68,
+            "rect": {
+              "x": 72,
+              "y": 827.5625,
+              "w": 356.890625,
+              "h": 62.109375,
+              "right": 428.890625,
+              "bottom": 889.671875
+            }
+          },
+          {
+            "slot": "cta",
+            "px": 30.24,
+            "rect": {
+              "x": 72,
+              "y": 937.1875,
+              "w": 327.34375,
+              "h": 70.8125,
+              "right": 399.34375,
+              "bottom": 1008
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "event--1x1--ink",
+      "archetype": "social-post/event",
+      "ratio": "1:1",
+      "scheme": "ink",
+      "logoVariant": "reversed",
+      "variation": {
+        "align": "start",
+        "accent": "none",
+        "rule": "none",
+        "cta": "pill",
+        "highlight": "none",
+        "head": "logo",
+        "foot": "stack",
+        "scheme": "ink"
+      },
+      "inputs": {
+        "name": "Kadri Pop-up",
+        "date": "8 November",
+        "place": "Mill Lane Market",
+        "cta": "Find our stall"
+      },
+      "factRefs": {
+        "name": "name",
+        "date": "date",
+        "place": "place"
+      },
+      "html": "out/p01/event--1x1--ink.html",
+      "png": "out/p01/event--1x1--ink.png",
+      "pngSha256": "5ad57a94f99f45f412cf009d2a173fc7c9a4d70466f012e7ae7ae09951a70dd3",
+      "checks": [
+        {
+          "id": "budget",
+          "pass": true,
+          "detail": "name: 2 of 5 words, 12 of 32 chars; date: 2 of 4 words, 10 of 24 chars; place: 3 of 6 words, 16 of 40 chars; cta: 3 of 3 words, 14 of 20 chars",
+          "plain": "every slot is within its word and character budget"
+        },
+        {
+          "id": "contrast",
+          "pass": true,
+          "detail": "name #fff5df on #302037 at 118.8px: 13.97:1 (needs 3); date #fff5df on #302037 at 75.6px: 13.97:1 (needs 3); place #fff5df on #302037 at 49.7px: 13.97:1 (needs 3); cta #302037 on #ff603e at 30.2px: 5.04:1 (needs 4.5)",
+          "plain": "every text colour is readable on its surface"
+        },
+        {
+          "id": "min-text",
+          "pass": true,
+          "detail": "name 118.80px; date 75.60px; place 49.68px; cta 30.24px (floor 28px)",
+          "plain": "the smallest text is 30.2px, above the 28px floor"
+        },
+        {
+          "id": "safe-zone",
+          "pass": true,
+          "detail": "safe box 72,72 to 1008,1008 (config 72/72/72/72); logo 72,72-109,109; name 72,561-759,728; date 72,720-490,826; place 72,824-429,894; cta 102,950-369,993",
+          "plain": "everything sits inside the safe zone"
+        },
+        {
+          "id": "overflow",
+          "pass": true,
+          "detail": "name scroll width 687 in 687, glyph box 72,561-759,728; date scroll width 418 in 418, glyph box 72,720-490,826; place scroll width 357 in 357, glyph box 72,824-429,894; cta scroll width 327 in 327, glyph box 102,950-369,993; block 589-1008",
+          "plain": "nothing spills out of its space"
+        },
+        {
+          "id": "element-count",
+          "pass": true,
+          "detail": "14 elements inside the frame; template 18, 4 empty optional slots removed",
+          "plain": "no extra thing on the post"
+        },
+        {
+          "id": "token-colors",
+          "pass": true,
+          "detail": "colours rendered: #fff5df, #302037, #ff603e; tokens: #fff5df, #302037, #ff603e",
+          "plain": "every colour is one of yours"
+        },
+        {
+          "id": "logo-integrity",
+          "pass": true,
+          "detail": "brand/assets/logo-reversed.svg sha256 551a9d1972fa0fc75bcafba5ba45bbd91c60b1b399b7c6bf9f7b59245373d17e; locked.json 551a9d1972fa0fc75bcafba5ba45bbd91c60b1b399b7c6bf9f7b59245373d17e; variant reversed",
+          "plain": "the logo file is the one you handed in"
+        },
+        {
+          "id": "logo-visible",
+          "pass": true,
+          "detail": "313 opaque pixels at 36.7x36.7px; 100.0% reach 1.5:1 on #302037 (100.0% reach 3:1)",
+          "plain": "the logo shows"
+        },
+        {
+          "id": "font-loaded",
+          "pass": true,
+          "detail": "document.fonts loaded: Mona Sans; check(500 Mona Sans)=true, check(400 Mona Sans)=true",
+          "plain": "your font loaded"
+        },
+        {
+          "id": "role-face",
+          "pass": true,
+          "detail": "name role=h1 face=Mona Sans weight=500; date role=h2 face=Mona Sans weight=500; place role=body face=Mona Sans weight=400; cta role=label face=Mona Sans weight=500",
+          "plain": "every slot uses the right typeface for its job"
+        },
+        {
+          "id": "facts-consistent",
+          "pass": true,
+          "detail": "name: \"Kadri Pop-up\" vs name \"Kadri Pop-up\" exact; date: \"8 November\" vs date \"8 November\" exact; place: \"Mill Lane Market\" vs place \"Mill Lane Market\" exact",
+          "plain": "every fact matches the message"
+        }
+      ],
+      "pass": true,
+      "derivedDependencies": [
+        "--brand-accent-ink",
+        "--brand-muted",
+        "--brand-tracking-display",
+        "--brand-tracking-label",
+        "--brand-radius",
+        "--brand-logo-variant"
+      ],
+      "measured": {
+        "logoRenderedPx": {
+          "w": 36.71875,
+          "h": 36.71875
+        },
+        "safeBox": {
+          "x": 72,
+          "y": 72,
+          "w": 936,
+          "h": 936,
+          "right": 1008,
+          "bottom": 1008
+        },
+        "slots": [
+          {
+            "slot": "logo",
+            "px": 16,
+            "rect": {
+              "x": 72,
+              "y": 72,
+              "w": 36.71875,
+              "h": 36.71875,
+              "right": 108.71875,
+              "bottom": 108.71875
+            }
+          },
+          {
+            "slot": "name",
+            "px": 118.8,
+            "rect": {
+              "x": 72,
+              "y": 588.921875,
+              "w": 687.453125,
+              "h": 112.84375,
+              "right": 759.453125,
+              "bottom": 701.765625
+            }
+          },
+          {
+            "slot": "date",
+            "px": 75.6,
+            "rect": {
+              "x": 72,
+              "y": 738.484375,
+              "w": 418.4375,
+              "h": 71.8125,
+              "right": 490.4375,
+              "bottom": 810.296875
+            }
+          },
+          {
+            "slot": "place",
+            "px": 49.68,
+            "rect": {
+              "x": 72,
+              "y": 827.5625,
+              "w": 356.890625,
+              "h": 62.109375,
+              "right": 428.890625,
+              "bottom": 889.671875
+            }
+          },
+          {
+            "slot": "cta",
+            "px": 30.24,
+            "rect": {
+              "x": 72,
+              "y": 937.1875,
+              "w": 327.34375,
+              "h": 70.8125,
+              "right": 399.34375,
+              "bottom": 1008
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "event--1x1--accent",
+      "archetype": "social-post/event",
+      "ratio": "1:1",
+      "scheme": "accent",
+      "variation": {
+        "align": "start",
+        "accent": "none",
+        "rule": "none",
+        "cta": "pill",
+        "highlight": "none",
+        "head": "logo",
+        "foot": "stack",
+        "scheme": "accent"
+      },
+      "inputs": {
+        "name": "Kadri Pop-up",
+        "date": "8 November",
+        "place": "Mill Lane Market",
+        "cta": "Find our stall"
+      },
+      "factRefs": {
+        "name": "name",
+        "date": "date",
+        "place": "place"
+      },
+      "html": "out/p01/event--1x1--accent.html",
+      "png": "out/p01/event--1x1--accent.png",
+      "pngSha256": "3af74ffd5546685f491add0685cb437ba5c6e19ee8173849d68e6249128481a7",
+      "checks": [
+        {
+          "id": "budget",
+          "pass": true,
+          "detail": "name: 2 of 5 words, 12 of 32 chars; date: 2 of 4 words, 10 of 24 chars; place: 3 of 6 words, 16 of 40 chars; cta: 3 of 3 words, 14 of 20 chars",
+          "plain": "every slot is within its word and character budget"
+        },
+        {
+          "id": "contrast",
+          "pass": true,
+          "detail": "name #302037 on #ff603e at 118.8px: 5.04:1 (needs 3); date #302037 on #ff603e at 75.6px: 5.04:1 (needs 3); place #302037 on #ff603e at 49.7px: 5.04:1 (needs 3); cta #ff603e on #302037 at 30.2px: 5.04:1 (needs 4.5)",
+          "plain": "every text colour is readable on its surface"
+        },
+        {
+          "id": "min-text",
+          "pass": true,
+          "detail": "name 118.80px; date 75.60px; place 49.68px; cta 30.24px (floor 28px)",
+          "plain": "the smallest text is 30.2px, above the 28px floor"
+        },
+        {
+          "id": "safe-zone",
+          "pass": true,
+          "detail": "safe box 72,72 to 1008,1008 (config 72/72/72/72); logo 72,72-109,109; name 72,561-759,728; date 72,720-490,826; place 72,824-429,894; cta 102,950-369,993",
+          "plain": "everything sits inside the safe zone"
+        },
+        {
+          "id": "overflow",
+          "pass": true,
+          "detail": "name scroll width 687 in 687, glyph box 72,561-759,728; date scroll width 418 in 418, glyph box 72,720-490,826; place scroll width 357 in 357, glyph box 72,824-429,894; cta scroll width 327 in 327, glyph box 102,950-369,993; block 589-1008",
+          "plain": "nothing spills out of its space"
+        },
+        {
+          "id": "element-count",
+          "pass": true,
+          "detail": "14 elements inside the frame; template 18, 4 empty optional slots removed",
+          "plain": "no extra thing on the post"
+        },
+        {
+          "id": "token-colors",
+          "pass": true,
+          "detail": "colours rendered: #302037, #ff603e; tokens: #fff5df, #302037, #ff603e",
+          "plain": "every colour is one of yours"
+        },
+        {
+          "id": "logo-integrity",
+          "pass": true,
+          "detail": "brand/assets/logo.svg sha256 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; locked.json 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; variant default",
+          "plain": "the logo file is the one you handed in"
+        },
+        {
+          "id": "logo-visible",
+          "pass": true,
+          "detail": "313 opaque pixels at 36.7x36.7px; 100.0% reach 1.5:1 on #ff603e (100.0% reach 3:1)",
+          "plain": "the logo shows"
+        },
+        {
+          "id": "font-loaded",
+          "pass": true,
+          "detail": "document.fonts loaded: Mona Sans; check(500 Mona Sans)=true, check(400 Mona Sans)=true",
+          "plain": "your font loaded"
+        },
+        {
+          "id": "role-face",
+          "pass": true,
+          "detail": "name role=h1 face=Mona Sans weight=500; date role=h2 face=Mona Sans weight=500; place role=body face=Mona Sans weight=400; cta role=label face=Mona Sans weight=500",
+          "plain": "every slot uses the right typeface for its job"
+        },
+        {
+          "id": "facts-consistent",
+          "pass": true,
+          "detail": "name: \"Kadri Pop-up\" vs name \"Kadri Pop-up\" exact; date: \"8 November\" vs date \"8 November\" exact; place: \"Mill Lane Market\" vs place \"Mill Lane Market\" exact",
+          "plain": "every fact matches the message"
+        }
+      ],
+      "pass": true,
+      "derivedDependencies": [
+        "--brand-accent-ink",
+        "--brand-muted",
+        "--brand-tracking-display",
+        "--brand-tracking-label",
+        "--brand-radius"
+      ],
+      "measured": {
+        "logoRenderedPx": {
+          "w": 36.71875,
+          "h": 36.71875
+        },
+        "safeBox": {
+          "x": 72,
+          "y": 72,
+          "w": 936,
+          "h": 936,
+          "right": 1008,
+          "bottom": 1008
+        },
+        "slots": [
+          {
+            "slot": "logo",
+            "px": 16,
+            "rect": {
+              "x": 72,
+              "y": 72,
+              "w": 36.71875,
+              "h": 36.71875,
+              "right": 108.71875,
+              "bottom": 108.71875
+            }
+          },
+          {
+            "slot": "name",
+            "px": 118.8,
+            "rect": {
+              "x": 72,
+              "y": 588.921875,
+              "w": 687.453125,
+              "h": 112.84375,
+              "right": 759.453125,
+              "bottom": 701.765625
+            }
+          },
+          {
+            "slot": "date",
+            "px": 75.6,
+            "rect": {
+              "x": 72,
+              "y": 738.484375,
+              "w": 418.4375,
+              "h": 71.8125,
+              "right": 490.4375,
+              "bottom": 810.296875
+            }
+          },
+          {
+            "slot": "place",
+            "px": 49.68,
+            "rect": {
+              "x": 72,
+              "y": 827.5625,
+              "w": 356.890625,
+              "h": 62.109375,
+              "right": 428.890625,
+              "bottom": 889.671875
+            }
+          },
+          {
+            "slot": "cta",
+            "px": 30.24,
+            "rect": {
+              "x": 72,
+              "y": 937.1875,
+              "w": 327.34375,
+              "h": 70.8125,
+              "right": 399.34375,
+              "bottom": 1008
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "event--4x5--paper",
+      "archetype": "social-post/event",
+      "ratio": "4:5",
+      "scheme": "paper",
+      "variation": {
+        "align": "start",
+        "accent": "none",
+        "rule": "none",
+        "cta": "pill",
+        "highlight": "none",
+        "head": "logo",
+        "foot": "stack",
+        "scheme": "paper"
+      },
+      "inputs": {
+        "name": "Kadri Pop-up",
+        "date": "8 November",
+        "place": "Mill Lane Market",
+        "cta": "Find our stall"
+      },
+      "factRefs": {
+        "name": "name",
+        "date": "date",
+        "place": "place"
+      },
+      "html": "out/p01/event--4x5--paper.html",
+      "png": "out/p01/event--4x5--paper.png",
+      "pngSha256": "12222e0e7a06064bad4bfe1fde2fee9272637c7c3b0f0423627600080e3ad809",
+      "checks": [
+        {
+          "id": "budget",
+          "pass": true,
+          "detail": "name: 2 of 5 words, 12 of 32 chars; date: 2 of 4 words, 10 of 24 chars; place: 3 of 6 words, 16 of 40 chars; cta: 3 of 3 words, 14 of 20 chars",
+          "plain": "every slot is within its word and character budget"
+        },
+        {
+          "id": "contrast",
+          "pass": true,
+          "detail": "name #302037 on #fff5df at 118.8px: 13.97:1 (needs 3); date #302037 on #fff5df at 75.6px: 13.97:1 (needs 3); place #302037 on #fff5df at 49.7px: 13.97:1 (needs 3); cta #302037 on #ff603e at 30.2px: 5.04:1 (needs 4.5)",
+          "plain": "every text colour is readable on its surface"
+        },
+        {
+          "id": "min-text",
+          "pass": true,
+          "detail": "name 118.80px; date 75.60px; place 49.68px; cta 30.24px (floor 28px)",
+          "plain": "the smallest text is 30.2px, above the 28px floor"
+        },
+        {
+          "id": "safe-zone",
+          "pass": true,
+          "detail": "safe box 72,250 to 1008,1100 (config 72/250/72/250); logo 72,250-109,287; name 72,653-759,820; date 72,813-490,919; place 72,916-429,986; cta 102,1042-369,1085",
+          "plain": "everything sits inside the safe zone"
+        },
+        {
+          "id": "overflow",
+          "pass": true,
+          "detail": "name scroll width 687 in 687, glyph box 72,653-759,820; date scroll width 418 in 418, glyph box 72,813-490,919; place scroll width 357 in 357, glyph box 72,916-429,986; cta scroll width 327 in 327, glyph box 102,1042-369,1085; block 681-1100",
+          "plain": "nothing spills out of its space"
+        },
+        {
+          "id": "element-count",
+          "pass": true,
+          "detail": "14 elements inside the frame; template 18, 4 empty optional slots removed",
+          "plain": "no extra thing on the post"
+        },
+        {
+          "id": "token-colors",
+          "pass": true,
+          "detail": "colours rendered: #302037, #ff603e, #fff5df; tokens: #fff5df, #302037, #ff603e",
+          "plain": "every colour is one of yours"
+        },
+        {
+          "id": "logo-integrity",
+          "pass": true,
+          "detail": "brand/assets/logo.svg sha256 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; locked.json 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; variant default",
+          "plain": "the logo file is the one you handed in"
+        },
+        {
+          "id": "logo-visible",
+          "pass": true,
+          "detail": "313 opaque pixels at 36.7x36.7px; 100.0% reach 1.5:1 on #fff5df (100.0% reach 3:1)",
+          "plain": "the logo shows"
+        },
+        {
+          "id": "font-loaded",
+          "pass": true,
+          "detail": "document.fonts loaded: Mona Sans; check(500 Mona Sans)=true, check(400 Mona Sans)=true",
+          "plain": "your font loaded"
+        },
+        {
+          "id": "role-face",
+          "pass": true,
+          "detail": "name role=h1 face=Mona Sans weight=500; date role=h2 face=Mona Sans weight=500; place role=body face=Mona Sans weight=400; cta role=label face=Mona Sans weight=500",
+          "plain": "every slot uses the right typeface for its job"
+        },
+        {
+          "id": "facts-consistent",
+          "pass": true,
+          "detail": "name: \"Kadri Pop-up\" vs name \"Kadri Pop-up\" exact; date: \"8 November\" vs date \"8 November\" exact; place: \"Mill Lane Market\" vs place \"Mill Lane Market\" exact",
+          "plain": "every fact matches the message"
+        }
+      ],
+      "pass": true,
+      "derivedDependencies": [
+        "--brand-accent-ink",
+        "--brand-muted",
+        "--brand-tracking-display",
+        "--brand-tracking-label",
+        "--brand-radius"
+      ],
+      "measured": {
+        "logoRenderedPx": {
+          "w": 36.71875,
+          "h": 36.71875
+        },
+        "safeBox": {
+          "x": 72,
+          "y": 249.984375,
+          "w": 936,
+          "h": 850.03125,
+          "right": 1008,
+          "bottom": 1100.015625
+        },
+        "slots": [
+          {
+            "slot": "logo",
+            "px": 16,
+            "rect": {
+              "x": 72,
+              "y": 249.984375,
+              "w": 36.71875,
+              "h": 36.71875,
+              "right": 108.71875,
+              "bottom": 286.703125
+            }
+          },
+          {
+            "slot": "name",
+            "px": 118.8,
+            "rect": {
+              "x": 72,
+              "y": 680.9375,
+              "w": 687.453125,
+              "h": 112.84375,
+              "right": 759.453125,
+              "bottom": 793.78125
+            }
+          },
+          {
+            "slot": "date",
+            "px": 75.6,
+            "rect": {
+              "x": 72,
+              "y": 830.5,
+              "w": 418.4375,
+              "h": 71.8125,
+              "right": 490.4375,
+              "bottom": 902.3125
+            }
+          },
+          {
+            "slot": "place",
+            "px": 49.68,
+            "rect": {
+              "x": 72,
+              "y": 919.578125,
+              "w": 356.890625,
+              "h": 62.109375,
+              "right": 428.890625,
+              "bottom": 981.6875
+            }
+          },
+          {
+            "slot": "cta",
+            "px": 30.24,
+            "rect": {
+              "x": 72,
+              "y": 1029.203125,
+              "w": 327.34375,
+              "h": 70.8125,
+              "right": 399.34375,
+              "bottom": 1100.015625
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "event--9x16--paper",
+      "archetype": "social-post/event",
+      "ratio": "9:16",
+      "scheme": "paper",
+      "variation": {
+        "align": "start",
+        "accent": "none",
+        "rule": "none",
+        "cta": "pill",
+        "highlight": "none",
+        "head": "logo",
+        "foot": "stack",
+        "scheme": "paper"
+      },
+      "inputs": {
+        "name": "Kadri Pop-up",
+        "date": "8 November",
+        "place": "Mill Lane Market",
+        "cta": "Find our stall"
+      },
+      "factRefs": {
+        "name": "name",
+        "date": "date",
+        "place": "place"
+      },
+      "html": "out/p01/event--9x16--paper.html",
+      "png": "out/p01/event--9x16--paper.png",
+      "pngSha256": "8e27788b4277cc3090431f14c2ef02e603e98710f6b6c3b7d815ce452abda179",
+      "checks": [
+        {
+          "id": "budget",
+          "pass": true,
+          "detail": "name: 2 of 5 words, 12 of 32 chars; date: 2 of 4 words, 10 of 24 chars; place: 3 of 6 words, 16 of 40 chars; cta: 3 of 3 words, 14 of 20 chars",
+          "plain": "every slot is within its word and character budget"
+        },
+        {
+          "id": "contrast",
+          "pass": true,
+          "detail": "name #302037 on #fff5df at 118.8px: 13.97:1 (needs 3); date #302037 on #fff5df at 75.6px: 13.97:1 (needs 3); place #302037 on #fff5df at 49.7px: 13.97:1 (needs 3); cta #302037 on #ff603e at 30.2px: 5.04:1 (needs 4.5)",
+          "plain": "every text colour is readable on its surface"
+        },
+        {
+          "id": "min-text",
+          "pass": true,
+          "detail": "name 118.80px; date 75.60px; place 49.68px; cta 30.24px (floor 28px)",
+          "plain": "the smallest text is 30.2px, above the 28px floor"
+        },
+        {
+          "id": "safe-zone",
+          "pass": true,
+          "detail": "safe box 72,250 to 1008,1580 (config 72/250/72/340); logo 72,250-109,287; name 72,737-759,904; date 72,896-490,1002; place 72,999-429,1069; cta 102,1522-369,1565",
+          "plain": "everything sits inside the safe zone"
+        },
+        {
+          "id": "overflow",
+          "pass": true,
+          "detail": "name scroll width 687 in 687, glyph box 72,737-759,904; date scroll width 418 in 418, glyph box 72,896-490,1002; place scroll width 357 in 357, glyph box 72,999-429,1069; cta scroll width 327 in 327, glyph box 102,1522-369,1565; block 765-1065",
+          "plain": "nothing spills out of its space"
+        },
+        {
+          "id": "element-count",
+          "pass": true,
+          "detail": "14 elements inside the frame; template 18, 4 empty optional slots removed",
+          "plain": "no extra thing on the post"
+        },
+        {
+          "id": "token-colors",
+          "pass": true,
+          "detail": "colours rendered: #302037, #ff603e, #fff5df; tokens: #fff5df, #302037, #ff603e",
+          "plain": "every colour is one of yours"
+        },
+        {
+          "id": "logo-integrity",
+          "pass": true,
+          "detail": "brand/assets/logo.svg sha256 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; locked.json 6eb7bf1b410a530f44fbf715bc52ac836470cc5b38adcdd870ccb91d269bb50c; variant default",
+          "plain": "the logo file is the one you handed in"
+        },
+        {
+          "id": "logo-visible",
+          "pass": true,
+          "detail": "313 opaque pixels at 36.7x36.7px; 100.0% reach 1.5:1 on #fff5df (100.0% reach 3:1)",
+          "plain": "the logo shows"
+        },
+        {
+          "id": "font-loaded",
+          "pass": true,
+          "detail": "document.fonts loaded: Mona Sans; check(500 Mona Sans)=true, check(400 Mona Sans)=true",
+          "plain": "your font loaded"
+        },
+        {
+          "id": "role-face",
+          "pass": true,
+          "detail": "name role=h1 face=Mona Sans weight=500; date role=h2 face=Mona Sans weight=500; place role=body face=Mona Sans weight=400; cta role=label face=Mona Sans weight=500",
+          "plain": "every slot uses the right typeface for its job"
+        },
+        {
+          "id": "facts-consistent",
+          "pass": true,
+          "detail": "name: \"Kadri Pop-up\" vs name \"Kadri Pop-up\" exact; date: \"8 November\" vs date \"8 November\" exact; place: \"Mill Lane Market\" vs place \"Mill Lane Market\" exact",
+          "plain": "every fact matches the message"
+        }
+      ],
+      "pass": true,
+      "derivedDependencies": [
+        "--brand-accent-ink",
+        "--brand-muted",
+        "--brand-tracking-display",
+        "--brand-tracking-label",
+        "--brand-radius"
+      ],
+      "measured": {
+        "logoRenderedPx": {
+          "w": 36.71875,
+          "h": 36.71875
+        },
+        "safeBox": {
+          "x": 72,
+          "y": 249.984375,
+          "w": 936,
+          "h": 1330.015625,
+          "right": 1008,
+          "bottom": 1580
+        },
+        "slots": [
+          {
+            "slot": "logo",
+            "px": 16,
+            "rect": {
+              "x": 72,
+              "y": 249.984375,
+              "w": 36.71875,
+              "h": 36.71875,
+              "right": 108.71875,
+              "bottom": 286.703125
+            }
+          },
+          {
+            "slot": "name",
+            "px": 118.8,
+            "rect": {
+              "x": 72,
+              "y": 764.609375,
+              "w": 687.453125,
+              "h": 112.84375,
+              "right": 759.453125,
+              "bottom": 877.453125
+            }
+          },
+          {
+            "slot": "date",
+            "px": 75.6,
+            "rect": {
+              "x": 72,
+              "y": 914.171875,
+              "w": 418.4375,
+              "h": 71.8125,
+              "right": 490.4375,
+              "bottom": 985.984375
+            }
+          },
+          {
+            "slot": "place",
+            "px": 49.68,
+            "rect": {
+              "x": 72,
+              "y": 1003.25,
+              "w": 356.890625,
+              "h": 62.109375,
+              "right": 428.890625,
+              "bottom": 1065.359375
+            }
+          },
+          {
+            "slot": "cta",
+            "px": 30.24,
+            "rect": {
+              "x": 72,
+              "y": 1509.1875,
+              "w": 327.34375,
+              "h": 70.8125,
+              "right": 399.34375,
+              "bottom": 1580
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  },
+  "note": "Made without the engine (skills/poligraf--make-it.md) by out/p01/make.mjs: HTML filled from the template, PNG by Playwright/Chromium at 1x, checks measured in the same browser. Kadri Coffee is fictional teaching material."
+}

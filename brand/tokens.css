@@ -1,0 +1,31 @@
+/* Kadri Coffee is fictional teaching material by Madhuri Maram. Encoded 2026-10-22 from the Kadri Coffee demo brand
+   asset kit (aiproductdesign.co: demo-assets/kadri-coffee/brand-tokens.json and docs/brand-guide.md), which the owner
+   named as the hand-in. Supplied values are copied verbatim; every other value is derived and says where it came from.
+   Status per value: brand/locked.json. Measurements: brand/intake.log.md. */
+:root {
+  --brand-paper: #FFF5DF;          /* supplied: brand-tokens.json colors.cream; the guide: "Cream is used for large branding and label backgrounds" */
+  --brand-ink: #302037;            /* supplied: brand-tokens.json colors.ink (13.97:1 on paper) */
+  --brand-accent: #FF603E;         /* supplied: brand-tokens.json colors.coral, "Colour-logo coral" (2.77:1 on paper, 5.04:1 on ink) */
+  --brand-accent-ink: #302037;     /* derived: text on the coral surface; the ink, as the guide puts ink lettering on the coloured badges (5.04:1) */
+  --brand-muted: #302037;          /* derived: the kit has three shared colours and no muted one; the ink stands in until the owner names one */
+
+  /* The coral is 2.77:1 on the cream: below 3:1, so it cannot carry text of any size on the paper scheme. The
+     proposal keeps accent text off (variation accent: none) and shows the coral as a surface (the cta pill) instead.
+     No darker coral exists in the kit, so none is declared here: a coral that can carry text on cream is a question
+     for the owner (brand/intake.log.md). */
+
+  --brand-font-display: "Mona Sans", sans-serif;  /* supplied: the guide's typography table, "Product names, headings, small labels: Mona Sans 500" */
+  --brand-font-body: "Mona Sans", sans-serif;     /* supplied: "Tasting notes and supporting text: Mona Sans 400" */
+  --brand-weight-display: 500;     /* supplied: the guide, headings wght=500 */
+  --brand-weight-body: 400;        /* supplied: the guide, supporting text wght=400 */
+  --brand-weight-label: 500;       /* supplied: the guide, "small labels" wght=500 */
+  --brand-tracking-display: 0em;   /* derived: the guide sets tracking for the wordmark only (-0.023em); headings keep the face's own spacing */
+  --brand-tracking-label: 0.06em;  /* derived: uppercase labels opened slightly; the guide says nothing about label tracking */
+  --brand-radius: 28px;            /* derived: read from the kit's label artwork (rx="28" on the 1000x600 cream label) */
+}
+
+/* Ink scheme: the dark k vanishes on the ink surface, so this scheme renders the cream k (brand/assets/logo-reversed.svg,
+   the kit's kadri-symbol-light.svg). The kit's own rule: dark mark on a light background, cream mark on a dark one. */
+.pg-frame[data-scheme="ink"] {
+  --brand-logo-variant: reversed;
+}

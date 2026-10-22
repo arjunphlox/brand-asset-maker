@@ -1,0 +1,8 @@
+{
+  "name": "Kadri Coffee",
+  "wordmark": "",
+  "logo": "brand/assets/logo.svg",
+  "logoReversed": "brand/assets/logo-reversed.svg",
+  "context": "Good coffee, with a bright everyday mood. Fictional teaching brand. Direct, warm, concrete. Name flavours; never imply certifications, health benefits, actual stock, real customer reviews or commercial results.",
+  "notes": "Logo: the kit's dark k symbol (logos/kadri-symbol-dark.svg), the compact mark for light backgrounds, bytes unchanged. logoReversed: the kit's cream k (logos/kadri-symbol-light.svg) for dark backgrounds; tokens.css renders it on the ink scheme. The wordmark slot is empty on purpose: the kit says to use the actual wordmark asset, never a redrawn or typed one, and its wordmark files (brand/assets/kadri-wordmark-dark.svg, kadri-wordmark-light.svg) are kept here unused, because at the logo slot's size (3.4cqi, 36.7px tall) the lettering is 92px wide (measured in Chromium), under the kit's 100px minimum digital wordmark width, below which the kit says to use the k symbol. The wordmark spelling is \"kadri\", lowercase (the guide: keep the logo lowercase). The coral k (logos/kadri-symbol-colour.svg) is not used: it is 2.77:1 on the cream paper."
+}

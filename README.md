@@ -5,6 +5,7 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
 ## What is inside
 
 - `showcase.html`: open it first. One page: a break and its fix, a story post, a Do and a Don't for each layout, and what each check means.
+- `operate.html`: the BAM screen. Open it in Chrome, drop your brand folder (or try Kadri), keep the layouts you need, see every post drawn and checked, and save a generator. It runs in your browser: drawing and checking use no AI tokens, and the steps that need writing hand you a prompt for your own agent.
 - `AGENTS.md` and `CLAUDE.md` (the same note): where an AI assistant starts when it opens this folder.
 - `SPEC.md`: the contracts (tokens, fonts, template, inputs schema, checks, report, locked values, approvals, generators, feedback kinds).
 - `archetypes/README.md` and `archetypes/_shared/base.css`: how an archetype is built and the shared plumbing it relies on.

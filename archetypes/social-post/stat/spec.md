@@ -84,6 +84,7 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 - 2026-09-29 — Accent goes on exactly one element. `number` and `label` both accented was tried and rejected: the label competes.
 - 2026-10-20 — 9:16 story (contract 1.4), adapted not scaled (`upstream: true`): sizes stay in `cqi`; at `[data-ratio="9:16"]` the default position (`bottom`) sits on the centre line, because the foot of a story belongs to the reply bar and the thumb; `top` stays top.
 - 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
+- 2026-10-26 — Block with giant keeps the number in ink (`upstream: true`): on paper and ink, the giant accent rule outranked the block's ink rule, so the number was painted in the accent on the accent block and failed `contrast` (1.00:1 on ink, 3.00 on paper). The giant block rule now sets `color: var(--brand-ink)` too. HueGrid stat, every variation × 1:1, 4:5, 9:16: 72/72 pass.
 
 ## Never do
 

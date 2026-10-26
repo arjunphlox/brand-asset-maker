@@ -132,7 +132,24 @@ Write a short report next to each post. One line per check from the schema's `ch
 | `logo-integrity` | The logo file is the one in `locked.json` (compare its sha256 if you can run a command), and it is the variant `tokens.css` asks for. |
 | `element-count` | You added no element the template did not have. |
 | `facts-consistent` | Only when the request names a message file. Quote each fact as it appears in the post and mark it "exact" or "differs". A fact in a `label` slot shows in capitals because of the style; the text you wrote is still exact, so say "exact (shown in capitals)". |
-| `logo-visible`, `safe-zone`, `overflow`, `min-text` | Look at the PNG and say what you see ("the k is clear on white", "the label sits inside the margins"). Mark these "checked by eye, not measured" unless you measured them in a browser. The smallest text is 28px for posts and banners and 32px for the email header (it shows at half size). Work it out from the cqi size and the frame width. |
+| `overflow` | Two things fail it: text that spills out of its box, and a word broken across two lines in the middle of the word ("EVERYDA" on one line, "Y." on the next). The style keeps a too-long word inside its box by breaking it, so nothing looks clipped: read every line of the PNG for a word cut in two. A break right after a hyphen or a dash, or at a soft hyphen the copy contains, is fine. To measure it, open the HTML in a browser and run the snippet below in the developer-tools console; it lists every broken word, and an empty list means none. The fix is shorter copy, another layout or another size variation, never smaller type. Without a browser, mark it "checked by eye, not measured". |
+| `logo-visible`, `safe-zone`, `min-text` | Look at the PNG and say what you see ("the k is clear on white", "the label sits inside the margins"). Mark these "checked by eye, not measured" unless you measured them in a browser. The smallest text is 28px for posts and banners and 32px for the email header (it shows at half size). Work it out from the cqi size and the frame width. |
+
+The broken-word snippet for `overflow` (the engine runs the same test):
+
+```js
+[...document.querySelectorAll('.pg-frame [data-slot]')].flatMap((el) => [...el.childNodes].filter((n) => n.nodeType === 3).flatMap((n) =>
+  [...n.textContent.matchAll(/[^\s\u00AD\u200B\-\u2010\u2013\u2014/]+[\-\u2010\u2013\u2014/\u00AD]?/g)].filter((m) => {
+    const tops = [];
+    for (let i = 0; i < m[0].length; i++) {
+      if (m[0][i] === '\u00AD') continue;
+      const r = document.createRange(); r.setStart(n, m.index + i); r.setEnd(n, m.index + i + 1);
+      const box = [...r.getClientRects()].filter((b) => b.width > 0).pop(); // the last box: a drawn hyphen belongs to the line above
+      if (box && !tops.some((t) => Math.abs(t - box.top) < box.height / 2)) tops.push(box.top);
+    }
+    return tops.length > 1;
+  }).map((m) => `${el.dataset.slot}: "${m[0]}"`)));
+```
 
 If the brand has character words (`brand/expression.json`), add one more line, `expression`: run `archetypes/_shared/expression-measure.js` in the page and read the result through `docs/design/system/visual/expression.md` (`skills/poligraf--expression.md`), or write "not measured". It never fails a post: a mismatch makes the label **your call**.
 

@@ -8,7 +8,7 @@ tags: [pick, select, layout, rationale]
 
 # Suggest a layout
 
-**Verb: Pick.** Use this skill when someone tells you what they want to make, for example "a post about our pop-up on Saturday" or "a slide with last quarter's numbers". You suggest the form, the format and the layout, explain why in plain words, and name a runner-up. Then you make the layout with `skills/poligraf--make-it.md`.
+**Verb: Pick.** Use this skill when someone tells you what they want to make, for example "a post about our pop-up on Saturday" or "a slide with last quarter's numbers". First you check whether one of the brand's generators already does this job (step 0). If none does, you suggest the form, the format and the layout, explain why in plain words, and name a runner-up. Then you make the layout with `skills/poligraf--make-it.md`.
 
 Two things decide the suggestion, in this order:
 
@@ -20,6 +20,16 @@ Two things decide the suggestion, in this order:
 This whole skill works without the engine. It needs only the files above: read each candidate layout's **Why it works** section in its `spec.md`, and the "Cited for" line of each source it names in `sources.md`.
 
 With the engine (Poligraf), `npm run why -- <use-case>/<layout> [<use-case>/<layout> …]` prints the reasons of the candidates side by side, each with the claim its source is cited for (`--use-case <name>` for every layout of a form, `--json` for a machine-readable list). Quote from that output. After the owner agrees, `npm run render` refuses a row that breaks a budget and names the fallback, which confirms step 5.
+
+## 0. Check your generators first
+
+Before suggesting anything new, read every `generators/*.json` the brand has. Each one names its asset (`archetype`), its formats (`ratios`) and, usually, a `useWhen` line in the owner's words ("a number printed on the bag").
+
+- **One matches** (its `useWhen` describes this request, and its asset and formats fit where it goes): use it. Add the request as a new row (its inputs must pass the asset's budgets; reference message facts with `{ "fact": … }`), make the post from the generator, and say so in one line: "This is a job for the generator *stat-bag* ("a number printed on the bag"), so I added a row." The owner can still say "no, something new", and then you go on to step 1.
+- **More than one matches:** use the closest and name the runner-up generator.
+- **None matches,** or the brand has no generators: go on to step 1 and suggest an asset.
+
+A generator without a `useWhen` line is matched only by its asset and formats; ask the owner for the line (`skills/poligraf--generate.md` step 5).
 
 ## 1. Read the request
 

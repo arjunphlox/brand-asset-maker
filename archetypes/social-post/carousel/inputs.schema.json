@@ -83,6 +83,13 @@
     "handle",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "inviting"
+    ],
+    "why": "A set people swipe through: each frame easy, the first one an invitation."
+  },
   "variation": {
     "scheme": {
       "values": [

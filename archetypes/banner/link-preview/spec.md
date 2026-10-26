@@ -29,6 +29,10 @@ tier: sample
 - **Kicker, title and button read as one block.** The `kicker`, `title` and `cta` sit close together on one start edge, so they group into one block. Things that sit close together or line up are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **The block stays readable when cropped.** The block sits on the centre line, so the card still reads when an app shows it small or crops it towards a square. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**simple, credible.** A shared link: clear enough to read in a feed, credible enough to click. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

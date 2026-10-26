@@ -81,6 +81,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "credible",
+      "simple"
+    ],
+    "why": "A few numbers together: believed, easy to take in."
+  },
   "variation": {
     "scheme": {
       "values": [

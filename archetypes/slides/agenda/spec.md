@@ -29,6 +29,10 @@ A intro slide (opens the deck).
 - **Numbers show the order.** The template adds 01, 02, 03 beside the items. Numbers are a signal of structure, and signals help readers find their way and remember it. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
 - **Equal rows read as one list.** Every item has the same size (54px) and gap, the number sits on the item's baseline, and a hairline closes each row. Items that look alike and sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 
+## How it comes across
+
+**simple, credible.** The plan for the talk: orderly and believable. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

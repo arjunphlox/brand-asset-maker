@@ -60,6 +60,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "inviting",
+      "simple"
+    ],
+    "why": "The close: warm, with a clear way to get in touch."
+  },
   "variation": {
     "scheme": {
       "values": [

@@ -1,10 +1,10 @@
 <style>
-/* Two statements: the claim people believe, then the counter that overturns it. The block sits on the centre line
-   of the room above the foot row; the foot row holds the logo, an optional hairline and the tagline. */
-.pg-frame[data-archetype="social-post/contrast"] .pg-safe { justify-content: center; padding-bottom: 8cqi; }
+/* Two statements: the claim people believe, then the counter that overturns it. The block sits at the foot, just
+   above the foot row (Arjun 2026-10-26: anchored in every format); the foot row holds the logo, an optional hairline and the tagline. */
+.pg-frame[data-archetype="social-post/contrast"] .pg-safe { justify-content: flex-end; padding-bottom: 8cqi; }
 .pg-frame[data-archetype="social-post/contrast"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; gap: 2.6cqi; min-width: 0; max-width: 100%; text-align: start; }
 /* Both statements are h2 at one size: the counter carries the emphasis by its panel, not by a bigger size. */
-.pg-frame[data-archetype="social-post/contrast"] .pg-block [data-slot] { font-size: 6cqi; line-height: 1.02; max-width: 80%; width: fit-content; box-sizing: border-box; text-wrap: balance; overflow-wrap: break-word; }
+.pg-frame[data-archetype="social-post/contrast"] .pg-block [data-slot] { font-size: calc(6cqi * var(--pg-title, 1)); line-height: 1.02; max-width: 80%; width: fit-content; box-sizing: border-box; text-wrap: balance; overflow-wrap: break-word; }
 /* The counter: a solid accent panel with its own text colour (base.css swaps the pair on the accent scheme, so the
    panel turns ink with accent text there). Padding in cqi; corners follow the brand radius. */
 .pg-frame[data-archetype="social-post/contrast"] [data-slot="counter"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 2.6cqi 3.2cqi; border-radius: var(--brand-radius); }
@@ -16,7 +16,7 @@
    (role-face checks the face against the schema role, and a role cannot change with a variation); the counter steps
    to the body weight, so the turn reads in the weight, not a box. The offset and the claim outline do not apply. */
 .pg-frame[data-archetype="social-post/contrast"][data-join="inline"] .pg-block { display: block; max-width: 92%; font-size: 6.4cqi; line-height: 1.08; text-wrap: pretty; }
-.pg-frame[data-archetype="social-post/contrast"][data-join="inline"] .pg-block [data-slot] { display: inline; font-size: 6.4cqi; line-height: 1.08; max-width: none; width: auto; padding: 0; border: 0; background: none; color: var(--pg-on-surface); }
+.pg-frame[data-archetype="social-post/contrast"][data-join="inline"] .pg-block [data-slot] { display: inline; font-size: calc(6.4cqi * var(--pg-title, 1)); line-height: 1.08; max-width: none; width: auto; padding: 0; border: 0; background: none; color: var(--pg-on-surface); }
 .pg-frame[data-archetype="social-post/contrast"][data-join="inline"] [data-slot="counter"] { font-weight: var(--brand-weight-body); }
 /* Foot row: the logo at the start, with rule="hairline" a hairline running from it to the tagline at the end. */
 .pg-frame[data-archetype="social-post/contrast"] .pg-foot { position: absolute; bottom: 0; left: 0; right: 0; display: flex; flex-direction: row; align-items: center; gap: 2.4cqi; min-width: 0; }

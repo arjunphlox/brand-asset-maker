@@ -39,6 +39,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "striking",
+      "confident"
+    ],
+    "why": "Seen from across a room: it must stop people and sound sure."
+  },
   "variation": {
     "scheme": {
       "values": [

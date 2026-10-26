@@ -29,6 +29,10 @@ A outro slide (closes the deck).
 - **Numbers show the order of the actions.** The template numbers `action1` to `action3` at one size (46px). Numbers are a signal of structure, and signals help readers find their way and remember it. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
 - **The close is remembered.** This slide ends the deck. In free-recall tests with lists of items, people remember the first and last items best. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
 
+## How it comes across
+
+**confident, simple.** What happens now: sure and clear. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

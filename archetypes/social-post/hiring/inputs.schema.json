@@ -47,6 +47,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "welcoming",
+      "credible"
+    ],
+    "why": "It asks people to join: warm to the reader, serious about the job."
+  },
   "variation": {
     "scheme": {
       "values": [

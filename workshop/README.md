@@ -17,7 +17,7 @@ BAM has six states. You need three verbs:
 
 | Verb | States | What you do |
 |---|---|---|
-| **Bring** | 1 Intake, 2 Encode | You answer the nine questions and bring your logo and colour. Your agent writes your brand file, `BRAND.md`, and marks every value **you said** or **we guessed**. |
+| **Bring** | 1 Intake, 2 Encode | You answer the ten questions and bring your logo and colour. Your agent writes your brand file, `BRAND.md`, and marks every value **you said** or **we guessed**. |
 | **Pick** | 3 Propose, 4 Approve | Your agent makes a set of posts, each with its checks in plain words. You pick one. Picking turns what was guessed into what you said. |
 | **Make** | 5 Generate, 6 Feedback | Your agent makes posts from what you picked. You name each break with three questions, and the agent fixes it in the one file it belongs to. |
 
@@ -67,7 +67,7 @@ A month after the sessions, could you do these in any tool, with any AI assistan
 
 1. Given a logo, a colour and three sentences, list every brand value, mark each you said or we guessed, and keep that list in a file.
 2. Given a failing contrast number, name the file you would change before you change anything.
-3. Given a break, ask the three questions, then name one of the seven kinds and one file. Never two.
+3. Given a break, ask the three questions, then name one of the eight kinds and one file. Never two.
 4. Given a request nothing in your library fits, write a gap note with one ask and stop.
 5. Given your brand file, hand it to an assistant with no other context and get every value back right. If it gets one wrong, fix the brand file, not the question.
 

@@ -53,6 +53,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "confident",
+      "credible"
+    ],
+    "why": "One number has to land with force and be believed."
+  },
   "variation": {
     "scheme": {
       "values": [

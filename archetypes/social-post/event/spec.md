@@ -28,6 +28,10 @@ tier: sample
 - **A date and place make acting easy.** `date` and `place` are required slots. People who know when and where they will act are much more likely to act. ([Gollwitzer 1999](../../../docs/design/system/visual/sources.md#gollwitzer-1999))
 - **One accent marks one thing.** The `accent` variation colours the `date`, the `cta` or nothing, never two. One item that differs by a single feature, such as colour, is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
 
+## How it comes across
+
+**inviting, energetic.** It asks people to come: open and lively. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -47,7 +51,7 @@ Hierarchy: name > speaker > speakerRole > date > place > series > cta > logo. Wi
 
 ## Formats
 
-1:1 (feed post), 4:5 (tall feed post) and 9:16 (story: the reminder). At 9:16 the block sits on the centre line and the CTA drops to the foot of the safe zone, as in the headline.
+1:1 (feed post), 4:5 (tall feed post) and 9:16 (story: the reminder). The block anchors to the foot of the safe zone in every format (at 9:16, above the 340px reply-bar zone).
 
 ## Variation (bounded)
 
@@ -91,6 +95,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 - 2026-10-21 — `highlight: block` added as an opt-in cue from HueGrid's client work (Pifo Talks: the title set on solid highlight tags, one per line; inspiration only, `rules/decisions.md`). The `name` slot sits in a `.pg-title` wrapper that is `display: contents` by default, so default output is unchanged; with `block` the wrapper is the block box and the slot turns inline with `box-decoration-break: clone`, padding 0.08em by 0.22em of the tag size (written in cqi, as every template size is) and the brand radius. Hubot Sans's content area is about 1.4em tall, so tags overlapped by 31.6px at line-height 1.3; at 1.62 consecutive tags sit about 5px apart (measured on Kadri). At the full size the budget-length name spilled the 4:5 safe zone, so the tagged name takes one fixed size step down (11cqi → 9.6cqi): a property of the variation, not a fit to the copy. Works with `rule` and `cta: pill`. Kadri: all 2304 event samples in the sweep pass the 11 checks (192 variation combinations × 1:1, 4:5 and 9:16 × three schemes for the proposal, plus 576 for a demo talk row).
 
 - 2026-10-21 — A talk: optional `speaker`, `speakerRole` and `series`, and opt-in `head: series` and `foot: split`, from the talk and webinar posts HueGrid made for two clients (Women in Product and Pifo Talks: a series line top left, the logo top right, the talk title, the speaker, the date and time at the foot on the far side; inspiration only, `rules/decisions.md`). No headshot, gradient or glass shape: BAM has no photographs. The new wrappers (`.pg-foot`, `.pg-who`, `.pg-when`) are `display: contents` unless `foot: split`, so a post without a talk renders byte for byte as before. A `speakerRole` without a `speaker` is dropped by the template (`:has()`), with no engine change: the role never stands alone. `foot: split` falls back to `stack` at 9:16. Kadri has no talk: the sweep's talk row is demo copy ("Brewing at home", a fictional host "Mira Sol"), flagged in the evidence README. Kadri: all 2304 event samples in the sweep pass the 11 checks (192 variation combinations × 1:1, 4:5 and 9:16 × three schemes for the proposal, plus 576 for a demo talk row).
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 

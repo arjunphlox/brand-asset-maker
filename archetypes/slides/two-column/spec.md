@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **The left edge of each column is scanned.** Each column starts with a label at the left edge. On web pages, people scan more than they read, looking at the start of lines and the first words. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
 - **Small labels still pass contrast.** `leftLabel` is small text in the accent colour. Below 36px, `contrast` asks for 4.5:1 against the surface. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
 
+## How it comes across
+
+**simple, credible.** Two blocks side by side: balanced and plain. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

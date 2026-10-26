@@ -30,6 +30,10 @@ tier: sample
 - **Lines share one edge.** With `align` set to start, the `eyebrow`, `headline`, `body` and `cta` all start on one left edge. Things that line up along one path are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **The block survives a cover crop.** The safe zone keeps text inside the central 1280px that a cover crop still shows. The 1280px figure is an estimate, to re-measure. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**confident, simple.** The top of the site: sure of itself, nothing extra. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

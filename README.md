@@ -67,8 +67,8 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
   - `archetypes/print/rack-card/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/print/sticker/` (`spec.md`, `template.html`, `inputs.schema.json`)
   - `archetypes/print/table-tent/` (`spec.md`, `template.html`, `inputs.schema.json`)
-- `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback); `poligraf--suggest.md`, which tells your agent how to suggest a layout for what you want to make and say why, from the rules and the research behind each layout; `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine, and `poligraf--mockup.md`, which tells it how to turn a passing post into a mock-up photograph with your own image model and your own key.
-- `docs/design/system/`: the System Design router and the visual principles; `visual/why-it-works.md` says on one page why each layout works, with the research behind it in `visual/sources.md`.
+- `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback); `poligraf--suggest.md`, which tells your agent how to suggest a layout for what you want to make and say why, from the rules and the research behind each layout; `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine, `poligraf--mockup.md`, which tells it how to turn a passing post into a mock-up photograph with your own image model and your own key, and `poligraf--expression.md`, which tells it how to read what your posts say about your brand's character against your own words.
+- `docs/design/system/`: the System Design router and the visual principles; `visual/why-it-works.md` says on one page why each layout works, with the research behind it in `visual/sources.md`; `visual/expression.md` is the expression map: how a post's space, colour and type say something about the brand's character, read against your own character words (`skills/poligraf--expression.md`, measured in the page with `archetypes/_shared/expression-measure.js`).
 - `workshop/`: workshop material: the eight Kadri scenarios (`workshop/scenarios.md`), the brand-folder form, the gap note template (`workshop/gap-note.md`), the ranked next-assets prompt (`workshop/next-assets.md`) and the cold-handoff prompt (`workshop/cold-handoff.md`).
 - `examples/kadri/`: a worked example brand, start with its `README.md`. Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission.
 - `LICENSE.md` and `NOTICE`.
@@ -100,4 +100,4 @@ Poligraf is a HueGrid Studio framework. Learn more at huegrid.com.
 
 ## Provenance
 
-BAM version v1.0.0, generated 2026-10-26. Contract 1.5.
+BAM version v1.0.0, generated 2026-10-26. Contract 1.6.

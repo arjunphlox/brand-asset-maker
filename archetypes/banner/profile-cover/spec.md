@@ -28,6 +28,10 @@ tier: sample
 - **The hairline joins tagline and logo.** When `rule` is hairline, a line along the foot runs to the `logo`. Things that line up along one path are seen as a group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **Text stays clear of the profile photo.** The left margin is 568px so the `tagline` clears the photo that covers the lower left. The 568px figure is an estimate, to re-measure. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**simple, refined.** The brand's own page: calm behind the profile, well made. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

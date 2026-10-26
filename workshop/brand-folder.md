@@ -26,7 +26,7 @@ Fill in this form and put the files it asks for in one folder named after the br
 
 Only `brand-folder.md` and `logo.svg` must be there. Leave out any folder you have nothing for. Then ask your agent: "Read `<your-brand>/brand-folder.md` and follow `skills/poligraf--intake.md`, then `skills/poligraf--encode.md`."
 
-These are the nine intake questions, word for word. Answer in your own words; your agent copies your answers exactly.
+These are the ten intake questions, word for word. Answer in your own words; your agent copies your answers exactly.
 
 Questions 1, 2 and 4 are required. A blank answer is not a problem: the agent guesses, and every guess is marked **we guessed** until you pick a post that uses it.
 
@@ -78,6 +78,12 @@ Answer:
 If blank: the agent makes square (1:1) and portrait (4:5) feed posts and a story (9:16). Each format has its own job: a story is a reminder, one fact plus a call to action. \
 Answer:
 
+**10. Its character** \
+"Words for the brand's character, how it should look and feel, most important first (fewer than seven), and how strongly each (a little, clearly, very). For example: very simple, clearly warm, a little playful." \
+This is how the brand looks, not how it sounds (question 5). The agent measures every post against these words and tells you where a post says something else. It never fails a post for it: that is your call. \
+If blank: posts are checked only for being readable and on-brand. Nothing reads what they say about your character until you give the words. \
+Answer:
+
 Nothing else. A deck, a brand book or a website link can be attached as reference, but the agent reads only the form and the files it asks for. Anything it takes from elsewhere is marked we guessed.
 
 ## What your agent writes
@@ -92,6 +98,8 @@ brand/
   fonts.md          which font policy path applies and why
   fonts.css         @font-face rules
   voice.md          tone words, approved lines, never-claims
+  expression.json   your character words (question 10) and, per layout, the look
+                    that says them best (only if you answered question 10)
   brand.json        the name, the wordmark and the logo file
   intake.log.md     every question asked, your answer, what was guessed from it
   assets/           your logo (and photos/ if supplied)

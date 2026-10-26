@@ -40,6 +40,13 @@
     "tagline",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "striking",
+      "credible"
+    ],
+    "why": "Two statements set against each other: the turn must hit, and still be believed."
+  },
   "variation": {
     "scheme": {
       "values": [

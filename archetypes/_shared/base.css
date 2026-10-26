@@ -69,9 +69,8 @@ html, body { margin: 0; background: transparent; }
   --pg-safe-top: 6.6667cqi; --pg-safe-right: 6.6667cqi;
   --pg-safe-bottom: 6.6667cqi; --pg-safe-left: 6.6667cqi;
 }
-.pg-frame[data-ratio="4:5"] {
-  --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 23.1481cqi;
-}
+/* 4:5 (Arjun 2026-10-26): 72px all round, as the square. A tall feed post has nothing laid over it; the old 250px
+   top and bottom had no source and pushed the content inward. */
 /* 9:16 story (1.4): 250px top clears the story header, 340px bottom clears the reply bar. An ESTIMATE, to
    re-measure (poligraf.config.json safeZoneNotes); the config numbers are what the safe-zone check enforces. */
 .pg-frame[data-ratio="9:16"] {
@@ -161,11 +160,16 @@ html, body { margin: 0; background: transparent; }
 }
 
 /* Logo group */
-.pg-logo { display: flex; flex-direction: row; align-items: center; gap: 0.6cqi; }
-.pg-logo img[data-slot="logo"] { height: 3.4cqi; width: auto; display: block; }
+.pg-logo { display: flex; flex-direction: row; align-items: center; gap: calc(0.6cqi * var(--pg-logo, 1)); }
+.pg-logo img[data-slot="logo"] { height: calc(3.4cqi * var(--pg-logo, 1)); width: auto; display: block; }
+/* Tall frames (Arjun 2026-10-26): type is sized by width (cqi), so on a taller frame the logo and the title read
+   small. --pg-logo scales the logo (and the wordmark beside it); --pg-title scales each layout's first text slot,
+   which templates multiply into its font-size. 1 on every other ratio. */
+.pg-frame[data-ratio="4:5"] { --pg-logo: 1.25; --pg-title: 1.15; }
+.pg-frame[data-ratio="9:16"] { --pg-logo: 1.5; --pg-title: 1.3; }
 .pg-logo [data-slot="wordmark"] {
   font-family: var(--brand-font-display);
-  font-size: 4.2cqi;
+  font-size: calc(4.2cqi * var(--pg-logo, 1));
   line-height: 0.8;
   letter-spacing: 0.02em;
   font-weight: var(--brand-weight-display);

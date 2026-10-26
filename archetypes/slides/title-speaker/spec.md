@@ -29,6 +29,10 @@ A intro slide (opens the deck).
 - **A named role adds trust.** `role` is required, so the audience learns who is speaking and why. The same message changes more minds when it comes from a source people trust. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
 - **The logo is in its usual place.** The logo sits top left, where it sits on every slide of the deck. A logo becomes a brand asset when people link it to the brand, which is built by using it the same way, often. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
 
+## How it comes across
+
+**credible, refined.** Who is talking: worth listening to, well made. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

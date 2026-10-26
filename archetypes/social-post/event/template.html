@@ -7,14 +7,14 @@
 .pg-frame[data-archetype="social-post/event"][data-rule="hairline"] .pg-rule { display: block; }
 .pg-frame[data-archetype="social-post/event"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 100%; text-align: start; }
 .pg-frame[data-archetype="social-post/event"][data-align="center"] .pg-block { align-items: center; text-align: center; }
-.pg-frame[data-archetype="social-post/event"] [data-slot="name"] { font-size: 11cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/event"] [data-slot="name"] { font-size: calc(11cqi * var(--pg-title, 1)); text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
 /* highlight="block": the name sits on solid accent tags, one per line (box-decoration-break: clone repeats the padding and
    radius on every line; padding 0.08em by 0.22em of the tag size, written in cqi). The wrapper is display: contents by default, so the default layout is unchanged; with block it is
    the line's block box, and the slot turns inline inside it. line-height opens to 1.62 so tags on consecutive lines do not touch. */
 .pg-frame[data-archetype="social-post/event"] .pg-title { display: contents; }
 .pg-frame[data-archetype="social-post/event"][data-highlight="block"] .pg-title { display: block; max-width: 100%; font-size: 9.6cqi; line-height: 1.62; text-wrap: balance; }
 .pg-frame[data-archetype="social-post/event"][data-highlight="block"][data-align="center"] .pg-title { text-align: center; }
-.pg-frame[data-archetype="social-post/event"][data-highlight="block"] [data-slot="name"] { display: inline; font-size: 9.6cqi; line-height: 1.62; background: var(--pg-accent); color: var(--pg-accent-on); padding: 0.768cqi 2.112cqi; border-radius: var(--brand-radius); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.pg-frame[data-archetype="social-post/event"][data-highlight="block"] [data-slot="name"] { display: inline; font-size: calc(9.6cqi * var(--pg-title, 1)); line-height: 1.62; background: var(--pg-accent); color: var(--pg-accent-on); padding: 0.768cqi 2.112cqi; border-radius: var(--brand-radius); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 /* The date reads second: display face one step down, with room above it for the name's descenders. */
 .pg-frame[data-archetype="social-post/event"] [data-slot="date"] { font-size: 7cqi; margin-top: 3.4cqi; max-width: 100%; }
 .pg-frame[data-archetype="social-post/event"] [data-slot="place"] { font-size: 4.6cqi; margin-top: 1.6cqi; max-width: 100%; }
@@ -45,11 +45,6 @@
 .pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="date"] { margin-top: 0; }
 .pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="date"] { font-size: 5.2cqi; line-height: 1.02; }
 .pg-frame[data-archetype="social-post/event"][data-foot="split"]:not([data-ratio="9:16"]) [data-slot="speakerRole"] { font-size: 3.8cqi; }
-/* 9:16 story: adapted, not scaled. The block sits on the centre line; the CTA drops to the foot of the safe zone. */
-.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"] .pg-safe { justify-content: center; }
-.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"] [data-slot="cta"] { position: absolute; bottom: 0; left: 0; right: 0; margin-top: 0; }
-.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"][data-cta="pill"] [data-slot="cta"] { margin-right: auto; }
-.pg-frame[data-archetype="social-post/event"][data-ratio="9:16"][data-cta="pill"][data-align="center"] [data-slot="cta"] { margin-left: auto; }
 </style>
 <div class="pg-frame" data-archetype="social-post/event">
   <div class="pg-safe">

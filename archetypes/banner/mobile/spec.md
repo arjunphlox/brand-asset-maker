@@ -30,6 +30,10 @@ tier: sample
 - **The headline is the largest text.** The `headline` is 17.3px and the `cta` is 12.5px. Attention goes first to the region that differs most in size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
 - **One short button, one choice.** The `cta` is up to two words and starts with a verb. The time to choose grows with the number of options, and here there is one. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
 
+## How it comes across
+
+**striking, simple.** A display ad seen in passing: it must stop the eye with very little. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

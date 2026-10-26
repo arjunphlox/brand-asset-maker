@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **Large type is read without effort.** Points are set at 40px, one line at 80 characters, and `min-text` stops anything under 24px. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
 - **The start of each line is seen first.** Points are short and begin at the left edge, next to the square. On web pages, people scan the first words of lines down the left edge more than they read. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
 
+## How it comes across
+
+**simple, credible.** Points to follow while someone talks: nothing competes. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

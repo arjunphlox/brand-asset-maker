@@ -236,6 +236,50 @@ Cited for: people looking for something on a page often miss items that look lik
 **Burke et al. 2005.** Burke, M., Hornof, A., Nilsen, E., & Gorman, N. (2005). High-cost banner blindness: Ads increase perceived workload, hinder visual search, and are forgotten. *ACM Transactions on Computer-Human Interaction*, 12(4), 423–445.
 Cited for: animated ads slowed people's search and added to their sense of workload, and the ads themselves were poorly remembered.
 
+## Expression (what a post says about the brand's character)
+
+These sources back the rows of the expression map ([expression.md](./expression.md)). They were checked on 2026-10-25.
+
+<a id="henderson-2004"></a>
+**Henderson et al. 2004.** Henderson, P. W., Giese, J. L., & Cote, J. A. (2004). Impression management using typeface design. *Journal of Marketing*, 68(4), 60–72.
+Cited for: the design of a typeface (how natural or handwritten it looks, how harmonious, how elaborate, its weight, how compressed) changes the impression it gives, such as pleasing, engaging, reassuring or prominent; natural faces read as more pleasing and engaging, elaborate ones as less reassuring.
+
+<a id="brumberger-2003"></a>
+**Brumberger 2003.** Brumberger, E. R. (2003). The rhetoric of typography: The persona of typeface and text. *Technical Communication*, 50(2), 206–223.
+Cited for: readers consistently give typefaces a persona (for example elegant, friendly or direct), and they expect the face to suit the text it sets.
+
+<a id="pracejus-2006"></a>
+**Pracejus et al. 2006.** Pracejus, J. W., Olsen, G. D., & O'Guinn, T. C. (2006). How nothing became something: White space, rhetoric, history, and meaning. *Journal of Consumer Research*, 33(1), 82–90.
+Cited for: white space in an ad carries a meaning of its own, from the history of art and advertising, which creative directors and ordinary readers share; an ad with more empty space reads as more upscale, higher in quality and more trusted.
+
+<a id="pracejus-2013"></a>
+**Pracejus et al. 2013.** Pracejus, J. W., O'Guinn, T. C., & Olsen, G. D. (2013). When white space is more than "burning money": Economic signaling meets visual commercial rhetoric. *International Journal of Research in Marketing*, 30(3), 211–218.
+Cited for: the meaning of white space is a learned, visual meaning, distinct from simply looking expensive, and it differs between cultures.
+
+<a id="labrecque-milne-2012"></a>
+**Labrecque & Milne 2012.** Labrecque, L. I., & Milne, G. R. (2012). Exciting red and competent blue: The importance of color in marketing. *Journal of the Academy of Marketing Science*, 40(5), 711–727.
+Cited for: a brand's colour (its hue, saturation and value) changes the personality people give the brand; red is linked to excitement and blue to competence.
+
+<a id="jiang-2016"></a>
+**Jiang et al. 2016.** Jiang, Y., Gorn, G. J., Galli, M., & Chattopadhyay, A. (2016). Does your company have the right logo? How and why circular- and angular-logo shapes influence brand attribute judgments. *Journal of Consumer Research*, 42(5), 709–726.
+Cited for: round shapes make people judge a brand as softer (comfortable, gentle) and angular shapes as harder (durable, tough), even when the shape is only the logo.
+
+<a id="pieters-2010"></a>
+**Pieters et al. 2010.** Pieters, R., Wedel, M., & Batra, R. (2010). The stopping power of advertising: Measures and effects of visual complexity. *Journal of Marketing*, 74(5), 48–60.
+Cited for: how busy an ad looks can be measured; packing in many visual elements (feature complexity) is different from an intricate layout (design complexity), and the two affect attention and liking differently.
+
+<a id="aaker-1997"></a>
+**Aaker 1997.** Aaker, J. L. (1997). Dimensions of brand personality. *Journal of Marketing Research*, 34(3), 347–356.
+Cited for: people describe brands with human character words that group into five dimensions: sincerity, excitement, competence, sophistication and ruggedness.
+
+<a id="osgood-1957"></a>
+**Osgood et al. 1957.** Osgood, C. E., Suci, G. J., & Tannenbaum, P. H. (1957). *The Measurement of Meaning*. University of Illinois Press.
+Cited for: the meaning a thing has for people can be measured by asking them to place it on scales between two opposite words (the semantic differential).
+
+<a id="nagamachi-1995"></a>
+**Nagamachi 1995.** Nagamachi, M. (1995). Kansei engineering: A new ergonomic consumer-oriented technology for product development. *International Journal of Industrial Ergonomics*, 15(1), 3–11.
+Cited for: the feeling words people use for a product can be linked to its measurable design parameters, and those links can be used to design for a feeling (Kansei engineering).
+
 ## Never do
 
 - Never cite a source that is not on this list. Add it here first, with the one claim it supports, after checking it against a published record.

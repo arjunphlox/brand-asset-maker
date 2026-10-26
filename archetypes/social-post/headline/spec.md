@@ -29,6 +29,10 @@ tier: sample
 - **The call to action starts with a verb.** The `cta` is three words or fewer and starts with a verb, such as "Book a seat", so it says what to do. (HueGrid practice, not a research finding)
 - **The colours are easy to read.** The `scheme` pair comes from brand tokens and `contrast` checks it at 4.5:1 (3:1 at 36px and above). In one study, the same statement was judged true more often in a colour that was easier to read. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber & Schwarz 1999](../../../docs/design/system/visual/sources.md#reber-schwarz-1999))
 
+## How it comes across
+
+**confident, simple.** One line has to be read at a glance and sound sure of itself. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -50,6 +54,7 @@ Hierarchy: headline > kicker > cta > logo.
 | `align` | start · center | start | Text alignment and logo corner |
 | `size` | 1 · 2 | 1 | Headline size step (1 = 12cqi, 2 = 15cqi). Never below 1 |
 | `mark` | bar · none | bar | An accent bar on the start side of the block; suppressed when `align` is center |
+| `emphasis` | standard · giant | standard | `giant`: the headline at 19cqi in the accent text colour (on white, the brand's darker accent text colour where the accent itself fails contrast). Long headlines overflow and are caught by the overflow check; never shrink the type |
 
 Everything else is fixed by the template. A brand cannot ask for a third alignment or a size 3; that is a designer conversation.
 
@@ -80,6 +85,7 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 - 2026-10-20 — 9:16 story (contract 1.4), adapted not scaled (`upstream: true`): sizes stay in `cqi` (same width, same line length); at `[data-ratio="9:16"]` the block sits on the centre line and the `cta` drops to the foot of the safe zone, where the thumb is; a centred story keeps the logo at the top so the CTA owns the foot. Selection picks the headline for a story only with a `cta` (`../select.md`, step 0).
 
 - 2026-10-20 — The `cta` is verb-first, 3 words or fewer (ux-copy borrowing, `docs/plans/2026-10-20-package-borrowings.md` §5). Stated as a rule in this spec and the propose skill, not a check: deciding whether a word is a verb needs language judgement no script here makes reliably, and a guessed check would be a wish. `upstream: true`.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 
@@ -91,6 +97,13 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 ## Editor controls (tessor-props)
 
 ```tessor-props
+- prop: emphasis
+  label: Emphasis
+  kind: select
+  values: [standard, giant]
+  tab: Visual
+  appliesTo:
+    elements: [".pg-frame[data-archetype='social-post/headline']"]
 - prop: scheme
   label: Scheme
   kind: select

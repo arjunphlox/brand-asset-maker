@@ -28,6 +28,10 @@ tier: sample
 - **The mark is the largest element.** The `logo` is 22cqi tall alone, or 14cqi with a `word` at 11cqi. In print ads, attention to the brand element helps people remember the brand. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
 - **One group, centred.** The group is centred, and with `shape: circle` it narrows to stay inside the die cut. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**playful, striking.** Stuck on things people own: fun and eye-catching. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

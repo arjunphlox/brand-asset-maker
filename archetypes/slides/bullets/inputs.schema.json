@@ -74,6 +74,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "Points to follow while someone talks: nothing competes."
+  },
   "variation": {
     "scheme": {
       "values": [

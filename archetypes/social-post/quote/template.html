@@ -1,5 +1,6 @@
 <style>
-.pg-frame[data-archetype="social-post/quote"] .pg-safe { justify-content: center; }
+/* Anchored to the foot of the safe zone in every format (Arjun 2026-10-26); centred, the quote floated on tall posts. */
+.pg-frame[data-archetype="social-post/quote"] .pg-safe { justify-content: flex-end; }
 .pg-frame[data-archetype="social-post/quote"] .pg-block { display: flex; flex-direction: row; align-items: stretch; gap: 2.4cqi; min-width: 0; max-width: 100%; }
 .pg-frame[data-archetype="social-post/quote"] .pg-block-text { display: flex; flex-direction: column; min-width: 0; text-align: start; align-items: flex-start; }
 .pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-block { align-self: center; }
@@ -9,11 +10,13 @@
 .pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-bar { display: none; } /* bar is a start-side device; centered blocks carry no bar (spec) */
 .pg-frame[data-archetype="social-post/quote"] .pg-quote-mark { display: none; font-family: var(--brand-font-body); font-weight: var(--brand-weight-body); font-size: 14cqi; line-height: 0.7; height: 6cqi; color: var(--pg-accent-text); margin-bottom: 2cqi; }
 .pg-frame[data-archetype="social-post/quote"][data-mark="glyph"] .pg-quote-mark { display: block; }
-.pg-frame[data-archetype="social-post/quote"] [data-slot="quote"] { text-wrap: balance; font-size: 7cqi; line-height: 1.05; max-width: 78cqi; overflow-wrap: break-word; }
+.pg-frame[data-archetype="social-post/quote"] [data-slot="quote"] { text-wrap: balance; font-size: calc(7cqi * var(--pg-title, 1)); line-height: 1.05; max-width: 78cqi; overflow-wrap: break-word; }
 .pg-frame[data-archetype="social-post/quote"] .pg-attrib { display: flex; flex-direction: column; gap: 0.6cqi; margin-top: 4cqi; }
 .pg-frame[data-archetype="social-post/quote"] [data-slot="attribution"] { font-size: 3.6cqi; font-weight: var(--brand-weight-label); }
 .pg-frame[data-archetype="social-post/quote"] [data-slot="role"] { color: var(--pg-muted); }
-.pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-logo { top: auto; left: 50%; bottom: 0; transform: translateX(-50%); }
+.pg-frame[data-archetype="social-post/quote"][data-align="center"] .pg-logo { top: 0; left: 50%; bottom: auto; transform: translateX(-50%); } /* the block owns the foot, so a centred quote keeps its logo at the top */
+/* emphasis giant (gap note 0003): the quote larger, in the accent text colour. */
+.pg-frame[data-archetype="social-post/quote"][data-emphasis="giant"] [data-slot="quote"] { font-size: calc(9.5cqi * var(--pg-title, 1)); line-height: 1; color: var(--pg-accent-text); }
 </style>
 <div class="pg-frame" data-archetype="social-post/quote">
   <div class="pg-safe">

@@ -36,8 +36,9 @@ No scripts? Do each step yourself, in the folder. Whenever a step makes a post i
    1. "Is it the colour, or the words?" Colour (any look value: a colour, a typeface, a weight) points at `token`; the words point at `voice`. Ask alongside it: "Did something that must never move, move?" A yes lands on `locked` (a drift).
    2. "Is it this one post, or all of them?" This one post → `input`. All of them → the answer to question 1 stands (`token` or `voice`); all of them and the layout is the reason (the copy does not fit, the post is the wrong kind of post) → `budget` or `selection`.
    3. "Do you want something new?" → `designer`: write a gap note (`workshop/gap-note.md`) and stop.
+   Alongside question 1, when the post is readable and in the brand's own colours, fonts and words but feels wrong: "Does it say something else about who you are?" A yes points at `expression`. So does an answer on the sheet's scales that disagrees with the measurement, and an expression note (your call) the owner wants changed.
    The answers are the participant's map, not the decision. The ladder decides the kind; where the two seem to disagree, ask the ladder in order and write down why.
-3. **Triage** to one of the seven kinds (`CLAUDE.md` → Feedback). Ask yourself in order:
+3. **Triage** to one of the eight kinds (`CLAUDE.md` → Feedback). **Precedence:** utility first ("works for anyone": can people see and read it?), then brand ("looks like you"), then expression ("says who you are"). A utility or brand fix wins even when it moves the post away from the owner's words; expression never loosens a check or bends a brand value. Ask yourself in order:
    - Is it wrong everywhere the value appears? → `token`
    - Does it look right but say the wrong thing? → `voice`
    - Did something that must never move, move? → `locked`
@@ -46,8 +47,10 @@ No scripts? Do each step yourself, in the folder. Whenever a step makes a post i
    - Is only this row wrong? → `input`
      A failed `image-contrast` or `crop` is `input`, never a file edit. Try in order: scrim strength (`strong`), focal point, another photograph, layout `split`.
    - Is the content in the wrong archetype? → `selection`
+   - Is it readable and on-brand, but saying something else about the brand's character? → `expression`
+     Fix in `brand/expression.json`, in order: the layout's preferred look (`prefer`); the words themselves, with the owner ("is this still what you want to say?"); a brand value, with the owner (then the note is `token`, not `expression`); the map row in `docs/design/system/visual/expression.md`, marked research or practice and flagged `upstream: true`. See `skills/poligraf--expression.md`.
    - Is a new style, layout or element being asked for (type on a photograph without a scrim, a tint, a side-by-side)? → `designer`
-4. Apply the diff in that location only. For `budget` and `selection`, mark `upstream: true`: the change belongs to the layout library (`archetypes/` in your fork) and comes with a spec update.
+4. Apply the diff in that location only. For `budget`, `selection` and an `expression` change to the map, mark `upstream: true`: the change belongs to the layout library (`archetypes/` in your fork) and comes with a spec update.
 5. For `designer`, do not improvise. Write a gap note in the feedback file with the template in `workshop/gap-note.md`: what was asked (word for word) and the facts; what BAM could not do and why (no layout, a missing input, or a missing brand value); what was tried; and exactly one ask: (a) more context from the owner, (b) a new value in the brand file, or (c) a new layout to define. Its Kadri example is the gradient note. Stop.
 6. Re-render the affected run. Compare the sheet before and after. Append to `rules/decisions.md`: date, feedback id, kind, file changed, one line on what was learned.
 
@@ -58,5 +61,6 @@ The feedback file has its `kind`, the decisions log has its line, and the re-ren
 ## Never do
 
 - Never fix the output. Find the kind, fix the source, regenerate.
+- Never fix an expression note by editing the post, shrinking or recolouring anything, or loosening a check. Utility, then brand, then expression.
 - Never triage a note to two kinds. If it seems to need two, it is two notes.
 - Never fix a weak sample by adding an element. Rewrite or remove; the `element-count` check backs this.

@@ -28,6 +28,10 @@ tier: sample
 - **The facts are easy to find.** The `date` and `place` are set in the display face, apart from the `body`. Headings and numbers that show a text's structure help readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
 - **A short body.** The `body` is at most 30 words. In studies of learning, people understand more when extra words are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
 
+## How it comes across
+
+**striking, inviting.** Picked up or pinned up: it must catch the eye and ask people in. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

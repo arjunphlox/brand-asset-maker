@@ -28,6 +28,10 @@ tier: sample
 - **A source can back the figure.** The optional `source` sits at the bottom of the block. The same message changes more minds when it comes from a source people trust. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
 - **The block and logo face each other.** The block sits at the top or bottom of the safe zone and the `logo` takes the opposite corner, so the frame is balanced. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**confident, credible.** One number has to land with force and be believed. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -46,6 +50,9 @@ Hierarchy: number > label > source > logo.
 | `scheme` | paper · ink · accent | paper | Surface and on-surface pair |
 | `accent` | number · label · none | number | Which one element takes the accent color. Never two |
 | `position` | top · bottom | bottom | Where the block sits; the logo takes the opposite corner |
+| `layout` | stack · column | stack | `column`: the label and source move to a narrow column at the right, on the centre line, inside the safe zone. Reads playful |
+| `block` | none · solid | none | `solid`: the number in ink on a block of its own, the paper (white) on the accent ground, the accent on paper and ink. The label and source always move to the right column with it (below the block, the foot is cramped; Arjun). On the block the number is 1.25 times its size (27.5cqi, giant 42.5cqi) with tight padding, anchored bottom-left in every format and position. With `giant` on the accent ground it reads clearly bold and clearly playful |
+| `emphasis` | standard · giant | standard | `giant`: the number at 34cqi, in the accent text colour when `accent` is number (on white, the brand's darker accent text colour where the accent itself fails contrast). Bold through scale, playful through colour, simple through the space around it |
 
 ## Checks
 
@@ -76,6 +83,7 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 - 2026-10-20 — The 1.4cqi gap was tuned to one condensed face. In Kadri's Hubot Sans the `g` of `250 g` hangs 0.14em below the 0.85 line box and its ink ran 5.3px into the label (measured at 1x; `overflow` passed, it sees boxes, not ink). A descender scales with the number, so its room is set in em: `padding-bottom: 0.15em` on the number, the 1.4cqi gap kept below it. Figures-only numbers sit 0.15em higher. `upstream: true`.
 - 2026-09-29 — Accent goes on exactly one element. `number` and `label` both accented was tried and rejected: the label competes.
 - 2026-10-20 — 9:16 story (contract 1.4), adapted not scaled (`upstream: true`): sizes stay in `cqi`; at `[data-ratio="9:16"]` the default position (`bottom`) sits on the centre line, because the foot of a story belongs to the reply bar and the thumb; `top` stays top.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 
@@ -86,6 +94,27 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 ## Editor controls (tessor-props)
 
 ```tessor-props
+- prop: layout
+  label: Layout
+  kind: select
+  values: [stack, column]
+  tab: Visual
+  appliesTo:
+    elements: [".pg-frame[data-archetype='social-post/stat']"]
+- prop: block
+  label: Block
+  kind: select
+  values: [none, solid]
+  tab: Visual
+  appliesTo:
+    elements: [".pg-frame[data-archetype='social-post/stat']"]
+- prop: emphasis
+  label: Emphasis
+  kind: select
+  values: [standard, giant]
+  tab: Visual
+  appliesTo:
+    elements: [".pg-frame[data-archetype='social-post/stat']"]
 - prop: scheme
   label: Scheme
   kind: select

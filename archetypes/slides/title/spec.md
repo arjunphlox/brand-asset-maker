@@ -29,6 +29,10 @@ A intro slide (opens the deck).
 - **The subtitle gives an overview.** `subtitle` says what the deck is for, in 16 words or fewer. A short overview given before the material helps people learn and keep it. ([Ausubel 1960](../../../docs/design/system/visual/sources.md#ausubel-1960))
 - **The block sits low and to the start.** The title block sits low on the start side, so the empty top of the slide frames it. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**confident, refined.** The opening: sure of itself, well made. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

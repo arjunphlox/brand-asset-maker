@@ -134,6 +134,8 @@ Write a short report next to each post. One line per check from the schema's `ch
 | `facts-consistent` | Only when the request names a message file. Quote each fact as it appears in the post and mark it "exact" or "differs". A fact in a `label` slot shows in capitals because of the style; the text you wrote is still exact, so say "exact (shown in capitals)". |
 | `logo-visible`, `safe-zone`, `overflow`, `min-text` | Look at the PNG and say what you see ("the k is clear on white", "the label sits inside the margins"). Mark these "checked by eye, not measured" unless you measured them in a browser. The smallest text is 28px for posts and banners and 32px for the email header (it shows at half size). Work it out from the cqi size and the frame width. |
 
+If the brand has character words (`brand/expression.json`), add one more line, `expression`: run `archetypes/_shared/expression-measure.js` in the page and read the result through `docs/design/system/visual/expression.md` (`skills/poligraf--expression.md`), or write "not measured". It never fails a post: a mismatch makes the label **your call**.
+
 Then label the post the way the contact sheet does: **must fix** (a measured check failed), **your call** (nothing failed, but something needs the owner's decision), or **fine** (nothing failed and nothing is open). Say which checks were not measured. Ask the two-second question: "What do you read first? It should be the <first slot in `hierarchy`>."
 
 ## Never do

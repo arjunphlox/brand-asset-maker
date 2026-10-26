@@ -35,6 +35,13 @@
     "role",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "understated",
+      "credible"
+    ],
+    "why": "Someone else's words: the post steps back and lets them be trusted."
+  },
   "variation": {
     "scheme": {
       "values": [
@@ -58,7 +65,7 @@
         "center"
       ],
       "default": "start"
-    }
+    }, "emphasis": { "values": ["standard", "giant"], "default": "standard" }
   },
   "checks": {
     "contrast": true,

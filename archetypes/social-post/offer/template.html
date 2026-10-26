@@ -2,7 +2,7 @@
 .pg-frame[data-archetype="social-post/offer"] .pg-safe { justify-content: flex-end; }
 .pg-frame[data-archetype="social-post/offer"] .pg-block { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 100%; }
 /* The detail is the dominant glyph, like the stat's number: a tight line box, with 0.15em kept for a descender. */
-.pg-frame[data-archetype="social-post/offer"] [data-slot="detail"] { font-size: 18cqi; line-height: 0.85; padding-bottom: 0.15em; white-space: nowrap; }
+.pg-frame[data-archetype="social-post/offer"] [data-slot="detail"] { font-size: calc(18cqi * var(--pg-title, 1)); line-height: 0.85; padding-bottom: 0.15em; white-space: nowrap; }
 /* was (optional): the old price the owner gave, struck through in the muted colour, above the detail and far smaller.
    Its presence is the switch; there is no variation. */
 .pg-frame[data-archetype="social-post/offer"] [data-slot="was"] { font-size: 5.2cqi; color: var(--pg-muted); text-decoration: line-through; text-decoration-thickness: 0.416cqi; text-transform: none; margin-bottom: 1.2cqi; white-space: nowrap; }
@@ -13,10 +13,6 @@
 .pg-frame[data-archetype="social-post/offer"][data-accent="cta"] [data-slot="cta"] { color: var(--pg-accent-text); }
 /* cta="pill": one solid button (accent surface, its own text colour; base.css swaps the pair on the accent scheme). */
 .pg-frame[data-archetype="social-post/offer"][data-cta="pill"] [data-slot="cta"] { background: var(--pg-accent); color: var(--pg-accent-on); padding: 1.6cqi 2.8cqi; border-radius: var(--brand-radius); width: fit-content; }
-/* 9:16 story: the block sits on the centre line; the CTA drops to the foot of the safe zone. */
-.pg-frame[data-archetype="social-post/offer"][data-ratio="9:16"] .pg-safe { justify-content: center; }
-.pg-frame[data-archetype="social-post/offer"][data-ratio="9:16"] [data-slot="cta"] { position: absolute; bottom: 0; left: 0; right: 0; margin-top: 0; }
-.pg-frame[data-archetype="social-post/offer"][data-ratio="9:16"][data-cta="pill"] [data-slot="cta"] { margin-right: auto; }
 </style>
 <div class="pg-frame" data-archetype="social-post/offer">
   <div class="pg-safe">

@@ -45,6 +45,13 @@
     "kicker",
     "cta"
   ],
+  "appear": {
+    "words": [
+      "trustworthy",
+      "refined"
+    ],
+    "why": "Two names side by side: each lends the other its trust."
+  },
   "variation": {
     "scheme": {
       "values": [

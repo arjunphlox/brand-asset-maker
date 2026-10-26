@@ -67,6 +67,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "Two blocks side by side: balanced and plain."
+  },
   "variation": {
     "scheme": {
       "values": [

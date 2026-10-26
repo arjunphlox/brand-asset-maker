@@ -39,6 +39,13 @@
     "kicker",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "inviting",
+      "cheerful"
+    ],
+    "why": "Sent or picked up to keep: warm and glad."
+  },
   "variation": {
     "scheme": {
       "values": [

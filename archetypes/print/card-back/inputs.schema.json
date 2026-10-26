@@ -60,6 +60,13 @@
     "contact4",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "Contact details: plain and trusted."
+  },
   "variation": {
     "scheme": {
       "values": [

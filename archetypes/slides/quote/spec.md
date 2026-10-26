@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **Name and role read as a pair.** `attribution` and `role` sit together under the quote, close and in a smaller size. Things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **Quote lines stay short.** The quote is capped at 36 words and five lines at 61px. Line length and line spacing change how fast and how well text is read on screen. ([Dyson 2004](../../../docs/design/system/visual/sources.md#dyson-2004))
 
+## How it comes across
+
+**understated, credible.** Someone else's words: the slide steps back and lets them be trusted. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -30,6 +30,10 @@ From HueGrid client work, inspiration only: the "A × B" posts of Aampe × Taxfi
 - **The line is read from the start edge.** In `row`, the lockup starts at the start edge and the `title` (7.4cqi) is the only display-size text under it. On screen, people scan down the left edge and look at the first words. ([Nielsen 2006](../../../docs/design/system/visual/sources.md#nielsen-2006))
 - **The partner mark stays visible.** The `partnerLogo` sits on a tile in the paper colour, so a dark mark reads on every scheme, and `logo-visible` fails the post if either mark vanishes. Things with clear figure and ground, and high contrast, are liked more. ([Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
 
+## How it comes across
+
+**trustworthy, refined.** Two names side by side: each lends the other its trust. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -40,7 +44,7 @@ From HueGrid client work, inspiration only: the "A × B" posts of Aampe × Taxfi
 | `title` | yes | ≤ 8 words, ≤ 56 chars | `h2`: display face, 7.4cqi. What the two do together |
 | `cta` | no | ≤ 3 words, ≤ 20 chars, starts with a verb | `label`: body face, below the line |
 
-The × is not a slot: two crossed strokes drawn in CSS in the on-surface colour (a 4.4cqi square, 0.8cqi strokes), between the marks. It was first set as the multiplication sign in the display face, but HueGrid's condensed display face draws that glyph as a dot-sized cross where Kadri's is full size, so the drawn version keeps the joiner the same weight in every brand.
+The × is not a slot: two crossed strokes drawn in CSS in the on-surface colour (a 4.4cqi square, 0.8cqi strokes), between the marks. It was first set as the multiplication sign in the display face, but one condensed display face draws that glyph as a dot-sized cross where Kadri's is full size, so the drawn version keeps the joiner the same weight in every brand.
 
 Hierarchy: title > logo > partnerLogo > kicker > cta.
 
@@ -74,6 +78,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 ## Decisions
 
 - 2026-10-22 — Added as a sample layout (contract 1.5), from the HueGrid client cues noted on 2026-10-21 (`poligraf/archetype-tuning/client-cues.md`: "an A × B partner layout, needs a second logo slot"). The engine gains row-named asset slots (any asset slot but `logo`, resolved and refused like an image slot) and `logo-visible` over every mark, so no new check id. The partner's mark sits on a paper tile: a partner file is made for a light ground, and the tile keeps it readable on ink and accent without asking the partner for a reversed file. In a theme where the paper is dark, the tile is dark too: such a brand needs the partner's light-ground mark reviewed (a review item, not measured beyond `logo-visible`). Kadri's example partner ("Mill Lane Market") and HueGrid's ("Demo Partner") are plain demo wordmarks, labelled in the file.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 

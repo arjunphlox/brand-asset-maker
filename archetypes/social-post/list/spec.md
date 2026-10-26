@@ -28,6 +28,10 @@ tier: sample
 - **Numbers show the structure.** The 1, 2 and 3 sit on the baseline of each item, so number and item read as one row. Numbers and other signals of structure help readers find their way and remember the structure. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989); [Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **The title tells what the list is.** The `title` (8cqi) is larger than the items and is read first. In learning studies, a short overview given before the material helps people learn and keep it. ([Ausubel 1960](../../../docs/design/system/visual/sources.md#ausubel-1960))
 
+## How it comes across
+
+**simple, credible.** Several items read in order: nothing competes, every item is believed. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -70,6 +74,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 - 2026-10-21 — Added as a sample layout (contract 1.4, `rules/decisions.md`). Exactly three items: a list of two is a comparison, and four or more stop reading at a glance on a feed post. The numbers are template text in the display face; the contrast and min-text checks measure them like any other text.
 
 - 2026-10-21 — `style: stacked` and `accent: last` added as opt-in cues from HueGrid's client work (inspiration only, `rules/decisions.md`). The items are `h3` in the display face for both styles: `role-face` checks the face against the schema role, and a role cannot change with a variation. Kadri: all 36 samples (6 variation combinations × 1:1 and 4:5 × three schemes) pass the 11 checks.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 

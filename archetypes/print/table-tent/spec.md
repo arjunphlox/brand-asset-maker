@@ -28,6 +28,10 @@ tier: sample
 - **One call to action.** There is at most one `cta`, of three words or fewer. In their studies, fewer options led more people to act (to buy, to write an essay). ([Iyengar & Lepper 2000](../../../docs/design/system/visual/sources.md#iyengar-lepper-2000))
 - **Centred for both sides of the table.** With `align: center` the block sits on the centre line, so it reads the same from either side. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**inviting, simple.** On a table at eye level: welcoming, one thing to read. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

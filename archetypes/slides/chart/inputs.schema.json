@@ -136,6 +136,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "credible",
+      "simple"
+    ],
+    "why": "Numbers drawn to scale: they must be believed first."
+  },
   "variation": {
     "scheme": {
       "values": [

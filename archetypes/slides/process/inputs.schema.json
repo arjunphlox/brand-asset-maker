@@ -109,6 +109,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "Steps in order: easy to follow, believable."
+  },
   "variation": {
     "scheme": {
       "values": [

@@ -28,6 +28,10 @@ tier: sample
 - **Read in order, top to bottom.** The items run in one column, in the order they are given. In a study of restaurant menus, diners read in order from top to bottom and no single spot on the page drew them. ([Yang 2012](../../../docs/design/system/visual/sources.md#yang-2012))
 - **At most eight rows.** A menu has at most eight rows. The time to choose grows with the number of options, and in their studies fewer options led more people to act. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952); [Iyengar & Lepper 2000](../../../docs/design/system/visual/sources.md#iyengar-lepper-2000))
 
+## How it comes across
+
+**inviting, simple.** Read at the table: welcoming, easy to scan. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

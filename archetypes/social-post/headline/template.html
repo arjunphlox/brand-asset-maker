@@ -8,17 +8,14 @@
 .pg-frame[data-archetype="social-post/headline"] .pg-bar { display: none; flex: 0 0 auto; }
 .pg-frame[data-archetype="social-post/headline"][data-mark="bar"] .pg-bar { display: block; }
 .pg-frame[data-archetype="social-post/headline"][data-align="center"] .pg-bar { display: none; } /* bar is a start-side device; centered blocks carry no bar (spec) */
-.pg-frame[data-archetype="social-post/headline"] [data-slot="headline"] { text-wrap: balance; font-size: 12cqi; margin: 0; overflow-wrap: break-word; max-width: 100%; }
-.pg-frame[data-archetype="social-post/headline"][data-size="2"] [data-slot="headline"] { font-size: 15cqi; }
+.pg-frame[data-archetype="social-post/headline"] [data-slot="headline"] { text-wrap: balance; font-size: calc(12cqi * var(--pg-title, 1)); margin: 0; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/headline"][data-size="2"] [data-slot="headline"] { font-size: calc(15cqi * var(--pg-title, 1)); }
 .pg-frame[data-archetype="social-post/headline"] [data-slot="cta"] { color: var(--pg-accent-text); }
 /* accent scheme: accent == on-surface, so the CTA stays legible */
 .pg-frame[data-archetype="social-post/headline"][data-align="center"] .pg-logo { top: auto; left: 50%; bottom: 0; transform: translateX(-50%); }
-/* 9:16 story (1.4): adapted, not scaled. Sizes stay in cqi (same width, same line length); the layout changes.
-   The line sits on the story's centre line, the CTA drops to the foot of the safe zone where the thumb is, and a
-   centred story keeps the logo at the top so the CTA owns the foot. */
-.pg-frame[data-archetype="social-post/headline"][data-ratio="9:16"] .pg-safe { justify-content: center; }
-.pg-frame[data-archetype="social-post/headline"][data-ratio="9:16"] [data-slot="cta"] { position: absolute; bottom: 0; left: 0; right: 0; }
-.pg-frame[data-archetype="social-post/headline"][data-ratio="9:16"][data-align="center"] .pg-logo { top: 0; bottom: auto; }
+/* emphasis giant (gap note 0003): the headline much larger, in the accent text colour. Long copy overflows and is
+   caught by the overflow check: rewrite it or use the standard emphasis, never shrink the type. */
+.pg-frame[data-archetype="social-post/headline"][data-emphasis="giant"] [data-slot="headline"] { font-size: calc(19cqi * var(--pg-title, 1)); line-height: 0.95; color: var(--pg-accent-text); }
 </style>
 <div class="pg-frame" data-archetype="social-post/headline">
   <div class="pg-safe">

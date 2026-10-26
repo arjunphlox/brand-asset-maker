@@ -28,6 +28,10 @@ tier: sample
 - **Plain and high contrast.** Few elements, and every text and background pair must pass `contrast` (4.5:1, or 3:1 for large text). Things that are easy to perceive, such as high contrast and simplicity, are liked more. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
 - **Logo at the head, text at the foot.** The `logo` sits on the top row and the text block sits on the foot of the safe zone, so the card has a top and a bottom. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**inviting, cheerful.** Sent or picked up to keep: warm and glad. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

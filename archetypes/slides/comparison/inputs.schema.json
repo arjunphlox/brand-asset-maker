@@ -67,6 +67,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "credible",
+      "simple"
+    ],
+    "why": "Two things set side by side: fair and easy to compare."
+  },
   "variation": {
     "scheme": {
       "values": [

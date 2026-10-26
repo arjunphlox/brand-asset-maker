@@ -47,6 +47,13 @@
     "item3",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "Several items read in order: nothing competes, every item is believed."
+  },
   "variation": {
     "scheme": {
       "values": [

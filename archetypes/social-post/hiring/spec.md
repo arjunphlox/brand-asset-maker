@@ -28,6 +28,10 @@ tier: sample
 - **Only what the reader needs is shown.** `details` is at most 8 words (where and what kind), and pay, hours and perks go in the post copy. In learning studies, people understand more when extra words are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
 - **A date can end the CTA.** The `cta` starts with a verb and may carry a date, as in "Apply by Friday". In a study of coupons, use rose as the expiry date came near, so a stated end date prompts action. ([Inman & McAlister 1994](../../../docs/design/system/visual/sources.md#inman-mcalister-1994))
 
+## How it comes across
+
+**welcoming, credible.** It asks people to join: warm to the reader, serious about the job. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -74,6 +78,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 - 2026-10-21 — `cta: pill` added as an opt-in cue from HueGrid's client work (inspiration only, `rules/decisions.md`). Kadri: all 48 samples (8 variation combinations × two formats × three schemes) pass the 11 checks.
 
 - 2026-10-21 — `highlight: block` added as an opt-in cue from HueGrid's client work (Pifo Talks: the title set on solid highlight tags, one per line; inspiration only, `rules/decisions.md`). The `role` slot sits in a `.pg-title` wrapper that is `display: contents` by default, so default output is unchanged; with `block` the wrapper is the block box and the slot turns inline with `box-decoration-break: clone`, padding 0.08em by 0.22em of the tag size (written in cqi, as every template size is) and the brand radius. Hubot Sans's content area is about 1.4em tall, so tags overlapped by 31.6px at line-height 1.3; at 1.62 consecutive tags sit about 5px apart (measured on Kadri). At the full size the budget-length role spilled the 4:5 safe zone, so the tagged role takes one fixed size step down (12cqi → 10.4cqi): a property of the variation, not a fit to the copy. Works with `mark`, `align` and `cta: pill`. Kadri: all 96 samples (16 variation combinations × two formats × three schemes) pass the 11 checks.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 

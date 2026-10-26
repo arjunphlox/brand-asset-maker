@@ -28,6 +28,10 @@ tier: sample
 - **Attribution and role form one unit.** `attribution` and `role` sit tight together with a clear gap from the `quote`. Things that sit close are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **A named source makes it believable.** `attribution` is required, and an unattributed quote goes to `headline`. In 1951 persuasion studies, the same message changed more minds when it came from a source people trusted. ([Hovland & Weiss 1951](../../../docs/design/system/visual/sources.md#hovland-weiss-1951))
 
+## How it comes across
+
+**understated, credible.** Someone else's words: the post steps back and lets them be trusted. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -46,6 +50,7 @@ Hierarchy: quote > attribution > role > logo.
 | `scheme` | paper · ink · accent | paper | Surface and on-surface pair |
 | `mark` | glyph · bar · none | glyph | An opening quote glyph in the body face and the accent, an accent bar, or nothing |
 | `align` | start · center | start | Text alignment; with `center` the bar mark is suppressed (a bar is a start-side device) |
+| `emphasis` | standard · giant | standard | `giant`: the quote at 9.5cqi in the accent text colour (on white, the brand's darker accent text colour where the accent itself fails contrast). Long quotes overflow and are caught by the overflow check |
 
 ## Checks
 
@@ -75,6 +80,7 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 - 2026-09-29 — `mark: bar` with `align: center` is suppressed by the template; a centered bar has no side to sit on.
 - 2026-09-29 — The quote step is fixed at 7cqi regardless of length. Auto-sizing to fit was rejected: it hides budget violations and produces two posts that "match" at different sizes.
 - 2026-10-20 — 9:16 story (contract 1.4): no layout change. The centred block already sits on the story's centre line and passes every check at 9:16 for HueGrid and Kadri. Selection does not pick a quote for a story (no call to action): it becomes a headline (`../select.md`, step 0).
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste. The quote now anchors to the foot in every format, the square included; a centred quote keeps its logo at the top.
 
 ## Never do
 
@@ -86,6 +92,13 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 ## Editor controls (tessor-props)
 
 ```tessor-props
+- prop: emphasis
+  label: Emphasis
+  kind: select
+  values: [standard, giant]
+  tab: Visual
+  appliesTo:
+    elements: [".pg-frame[data-archetype='social-post/quote']"]
 - prop: scheme
   label: Scheme
   kind: select

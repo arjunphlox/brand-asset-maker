@@ -28,6 +28,10 @@ tier: sample
 - **A large surface gets attention.** In print ads, the attention a text element gets grows with its surface size. The `headline` is by far the largest element here. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
 - **The block never floats.** The text block sits on the foot of the safe zone, or under the logo with `anchor: top`, so the page feels settled. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**striking, confident.** Seen from across a room: it must stop people and sound sure. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

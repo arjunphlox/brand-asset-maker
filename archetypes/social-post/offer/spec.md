@@ -29,6 +29,10 @@ tier: sample
 - **There is one thing to choose.** The post has one `detail` and at most one `cta`. The time to choose grows with the number of options. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
 - **The condition does not compete.** The `terms` are muted, so they are there to read but are smaller and quieter than the `detail`. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**energetic, cheerful.** A deal: it should feel lively and glad, not grave. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -46,7 +50,7 @@ Hierarchy: detail > was > offer > terms > cta > logo. The old price sits above t
 
 ## Formats
 
-1:1 (feed post), 4:5 (tall feed post) and 9:16 (story). At 9:16 the block sits on the centre line and the CTA drops to the foot of the safe zone.
+1:1 (feed post), 4:5 (tall feed post) and 9:16 (story). The block anchors to the foot of the safe zone in every format (at 9:16, above the 340px reply-bar zone).
 
 ## Variation (bounded)
 
@@ -77,6 +81,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 - 2026-10-21 — `cta: pill` added as an opt-in cue from HueGrid's client work (inspiration only, `rules/decisions.md`). Kadri: all 54 samples (6 variation combinations × three formats × three schemes) pass the 11 checks.
 
 - 2026-10-21 — Optional `was` slot from public reference posts Arjun shared (Shillington, Room Fifty, a course card: an old price struck through beside the new one; inspiration only, nothing copied, `rules/decisions.md`). `label` role (body face), 5.2cqi, `--pg-muted`, `text-decoration: line-through`, above the detail so a long detail and the old price never share one line. Muted is 4.64:1 on Kadri's paper, the ink scheme's own muted on ink, and the accent ink on the accent surface (`base.css`), so `contrast` and `min-text` pass on all three schemes. No variation: an empty `was` is removed, and the layout is as before. Kadri: 54 demo samples with `was` (every combination × three formats × three schemes) pass the 11 checks; Kadri has set no price, so the sweep's "₹2699" is demo copy.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 

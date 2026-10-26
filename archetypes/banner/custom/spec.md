@@ -30,6 +30,10 @@ tier: sample
 - **One action in every shape.** The `cta` is required and there is only one, starting with a verb. The time to choose grows with the number of options. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
 - **Thin frames fail instead of shrinking.** The `min-text` check fails a frame where text falls under 12px, such as a very long thin one. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
 
+## How it comes across
+
+**striking, simple.** A display ad of any size: stop the eye with very little. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

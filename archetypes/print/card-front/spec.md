@@ -28,6 +28,10 @@ tier: sample
 - **The same mark, the same way.** The front uses the ink scheme and the same mark on every card. A logo or colour becomes a brand asset when people link it to the brand through repeated, consistent use. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
 - **The front shows the brand only.** Contact details go on the back (`print/card-back`), so the front has no competing text. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**refined, simple.** A card handed over in person: well made, little on it. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

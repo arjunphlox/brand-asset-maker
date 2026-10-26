@@ -35,6 +35,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "confident",
+      "simple"
+    ],
+    "why": "One line has to be read at a glance and sound sure of itself."
+  },
   "variation": {
     "scheme": {
       "values": [
@@ -64,7 +71,7 @@
         "none"
       ],
       "default": "bar"
-    }
+    }, "emphasis": { "values": ["standard", "giant"], "default": "standard" }
   },
   "checks": {
     "contrast": true,

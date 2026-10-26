@@ -25,6 +25,7 @@ This folder is Brand Asset Maker (BAM), the part of Poligraf that participants k
 - For a mock-up (the post on a tote bag, a phone, a shop window), read `skills/poligraf--mockup.md`: you send a passing post and the filled prompt to the owner's own image model with the owner's own key, then review the result. Never edit the image it returns.
 - If the owner brings layouts, templates or a guide of their own, encode those first (`skills/poligraf--encode.md`, "Your layouts first"): show what they cover in `brand/coverage.md`, and offer the sample layouts only for the jobs they do not cover.
 - When a request fits no layout, write a gap note with `workshop/gap-note.md` and stop.
+- If the owner gave character words (intake question 10), read `skills/poligraf--expression.md`: measure what each post says about the brand's character and show every mismatch. It is always the owner's call, never a must fix; a post must be readable and in the brand first.
 - Never hand-edit an image.
 - Never invent a brand value. Ask the owner. If you must guess, mark the value "we guessed" (`derived`).
 

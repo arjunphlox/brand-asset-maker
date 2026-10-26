@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **Numbered nodes mark the order.** The template numbers each node, so the viewer does not count along the row. Numbers are a signal of structure, and signals help readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
 - **Detail sits under its step.** `detail1` to `detail5` are small (31px) and placed directly under their step. Related words placed together are easier to understand than ones placed apart. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
 
+## How it comes across
+
+**simple, credible.** Steps in order: easy to follow, believable. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

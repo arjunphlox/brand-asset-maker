@@ -34,6 +34,13 @@
     "source",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "confident",
+      "credible"
+    ],
+    "why": "One number has to land with force and be believed."
+  },
   "variation": {
     "scheme": {
       "values": [
@@ -57,7 +64,9 @@
         "bottom"
       ],
       "default": "bottom"
-    }
+    }, "emphasis": { "values": ["standard", "giant"], "default": "standard" },
+    "layout": { "values": ["stack", "column"], "default": "stack" },
+    "block": { "values": ["none", "solid"], "default": "none" }
   },
   "checks": {
     "contrast": true,

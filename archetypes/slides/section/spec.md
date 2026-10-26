@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **The title is the largest text.** `title` is 115px, the largest words on the slide, with `number` next and `kicker` small and muted. In print ads, attention to a text element grows with its surface size. ([Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
 - **Large accent text passes contrast.** The accent number is above 36px, where `contrast` asks for 3:1 against the surface. Large text needs at least 3:1 and smaller text 4.5:1. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
 
+## How it comes across
+
+**confident, simple.** A new part of the talk: one sure line. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

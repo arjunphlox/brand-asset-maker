@@ -28,6 +28,10 @@ tier: sample
 - **Date and place sit together.** The `date` and `place` sit side by side in one row with one size. Things close together are seen as one group, so the viewer reads when and where as one fact. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **A stated end date can prompt action.** When the `date` is the day the offer ends, it gives a reason to act now. In coupon studies, use rose as the expiry date came near. ([Inman & McAlister 1994](../../../docs/design/system/visual/sources.md#inman-mcalister-1994))
 
+## How it comes across
+
+**energetic, cheerful.** A printed deal: lively and glad. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

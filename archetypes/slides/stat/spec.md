@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **The label stays with the number.** `label` and `source` sit directly under `number`. Things that sit close together are seen as one group, so the label reads as the number's meaning. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **The accent colour makes it stand out.** With `accent: number`, the figure is the one element in the accent text colour. One item that differs by a single feature such as colour is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
 
+## How it comes across
+
+**confident, credible.** One number has to land with force and be believed. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

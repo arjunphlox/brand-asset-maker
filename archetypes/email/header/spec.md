@@ -28,6 +28,10 @@ tier: sample
 - **The kicker shows the topic.** The `kicker` sits above the `headline` in the accent text colour and names the issue or topic. Signals that show a text's structure help readers find their way. ([Lorch 1989](../../../docs/design/system/visual/sources.md#lorch-1989))
 - **The logo is in the same place each issue.** By default the `logo` is top left, the same place on every issue. A logo becomes a brand asset when people link it to the brand, and that comes from using it the same way, often, over time. ([Romaniuk 2018](../../../docs/design/system/visual/sources.md#romaniuk-2018))
 
+## How it comes across
+
+**simple, inviting.** The top of a newsletter: easy to take in, and an invitation to read on. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

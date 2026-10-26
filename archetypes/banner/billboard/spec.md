@@ -30,6 +30,10 @@ tier: sample
 - **One action, nothing to choose.** The layout has a single `cta` of up to three words, starting with a verb. The time to choose grows with the number of options, and here there is only one. ([Hick 1952](../../../docs/design/system/visual/sources.md#hick-1952))
 - **The text is easy to read.** The `contrast` check holds text to 4.5:1 against its surface, or 3:1 for large text. Things that are easy to perceive, with high contrast, are liked more. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22); [Reber et al. 2004](../../../docs/design/system/visual/sources.md#reber-2004))
 
+## How it comes across
+
+**striking, simple.** A display ad seen in passing: it must stop the eye with very little. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

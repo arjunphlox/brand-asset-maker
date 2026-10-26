@@ -32,6 +32,13 @@
     "kicker",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "inviting"
+    ],
+    "why": "The top of a newsletter: easy to take in, and an invitation to read on."
+  },
   "variation": {
     "scheme": {
       "values": [

@@ -30,6 +30,10 @@ tier: sample
 - **The button is the one filled shape.** With `cta` set to chip, the button is a filled accent shape among plain text. One item that differs by a single feature is found at once. ([Treisman & Gelade 1980](../../../docs/design/system/visual/sources.md#treisman-gelade-1980))
 - **Copy stays short.** The `headline` is capped at 8 words and the `sub` at 12. Working memory is limited, and extra material leaves less room to take in the point. ([Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
 
+## How it comes across
+
+**striking, simple.** A display ad seen in passing: it must stop the eye with very little. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

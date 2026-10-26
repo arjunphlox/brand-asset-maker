@@ -46,6 +46,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "confident",
+      "simple"
+    ],
+    "why": "The top of the site: sure of itself, nothing extra."
+  },
   "variation": {
     "scheme": {
       "values": [

@@ -46,6 +46,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "inviting",
+      "simple"
+    ],
+    "why": "An open floor: it should invite people to speak."
+  },
   "variation": {
     "scheme": {
       "values": [

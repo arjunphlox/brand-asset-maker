@@ -32,6 +32,10 @@ A carousel is an ordered set. This layout is **one slide**; the set is a generat
 - **A fixed logo corner joins the slides.** The `logo` sits top left at the same size on every beat, and the whole set shares one scheme and format. Things that look alike are seen as one group, so the swipe reads as one set. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **The first and last slides are remembered.** The cover opens the set and the close holds the only `cta`. People remember the first and last items of a sequence best, so these two slides do the most work. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
 
+## How it comes across
+
+**simple, inviting.** A set people swipe through: each frame easy, the first one an invitation. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 Each slot belongs to the beats named in its `when` (contract 1.5). A slot given on a beat that does not show it fails `budget` (rule `when`): the post would drop it.
@@ -81,6 +85,7 @@ The checks judge one slide. Nothing yet measures the set as a whole (order, the 
 ## Decisions
 
 - 2026-10-22 — Added as a sample layout (contract 1.5) from the sequence brief (`../sequence-brief.md`, now superseded): one layout with a `beat` variation, not three layouts, so the slides share one template and the logo cannot move between them. The set is a generator's ordered `frames` (engine, 1.5), so a frame may be another layout (a stat for a number). The beats per slot are declared with the schema's slot `when`, so `element-count` and `role-face` judge only the slots a beat shows. The swipe cue is drawn in CSS (no glyph, so no font dependency). Open questions 2 to 4 of the brief answered: 1:1 and 4:5; the close may share the cover's scheme (one scheme per set); three to five slides is the guidance, not a check.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste.
 
 ## Never do
 

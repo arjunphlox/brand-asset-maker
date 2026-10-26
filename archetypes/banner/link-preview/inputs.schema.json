@@ -39,6 +39,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "A shared link: clear enough to read in a feed, credible enough to click."
+  },
   "variation": {
     "scheme": {
       "values": [

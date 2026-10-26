@@ -28,6 +28,10 @@ tier: sample
 - **Three is within what people hold.** The card has three points. The working limit is nearer three to five chunks than seven, so all three can be held in mind at once. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
 - **First and last are remembered.** The `headline` comes first and the `cta` comes last. People remember the first and last items of a sequence best (shown with lists of items). ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
 
+## How it comes across
+
+**simple, inviting.** Picked from a rack: easy to scan, an invitation to take it. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

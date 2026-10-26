@@ -29,6 +29,10 @@ tier: sample
 - **Two short statements are easy to hold.** Each statement is at most 10 words, and there are only two. The working limit is about three to five chunks, so the pair fits with room to spare. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
 - **The panel text stays readable.** The counter's text uses `--pg-accent-on` on `--pg-accent`, and `contrast` checks the pair against 4.5:1 (3:1 at 36px and above). ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
 
+## How it comes across
+
+**striking, credible.** Two statements set against each other: the turn must hit, and still be believed. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |
@@ -71,6 +75,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 - 2026-10-21 — Added as a sample layout (contract 1.4, `rules/decisions.md`, `upstream: true`). Inspiration: a "Contrast Statements" template from HueGrid's client work (inspiration only; the client is named in the engine's `rules/decisions.md`): the claim, then the counter on a solid panel, offset on a diagonal; logo bottom left with a hairline to a small tagline bottom right. Only what tokens, slots and `cqi` carry was taken; none of its colours, fonts, copy, gradients, texture, illustrations or shadowed cards. Fills `select.md`'s "a comparison" gap for the two-statement case. Both statements are `h2` at 6cqi: a first draft at 6.6cqi with a 76% measure spilled the 4:5 safe zone with both statements at budget and the claim outlined, so the size came down and the measure went up to 80%. A wrapped counter's panel takes the full measure (CSS sizes a wrapped box to the space it may use, not its longest line), so it reads as a fixed card with the text on its start edge. The foot hairline keeps a 6cqi minimum so it never collapses beside a long tagline. Kadri: p06 6/6 (1:1 and 4:5 × three schemes) and every variation combination × both formats × three schemes pass the 11 checks.
 
 - 2026-10-21 — `join: inline` added from public reference posts Arjun shared (Shillington, Room Fifty; inspiration only, nothing copied, `rules/decisions.md`): the belief and the answer as one sentence pair, the turn carried by weight. Both slots stay `h2` in the display face: `role-face` checks the face against the schema role, and a role cannot change with a variation, so the counter keeps the display face and steps down to `--brand-weight-body` (400 for Kadri against 700). The panel, the outline and the stagger are switched off inside `inline`; those combinations render the same as `inline` alone and still pass. Kadri: all 96 contrast samples (16 combinations × 1:1 and 4:5 × three schemes) pass the 11 checks.
+- 2026-10-26 — Anchored, never floating (Arjun, `upstream: true`): a block on the centre line of a tall post reads unresolved, so content anchors to the safe zone's edges in every format, the 9:16 story included (above its 340px reply-bar zone). On tall frames the logo and the first text slot grow with `--pg-logo` and `--pg-title` from `base.css`, since type is sized by width. A readability rule for every brand, not one brand's taste. The pair now sits at the foot, just above the foot row, in every format.
 
 ## Never do
 

@@ -69,6 +69,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "inviting",
+      "energetic"
+    ],
+    "why": "It asks people to come: open and lively."
+  },
   "variation": {
     "scheme": {
       "values": [

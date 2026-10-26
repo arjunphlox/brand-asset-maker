@@ -46,6 +46,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "striking",
+      "simple"
+    ],
+    "why": "One line the audience should remember."
+  },
   "variation": {
     "scheme": {
       "values": [

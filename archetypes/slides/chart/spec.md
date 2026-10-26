@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **Each number sits with its bar.** `label1` is left of its bar and `value1` is at the end of the bar. Related words and shapes placed together are easier to understand than ones placed apart. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
 - **Two to six bars and no extra ink.** The chart has one baseline, the bars, labels and numbers, and no gridlines. Ink that shows no data is cut, and extra words and pictures leave people learning less. ([Tufte 2001](../../../docs/design/system/visual/sources.md#tufte-2001); [Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
 
+## How it comes across
+
+**credible, simple.** Numbers drawn to scale: they must be believed first. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -53,6 +53,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "confident",
+      "simple"
+    ],
+    "why": "A new part of the talk: one sure line."
+  },
   "variation": {
     "scheme": {
       "values": [

@@ -81,6 +81,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "credible"
+    ],
+    "why": "The plan for the talk: orderly and believable."
+  },
   "variation": {
     "scheme": {
       "values": [

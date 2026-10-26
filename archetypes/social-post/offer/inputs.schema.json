@@ -53,6 +53,13 @@
     "cta",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "energetic",
+      "cheerful"
+    ],
+    "why": "A deal: it should feel lively and glad, not grave."
+  },
   "variation": {
     "scheme": {
       "values": [

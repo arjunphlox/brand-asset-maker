@@ -53,6 +53,13 @@
     "page",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "understated",
+      "credible"
+    ],
+    "why": "Someone else's words: the slide steps back and lets them be trusted."
+  },
   "variation": {
     "scheme": {
       "values": [

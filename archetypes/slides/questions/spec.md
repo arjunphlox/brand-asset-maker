@@ -29,6 +29,10 @@ A outro slide (closes the deck).
 - **The last slide is remembered.** This slide ends the deck. In free-recall tests with lists of items, people remember the first and last items best. ([Murdock 1962](../../../docs/design/system/visual/sources.md#murdock-1962))
 - **The contact stays with the line.** `contact` sits directly under `line` at 42px. Things that sit close together are seen as one group, so the audience knows where to ask later. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 
+## How it comes across
+
+**inviting, simple.** An open floor: it should invite people to speak. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -9,7 +9,7 @@
 .pg-frame[data-archetype="social-post/hiring"][data-mark="bar"] .pg-bar { display: block; }
 .pg-frame[data-archetype="social-post/hiring"][data-align="center"] .pg-bar { display: none; } /* a bar is a start-side device */
 .pg-frame[data-archetype="social-post/hiring"] [data-slot="kicker"] { color: var(--pg-accent-text); }
-.pg-frame[data-archetype="social-post/hiring"] [data-slot="role"] { font-size: 12cqi; margin-top: 2.4cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
+.pg-frame[data-archetype="social-post/hiring"] [data-slot="role"] { font-size: calc(12cqi * var(--pg-title, 1)); margin-top: 2.4cqi; text-wrap: balance; overflow-wrap: break-word; max-width: 100%; }
 /* highlight="block": the role sits on solid accent tags, one per line (box-decoration-break: clone repeats the padding and
    radius on every line; padding 0.08em by 0.22em of the tag size, written in cqi). The wrapper is display: contents by default, so the default layout is unchanged; with block it is
    the line's block box (it takes the role's top margin), and the slot turns inline inside it. line-height opens to 1.62 so
@@ -17,7 +17,7 @@
 .pg-frame[data-archetype="social-post/hiring"] .pg-title { display: contents; }
 .pg-frame[data-archetype="social-post/hiring"][data-highlight="block"] .pg-title { display: block; max-width: 100%; margin-top: 2.4cqi; font-size: 10.4cqi; line-height: 1.62; text-wrap: balance; }
 .pg-frame[data-archetype="social-post/hiring"][data-highlight="block"][data-align="center"] .pg-title { text-align: center; }
-.pg-frame[data-archetype="social-post/hiring"][data-highlight="block"] [data-slot="role"] { display: inline; font-size: 10.4cqi; margin-top: 0; line-height: 1.62; background: var(--pg-accent); color: var(--pg-accent-on); padding: 0.832cqi 2.288cqi; border-radius: var(--brand-radius); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.pg-frame[data-archetype="social-post/hiring"][data-highlight="block"] [data-slot="role"] { display: inline; font-size: calc(10.4cqi * var(--pg-title, 1)); margin-top: 0; line-height: 1.62; background: var(--pg-accent); color: var(--pg-accent-on); padding: 0.832cqi 2.288cqi; border-radius: var(--brand-radius); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .pg-frame[data-archetype="social-post/hiring"] [data-slot="details"] { font-size: 4.6cqi; margin-top: 3.2cqi; max-width: 100%; }
 .pg-frame[data-archetype="social-post/hiring"] [data-slot="cta"] { margin-top: 4cqi; }
 /* cta="pill": one solid button (accent surface, its own text colour; base.css swaps the pair on the accent scheme). */

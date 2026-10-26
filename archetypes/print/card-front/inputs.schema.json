@@ -25,6 +25,13 @@
     "logo",
     "tagline"
   ],
+  "appear": {
+    "words": [
+      "refined",
+      "simple"
+    ],
+    "why": "A card handed over in person: well made, little on it."
+  },
   "variation": {
     "scheme": {
       "values": [

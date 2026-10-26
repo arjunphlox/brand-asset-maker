@@ -60,6 +60,13 @@
     "kicker",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "simple",
+      "inviting"
+    ],
+    "why": "Picked from a rack: easy to scan, an invitation to take it."
+  },
   "variation": {
     "scheme": {
       "values": [

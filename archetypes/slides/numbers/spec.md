@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **Equal cells read as one set.** The three cells have the same size and treatment, and each label sits under its number. Things that look alike or sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **Large accent numbers still pass contrast.** With `accent: numbers`, the three figures take the accent text colour. At 36px and above, `contrast` asks for 3:1 against the surface; smaller text needs 4.5:1. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
 
+## How it comes across
+
+**credible, simple.** A few numbers together: believed, easy to take in. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

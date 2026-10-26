@@ -6,22 +6,40 @@
 /* The tight 0.85 line box suits figures, but the number may carry a unit with a descender ("250 g"): its ink
    hangs up to ~0.18em below the line box and met the label. padding-bottom keeps room for it (upstream fix,
    rules/decisions.md 2026-10-20). */
-.pg-frame[data-archetype="social-post/stat"] [data-slot="number"] { font-size: 22cqi; line-height: 0.85; padding-bottom: 0.15em; }
+.pg-frame[data-archetype="social-post/stat"] [data-slot="number"] { font-size: calc(22cqi * var(--pg-title, 1)); line-height: 0.85; padding-bottom: 0.15em; }
 .pg-frame[data-archetype="social-post/stat"] [data-slot="label"] { font-size: 4.6cqi; margin-top: 1.4cqi; }
 .pg-frame[data-archetype="social-post/stat"] [data-slot="source"] { color: var(--pg-muted); margin-top: 2.4cqi; }
 .pg-frame[data-archetype="social-post/stat"][data-accent="number"] [data-slot="number"] { color: var(--pg-accent-text); }
 .pg-frame[data-archetype="social-post/stat"][data-accent="label"] [data-slot="label"] { color: var(--pg-accent-text); }
-/* 9:16 story (1.4): adapted, not scaled. Sizes stay in cqi; the default position (bottom) sits on the story's
-   centre line, because the foot of a story belongs to the reply bar and the thumb. Top stays top. */
-.pg-frame[data-archetype="social-post/stat"][data-ratio="9:16"]:not([data-position="top"]) .pg-safe { justify-content: center; }
+/* emphasis giant (gap note 0003, Arjun 2026-10-26): the number much larger, in the accent. On the white surface the
+   accent text is --pg-accent-text, which a brand darkens when its accent fails contrast on white. */
+.pg-frame[data-archetype="social-post/stat"][data-emphasis="giant"] [data-slot="number"] { font-size: calc(34cqi * var(--pg-title, 1)); }
+.pg-frame[data-archetype="social-post/stat"][data-emphasis="giant"][data-accent="number"] [data-slot="number"] { color: var(--pg-accent-text); }
+/* layout column (Arjun 2026-10-26): the label and source move to a narrow column at the right, on the centre line,
+   inside the safe zone. */
+.pg-frame[data-archetype="social-post/stat"][data-layout="column"] .pg-desc, .pg-frame[data-archetype="social-post/stat"][data-block="solid"] .pg-desc { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 30cqi; }
+.pg-frame[data-archetype="social-post/stat"][data-layout="column"] [data-slot="label"], .pg-frame[data-archetype="social-post/stat"][data-block="solid"] [data-slot="label"] { margin-top: 0; }
+/* block (Arjun 2026-10-26): the number set dark on a block of its own, always with the label and source in the right
+   column (below the block, the foot of the post is cramped). On the block the number is 1.25 times its size
+   elsewhere (27.5cqi, giant 42.5cqi) and the padding tight around it (Arjun). On the accent ground the block is the paper
+   (white), which reads bold and playful together; on paper and ink the block is the accent. The number's ink stays
+   --brand-ink on either block, which reads on white and, for a light accent, on the accent. */
+.pg-frame[data-archetype="social-post/stat"][data-block="solid"] [data-slot="number"] { align-self: flex-start; background: var(--pg-accent); color: var(--brand-ink); font-size: calc(27.5cqi * var(--pg-title, 1)); padding: 1.75cqi 2.65cqi 2.85cqi; border-radius: calc(var(--brand-radius) * 4); }
+.pg-frame[data-archetype="social-post/stat"][data-block="solid"][data-emphasis="giant"] [data-slot="number"] { font-size: calc(42.5cqi * var(--pg-title, 1)); padding: 2.7cqi 4.1cqi 4.4cqi; }
+.pg-frame[data-archetype="social-post/stat"][data-block="solid"][data-scheme="accent"] [data-slot="number"] { background: var(--brand-paper); }
+/* The block is anchored bottom-left in every format and position (Arjun): at 9:16 too, and with position top. */
+.pg-frame[data-archetype="social-post/stat"][data-block="solid"] .pg-safe { justify-content: flex-end; }
+.pg-frame[data-archetype="social-post/stat"][data-block="solid"][data-position="top"] .pg-logo { top: 0; bottom: auto; }
 </style>
 <div class="pg-frame" data-archetype="social-post/stat">
   <div class="pg-safe">
     <div class="pg-logo pg-logo--tl"><img data-slot="logo" alt=""><span data-slot="wordmark" data-slot-optional></span></div>
     <div class="pg-block">
       <div class="pg-data" data-slot="number"></div>
-      <div class="pg-body" data-slot="label"></div>
-      <div class="pg-label" data-slot="source" data-slot-optional></div>
+      <div class="pg-desc">
+        <div class="pg-body" data-slot="label"></div>
+        <div class="pg-label" data-slot="source" data-slot-optional></div>
+      </div>
     </div>
   </div>
 </div>

@@ -29,6 +29,10 @@ A outro slide (closes the deck).
 - **Ways to reach you sit together.** `contact`, `url` and `handle` are stacked at one size (42px) and one gap. Things that sit close together are seen as one group. ([Wertheimer 1923](../../../docs/design/system/visual/sources.md#wertheimer-1923))
 - **Few lines are easy to copy down.** `contact` is at most six words and `url` and `handle` at most two. Material that makes people search for extra things leaves less room to take in the point. ([Sweller 1988](../../../docs/design/system/visual/sources.md#sweller-1988))
 
+## How it comes across
+
+**inviting, simple.** The close: warm, with a clear way to get in touch. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

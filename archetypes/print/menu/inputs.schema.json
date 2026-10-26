@@ -143,6 +143,13 @@
     "kicker",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "inviting",
+      "simple"
+    ],
+    "why": "Read at the table: welcoming, easy to scan."
+  },
   "variation": {
     "scheme": {
       "values": [

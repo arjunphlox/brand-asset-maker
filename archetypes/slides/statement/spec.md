@@ -28,6 +28,10 @@ A content slide (the body of the deck).
 - **Nothing competes with it.** The slide has only `statement` and an optional `kicker`. Attention goes to the region that differs most from its surroundings, and two equally strong regions compete for it. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
 - **Extra words are left out.** With one element and open space around it, the audience has nothing else to read. People learn more when extra words and pictures are left out. ([Mayer 2009](../../../docs/design/system/visual/sources.md#mayer-2009))
 
+## How it comes across
+
+**striking, simple.** One line the audience should remember. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

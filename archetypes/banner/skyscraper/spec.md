@@ -30,6 +30,10 @@ tier: sample
 - **Short budgets keep chunks few.** The `headline` is capped at 6 words and the `sub` at 10. People hold about three to five chunks in mind at once. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
 - **Small text has a floor.** The `cta` is 12.2px on one line, and the `min-text` check fails text under the floor. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
 
+## How it comes across
+
+**striking, simple.** A display ad seen in passing: it must stop the eye with very little. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

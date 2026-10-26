@@ -46,6 +46,13 @@
     "kicker",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "inviting",
+      "simple"
+    ],
+    "why": "On a table at eye level: welcoming, one thing to read."
+  },
   "variation": {
     "scheme": {
       "values": [

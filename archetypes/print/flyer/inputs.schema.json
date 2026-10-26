@@ -61,6 +61,13 @@
     "kicker",
     "logo"
   ],
+  "appear": {
+    "words": [
+      "striking",
+      "inviting"
+    ],
+    "why": "Picked up or pinned up: it must catch the eye and ask people in."
+  },
   "variation": {
     "scheme": {
       "values": [

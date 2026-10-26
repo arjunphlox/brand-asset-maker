@@ -28,6 +28,10 @@ tier: sample
 - **The name is seen first.** The `name` is 6.4cqi and every other line is 3.6cqi. Attention goes first to the region that differs most in size, so the person is found before the details. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001))
 - **Few lines to hold in mind.** A card has at most four contact lines. People hold about three to five chunks at once, so a short list is easier to remember and use than a long one. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
 
+## How it comes across
+
+**simple, credible.** Contact details: plain and trusted. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

@@ -29,6 +29,10 @@ A content slide (the body of the deck).
 - **Text on the accent stays readable.** The marked panel uses its own text colour, and the pair swaps on the accent scheme. `contrast` still checks every pair: text needs 4.5:1, large text 3:1. ([W3C 2023 (WCAG 2.2)](../../../docs/design/system/visual/sources.md#wcag-22))
 - **The better side is always on the right.** The layout puts the side that wins in the right panel and its Never do forbids marking the left. The slide is read left to right, so the side that wins is read last. (HueGrid practice, not a research finding)
 
+## How it comes across
+
+**credible, simple.** Two things set side by side: fair and easy to compare. Among the variants that pass every check, the harness prefers the one that reads closest to these words; a brand can replace them for this layout, and one post can ask for something else (`docs/design/system/visual/expression.md`).
+
 ## Slots
 
 | Slot | Required | Budget | Role |

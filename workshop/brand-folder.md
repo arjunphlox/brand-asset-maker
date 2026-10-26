@@ -19,6 +19,7 @@ Fill in this form and put the files it asks for in one folder named after the br
   logo.svg            your logo (question 1)
   logo-reversed.svg   the reversed logo, if one exists (question 1)
   posts/              posts you consider on-brand (question 7)
+  layouts/            your own layouts and guides, if you have them (question 7)
   fonts/              font files you are licensed to use, with their licences (question 3)
   photos/             photographs, if you have them (question 8)
 ```
@@ -59,10 +60,11 @@ Answer:
 If blank: the agent guesses from your other answers and marks it "we guessed". \
 Answer:
 
-**7. Posts you consider on-brand** \
-"Link three existing posts or assets you consider on-brand." \
-Files in `posts/` count: you can drop them there instead of linking. The agent reads them and never copies them into a post. \
-If blank: the agent starts from the library as it is. \
+**7. Your posts, layouts and guides** \
+"Link three existing posts or assets you consider on-brand, and any layouts or guides you already use (Figma frames, templates, a brand guide)." \
+Put posts in posts/ and layouts in layouts/: a Figma link (if your agent can open Figma), exported frames, templates or the pages of a brand guide. \
+The agent reads them and never copies them into a post. If you bring layouts, the agent turns them into BAM layouts first and uses BAM's sample layouts only for the jobs yours do not cover (`skills/poligraf--encode.md`, "Your layouts first"). \
+If blank: the agent starts from the BAM sample layouts. \
 Answer:
 
 **8. Photographs** \
@@ -93,7 +95,12 @@ brand/
   brand.json        the name, the wordmark and the logo file
   intake.log.md     every question asked, your answer, what was guessed from it
   assets/           your logo (and photos/ if supplied)
+  coverage.md       which jobs your own layouts cover, which they partly cover,
+                    and which need a BAM sample or a gap note (only if you
+                    brought layouts)
   proposals/        the inputs for your first set of posts
+archetypes/
+  <use-case>/<name>/  each of your own layouts, encoded (only if you brought them)
 out/
   <run>/            each post as HTML and PNG, with what was measured
 feedback/           the breaks you named and the gap notes you wrote

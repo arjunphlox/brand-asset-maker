@@ -82,7 +82,7 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
 
 ## How to use it
 
-Fork or unzip BAM, put your own `brand/` folder at its root, and open the folder with your own AI assistant (Claude, Cursor, Codex or another). It reads `AGENTS.md` or `CLAUDE.md` first, then the skill for the state you are in. The agent asks, proposes, writes the brand files and makes the posts itself with `skills/poligraf--make-it.md`: one HTML file per post, saved as a PNG. When a request fits no layout, it writes a gap note (`workshop/gap-note.md`). The cold-handoff prompt lives in `workshop/cold-handoff.md`: use it to test that your `brand/` folder stands on its own in a fresh chat.
+Fork or unzip BAM, put your own `brand/` folder at its root, and open the folder with your own AI assistant (Claude, Cursor, Codex or another). It reads `AGENTS.md` or `CLAUDE.md` first, then the skill for the state you are in. The agent asks, proposes, writes the brand files and makes the posts itself with `skills/poligraf--make-it.md`: one HTML file per post, saved as a PNG. If you bring layouts of your own, it encodes those first and offers the sample layouts only for the jobs yours do not cover. When a request fits no layout, it writes a gap note (`workshop/gap-note.md`). The cold-handoff prompt lives in `workshop/cold-handoff.md`: use it to test that your `brand/` folder stands on its own in a fresh chat.
 
 ## Licence
 
@@ -100,4 +100,4 @@ Poligraf is a HueGrid Studio framework. Learn more at huegrid.com.
 
 ## Provenance
 
-BAM version v1.0.0, generated 2026-10-21. Contract 1.5.
+BAM version v1.0.0, generated 2026-10-26. Contract 1.5.

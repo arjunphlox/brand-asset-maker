@@ -47,12 +47,14 @@ Read step 0 of that `select.md` first, where it has one: the format names the jo
 
 ## 3. Run the rules
 
+**The owner's layouts first.** If `brand/coverage.md` exists, the owner brought layouts of their own: check those first (Encode put a branch for each at the top of `select.md`). When one of them does the job, it is the suggestion; a sample is the runner-up only if the owner added it. A **partly ready** layout can be suggested: list its guesses under "I need".
+
 Ask the `select.md` questions in order, within the layouts the format allows. The first "yes" is the rule's choice. Note two more things as you go:
 
 - **Near misses:** layouts that would fit after a small rewrite (a 6-character number is a headline; at 5 characters it is a stat).
 - **Fallbacks:** the layout the tree sends the content to when a budget or slot does not fit.
 
-If no layout fits, stop and write a gap note (`workshop/gap-note.md`). Do not stretch a layout to fit.
+If no layout fits (neither the owner's nor a sample the owner added), stop and write a gap note (`workshop/gap-note.md`). If a sample the owner has not added would fit, offer it first: "No layout of yours does this; BAM's <layout> does. Add it?" Do not stretch a layout to fit.
 
 ## 4. Rank with the reasons
 
@@ -103,8 +105,10 @@ Next: make it with skills/poligraf--make-it.md.
 
 ## Rules
 
+- Never suggest a sample layout over one of the owner's own layouts that does the same job.
 - Never suggest a layout that `select.md` rules out for this content or format. Your judgement chooses only among what the rules allow.
 - Every reason you give comes from the chosen layout's **Why it works** section or from `docs/design/system/visual/why-it-works.md`, with the source named there. Never invent a finding, a study or a number. If the spec marks a reason "HueGrid practice, not a research finding", say so.
+- The owner's own layout needs no research reason to be chosen: it is chosen because it is theirs and it does the job. If its spec has no **Why it works** section, say so, and give reasons only from the sample it `covers`, naming that sample.
 - Never cite a source for more than its "Cited for" line in `sources.md`.
 - One suggestion and one runner-up. A list of every layout is not a suggestion.
 - When the request is unclear about the news, the destination or the action, ask one multiple-choice question, then suggest.

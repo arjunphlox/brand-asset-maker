@@ -61,7 +61,7 @@ Rewriting the prompt to explain what the file left out makes this chat pass and 
 On 2026-10-01 HueGrid's own brand folder failed this test:
 
 - `BRAND.md` lists `--brand-muted` as `#888888`; `tokens.css` has `#767676` (changed by feedback 0002).
-- It omits `--brand-accent-text-on-paper` (`#8c6201`) and says the accent color is constant across schemes, while text on paper reads the darker amber.
+- It omits the darker accent text colour used on paper and says the accent color is constant across schemes, while text on paper reads the darker one.
 - It lists both trackings as `derived`; `locked.json` has them `locked`.
 
 Every one of these is a `BRAND.md` that was not regenerated after `tokens.css` or `locked.json` changed. The fix in each case is to regenerate it. The prompt stays as it is.

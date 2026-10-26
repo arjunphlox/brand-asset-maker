@@ -36,6 +36,7 @@ No scripts? Do each step yourself, in the folder. Whenever a step makes a post i
 5. **Voice.** From the context, draft `brand/voice.md`: three tone words, three approved lines (only if supplied or clearly present in the context), and a "never claims" list. Ask the two voice questions from the fixed list if the context does not answer them.
 5b. **Photographs.** Photographs go under `brand/assets/photos/`, each with the focal point the owner names (where the subject is). None supplied (question 8 blank) → leave the photograph layouts out: the doctor lists their proposals as optional. Only if the owner wants a photograph layout proposed anyway, generate a placeholder with `npm run placeholder` and mark it `derived`; a placeholder never becomes locked.
 5c. **Reversed logo.** A reversed logo handed in with question 1 goes to `brand/assets/logo-reversed.svg`, bytes unchanged, `locked` in `locked.json` `assets` with its sha256, and its path in `poligraf.config.json` `brand.assets.logoReversed` (contract 1.4). Do not pick a scheme for it at intake: which surface shows it is decided when a sheet shows the main logo vanishing (feedback kind `locked`).
+5d. **Your own layouts and guides.** If question 7 names layouts, templates, Figma frames or a brand guide (or `layouts/` holds any), list each one in `brand/intake.log.md`: its name, the job it does in the owner's words ("the weekly number post"), and where it came from (a Figma link, a file, a guide page). Read a Figma link only if you can open it; otherwise ask for the frames exported as PNG or SVG. Do not encode the layouts here and do not offer BAM's sample layouts yet: Encode turns the owner's layouts into BAM layouts first (`skills/poligraf--encode.md`, "Your layouts first"). With no layouts brought, nothing changes: Encode starts from the sample layouts.
 6. Write `brand/intake.log.md`: every question asked, the answer, and what was derived from it.
 7. Re-run the doctor until it passes.
 
@@ -51,7 +52,7 @@ Ask a question only when the doctor flags its item.
 | audience | "Who is this for, in one sentence?" |
 | tone | "Three words for how the brand sounds." |
 | never say | "One thing the brand must never claim or say." |
-| existing assets | "Link three existing posts or assets you consider on-brand." (optional; used to tag which archetypes the brand already uses) |
+| existing assets | "Link three existing posts or assets you consider on-brand, and any layouts or guides you already use (Figma frames, templates, a brand guide)." (optional; layouts and guides go to Encode first, step 5d; posts tag which layouts the brand already uses) |
 | photographs | "Which photographs may we use for announcements, and where is the subject in each (the focal point)?" (optional; a placeholder from `npm run placeholder` stands in until then and stays derived) |
 | platforms | "Where will these run first: Instagram, LinkedIn, X?" (chooses ratios) |
 

@@ -73,7 +73,7 @@ Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` a
 
 - 2026-09-29 — The 5-character rule is the whole archetype. Past it the number stops reading as a glyph and the display size becomes a wall. Tested against `100%`, `$1.4M`, `3.2×`, `10k+`, `24/7`.
 - 2026-09-29 — A 1.4cqi gap between number and label: at line-height 0.85 the descender of a `y` in `15y` touched the label in the first HueGrid render.
-- 2026-10-20 — The 1.4cqi gap was tuned to one face (Magnet). In Kadri's Hubot Sans the `g` of `250 g` hangs 0.14em below the 0.85 line box and its ink ran 5.3px into the label (measured at 1x; `overflow` passed, it sees boxes, not ink). A descender scales with the number, so its room is set in em: `padding-bottom: 0.15em` on the number, the 1.4cqi gap kept below it. Figures-only numbers sit 0.15em higher. `upstream: true`.
+- 2026-10-20 — The 1.4cqi gap was tuned to one condensed face. In Kadri's Hubot Sans the `g` of `250 g` hangs 0.14em below the 0.85 line box and its ink ran 5.3px into the label (measured at 1x; `overflow` passed, it sees boxes, not ink). A descender scales with the number, so its room is set in em: `padding-bottom: 0.15em` on the number, the 1.4cqi gap kept below it. Figures-only numbers sit 0.15em higher. `upstream: true`.
 - 2026-09-29 — Accent goes on exactly one element. `number` and `label` both accented was tried and rejected: the label competes.
 - 2026-10-20 — 9:16 story (contract 1.4), adapted not scaled (`upstream: true`): sizes stay in `cqi`; at `[data-ratio="9:16"]` the default position (`bottom`) sits on the centre line, because the foot of a story belongs to the reply bar and the thumb; `top` stays top.
 

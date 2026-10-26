@@ -9,6 +9,8 @@ tier: sample
 
 A gap note is what your agent writes when Brand Asset Maker (BAM) cannot make what was asked. It is the feedback kind `designer` in the spec. Anyone can write one: a designer, an owner, or an agent. It needs no design words.
 
+A gap note comes last. If the owner brought layouts of their own, the agent encodes those first and offers BAM's samples for the jobs they do not cover (`skills/poligraf--encode.md`, "Your layouts first"); a gap note is only for what neither covers. With no layouts brought, the samples come first.
+
 Copy the block below into a new file, `feedback/NNNN-<slug>.md`, and fill in every part. Then stop. Do not make a sketch, a mockup or a rough version. A rough version quietly becomes the layout.
 
 A gap note ends in **one** ask, never two. Pick the one that would unblock the post first:
@@ -34,7 +36,7 @@ The facts, as exact strings (name, date, place, price). If there is a message fi
 
 ## 2. What BAM could not do, and why
 Pick one reason and say it in a sentence:
-- No layout: no archetype in `archetypes/` does this job (name the `select.md` step that failed).
+- No layout: neither the owner's layouts nor BAM's samples in `archetypes/` do this job (name the `select.md` step that failed). A sample that would do it but the owner has not added is not a gap: offer it.
 - Missing input: the request needs something nobody has given yet (a photograph, a figure, a date).
 - A brand value is missing: the layout exists, but `tokens.css`, `locked.json` or the logo files lack a value it needs.
 Name the slot, budget, check or format the request breaks.
@@ -42,6 +44,7 @@ Name the slot, budget, check or format the request breaks.
 ## 3. What was tried
 | Layout or fix tried | What it kept | What it lost |
 |---|---|---|
+| <your own layouts first, if any> | | |
 | headline | | |
 | stat | | |
 | quote | | |
@@ -62,7 +65,9 @@ One of these three, and only one.
     - The bounded variation: what may change, and the allowed values.
     - The checks it runs (from `SPEC.md`), and anything new they would have to measure.
     - The fallbacks: where the content goes when it does not fit.
-    A designer or the owner can define it in their fork as `archetypes/<use-case>/<name>/`,
+    If the owner already has a design for this job (a Figma frame, a page of their guide),
+    encode that instead (`skills/poligraf--encode.md`, "Your layouts first").
+    Otherwise a designer or the owner can define it in their fork as `archetypes/<use-case>/<name>/`,
     with `spec.md`, `inputs.schema.json` and `template.html` (see `archetypes/README.md`).
 ```
 

@@ -21,3 +21,5 @@ Two social-post layouts use contract 1.5. **carousel** is one slide with a `beat
 `<use-case>/select.md` is the decision tree from content to archetype, with fallbacks when a budget is exceeded or a slot is missing.
 
 Adding an archetype means all three files (`prompt.md` in place of `template.html` for a prompt layout) plus a `select.md` branch, written together, spec first. In a fork of Brand Asset Maker (BAM), the owner or a designer may add one, usually from a gap note that ended in ask (c) (`workshop/gap-note.md`). Never add a template without its spec and schema.
+
+**The owner's own layouts.** When a brand brings layouts of its own (Figma frames, templates, a guide), Encode turns each into a layout here before any sample is offered (`skills/poligraf--encode.md`, "Your layouts first"). It is written like a sample (spec, schema, template, a `select.md` branch at the top), with `"tier": "brand"` in the schema and `tier: brand` in the spec, `covers:` in the spec frontmatter naming the sample jobs it does, and a `## You said vs we guessed` section listing every value the agent filled in. A brand layout is never part of the shared library.

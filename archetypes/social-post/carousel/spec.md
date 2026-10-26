@@ -45,7 +45,7 @@ Each slot belongs to the beats named in its `when` (contract 1.5). A slot given 
 | `heading` | point · close | yes | ≤ 10 words, ≤ 64 chars | `h2`: display face, 8cqi. The point, or the close's line |
 | `body` | point | no | ≤ 24 words, ≤ 150 chars | `body`: body face, 4.4cqi, under the heading |
 | `cta` | close | yes | ≤ 3 words, ≤ 20 chars, starts with a verb | `label`: body face, 3.4cqi, in the accent, under the line |
-| `handle` | close | no | ≤ 2 words, ≤ 28 chars | `label`: the handle, the site ("huegrid.com") or one short fact such as the date (a message reference), at the foot on the start side |
+| `handle` | close | no | ≤ 2 words, ≤ 28 chars | `label`: the handle, the site ("example.com") or one short fact such as the date (a message reference), at the foot on the start side |
 | `logo` | every beat | yes | asset | Top left inside the safe zone, the same corner and size on every beat |
 
 Hierarchy: title > heading > kicker > index > body > cta > cue > handle > logo. Per beat that reads: cover title > kicker > cue > logo; point heading > index > body > logo; close heading > cta > handle > logo.

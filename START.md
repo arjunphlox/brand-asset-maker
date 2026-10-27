@@ -20,7 +20,7 @@ You are setting up Brand Asset Maker (BAM) for me, so you can make on-brand post
 5. Run: node bam-screen.mjs
    Then tell me to open operate.html in Chrome. It shows my repo, every post drawn and checked, and which file each step makes.
 
-6. From then on, use the screen to look, and the skills to make: skills/bam--make-it.md to make a post, then approve, generate and feedback as I ask. Run node bam-screen.mjs again whenever brand/ changes.
+6. From then on, use the screen to look, and the skills to make: skills/bam--make-it.md to make a post, then approve, generate and feedback as I ask. Run node bam-screen.mjs again after every change you make to brand/, generators/, messages/, rules/ or archetypes/; the open screen redraws by itself (no refresh). When I ask for more posts like one I picked, save them as a generator in generators/ (skills/bam--generate.md), commit it and run node bam-screen.mjs again.
 ```
 
 Nothing here depends on HueGrid: your agent, your GitHub, your files.

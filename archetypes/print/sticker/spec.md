@@ -43,7 +43,7 @@ Hierarchy: logo > word.
 
 ## Format
 
-`sticker`: sticker, 450×450 (3×3 in, 76.2 mm, at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`poligraf.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 4.5px at sticker. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
+`sticker`: sticker, 450×450 (3×3 in, 76.2 mm, at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`bam.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 4.5px at sticker. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
 
 ## Variation (bounded)
 

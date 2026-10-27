@@ -48,7 +48,7 @@ A word that does not fit its line is broken by `overflow-wrap: break-word` rathe
 
 - 2026-09-29 — Display face restricted to heading roles (HueGrid rule, adopted library-wide). Quote moved to the body face.
 
-- 2026-09-29 — Principles enter Poligraf only through archetypes. They are not taught to the person making posts; they are compiled into templates and checks.
+- 2026-09-29 — Principles enter BAM master only through archetypes. They are not taught to the person making posts; they are compiled into templates and checks.
 
 ## Never do
 

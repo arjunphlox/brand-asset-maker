@@ -1,5 +1,5 @@
 ---
-skill: poligraf/mockup
+skill: bam-master/mockup
 version: 1
 author: HueGrid Studio
 license: CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@ This whole skill works without the engine. With the engine, `npm run mockup -- -
 ## 1. Pick the recipe and the artwork
 
 - **Recipe:** one folder under `archetypes/mockup/`, picked with `archetypes/mockup/select.md`. Each holds `spec.md`, `inputs.schema.json` and `prompt.md`.
-- **Artwork:** one PNG of a finished asset that **passed**. With the engine: its sample in `report.json` has `"pass": true`. Without it: your report from `skills/poligraf--make-it.md` has no failed check (labelled fine or your call). Never mock up a post with a break; fix the post first.
+- **Artwork:** one PNG of a finished asset that **passed**. With the engine: its sample in `report.json` has `"pass": true`. Without it: your report from `skills/bam--make-it.md` has no failed check (labelled fine or your call). Never mock up a post with a break; fix the post first.
 - **Format fits:** the artwork's layout and ratio must match one of the recipe's `slots.artwork.accepts` patterns (`social-post/*@1:1` means any social post at 1:1; `print/*` any print layout). If none matches, pick another recipe or make that asset first.
 
 ## 2. Fill the prompt

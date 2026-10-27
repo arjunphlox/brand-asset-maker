@@ -11,7 +11,7 @@ A paper checklist. Print it, open your brand folder, and tick each line. No engi
 
 Each "no" points at the skill or file that covers it. Fix the file, not the checklist.
 
-## 1. Every value has a status (Bring: `skills/poligraf--encode.md`)
+## 1. Every value has a status (Bring: `skills/bam--encode.md`)
 
 Open `brand/BRAND.md` and `brand/locked.json`.
 
@@ -30,7 +30,7 @@ Open each `template.html` you use.
 - [ ] No typeface named. Faces come from `--brand-font-display` and `--brand-font-body`.
 - [ ] Every value is a `var(--brand-…)`, `var(--pg-…)` or `var(--v-…)`.
 
-## 3. Budgets counted (Make: `skills/poligraf--make-it.md`)
+## 3. Budgets counted (Make: `skills/bam--make-it.md`)
 
 Take your last three posts.
 
@@ -39,7 +39,7 @@ Take your last three posts.
 - [ ] Every call to action is 3 words or fewer and starts with a verb.
 - [ ] Every fact (a name, a date, a place) is written exactly as it is in the message (`messages/<name>.json`), if you have one.
 
-## 4. Both traps are written down (Make: `skills/poligraf--feedback.md`)
+## 4. Both traps are written down (Make: `skills/bam--feedback.md`)
 
 Open `rules/refusals.md`.
 
@@ -47,7 +47,7 @@ Open `rules/refusals.md`.
 - [ ] Each trap says what to do instead, and which file it protects.
 - [ ] Read the last ten requests you got. Any that a trap should have stopped? Add it.
 
-## 5. One pick, with a why (Pick: `skills/poligraf--approve.md`)
+## 5. One pick, with a why (Pick: `skills/bam--approve.md`)
 
 Open `rules/approvals.json` and `rules/decisions.md`.
 

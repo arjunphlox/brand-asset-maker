@@ -1,4 +1,4 @@
-# Poligraf System Design
+# BAM master System Design
 
 Tessor-shaped System Design for this harness. Modules carry YAML frontmatter (`title`, `scope`, `owns`, `see-also`, `implements`), `## Decisions` and `## Never do`. Archetype specs under `archetypes/**/spec.md` follow the same contract and are the primary modules; `npm run manifest` parses both trees.
 

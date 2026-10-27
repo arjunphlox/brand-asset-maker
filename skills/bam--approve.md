@@ -1,5 +1,5 @@
 ---
-skill: poligraf/approve
+skill: bam-master/approve
 version: 1
 state: 4
 author: HueGrid Studio
@@ -13,9 +13,9 @@ tags: [lifecycle, approve]
 
 ## Without the engine
 
-No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/bam--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
-- `npm run approve` → record the pick by hand in `rules/approvals.json`, with the fields `SPEC.md` names (sample, archetype, ratio, scheme, variation, inputs, date, generator). Use the PNG you made with `skills/poligraf--make-it.md`; put its sha256 in `pngSha256` if you can run a command, or leave it empty.
+- `npm run approve` → record the pick by hand in `rules/approvals.json`, with the fields `SPEC.md` names (sample, archetype, ratio, scheme, variation, inputs, date, generator). Use the PNG you made with `skills/bam--make-it.md`; put its sha256 in `pngSha256` if you can run a command, or leave it empty.
 - Put the owner's reason for the pick, in their own words, in the entry's `why` field (one line, verbatim), and keep a dated line with the same words in `rules/decisions.md`.
 - Ask the owner when this generator is for, in one line, and write it as the generator's `useWhen`.
 - In `brand/locked.json`, change each value the sample depends on from `derived` to `locked`, with `promotedBy` set to the approval id. Promote the logo or the fonts only when their checks were measured, not only seen by eye.

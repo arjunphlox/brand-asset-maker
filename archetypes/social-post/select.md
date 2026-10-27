@@ -29,7 +29,7 @@ tier: sample
 
 # Social post — selection
 
-**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/bam--suggest.md`).
 
 ## Step 0: the format names the job
 

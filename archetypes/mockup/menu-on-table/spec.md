@@ -8,7 +8,7 @@ owns:
 see-also:
   - ../select.md
   - ./prompt.md
-  - ../../../skills/poligraf--mockup.md
+  - ../../../skills/bam--mockup.md
 implements:
   - ./prompt.md
   - ./inputs.schema.json

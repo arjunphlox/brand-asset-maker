@@ -1,5 +1,5 @@
 ---
-skill: poligraf/encode
+skill: bam-master/encode
 version: 1
 state: 2
 author: HueGrid Studio
@@ -13,7 +13,7 @@ tags: [lifecycle, encode]
 
 ## Without the engine
 
-No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/bam--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
 - `npm run doctor` → check by eye that every token in `brand/tokens.css` has a status in `brand/locked.json`.
 - `npm run roles` → write the `:root` values in `brand/tokens.css` by hand, one comment per line that says where the value came from.
@@ -32,7 +32,7 @@ No scripts? Do each step yourself, in the folder. Whenever a step makes a post i
    3. **Voice** — tone words, approved lines, never-claims.
    4. **You said vs we guessed** — the two lists, plain words. One sentence names the keys: you said is `locked` and we guessed is `derived` in `locked.json`; approval (you pick one) is the only thing that turns a guess into something you said.
    5. **Files** — which asset to use where; the logo path; the wordmark.
-1b. **Expression** (only when `brand/expression.json` exists, intake step 5e). Add a sixth section, **Expression**, after Files: the owner's character words (you said / we guessed), what the brand file and the past posts say on each word's scale, every mismatch in plain words, the display face's class, and each layout's preferred look. With the engine, `npm run expression -- --posts <the owner's posts folder> --write --section` prints it; copy it in. Without it, follow `skills/poligraf--expression.md` steps 2 to 6. Show the owner every mismatch now; each one is their call, and none changes a token by itself. The preferred looks come after the first contact sheet (Propose), so the first version of this section may say "none yet".
+1b. **Expression** (only when `brand/expression.json` exists, intake step 5e). Add a sixth section, **Expression**, after Files: the owner's character words (you said / we guessed), what the brand file and the past posts say on each word's scale, every mismatch in plain words, the display face's class, and each layout's preferred look. With the engine, `npm run expression -- --posts <the owner's posts folder> --write --section` prints it; copy it in. Without it, follow `skills/bam--expression.md` steps 2 to 6. Show the owner every mismatch now; each one is their call, and none changes a token by itself. The preferred looks come after the first contact sheet (Propose), so the first version of this section may say "none yet".
 2. Copy `rules/refusals.md` traps into a "Refuse" paragraph: at least one font trap ("swap the headline to X") and one voice trap (a claim the brand never makes).
 3. **Cold handoff test.** Open a fresh chat with only `brand/` attached and this prompt: "Using BRAND.md, list the tokens, the font policy, and which files you would use for a stat post. Do not render." Pass = every value matches and the file list is right. If it fails, the fix is in `BRAND.md`, never in the prompt.
 
@@ -56,7 +56,7 @@ Only when the owner brought layouts, templates or a guide. Do this after `BRAND.
 6. **Offer samples only for the jobs nothing covers.** Ask one multiple-choice question that lists each not-covered job with the sample layout that does it, for example: "Nothing of yours covers these jobs: a date and a place (event), an offer (offer). Add BAM's samples for them? (a) add all (b) pick some (c) none for now". Write the answer in the next-step column ("sample added" or "not now"). A sample the owner adds is used as it is.
 7. **Gap notes for the rest.** A job the owner needs that neither their layouts nor a sample covers, or a layout of theirs that BAM cannot make, is a gap note (`workshop/gap-note.md`). Name it in the table.
 
-Propose then renders the owner's layouts first (`skills/poligraf--propose.md`), and the owner picks from those before any sample.
+Propose then renders the owner's layouts first (`skills/bam--propose.md`), and the owner picks from those before any sample.
 
 ## Exit criterion
 

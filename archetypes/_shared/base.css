@@ -1,5 +1,5 @@
-/* Poligraf shared plumbing. Brand-agnostic: reads only --brand-* tokens.
-   (c) HueGrid Studio. Part of Brand Asset Maker (BAM), the part of Poligraf that participants keep: CC BY-NC-SA 4.0 (fork and change it, credit
+/* BAM master shared plumbing. Brand-agnostic: reads only --brand-* tokens.
+   (c) HueGrid Studio. Part of Brand Asset Maker (BAM), the part of BAM master that participants keep: CC BY-NC-SA 4.0 (fork and change it, credit
    HueGrid Studio, non-commercial, share changes under the same licence). The engine under scripts/ is not part of BAM. */
 html, body { margin: 0; background: transparent; }
 
@@ -72,7 +72,7 @@ html, body { margin: 0; background: transparent; }
 /* 4:5 (Arjun 2026-10-26): 72px all round, as the square. A tall feed post has nothing laid over it; the old 250px
    top and bottom had no source and pushed the content inward. */
 /* 9:16 story (1.4): 250px top clears the story header, 340px bottom clears the reply bar. An ESTIMATE, to
-   re-measure (poligraf.config.json safeZoneNotes); the config numbers are what the safe-zone check enforces. */
+   re-measure (bam.config.json safeZoneNotes); the config numbers are what the safe-zone check enforces. */
 .pg-frame[data-ratio="9:16"] {
   --pg-safe-top: 23.1481cqi; --pg-safe-bottom: 31.4815cqi;
 }
@@ -81,7 +81,7 @@ html, body { margin: 0; background: transparent; }
   --pg-safe-top: 5cqi; --pg-safe-right: 6cqi; --pg-safe-bottom: 5cqi; --pg-safe-left: 6cqi;
 }
 /* 4:1 profile cover: the 568px left margin keeps text clear of the profile photo. An ESTIMATE, to re-measure
-   (poligraf.config.json safeZoneNotes). 1584 wide: 48 = 3.0303cqi, 72 = 4.5455cqi, 568 = 35.8586cqi. */
+   (bam.config.json safeZoneNotes). 1584 wide: 48 = 3.0303cqi, 72 = 4.5455cqi, 568 = 35.8586cqi. */
 .pg-frame[data-ratio="4:1"] {
   --pg-safe-top: 3.0303cqi; --pg-safe-right: 4.5455cqi; --pg-safe-bottom: 3.0303cqi; --pg-safe-left: 35.8586cqi;
 }
@@ -112,7 +112,7 @@ html, body { margin: 0; background: transparent; }
   --pg-safe-top: 3.125cqi; --pg-safe-right: 16.6667cqi; --pg-safe-bottom: 3.125cqi; --pg-safe-left: 16.6667cqi;
 }
 /* Print: 5mm inside the trim = 30px at 150 dpi on every side (an ESTIMATE, to re-measure against the printer's spec;
-   poligraf.config.json safeZoneNotes). Insets are 30px over the frame width. */
+   bam.config.json safeZoneNotes). Insets are 30px over the frame width. */
 .pg-frame[data-ratio="A4-portrait"] { --pg-safe-top: 2.4194cqi; --pg-safe-right: 2.4194cqi; --pg-safe-bottom: 2.4194cqi; --pg-safe-left: 2.4194cqi; } /* 1240 wide */
 .pg-frame[data-ratio="A5-portrait"] { --pg-safe-top: 3.4325cqi; --pg-safe-right: 3.4325cqi; --pg-safe-bottom: 3.4325cqi; --pg-safe-left: 3.4325cqi; } /* 874 wide */
 .pg-frame[data-ratio="A6-landscape"] { --pg-safe-top: 3.4325cqi; --pg-safe-right: 3.4325cqi; --pg-safe-bottom: 3.4325cqi; --pg-safe-left: 3.4325cqi; } /* 874 wide */

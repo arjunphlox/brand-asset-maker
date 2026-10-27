@@ -40,7 +40,7 @@ All five hold: pass.
 
 The fix is in `BRAND.md`. Never in the prompt.
 
-`BRAND.md` is regenerated from `tokens.css`, `locked.json`, `fonts.md`, `voice.md` and `brand.json` (`skills/poligraf--encode.md`); where they disagree, those files win. Find the line that caused the failure and hand it to the owner:
+`BRAND.md` is regenerated from `tokens.css`, `locked.json`, `fonts.md`, `voice.md` and `brand.json` (`skills/bam--encode.md`); where they disagree, those files win. Find the line that caused the failure and hand it to the owner:
 
 | Symptom | Cause in `BRAND.md` |
 |---|---|

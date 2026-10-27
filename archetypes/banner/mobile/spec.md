@@ -48,7 +48,7 @@ The call to action is required: a display banner that cannot be clicked through 
 
 ## Format
 
-One format: `320x100`, 320×100, shown at 1x. Safe zone and minimum text size from `poligraf.config.json` (`safeZone`, `minTextPxByRatio`); 1cqi is 3.2px here.
+One format: `320x100`, 320×100, shown at 1x. Safe zone and minimum text size from `bam.config.json` (`safeZone`, `minTextPxByRatio`); 1cqi is 3.2px here.
 
 ## Variation (bounded)
 
@@ -69,7 +69,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 
 ## Decisions
 
-- 2026-10-21 — Added as a sample layout of the web banner form (contract 1.5). The size is the Large mobile banner unit (sources in `poligraf.config.json` `safeZoneNotes`); the safe zone and the 1x minimum text size are judgement, to re-measure.
+- 2026-10-21 — Added as a sample layout of the web banner form (contract 1.5). The size is the Large mobile banner unit (sources in `bam.config.json` `safeZoneNotes`); the safe zone and the 1x minimum text size are judgement, to re-measure.
 
 ## Never do
 

@@ -1,6 +1,6 @@
 # Licence: CC BY-NC-SA 4.0
 
-Brand Asset Maker (BAM) by HueGrid, the part of Poligraf that participants keep, is produced by `npm run package` (the spec extracted from `CLAUDE.md`, `archetypes/README.md`, `archetypes/_shared/base.css`, `archetypes/<use-case>/select.md`, every archetype whose schema declares `"tier": "sample"`, `docs/design/system/README.md`, `docs/design/system/visual/`, `skills/`, `workshop/`). It is licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**: https://creativecommons.org/licenses/by-nc-sa/4.0/
+Brand Asset Maker (BAM) by HueGrid, the part of BAM master that participants keep, is produced by `npm run package` (the spec extracted from `CLAUDE.md`, `archetypes/README.md`, `archetypes/_shared/base.css`, `archetypes/<use-case>/select.md`, every archetype whose schema declares `"tier": "sample"`, `docs/design/system/README.md`, `docs/design/system/visual/`, `skills/`, `workshop/`). It is licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 In plain words:
 
@@ -12,4 +12,4 @@ In plain words:
 
 Your own brand layer, and every asset you make from these archetypes, are yours. The licence covers BAM itself, not the posts you make with it.
 
-The names Poligraf, Tessor and HueGrid, and the HueGrid marks, are not licensed by this document.
+The names BAM master, Tessor and HueGrid, and the HueGrid marks, are not licensed by this document.

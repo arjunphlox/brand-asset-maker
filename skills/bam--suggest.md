@@ -1,5 +1,5 @@
 ---
-skill: poligraf/suggest
+skill: bam-master/suggest
 version: 1
 author: HueGrid Studio
 license: CC-BY-NC-SA-4.0
@@ -8,7 +8,7 @@ tags: [pick, select, layout, rationale]
 
 # Suggest a layout
 
-**Verb: Pick.** Use this skill when someone tells you what they want to make, for example "a post about our pop-up on Saturday" or "a slide with last quarter's numbers". First you check whether one of the brand's generators already does this job (step 0). If none does, you suggest the form, the format and the layout, explain why in plain words, and name a runner-up. Then you make the layout with `skills/poligraf--make-it.md`.
+**Verb: Pick.** Use this skill when someone tells you what they want to make, for example "a post about our pop-up on Saturday" or "a slide with last quarter's numbers". First you check whether one of the brand's generators already does this job (step 0). If none does, you suggest the form, the format and the layout, explain why in plain words, and name a runner-up. Then you make the layout with `skills/bam--make-it.md`.
 
 Two things decide the suggestion, in this order:
 
@@ -19,7 +19,7 @@ Two things decide the suggestion, in this order:
 
 This whole skill works without the engine. It needs only the files above: read each candidate layout's **Why it works** section in its `spec.md`, and the "Cited for" line of each source it names in `sources.md`.
 
-With the engine (Poligraf), `npm run why -- <use-case>/<layout> [<use-case>/<layout> …]` prints the reasons of the candidates side by side, each with the claim its source is cited for (`--use-case <name>` for every layout of a form, `--json` for a machine-readable list). Quote from that output. After the owner agrees, `npm run render` refuses a row that breaks a budget and names the fallback, which confirms step 5.
+With the engine (BAM master), `npm run why -- <use-case>/<layout> [<use-case>/<layout> …]` prints the reasons of the candidates side by side, each with the claim its source is cited for (`--use-case <name>` for every layout of a form, `--json` for a machine-readable list). Quote from that output. After the owner agrees, `npm run render` refuses a row that breaks a budget and names the fallback, which confirms step 5.
 
 ## 0. Check your generators first
 
@@ -29,7 +29,7 @@ Before suggesting anything new, read every `generators/*.json` the brand has. Ea
 - **More than one matches:** use the closest and name the runner-up generator.
 - **None matches,** or the brand has no generators: go on to step 1 and suggest an asset.
 
-A generator without a `useWhen` line is matched only by its asset and formats; ask the owner for the line (`skills/poligraf--generate.md` step 5).
+A generator without a `useWhen` line is matched only by its asset and formats; ask the owner for the line (`skills/bam--generate.md` step 5).
 
 ## 1. Read the request
 
@@ -75,7 +75,7 @@ Only when step 3 leaves more than one sound option, open the **Why it works** se
 - **How long will they look?** A feed post, an ad or a poster in passing gets a glance; a slide or a menu gets a read. Prefer fewer words for a glance.
 - **Is trust part of the job?** Someone's words need a name (quote). Use this only where the layout's own reasons say so.
 
-If `brand/expression.json` names a preferred look for the layout (`prefer`), use that variation in the draft and say so ("the look that comes closest to how this layout should come across"). If the owner says how this post should feel ("make it feel calm"), check the words are on the map, put them in the generator as `"appear": [...]`, and pick the variant with `npm run expression -- --run out/<run> --layout <id> --appear "<words>"` (without the engine: `skills/poligraf--expression.md`, step 6a). Character words never choose the layout itself: the job, the rules and the reasons do.
+If `brand/expression.json` names a preferred look for the layout (`prefer`), use that variation in the draft and say so ("the look that comes closest to how this layout should come across"). If the owner says how this post should feel ("make it feel calm"), check the words are on the map, put them in the generator as `"appear": [...]`, and pick the variant with `npm run expression -- --run out/<run> --layout <id> --appear "<words>"` (without the engine: `skills/bam--expression.md`, step 6a). Character words never choose the layout itself: the job, the rules and the reasons do.
 
 Pick the layout whose reasons fit the viewer's job best. Keep the next best as the runner-up, and say when it would be the better choice. When the choice between them is your judgement and no rule settles it (a counter sign could be a flyer or a table tent), say that it is your judgement.
 
@@ -99,7 +99,7 @@ Why:
 Runner-up: <layout>, better if <condition>.
 Draft: <slot>: "<text>" (<count> of <budget>) … one line per slot
 I need: <missing fact or file>, or "nothing, ready to make".
-Next: make it with skills/poligraf--make-it.md.
+Next: make it with skills/bam--make-it.md.
 ```
 
 Example, for "a post for the Northside pop-up at Harbour Market on 8 November, for Instagram":
@@ -112,7 +112,7 @@ Why:
 Runner-up: headline at 9:16 with a call to action, for a story the week of the pop-up.
 Draft: name: "Northside Pop-up" (fact) · date: "8 November" (fact) · place: "Harbour Market" (fact) · cta: "See you there" (draft, 3 of 3 words)
 I need: your yes on the call to action, or your own words.
-Next: make it with skills/poligraf--make-it.md.
+Next: make it with skills/bam--make-it.md.
 ```
 
 ## Rules

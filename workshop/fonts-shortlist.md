@@ -7,7 +7,7 @@ tier: sample
 
 # Free font shortlist
 
-Use this only when the owner has no font files and names no free font (font policy path (c) in `SPEC.md`, step 3 of `skills/poligraf--intake.md`). Suggest up to three pairs from this list, each with one sentence tying it to the brand. The owner chooses. The choice stays **we guessed** (`derived`, `source: suggested`) until a post that uses it is picked.
+Use this only when the owner has no font files and names no free font (font policy path (c) in `SPEC.md`, step 3 of `skills/bam--intake.md`). Suggest up to three pairs from this list, each with one sentence tying it to the brand. The owner chooses. The choice stays **we guessed** (`derived`, `source: suggested`) until a post that uses it is picked.
 
 Every font here is under the SIL Open Font License 1.1 (OFL 1.1): free to use, embed and ship with your brand files, as long as its licence file goes with it. Download from the source link, keep the licence file beside the font in `brand/fonts/`, and write the name, licence and link in `brand/fonts.md`.
 

@@ -28,7 +28,7 @@ tier: sample
 - **Few things, so a glance is enough.** The row has at most four things: `logo`, `headline`, an optional `sub` and `cta`. People hold only about three to five chunks in mind, and this row stays inside that. ([Cowan 2001](../../../docs/design/system/visual/sources.md#cowan-2001))
 - **The headline is the largest text.** The `headline` is 24px against 13px for the `sub` and 12.7px for the `cta`. Attention goes first to the largest region, and in print ads, text gets attention in step with its size. ([Itti & Koch 2001](../../../docs/design/system/visual/sources.md#itti-koch-2001); [Pieters & Wedel 2004](../../../docs/design/system/visual/sources.md#pieters-wedel-2004))
 - **An ad gets a short look.** People looking for something else on a page often miss things that look like ads, even large bright ones. So this unit says one thing: the `logo`, one `headline` and one `cta`, in the order they are read. ([Benway 1998](../../../docs/design/system/visual/sources.md#benway-1998))
-- **Text never drops below a floor.** The sizes are set for the unit at 1x, and the `min-text` check fails any text under the floor in `poligraf.config.json`. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
+- **Text never drops below a floor.** The sizes are set for the unit at 1x, and the `min-text` check fails any text under the floor in `bam.config.json`. Reading slows sharply below a critical print size. ([Legge & Bigelow 2011](../../../docs/design/system/visual/sources.md#legge-bigelow-2011))
 
 ## How it comes across
 
@@ -49,7 +49,7 @@ The call to action is required: a display banner that cannot be clicked through 
 
 ## Format
 
-One format: `728x90`, 728×90, shown at 1x. Safe zone and minimum text size from `poligraf.config.json` (`safeZone`, `minTextPxByRatio`); 1cqi is 7.28px here.
+One format: `728x90`, 728×90, shown at 1x. Safe zone and minimum text size from `bam.config.json` (`safeZone`, `minTextPxByRatio`); 1cqi is 7.28px here.
 
 ## Variation (bounded)
 
@@ -70,7 +70,7 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 
 ## Decisions
 
-- 2026-10-21 — Added as a sample layout of the web banner form (contract 1.5). The size is the IAB Leaderboard unit (sources in `poligraf.config.json` `safeZoneNotes`); the safe zone and the 1x minimum text size are judgement, to re-measure.
+- 2026-10-21 — Added as a sample layout of the web banner form (contract 1.5). The size is the IAB Leaderboard unit (sources in `bam.config.json` `safeZoneNotes`); the safe zone and the 1x minimum text size are judgement, to re-measure.
 
 ## Never do
 

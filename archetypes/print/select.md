@@ -27,7 +27,7 @@ tier: sample
 
 # Print — selection
 
-**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/bam--suggest.md`).
 
 A print piece is held in a hand, pinned to a wall or stood on a table. Its size is a paper size, not a screen. Every print frame is its trim size at **150 dpi** (px = mm × 150 / 25.4), so one minimum text size serves every format: `minTextPx` 17 is 8pt. The proof PNG renders at `render.scale` 2, which is **300 dpi** at trim size, the resolution print shops ask for. Bleed (usually 3 mm a side) is not drawn and there is no PDF export yet: both are a later step, and the printer confirms the bleed and the colour profile. The frame is the trim line; text and logos stay 5 mm (30px) inside it.
 
@@ -75,7 +75,7 @@ A4, A5 and A6 share the proportion (1 : 1.414), but they are separate frames so 
 
 ## Decisions
 
-- 2026-10-21 — The `print` use-case added with ten sample layouts (five forms plan, form 5). One dpi for every frame (150, so `minTextPx` 17 = 8pt); A5 has its own frame rather than the A4 frame printed small, which would make 8pt into 5.7pt. The 5 mm safe zone, the business card size and the sticker size are estimates, to re-measure against the printer's spec (`poligraf.config.json` safeZoneNotes). The flyer closes the Kadri gap note `kadri-flyer-gap-note.md`.
+- 2026-10-21 — The `print` use-case added with ten sample layouts (five forms plan, form 5). One dpi for every frame (150, so `minTextPx` 17 = 8pt); A5 has its own frame rather than the A4 frame printed small, which would make 8pt into 5.7pt. The 5 mm safe zone, the business card size and the sticker size are estimates, to re-measure against the printer's spec (`bam.config.json` safeZoneNotes). The flyer closes the Kadri gap note `kadri-flyer-gap-note.md`.
 
 ## Never do
 

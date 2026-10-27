@@ -9,7 +9,7 @@ tier: sample
 
 A gap note is what your agent writes when Brand Asset Maker (BAM) cannot make what was asked. It is the feedback kind `designer` in the spec. Anyone can write one: a designer, an owner, or an agent. It needs no design words.
 
-A gap note comes last. If the owner brought layouts of their own, the agent encodes those first and offers BAM's samples for the jobs they do not cover (`skills/poligraf--encode.md`, "Your layouts first"); a gap note is only for what neither covers. With no layouts brought, the samples come first.
+A gap note comes last. If the owner brought layouts of their own, the agent encodes those first and offers BAM's samples for the jobs they do not cover (`skills/bam--encode.md`, "Your layouts first"); a gap note is only for what neither covers. With no layouts brought, the samples come first.
 
 Copy the block below into a new file, `feedback/NNNN-<slug>.md`, and fill in every part. Then stop. Do not make a sketch, a mockup or a rough version. A rough version quietly becomes the layout.
 
@@ -66,7 +66,7 @@ One of these three, and only one.
     - The checks it runs (from `SPEC.md`), and anything new they would have to measure.
     - The fallbacks: where the content goes when it does not fit.
     If the owner already has a design for this job (a Figma frame, a page of their guide),
-    encode that instead (`skills/poligraf--encode.md`, "Your layouts first").
+    encode that instead (`skills/bam--encode.md`, "Your layouts first").
     Otherwise a designer or the owner can define it in their fork as `archetypes/<use-case>/<name>/`,
     with `spec.md`, `inputs.schema.json` and `template.html` (see `archetypes/README.md`).
 ```

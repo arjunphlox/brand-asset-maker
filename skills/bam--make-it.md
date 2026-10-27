@@ -1,5 +1,5 @@
 ---
-skill: poligraf/make-it
+skill: bam-master/make-it
 version: 1
 author: HueGrid Studio
 license: CC-BY-NC-SA-4.0
@@ -18,7 +18,7 @@ This whole skill is the path without the engine. It needs only files you can rea
 
 Write down five things before you write any HTML:
 
-- **Layout:** one archetype folder, for example `archetypes/social-post/stat/`. If the owner has not chosen one, suggest it first with `skills/poligraf--suggest.md` (the rules in `select.md`, then the layouts' reasons). Otherwise pick it with the `select.md` of its use-case: `archetypes/social-post/select.md` for posts, `archetypes/banner/select.md` for a link preview or a profile cover, `archetypes/email/select.md` for a newsletter header.
+- **Layout:** one archetype folder, for example `archetypes/social-post/stat/`. If the owner has not chosen one, suggest it first with `skills/bam--suggest.md` (the rules in `select.md`, then the layouts' reasons). Otherwise pick it with the `select.md` of its use-case: `archetypes/social-post/select.md` for posts, `archetypes/banner/select.md` for a link preview or a profile cover, `archetypes/email/select.md` for a newsletter header.
 - **Format (ratio):** one of the ratios the layout serves. If its `inputs.schema.json` has a `ratios` list, pick from that list; otherwise any ratio of its use-case. The sizes:
 
   | Use-case | Ratio | Frame (px) | What it is |
@@ -32,7 +32,7 @@ Write down five things before you write any HTML:
   | print | `A5-portrait` | 874×1240 (148×210 mm at 150 dpi) | flyer to hand out |
   | print | `A4-portrait` | 1240×1754 (210×297 mm at 150 dpi) | flyer, poster or menu for a wall |
 
-  The other print sizes are in `archetypes/print/select.md`; a print frame is its trim size, so text stays 17px (8 pt) or larger and 30px (5 mm) inside the edge. The frame sizes and safe zones are in `poligraf.config.json` → `useCases`, if your copy has it, and in `archetypes/_shared/base.css`.
+  The other print sizes are in `archetypes/print/select.md`; a print frame is its trim size, so text stays 17px (8 pt) or larger and 30px (5 mm) inside the edge. The frame sizes and safe zones are in `bam.config.json` → `useCases`, if your copy has it, and in `archetypes/_shared/base.css`.
 - **Scheme:** `paper`, `ink` or `accent`. It must be one of the values in the schema's `variation.scheme.values`.
 - **Variation:** every other key in the schema's `variation` (for the stat: `accent`, `position`). Use the `default` for any key you did not choose. A value outside `values` is not allowed.
 - **Inputs:** the text for each slot. Count words and characters against `inputs.schema.json` now, before you write HTML. Over budget means you rewrite the words or pick another layout. Never shrink the type.
@@ -151,7 +151,7 @@ The broken-word snippet for `overflow` (the engine runs the same test):
   }).map((m) => `${el.dataset.slot}: "${m[0]}"`)));
 ```
 
-If the brand has character words (`brand/expression.json`), add one more line, `expression`: run `archetypes/_shared/expression-measure.js` in the page and read the result through `docs/design/system/visual/expression.md` (`skills/poligraf--expression.md`), or write "not measured". It never fails a post: a mismatch makes the label **your call**.
+If the brand has character words (`brand/expression.json`), add one more line, `expression`: run `archetypes/_shared/expression-measure.js` in the page and read the result through `docs/design/system/visual/expression.md` (`skills/bam--expression.md`), or write "not measured". It never fails a post: a mismatch makes the label **your call**.
 
 Then label the post the way the contact sheet does: **must fix** (a measured check failed), **your call** (nothing failed, but something needs the owner's decision), or **fine** (nothing failed and nothing is open). Say which checks were not measured. Ask the two-second question: "What do you read first? It should be the <first slot in `hierarchy`>."
 

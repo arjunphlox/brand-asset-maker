@@ -11,7 +11,7 @@ see-also:
   - ./sources.md
   - ./why-it-works.md
   - ../../../../archetypes/_shared/expression-measure.js
-  - ../../../../skills/poligraf--expression.md
+  - ../../../../skills/bam--expression.md
 implements: []
 author: HueGrid Studio
 license: CC-BY-NC-SA-4.0
@@ -46,7 +46,7 @@ Every check belongs to one kind. The contact sheet and `report.json` say which (
 4. **Compare** each word the owner gave with the post's position on that word's scale. Agreement is the position times the word's side (-1 or +1): 0.2 or more **says it**; between -0.2 and 0.2 **does not say it yet**; below -0.2 **reads the other way**, a mismatch.
    **How strongly** (Arjun, 2026-10-26): a post that says a word says it **a little** (0.2 to 0.4), **clearly** (0.4 to 0.7) or **very** (0.7 and above), the map's `degrees`. A word may carry a target `degree`; then a post at another degree gets a your-call note, and the pick prefers the post nearest the degree's centre (0.3, 0.55, 0.85) over the strongest. The bands are practice: an even split of the says-it range, to be checked against owners' answers on the sheet.
 5. **Show** every mismatch to the owner: the `expression` check passes with a "your call" note, and the sheet lists it. None is fixed silently.
-6. **Ask** the owner on the contact sheet: one scale per word ("simple ○○○○○ busy"), answered without seeing the measurement. An answer that disagrees with the measurement is feedback (`skills/poligraf--feedback.md`, kind `expression`).
+6. **Ask** the owner on the contact sheet: one scale per word ("simple ○○○○○ busy"), answered without seeing the measurement. An answer that disagrees with the measurement is feedback (`skills/bam--feedback.md`, kind `expression`).
 
 ## How each layout must come across
 

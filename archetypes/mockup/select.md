@@ -12,7 +12,7 @@ see-also:
   - ../social-post/select.md
   - ../banner/select.md
   - ../email/select.md
-  - ../../skills/poligraf--mockup.md
+  - ../../skills/bam--mockup.md
 implements:
   - ../../scripts/mockup.mjs (accepts check + refusal)
 author: HueGrid Studio
@@ -22,9 +22,9 @@ tier: sample
 
 # Mock-up — selection
 
-**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/bam--suggest.md`).
 
-A mock-up is a photograph of a finished asset in use: printed on a bag, on a phone, in a window. Its layouts are **prompt recipes** (contract 1.5, `"kind": "prompt"`): `spec.md`, `inputs.schema.json` and `prompt.md`, no template. The owner's own agent sends one passing asset PNG and the filled prompt to the owner's own image model with the owner's own key (`skills/poligraf--mockup.md`). The engine fills prompts (`npm run mockup`); it never calls a model.
+A mock-up is a photograph of a finished asset in use: printed on a bag, on a phone, in a window. Its layouts are **prompt recipes** (contract 1.5, `"kind": "prompt"`): `spec.md`, `inputs.schema.json` and `prompt.md`, no template. The owner's own agent sends one passing asset PNG and the filled prompt to the owner's own image model with the owner's own key (`skills/bam--mockup.md`). The engine fills prompts (`npm run mockup`); it never calls a model.
 
 ## Step 0: the artwork must pass first
 

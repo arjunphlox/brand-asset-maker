@@ -1,5 +1,5 @@
 ---
-skill: poligraf/expression
+skill: bam-master/expression
 version: 1
 author: HueGrid Studio
 license: CC-BY-NC-SA-4.0
@@ -72,7 +72,7 @@ You need the files and, for measuring, a browser. Without a browser, skip step 2
    - for each layout, how it should come across and the **preferred look**: the variation of the passing post on the sheet that comes closest (step 6a). Write it in `prefer` as `derived`. A key that changes what is on the post (the carousel's `beat`) is never a preference. When the owner picks a post with that look, the preference becomes `locked`.
    Layouts choose inside those preferences. Templates stay token-only: a preference is a variation the layout already allows, never a new value.
 
-7. **Learn from the answer** (Make). An answer that disagrees with the measurement, or a mismatch the owner cares about, is feedback of kind `expression` (`skills/poligraf--feedback.md`). Try in order: the layout's preferred variation; the words themselves ("is this still what you want to say?"); a brand value, with the owner (that is kind `token`); the map row, marked research or practice, as a change to the shared library. Never edit the post.
+7. **Learn from the answer** (Make). An answer that disagrees with the measurement, or a mismatch the owner cares about, is feedback of kind `expression` (`skills/bam--feedback.md`). Try in order: the layout's preferred variation; the words themselves ("is this still what you want to say?"); a brand value, with the owner (that is kind `token`); the map row, marked research or practice, as a change to the shared library. Never edit the post.
 
 ## Exit criterion
 

@@ -7,7 +7,7 @@ tier: sample
 
 # Brand folder
 
-The form for **Bring**, the first verb. You fill it in and put the files it asks for in one folder. Then your own agent reads it and writes your `brand/` folder, using the intake and encode skills (`skills/poligraf--intake.md`, `skills/poligraf--encode.md`). Nothing is sent to anyone. The folder is yours.
+The form for **Bring**, the first verb. You fill it in and put the files it asks for in one folder. Then your own agent reads it and writes your `brand/` folder, using the intake and encode skills (`skills/bam--intake.md`, `skills/bam--encode.md`). Nothing is sent to anyone. The folder is yours.
 
 ## What to fill in
 
@@ -24,7 +24,7 @@ Fill in this form and put the files it asks for in one folder named after the br
   photos/             photographs, if you have them (question 8)
 ```
 
-Only `brand-folder.md` and `logo.svg` must be there. Leave out any folder you have nothing for. Then ask your agent: "Read `<your-brand>/brand-folder.md` and follow `skills/poligraf--intake.md`, then `skills/poligraf--encode.md`."
+Only `brand-folder.md` and `logo.svg` must be there. Leave out any folder you have nothing for. Then ask your agent: "Read `<your-brand>/brand-folder.md` and follow `skills/bam--intake.md`, then `skills/bam--encode.md`."
 
 These are the ten intake questions, word for word. Answer in your own words; your agent copies your answers exactly.
 
@@ -63,7 +63,7 @@ Answer:
 **7. Your posts, layouts and guides** \
 "Link three existing posts or assets you consider on-brand, and any layouts or guides you already use (Figma frames, templates, a brand guide)." \
 Put posts in posts/ and layouts in layouts/: a Figma link (if your agent can open Figma), exported frames, templates or the pages of a brand guide. \
-The agent reads them and never copies them into a post. If you bring layouts, the agent turns them into BAM layouts first and uses BAM's sample layouts only for the jobs yours do not cover (`skills/poligraf--encode.md`, "Your layouts first"). \
+The agent reads them and never copies them into a post. If you bring layouts, the agent turns them into BAM layouts first and uses BAM's sample layouts only for the jobs yours do not cover (`skills/bam--encode.md`, "Your layouts first"). \
 If blank: the agent starts from the BAM sample layouts. \
 Answer:
 

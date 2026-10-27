@@ -45,7 +45,7 @@ Hierarchy: headline > subline > cta > logo.
 
 ## Format
 
-`A4-portrait`: A4 portrait, 1240×1754 (210×297 mm at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`poligraf.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 12.4px at A4-portrait. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
+`A4-portrait`: A4 portrait, 1240×1754 (210×297 mm at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`bam.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 12.4px at A4-portrait. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
 
 ## Variation (bounded)
 

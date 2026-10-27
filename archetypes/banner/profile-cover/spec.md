@@ -45,7 +45,7 @@ Hierarchy: tagline > logo.
 
 One format: `4:1`, 1584×396. 1cqi is 15.84px here. Safe zone: 48px top and bottom, 72px right, and **568px left**, which keeps text clear of the profile photo. The photo sits over the lower left of the cover on a desktop; on a phone the cover is cropped at the sides and the photo sits further in.
 
-**The 568px margin is an estimate, to re-measure** (`safeZoneNotes` in `poligraf.config.json`). LinkedIn's help page could not be fetched to cite. Before treating the number as locked, take a desktop and a phone screenshot of the real profile with the cover in place and measure where the photo ends.
+**The 568px margin is an estimate, to re-measure** (`safeZoneNotes` in `bam.config.json`). LinkedIn's help page could not be fetched to cite. Before treating the number as locked, take a desktop and a phone screenshot of the real profile with the cover in place and measure where the photo ends.
 
 ## Variation (bounded)
 

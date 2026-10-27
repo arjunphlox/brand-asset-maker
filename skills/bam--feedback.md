@@ -1,5 +1,5 @@
 ---
-skill: poligraf/feedback
+skill: bam-master/feedback
 version: 1
 state: 6
 author: HueGrid Studio
@@ -13,10 +13,10 @@ tags: [lifecycle, feedback]
 
 ## Without the engine
 
-No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/poligraf--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
+No scripts? Do each step yourself, in the folder. Whenever a step makes a post image, follow `skills/bam--make-it.md`: you write the HTML and save the PNG, then check what you can measure.
 
 - The three questions, the ladder and the feedback file need no engine.
-- Re-render → make the affected posts again with `skills/poligraf--make-it.md`, with each check measured or marked "not measured".
+- Re-render → make the affected posts again with `skills/bam--make-it.md`, with each check measured or marked "not measured".
 - Append the line to `rules/decisions.md` by hand.
 
 **Goal:** every note becomes a diff in exactly one fix location, and the harness records what it learned.
@@ -48,7 +48,7 @@ No scripts? Do each step yourself, in the folder. Whenever a step makes a post i
      A failed `image-contrast` or `crop` is `input`, never a file edit. Try in order: scrim strength (`strong`), focal point, another photograph, layout `split`.
    - Is the content in the wrong archetype? → `selection`
    - Is it readable and on-brand, but saying something else about the brand's character? → `expression`
-     Fix in `brand/expression.json`, in order: the layout's preferred look (`prefer`); the words themselves, with the owner ("is this still what you want to say?"); a brand value, with the owner (then the note is `token`, not `expression`); the map row in `docs/design/system/visual/expression.md`, marked research or practice and flagged `upstream: true`. See `skills/poligraf--expression.md`.
+     Fix in `brand/expression.json`, in order: the layout's preferred look (`prefer`); the words themselves, with the owner ("is this still what you want to say?"); a brand value, with the owner (then the note is `token`, not `expression`); the map row in `docs/design/system/visual/expression.md`, marked research or practice and flagged `upstream: true`. See `skills/bam--expression.md`.
    - Is a new style, layout or element being asked for (type on a photograph without a scrim, a tint, a side-by-side)? → `designer`
 4. Apply the diff in that location only. For `budget`, `selection` and an `expression` change to the map, mark `upstream: true`: the change belongs to the layout library (`archetypes/` in your fork) and comes with a spec update.
 5. For `designer`, do not improvise. Write a gap note in the feedback file with the template in `workshop/gap-note.md`: what was asked (word for word) and the facts; what BAM could not do and why (no layout, a missing input, or a missing brand value); what was tried; and exactly one ask: (a) more context from the owner, (b) a new value in the brand file, or (c) a new layout to define. Its worked example is the gradient note in `workshop/gap-note.md`. Stop.

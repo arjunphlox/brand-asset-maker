@@ -46,7 +46,7 @@ Hierarchy: title > kicker > cta > logo.
 
 ## Format
 
-One format: `1.91:1`, 1200×630. Safe zone 60px top and bottom, 72px sides (`poligraf.config.json`). 1cqi is 12px here.
+One format: `1.91:1`, 1200×630. Safe zone 60px top and bottom, 72px sides (`bam.config.json`). 1cqi is 12px here.
 
 ## Variation (bounded)
 

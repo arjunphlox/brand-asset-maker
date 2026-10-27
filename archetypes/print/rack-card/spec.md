@@ -46,7 +46,7 @@ Hierarchy: headline > point1 > point2 > point3 > cta > kicker > logo.
 
 ## Format
 
-`DL`: DL, 585×1240 (99×210 mm at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`poligraf.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 5.85px at DL. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
+`DL`: DL, 585×1240 (99×210 mm at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`bam.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 5.85px at DL. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
 
 ## Variation (bounded)
 

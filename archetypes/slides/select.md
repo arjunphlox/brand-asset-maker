@@ -20,7 +20,7 @@ tier: sample
 
 # Slides — selection
 
-**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/bam--suggest.md`).
 
 A slide is one frame of a deck, shown on a projector, in a video call or as a thumbnail in a shared file. A deck is many slides that must read as one thing: every slides layout shares the same chrome (the logo top left, the optional footer bottom left, the optional page number bottom right), set in `base.css`.
 
@@ -30,7 +30,7 @@ A slide is one frame of a deck, shown on a projector, in a video call or as a th
 |---|---|---|---|---|
 | Slide | 16:9 | 1920×1080 | One idea of a talk or a pitch, read from across a room or in a call | all 16 below |
 
-The safe zone (96px all round) and the smallest text (24px) are estimates, to re-measure (`poligraf.config.json` safeZoneNotes). **A new format re-runs selection.** A slide is never cropped into a post, and a post is never stretched into a slide: a 4:3 or a portrait deck is a new format, not a scaled one.
+The safe zone (96px all round) and the smallest text (24px) are estimates, to re-measure (`bam.config.json` safeZoneNotes). **A new format re-runs selection.** A slide is never cropped into a post, and a post is never stretched into a slide: a 4:3 or a portrait deck is a new format, not a scaled one.
 
 ## Step 1: where in the deck
 

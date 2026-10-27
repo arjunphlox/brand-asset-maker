@@ -50,7 +50,7 @@ The logo (top left), the footer (bottom left) and the page number (bottom right)
 
 ## Format
 
-One format: `16:9`, 1920×1080, a slide. Safe zone 96px all round (`poligraf.config.json`, an estimate to re-measure). 1cqi is 19.2px. The smallest text is 24px (`minTextPx` for slides).
+One format: `16:9`, 1920×1080, a slide. Safe zone 96px all round (`bam.config.json`, an estimate to re-measure). 1cqi is 19.2px. The smallest text is 24px (`minTextPx` for slides).
 
 ## Variation (bounded)
 

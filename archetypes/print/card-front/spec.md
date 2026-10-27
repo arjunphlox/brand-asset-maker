@@ -43,7 +43,7 @@ Hierarchy: logo > tagline.
 
 ## Format
 
-`card`: business card, 502×325 (85×55 mm at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`poligraf.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 5.02px at card. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
+`card`: business card, 502×325 (85×55 mm at 150 dpi). Safe zone 5 mm inside the trim, 30px on every side (`bam.config.json`, an estimate to re-measure against the printer's spec). 1cqi is 5.02px at card. The frame is the trim: bleed is not drawn. The proof PNG renders at `render.scale` 2, 300 dpi.
 
 ## Variation (bounded)
 

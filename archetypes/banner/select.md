@@ -28,7 +28,7 @@ tier: sample
 
 # Banner — selection
 
-**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/poligraf--suggest.md`).
+**Suggesting a layout to someone:** this tree decides what is allowed. To rank the options it allows and explain the pick, use each layout's **Why it works** section and `docs/design/system/visual/why-it-works.md` (`skills/bam--suggest.md`).
 
 A banner is an image that sits inside a page: a link preview, a profile cover, a display ad, the hero of the brand's own site. Its size is set by the platform, the ad network or the site. Each banner layout serves one format; `custom` serves any size the generator names.
 
@@ -47,7 +47,7 @@ A banner is an image that sits inside a page: a link preview, a profile cover, a
 | Website hero | 1920x600 | 1920×600 | The band at the top of the brand's own web page or landing page (not an ad) | hero |
 | Custom | custom | any, 100 to 4000px a side | A slot whose size is none of the above (a partner site's slot, a venue screen) | custom |
 
-**Display ads show at 1x.** A 728×90 is seen at 728×90, so the post floor (28px) cannot hold: `minTextPxByRatio` sets 12px for the small units, 14px for the half page and the billboard, 20px for the hero (judgement, `poligraf.config.json` `minTextPxNotes`). Every display layout carries a call to action; it is required.
+**Display ads show at 1x.** A 728×90 is seen at 728×90, so the post floor (28px) cannot hold: `minTextPxByRatio` sets 12px for the small units, 14px for the half page and the billboard, 20px for the hero (judgement, `bam.config.json` `minTextPxNotes`). Every display layout carries a call to action; it is required.
 
 **The four kinds of banner are different jobs.** An *ad network unit* (leaderboard to mobile) is bought space on someone else's page: one headline, a call to action, the logo, and the size is the slot's. A *site hero* is the top of the brand's own page: eyebrow, h1, body and button, inside the central 1280px a cover crop keeps. A *share card* (link-preview) is what a link shows when someone else posts it: no button, the title on the centre line. A *cover* (profile-cover) sits behind a profile photo: one line, no button. *Custom* is for a slot that is none of these sizes; it adapts by shape (wide at 3:1 or wider, tall at 3:5 or narrower, square-ish between), never by scaling.
 
@@ -81,7 +81,7 @@ A banner is an image that sits inside a page: a link preview, a profile cover, a
 
 - 2026-10-21 — The banner use-case added with two sample layouts (contract 1.4). Each layout serves one format (schema `ratios`), so propose renders only that format for it. The profile cover's 568px left margin is an estimate, to re-measure on a real profile.
 
-- 2026-10-21 — The web banner form (contract 1.5): eight layouts added beside the share card and the cover, so the use-case holds ten. Six display ad units at the IAB / Google sizes (sources in `poligraf.config.json` `safeZoneNotes`), the 1920x600 site hero and `custom`. Ratio keys name the size (`728x90`), since a ratio alone (91:11) would say nothing. The ad-unit safe zones and the 1x text floors are judgement, to re-measure; the hero's 320px side margins are an estimate of a 1280px cover crop.
+- 2026-10-21 — The web banner form (contract 1.5): eight layouts added beside the share card and the cover, so the use-case holds ten. Six display ad units at the IAB / Google sizes (sources in `bam.config.json` `safeZoneNotes`), the 1920x600 site hero and `custom`. Ratio keys name the size (`728x90`), since a ratio alone (91:11) would say nothing. The ad-unit safe zones and the 1x text floors are judgement, to re-measure; the hero's 320px side margins are an estimate of a 1280px cover crop.
 
 ## Never do
 

@@ -30,7 +30,7 @@ Check the answer line by line with the brand's `tokens.css`, `locked.json` and `
 
 1. **Tokens.** Every `--brand-*` token in `tokens.css` is listed with the same value. None is missing, none is invented. Each status (you said or we guessed; `locked` or `derived` in `locked.json`) matches `locked.json`.
 2. **Font policy path.** The path matches `fonts.md`: (a) files supplied, (b) a named free font, or (c) suggested. Families and weights match.
-3. **Files for a stat post.** `archetypes/social-post/stat/template.html`, `inputs.schema.json` and `spec.md`; `archetypes/_shared/base.css`; `brand/tokens.css`; `brand/fonts.css` and the files it points to; `brand/assets/logo.svg`; the wordmark as spelled in `brand.json`; a generator, if `BRAND.md` names one (Kadri's is `generators/stat-bag.json`). No photograph, no other archetype.
+3. **Files for a stat post.** `archetypes/social-post/stat/template.html`, `inputs.schema.json` and `spec.md`; `archetypes/_shared/base.css`; `brand/tokens.css`; `brand/fonts.css` and the files it points to; `brand/assets/logo.svg`; the wordmark as spelled in `brand.json`; a generator, if `BRAND.md` names one (for example `generators/stat-weekly.json`). No photograph, no other archetype.
 4. **Inputs.** `number` is 5 characters or fewer, symbols included. `label` is 6 words and 40 characters or fewer. `source`, if present, is 8 words and 48 characters or fewer. The counts are shown. Nothing breaks a never-claim in `voice.md`. If the brand supplied no real figure, the assistant says so rather than inventing one.
 5. **Nothing rendered.** No image, no mockup, no HTML.
 
@@ -66,4 +66,3 @@ On 2026-10-01 HueGrid's own brand folder failed this test:
 
 Every one of these is a `BRAND.md` that was not regenerated after `tokens.css` or `locked.json` changed. The fix in each case is to regenerate it. The prompt stays as it is.
 
-Kadri Coffee's `BRAND.md` was written after its approval (`apr-0001`). Check it the same way, on the copy in BAM: `examples/kadri/brand/` (it ships every file listed under Attach). Ten tokens turned from we guessed to you said when a post was picked; three stayed we guessed (`--brand-accent-ink`, `--brand-muted-on-ink`, and `--brand-logo-variant`, which puts the dark k on the coral surface). If the assistant reports any status differently from `locked.json`, it fails.

@@ -4,8 +4,9 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
 
 ## What is inside
 
-- `showcase.html`: open it first. One page: a break and its fix, a story post, a Do and a Don't for each layout, and what each check means.
-- `operate.html`: the BAM screen. Open it in Chrome, drop your brand folder (or try Kadri), keep the layouts you need, see every post drawn and checked, and save a generator. It runs in your browser: drawing and checking use no AI tokens, the steps that need writing (marked AI) run on your own Claude key, or hand you a prompt for your own agent if you prefer, and you save straight into this folder.
+- `START.md`: start here. One prompt to paste into your own AI agent (Claude Code, Codex, Cursor or another): it forks BAM, reads your brand files, folders and links, writes your `brand/` folder with every value citing its source, and opens the screen.
+- `operate.html`: the screen. It shows your repo, every post drawn and checked, and which file each step makes. `node bam-screen.mjs` loads your repo into it; open it in Chrome.
+- `bam-screen.mjs`: the small script that does the loading (Node 18 or newer, nothing to install).
 - `AGENTS.md` and `CLAUDE.md` (the same note): where an AI assistant starts when it opens this folder.
 - `SPEC.md`: the contracts (tokens, fonts, template, inputs schema, checks, report, locked values, approvals, generators, feedback kinds).
 - `archetypes/README.md` and `archetypes/_shared/base.css`: how an archetype is built and the shared plumbing it relies on.
@@ -70,20 +71,19 @@ Poligraf is a HueGrid Studio framework for producing on-brand assets with an AI 
   - `archetypes/print/table-tent/` (`spec.md`, `template.html`, `inputs.schema.json`)
 - `skills/`: one prompt per lifecycle state (intake, encode, propose, approve, generate, feedback); `poligraf--suggest.md`, which tells your agent how to suggest a layout for what you want to make and say why, from the rules and the research behind each layout; `poligraf--make-it.md`, which tells your agent how to make a real post image without the engine, `poligraf--mockup.md`, which tells it how to turn a passing post into a mock-up photograph with your own image model and your own key, and `poligraf--expression.md`, which tells it how to read what your posts say about your brand's character against your own words.
 - `docs/design/system/`: the System Design router and the visual principles; `visual/why-it-works.md` says on one page why each layout works, with the research behind it in `visual/sources.md`; `visual/expression.md` is the expression map: how a post's space, colour and type say something about the brand's character, read against your own character words (`skills/poligraf--expression.md`, measured in the page with `archetypes/_shared/expression-measure.js`).
-- `workshop/`: workshop material: the eight Kadri scenarios (`workshop/scenarios.md`), the brand-folder form, the gap note template (`workshop/gap-note.md`), the ranked next-assets prompt (`workshop/next-assets.md`) and the cold-handoff prompt (`workshop/cold-handoff.md`).
-- `examples/kadri/`: a worked example brand, start with its `README.md`. Kadri Coffee is fictional teaching material by Madhuri Maram, used with permission.
+- `workshop/`: the brand-folder form (`workshop/brand-folder.md`), the gap note template (`workshop/gap-note.md`), the ranked next-assets prompt (`workshop/next-assets.md`), the cold-handoff prompt (`workshop/cold-handoff.md`), a free font shortlist and the month-later self-audit.
 - `LICENSE.md` and `NOTICE`.
 
 ## What is not inside
 
 - No engine. Commands named in the spec (`npm run …`) refer to HueGrid's private reference implementation, which is not included. Your own agent makes the posts instead: `skills/poligraf--make-it.md`.
-- No brand layer but one small worked example (`examples/kadri/`). Yours is yours to write.
+- No brand layer: `brand/` is empty on purpose, and your agent fills it from `START.md`. Yours is yours to write.
 - No reference archetypes. The photograph layout (`announcement`) is not in BAM, so a post over a photograph is a gap note (`workshop/gap-note.md`). Only sample archetypes ship.
-- No font files, except the worked example's two OFL fonts, each beside its licence. Fonts are licensed to their owners; bring your own.
+- No font files. Fonts are licensed to their owners; bring your own.
 
 ## How to use it
 
-Fork or unzip BAM, put your own `brand/` folder at its root, and open the folder with your own AI assistant (Claude, Cursor, Codex or another). It reads `AGENTS.md` or `CLAUDE.md` first, then the skill for the state you are in. The agent asks, proposes, writes the brand files and makes the posts itself with `skills/poligraf--make-it.md`: one HTML file per post, saved as a PNG. If you bring layouts of your own, it encodes those first and offers the sample layouts only for the jobs yours do not cover. When a request fits no layout, it writes a gap note (`workshop/gap-note.md`). The cold-handoff prompt lives in `workshop/cold-handoff.md`: use it to test that your `brand/` folder stands on its own in a fresh chat.
+Open `START.md`, paste its prompt into your own AI assistant (Claude Code, Codex, Cursor or another), and answer what it asks. It forks BAM and writes your `brand/` folder from the files and links you give it. It reads `AGENTS.md` or `CLAUDE.md` first, then the skill for the state you are in. The agent asks, proposes, writes the brand files and makes the posts itself with `skills/poligraf--make-it.md`: one HTML file per post, saved as a PNG. If you bring layouts of your own, it encodes those first and offers the sample layouts only for the jobs yours do not cover. When a request fits no layout, it writes a gap note (`workshop/gap-note.md`). The cold-handoff prompt lives in `workshop/cold-handoff.md`: use it to test that your `brand/` folder stands on its own in a fresh chat.
 
 ## Licence
 
@@ -101,4 +101,4 @@ Poligraf is a HueGrid Studio framework. Learn more at huegrid.com.
 
 ## Provenance
 
-BAM version v1.0.0, generated 2026-10-26. Contract 1.6.
+BAM version v1.0.0, generated 2026-10-27. Contract 1.6.

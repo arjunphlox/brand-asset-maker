@@ -40,7 +40,7 @@ A intro slide (opens the deck).
 | `title` | yes | ≤ 10 words, ≤ 60 chars | `h1`: display face, 5.6cqi (108px), at the top of the content box |
 | `speaker` | yes | ≤ 4 words, ≤ 32 chars | `h3`: display face, 3cqi (58px), at the foot of the content box |
 | `role` | yes | ≤ 8 words, ≤ 56 chars | `body`, 1.9cqi (36px), muted, under the speaker |
-| `event` | no | ≤ 6 words, ≤ 40 chars | `label`, accent text colour, above the title ("Kadri Talks") |
+| `event` | no | ≤ 6 words, ≤ 40 chars | `label`, accent text colour, above the title ("Northside Talks") |
 | `footer` | no | ≤ 8 words, ≤ 48 chars | `label`: body face, uppercase, muted, bottom left. The deck title or the talk, the same on every slide of a deck |
 | `page` | no | ≤ 3 words, ≤ 7 chars | `label`, bottom right. The page number ("3", "3 / 12") |
 | `logo` | yes | asset | Top left inside the safe zone, on every slide |

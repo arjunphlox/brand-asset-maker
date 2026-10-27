@@ -41,7 +41,7 @@ You need the files and, for measuring, a browser. Without a browser, skip step 2
 2. **Measure** (Bring and Pick). Open a post's HTML in a browser (Playwright, or Chrome's console), wait for the fonts, then run the whole of `archetypes/_shared/expression-measure.js` and call it:
    ```js
    await document.fonts.ready;
-   pgMeasureExpression({ displayFamily: 'Hubot Sans', bodyFamily: 'Mona Sans' })
+   pgMeasureExpression({ displayFamily: 'Your Display Font', bodyFamily: 'Your Body Font' })
    ```
    The two families are the first names in `--brand-font-display` and `--brand-font-body`. It returns the raw facts: ink share, filled slots, every painted colour with its area, font sizes, weights, capitals, tracking, corner radius and the faces' glyph traits. With Playwright: `await page.addScriptTag({ path: 'archetypes/_shared/expression-measure.js' })`, then `page.evaluate(...)`.
    For the brand file on its own (before any post exists), call `pgGlyphTraits('<display family>', <weight>)` on a page that loads `brand/fonts.css`, and read the colours, weight, tracking and radius from `tokens.css`. For the owner's past posts (question 7), call `pgImageColours('<data: URL of the image>')`: its largest share is the white-space proxy.

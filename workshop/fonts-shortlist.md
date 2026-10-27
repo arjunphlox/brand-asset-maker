@@ -15,7 +15,7 @@ Each pair has a display face (headings and big numbers) and a body face (everyth
 
 | # | Display face | Body face | Licence | Source | Character |
 |---|---|---|---|---|---|
-| 1 | Hubot Sans | Mona Sans | OFL 1.1 | github.com/github/hubot-sans · github.com/github/mona-sans | Wide, friendly and a little technical. Kadri Coffee uses this pair (`examples/kadri/`) |
+| 1 | Hubot Sans | Mona Sans | OFL 1.1 | github.com/github/hubot-sans · github.com/github/mona-sans | Wide, friendly and a little technical. |
 | 2 | Space Grotesk | Inter | OFL 1.1 | fonts.google.com/specimen/Space+Grotesk · github.com/rsms/inter | Odd, confident letter shapes at size; a plain, very readable body |
 | 3 | Bricolage Grotesque | DM Sans | OFL 1.1 | fonts.google.com/specimen/Bricolage+Grotesque · fonts.google.com/specimen/DM+Sans | Warm and expressive at size, with ink traps; a soft geometric body |
 | 4 | Fraunces | Manrope | OFL 1.1 | fonts.google.com/specimen/Fraunces · fonts.google.com/specimen/Manrope | A soft, characterful serif for headings; a clean modern body |

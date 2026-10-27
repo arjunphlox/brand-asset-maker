@@ -112,7 +112,7 @@
     },
     "details.maxWords": {
       "to": null,
-      "why": "details say where and what kind (\"Mill Lane, Saturdays, part time\"), 8 words or fewer; the rest goes in the post copy"
+      "why": "details say where and what kind (\"Harbour Road, Saturdays, part time\"), 8 words or fewer; the rest goes in the post copy"
     },
     "kicker.maxWords": {
       "to": null,

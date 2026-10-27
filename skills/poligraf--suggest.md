@@ -102,7 +102,7 @@ I need: <missing fact or file>, or "nothing, ready to make".
 Next: make it with skills/poligraf--make-it.md.
 ```
 
-Example, for "a post for the Kadri pop-up at Mill Lane Market on 8 November, for Instagram":
+Example, for "a post for the Northside pop-up at Harbour Market on 8 November, for Instagram":
 
 ```
 Suggested: social post · feed post 1:1 (the message) · event
@@ -110,7 +110,7 @@ Why:
 - Name, date and place sit together as one block, so they read as one fact (Wertheimer 1923).
 - People who know when and where they will act are more likely to act (Gollwitzer 1999).
 Runner-up: headline at 9:16 with a call to action, for a story the week of the pop-up.
-Draft: name: "Kadri Pop-up" (fact) · date: "8 November" (fact) · place: "Mill Lane Market" (fact) · cta: "See you there" (draft, 3 of 3 words)
+Draft: name: "Northside Pop-up" (fact) · date: "8 November" (fact) · place: "Harbour Market" (fact) · cta: "See you there" (draft, 3 of 3 words)
 I need: your yes on the call to action, or your own words.
 Next: make it with skills/poligraf--make-it.md.
 ```

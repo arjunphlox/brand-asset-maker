@@ -184,19 +184,19 @@
     },
     "speakerRole.maxWords": {
       "to": null,
-      "why": "the speaker's role is one short line, 6 words or fewer (\"Head roaster, Kadri\"); rewrite it"
+      "why": "the speaker's role is one short line, 6 words or fewer (\"Head baker, Northside\"); rewrite it"
     },
     "speakerRole.maxChars": {
       "to": null,
-      "why": "the speaker's role is one short line, 6 words or fewer (\"Head roaster, Kadri\"); rewrite it"
+      "why": "the speaker's role is one short line, 6 words or fewer (\"Head baker, Northside\"); rewrite it"
     },
     "series.maxWords": {
       "to": null,
-      "why": "the series line names the series, 4 words or fewer (\"Kadri Talks · Free\"); rewrite it"
+      "why": "the series line names the series, 4 words or fewer (\"Northside Talks · Free\"); rewrite it"
     },
     "series.maxChars": {
       "to": null,
-      "why": "the series line names the series, 4 words or fewer (\"Kadri Talks · Free\"); rewrite it"
+      "why": "the series line names the series, 4 words or fewer (\"Northside Talks · Free\"); rewrite it"
     },
     "logo.required": {
       "to": null,

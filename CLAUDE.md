@@ -10,6 +10,7 @@ This folder is Brand Asset Maker (BAM), the part of Poligraf that participants k
 
 ## Start here
 
+0. If `brand/` has no `BRAND.md` yet, open `START.md` and follow the prompt in it: it is how the owner brings their brand.
 1. Read `SPEC.md` first.
 2. Then read the skill for the state you are in:
    - **Bring:** `skills/poligraf--intake.md` (1 Intake), then `skills/poligraf--encode.md` (2 Encode).

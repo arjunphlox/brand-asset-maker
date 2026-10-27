@@ -71,22 +71,22 @@ One of these three, and only one.
     with `spec.md`, `inputs.schema.json` and `template.html` (see `archetypes/README.md`).
 ```
 
-## A filled example: Kadri Coffee
+## A filled example: Northside Bakery
 
-> "Put Velvet Hour's gradient behind the post."
+> "Put Ember Loaf's gradient behind the post."
 
 ```markdown
 ---
 kind: designer
-asked by: the Kadri owner (practice brand)
+asked by: the Northside owner (practice brand)
 date: 2026-10-20
 ask: b
 ---
 
 ## 1. What was asked
-The request, word for word: "Put Velvet Hour's gradient behind the post."
-The content: a post for Velvet Hour, one of Kadri's first two coffees. Its words are the
-tasting notes printed on the bag: "Cocoa, caramel and toasted almond."
+The request, word for word: "Put Ember Loaf's gradient behind the post."
+The content: a post for Ember Loaf, one of Northside's first two loaves. Its words are the
+tasting notes printed on the wrapper: "Cocoa, caramel and toasted almond."
 The facts: none beyond the tasting notes.
 
 ## 2. What BAM could not do, and why
@@ -100,10 +100,10 @@ and the gradient's colours were never handed in.
 |---|---|---|
 | headline | The tasting notes as the line | The gradient: the ground is flat paper, ink or coral |
 | stat | Nothing: "250 g" is the bag size, not the point of this post | The tasting notes and the gradient |
-| quote | The notes as the brand's own words, attributed to the Kadri team | The gradient, and the post now reads as a quote |
+| quote | The notes as the brand's own words, attributed to the Northside team | The gradient, and the post now reads as a quote |
 
 ## 4. The ask
-(b) A new value in the brand file: the Velvet Hour gradient, as two or three hex colours, their
+(b) A new value in the brand file: the Ember Loaf gradient, as two or three hex colours, their
 direction, and where each colour stops. It would be read by the headline's surface on one coffee's
 posts. Owner, please also say whether text may sit on it, or only beside it.
 ```

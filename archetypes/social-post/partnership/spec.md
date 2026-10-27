@@ -44,7 +44,7 @@ From HueGrid client work, inspiration only: the "A × B" posts of Aampe × Taxfi
 | `title` | yes | ≤ 8 words, ≤ 56 chars | `h2`: display face, 7.4cqi. What the two do together |
 | `cta` | no | ≤ 3 words, ≤ 20 chars, starts with a verb | `label`: body face, below the line |
 
-The × is not a slot: two crossed strokes drawn in CSS in the on-surface colour (a 4.4cqi square, 0.8cqi strokes), between the marks. It was first set as the multiplication sign in the display face, but one condensed display face draws that glyph as a dot-sized cross where Kadri's is full size, so the drawn version keeps the joiner the same weight in every brand.
+The × is not a slot: two crossed strokes drawn in CSS in the on-surface colour (a 4.4cqi square, 0.8cqi strokes), between the marks. It was first set as the multiplication sign in the display face, but one condensed display face draws that glyph as a dot-sized cross where a regular face's is full size, so the drawn version keeps the joiner the same weight in every brand.
 
 Hierarchy: title > logo > partnerLogo > kicker > cta.
 

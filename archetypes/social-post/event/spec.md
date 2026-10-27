@@ -40,8 +40,8 @@ tier: sample
 | `date` | yes | ≤ 4 words, ≤ 24 chars | `h2`: display face, 7cqi. The day, and the time if there is one ("8 November", "Sat 8 Nov, 10am") |
 | `place` | yes | ≤ 6 words, ≤ 40 chars | `body`: body face, 4.6cqi. Where to go. The full address goes in the post copy |
 | `speaker` | no | ≤ 4 words, ≤ 32 chars | `h3`: display face, 6cqi. For a talk: who speaks, under the name |
-| `speakerRole` | no | ≤ 6 words, ≤ 40 chars | `body`: body face, 4.2cqi, under the speaker ("Head roaster, Kadri"). Shown only with a `speaker` |
-| `series` | no | ≤ 4 words, ≤ 28 chars | `label`: body face, in the top row. The series or the kind of event ("Kadri Talks · Free") |
+| `speakerRole` | no | ≤ 6 words, ≤ 40 chars | `body`: body face, 4.2cqi, under the speaker ("Head baker, Northside"). Shown only with a `speaker` |
+| `series` | no | ≤ 4 words, ≤ 28 chars | `label`: body face, in the top row. The series or the kind of event ("Northside Talks · Free") |
 | `cta` | no | ≤ 3 words, ≤ 20 chars, starts with a verb | `label`: body face, sits below the block |
 | `logo` | yes | asset | Top left inside the safe zone (top centre when `align` is center) |
 
@@ -78,11 +78,11 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 
 - `date` missing → this is not an event post yet. Ask for the date, or say the one line as a headline.
 - `name` over 5 words → rewrite. The name is a name; the description goes in the post copy.
-- `place` over 6 words → keep where to go ("Mill Lane Market"). The full address goes in the post copy.
+- `place` over 6 words → keep where to go ("Harbour Market"). The full address goes in the post copy.
 - `cta` over 3 words, or not starting with a verb → rewrite it.
 - `speaker` over 4 words → the name only; titles and credentials go in `speakerRole` or the post copy.
-- `speakerRole` over 6 words → one short line ("Head roaster, Kadri"); the rest goes in the post copy.
-- `series` over 4 words → name the series ("Kadri Talks · Free"); rewrite it.
+- `speakerRole` over 6 words → one short line ("Head baker, Northside"); the rest goes in the post copy.
+- `series` over 4 words → name the series ("Northside Talks · Free"); rewrite it.
 - `logo` missing → refuse; intake incomplete.
 
 ## Decisions

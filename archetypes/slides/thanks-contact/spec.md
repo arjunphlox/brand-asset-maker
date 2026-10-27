@@ -40,7 +40,7 @@ A outro slide (closes the deck).
 | `thanks` | yes | ≤ 6 words, ≤ 40 chars | `h1`: display face, 7cqi (134px) |
 | `contact` | yes | ≤ 6 words, ≤ 48 chars | `body`, 2.2cqi (42px), in the accent text colour: an email or a name |
 | `url` | no | ≤ 2 words, ≤ 40 chars | `body`, 2.2cqi |
-| `handle` | no | ≤ 2 words, ≤ 32 chars | `body`, 2.2cqi ("@kadricoffee") |
+| `handle` | no | ≤ 2 words, ≤ 32 chars | `body`, 2.2cqi ("@northside") |
 | `footer` | no | ≤ 8 words, ≤ 48 chars | `label`: body face, uppercase, muted, bottom left. The deck title or the talk, the same on every slide of a deck |
 | `page` | no | ≤ 3 words, ≤ 7 chars | `label`, bottom right. The page number ("3", "3 / 12") |
 | `logo` | yes | asset | Top left inside the safe zone, on every slide |

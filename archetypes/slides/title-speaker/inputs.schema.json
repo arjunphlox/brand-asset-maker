@@ -101,7 +101,7 @@
     },
     "role.maxWords": {
       "to": null,
-      "why": "the role is one line, 8 words or fewer (\"Head roaster, Kadri\")"
+      "why": "the role is one line, 8 words or fewer (\"Head baker, Northside\")"
     },
     "footer.maxWords": {
       "to": null,

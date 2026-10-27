@@ -36,7 +36,7 @@ tier: sample
 
 | Slot | Required | Budget | Role |
 |---|---|---|---|
-| `kicker` | no | ≤ 4 words, ≤ 28 chars | `label`: body face, uppercase, 2.2cqi, top row at the end side. The series or the event's name ("Kadri Pop-up") |
+| `kicker` | no | ≤ 4 words, ≤ 28 chars | `label`: body face, uppercase, 2.2cqi, top row at the end side. The series or the event's name ("Northside Pop-up") |
 | `headline` | yes | ≤ 8 words, ≤ 64 chars | `h1`: display face, 10cqi (12.5cqi with `size: large`); the one line people read first |
 | `date` | yes | ≤ 4 words, ≤ 24 chars | `h3`: display face, 5cqi, beside an accent rule. The day, and the time if there is one. A message fact |
 | `place` | yes | ≤ 6 words, ≤ 40 chars | `h3`: display face, 5cqi, under the date. Where to go. A message fact |

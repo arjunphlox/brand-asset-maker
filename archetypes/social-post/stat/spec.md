@@ -60,12 +60,12 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 
 ## Do and Don't
 
-Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` at the root of Brand Asset Maker (BAM) shows each pair side by side (in the engine repo the PNGs are in `docs/evidence/kadri/out/do-dont/`).
+Each pair is a Do and a Don't for this layout, at 1:1 on paper.
 
 | | Post | What it shows |
 |---|---|---|
-| Do | [stat--do](../../../showcase.html#do-dont-stat) | "250 g" reads at a glance. The label says what it counts, and the source vouches for it. |
-| Don't | [stat--dont](../../../showcase.html#do-dont-stat) | A sentence in the number slot. It fails `budget`, `safe-zone` and `overflow`: must fix. Use the headline post instead. |
+| Do | stat--do | "250 g" reads at a glance. The label says what it counts, and the source vouches for it. |
+| Don't | stat--dont | A sentence in the number slot. It fails `budget`, `safe-zone` and `overflow`: must fix. Use the headline post instead. |
 
 ## Fallbacks
 

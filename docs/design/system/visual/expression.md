@@ -34,7 +34,7 @@ Every check belongs to one kind. The contact sheet and `report.json` say which (
 
 **Precedence.** Utility first, then brand, then expression.
 
-1. A utility failure is fixed even when the fix moves the post away from the brand's words. The brand adjusts and the post stays readable (Kadri's coral k uses the dark k on coral).
+1. A utility failure is fixed even when the fix moves the post away from the brand's words. The brand adjusts and the post stays readable (a coral mark switches to its dark version on a coral surface).
 2. A brand value is kept even when the post would read closer to a word without it. To change the reading, change the brand value (kind `token`) with the owner; never loosen a utility threshold or bend a brand value inside one post.
 3. Expression chooses only among posts that pass every utility and brand check. A preferred variation (the brand file's Expression section) that fails a utility check is not used.
 

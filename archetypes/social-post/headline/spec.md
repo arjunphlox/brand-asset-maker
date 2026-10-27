@@ -64,12 +64,12 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 
 ## Do and Don't
 
-Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` at the root of Brand Asset Maker (BAM) shows each pair side by side (in the engine repo the PNGs are in `docs/evidence/kadri/out/do-dont/`).
+Each pair is a Do and a Don't for this layout, at 1:1 on paper.
 
 | | Post | What it shows |
 |---|---|---|
-| Do | [headline--do](../../../showcase.html#do-dont-headline) | One line leads. The kicker sets it up, and the CTA starts with a verb ("Visit Mill Lane"). |
-| Don't | [headline--dont](../../../showcase.html#do-dont-headline) | Two headlines in one post, and a date where the CTA should be. Every check passes. Only the two-second question catches it. |
+| Do | headline--do | One line leads. The kicker sets it up, and the CTA starts with a verb ("Visit Harbour Market"). |
+| Don't | headline--dont | Two headlines in one post, and a date where the CTA should be. Every check passes. Only the two-second question catches it. |
 
 ## Fallbacks
 

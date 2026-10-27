@@ -35,19 +35,19 @@ Help me rank the next assets my brand should make. Follow AGENTS.md.
 - The top gap has one gap note with one ask. The other gaps stay as rows until you need them.
 - You can read the first three rows and know what to make next week.
 
-## Example: Kadri Coffee
+## Example: Northside Bakery
 
-The numbers below are made up for the practice brand. Use your own.
+The numbers below are made up for a fictional bakery. Use your own.
 
 | Rank | Asset | Where it goes | Per month | Layout and format | Status | Next step |
 |---|---|---|---|---|---|---|
-| 1 | Tasting notes post | Instagram feed | 8 | `social-post/list`, 1:1 | fits | make it |
+| 1 | Flavour notes post | Instagram feed | 8 | `social-post/list`, 1:1 | fits | make it |
 | 2 | Event reminder | Instagram story | 4 | `social-post/event`, 9:16 | fits | make it |
-| 3 | New bag over a photo | Instagram feed | 2 | none | gap | gap note: ask (a), which photograph |
+| 3 | New loaf over a photo | Instagram feed | 2 | none | gap | gap note: ask (a), which photograph |
 | 4 | Pop-up post | LinkedIn | 2 | `social-post/event`, 4:5 | fits | make it |
 | 5 | Counter price card | print, in the shop | 1 | `print/menu`, A4 portrait | fits | ask the owner for the prices |
 | 6 | Newsletter header | email | 1 | `email/header`, 3:1 | fits | make it |
-| 7 | Velvet Hour post on its gradient | Instagram feed | not sure | `social-post/headline`, 1:1 | needs a brand value | the gradient's colours |
+| 7 | Seasonal loaf post on its gradient | Instagram feed | not sure | `social-post/headline`, 1:1 | needs a brand value | the gradient's colours |
 
 ## Bring it to session two
 

@@ -58,12 +58,12 @@ contrast · min-text · safe-zone · overflow · element-count · token-colors �
 
 ## Do and Don't
 
-Rendered on the practice brand, Kadri Coffee, at 1:1 on paper. `showcase.html` at the root of Brand Asset Maker (BAM) shows each pair side by side (in the engine repo the PNGs are in `docs/evidence/kadri/out/do-dont/`).
+Each pair is a Do and a Don't for this layout, at 1:1 on paper.
 
 | | Post | What it shows |
 |---|---|---|
-| Do | [quote--do](../../../showcase.html#do-dont-quote) | One sentence, attributed. The words are big, and there is room around them. |
-| Don't | [quote--dont](../../../showcase.html#do-dont-quote) | 28 words: a wall. It is inside the 30-word budget, so every check passes. The budget is a ceiling, not a target. Cut to the one sentence that matters. |
+| Do | quote--do | One sentence, attributed. The words are big, and there is room around them. |
+| Don't | quote--dont | 28 words: a wall. It is inside the 30-word budget, so every check passes. The budget is a ceiling, not a target. Cut to the one sentence that matters. |
 
 ## Fallbacks
 

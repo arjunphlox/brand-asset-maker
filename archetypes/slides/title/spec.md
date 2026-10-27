@@ -39,7 +39,7 @@ A intro slide (opens the deck).
 |---|---|---|---|
 | `title` | yes | ≤ 10 words, ≤ 60 chars | `h1`: display face, 6.2cqi (119px), up to two lines |
 | `subtitle` | no | ≤ 16 words, ≤ 100 chars | `body`, 2.2cqi (42px), under the title. What the deck is for |
-| `kicker` | no | ≤ 6 words, ≤ 40 chars | `label`, in the accent text colour, above the title. The date or the event ("Mill Lane Market · 8 November") |
+| `kicker` | no | ≤ 6 words, ≤ 40 chars | `label`, in the accent text colour, above the title. The date or the event ("Harbour Market · 8 November") |
 | `footer` | no | ≤ 8 words, ≤ 48 chars | `label`: body face, uppercase, muted, bottom left. The deck title or the talk, the same on every slide of a deck |
 | `page` | no | ≤ 3 words, ≤ 7 chars | `label`, bottom right. The page number ("3", "3 / 12") |
 | `logo` | yes | asset | Top left inside the safe zone, on every slide |

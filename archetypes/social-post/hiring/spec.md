@@ -38,7 +38,7 @@ tier: sample
 |---|---|---|---|
 | `kicker` | yes | ≤ 3 words, ≤ 20 chars | `label`: body face, in the accent, above the role ("We're hiring", "Join us") |
 | `role` | yes | ≤ 5 words, ≤ 32 chars | `h1`: display face, dominant (12cqi). The job title |
-| `details` | yes | ≤ 8 words, ≤ 48 chars | `body`: body face, 4.6cqi. Where and what kind ("Mill Lane, Saturdays, part time") |
+| `details` | yes | ≤ 8 words, ≤ 48 chars | `body`: body face, 4.6cqi. Where and what kind ("Harbour Road, Saturdays, part time") |
 | `cta` | no | ≤ 3 words, ≤ 20 chars, starts with a verb | `label`: body face, below the details ("Apply by Friday") |
 | `logo` | yes | asset | Top left inside the safe zone (top centre when `align` is center) |
 

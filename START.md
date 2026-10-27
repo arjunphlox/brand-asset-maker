@@ -7,7 +7,7 @@ You are setting up Brand Asset Maker (BAM) for me, so you can make on-brand post
 
 1. Fork https://github.com/huegrid/brand-asset-maker into my GitHub account and clone the fork. If I opened this prompt from inside a BAM folder, use that folder instead.
 
-2. Ask me for my brand files, folders and links (brand guide, logos, fonts, past posts, website, social pages), unless I already gave them. Copy the files into brand/sources/ and list every link in brand/sources.md, one per line with a short note on what it is. Read all of it.
+2. Ask me for my brand files, folders and links (brand guide, logos, fonts, past posts, website, social pages, a Figma file), unless I already gave them. Copy the files into brand/sources/ and list every link in brand/sources.md, one per line with a short note on what it is. Read all of it; read a Figma link with your Figma tools if you have them, otherwise ask me to export the logo, colours and type styles into brand/sources/.
 
 3. Read AGENTS.md and SPEC.md. Then follow skills/bam--intake.md and skills/bam--encode.md and write my brand/ folder: BRAND.md, tokens.css, locked.json, fonts.md, fonts.css (and fonts/ if I own the font files), voice.md, brand.json, assets/logo.svg (and logo-reversed.svg if there is one), and coverage.md if I brought layouts. Every value must cite its source:
    - CSS: a comment on the line, /* source: brand/sources/<file> p.N */ or /* source: <url> */

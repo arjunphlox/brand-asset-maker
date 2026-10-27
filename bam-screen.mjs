@@ -53,7 +53,14 @@ for (const path of onDisk) {
   else if (MIME[ext]) files[path] = { dataUrl: `data:${MIME[ext]};base64,${buf.toString('base64')}` };
 }
 
-const data = { contract: 1, repo: repoInfo(), tree, files };
+// The text of every other text file in the tree (skills, layouts, docs), for previews in the screen's Editor only.
+const texts = {};
+for (const path of tree) {
+  if (files[path] || ['operate.html', 'bam-data.js'].includes(path) || !TEXT.concat(['.js']).includes(extname(path).toLowerCase())) continue;
+  try { const buf = readFileSync(join(ROOT, path)); if (buf.length <= 200000) texts[path] = buf.toString('utf8'); } catch { /* listed but not on disk */ }
+}
+
+const data = { contract: 1, repo: repoInfo(), tree, files, texts };
 writeFileSync(join(ROOT, 'bam-data.js'), `window.BAM_DATA = ${JSON.stringify(data)};\n`);
 
 const notCommitted = inGit ? onDisk.filter((p) => p.startsWith('brand/') && !tree.includes(p)) : [];

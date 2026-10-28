@@ -1,0 +1,26 @@
+/* Finverse brand tokens. Contract 1.6. Status of every token: brand/locked.json. */
+/* Figma file: https://www.figma.com/design/FKuOXyABg2J5dmd4kGIS2F/Finverse---Visual-Direction---Design (listed in brand/sources.md) */
+:root {
+  --brand-paper: #F2F4F5;        /* source: brand/sources/figma-extract.json variables "Cool Grey/Cool Grey 0" (swatch label Cool Grey 10); largest fill on Home; role confirmed by owner 2026-10-28 */
+  --brand-ink: #001F33;          /* source: brand/sources/figma-extract.json variables "Finblue Light/Finblue L80" = "Finblue Dark/Finblue D10"; main text colour on Home; role confirmed by owner 2026-10-28 */
+  --brand-accent: #009FFF;       /* source: brand/sources/figma-extract.json variables "Finblue Light/Finblue L40"; logo colour (brand/sources/figma-logo-blue.svg); role confirmed by owner 2026-10-28 */
+  --brand-accent-ink: #001F33;   /* source: brand/sources/figma-extract.json "Finblue L80"; 5.95:1 on #009FFF; role confirmed by owner 2026-10-28 */
+  --brand-muted: #59646B;        /* source: brand/sources/figma-extract.json variables "Cool Grey / Cool Grey 50"; secondary text on Home; 5.50:1 on paper; role confirmed by owner 2026-10-28 */
+  --brand-font-display: "Ranade", system-ui, sans-serif;  /* source: brand/sources/figma-extract.json graphicAssets fonts (Ranade Variable); chosen by owner 2026-10-28 */
+  --brand-font-body: "Amulya", system-ui, sans-serif;     /* source: brand/sources/figma-extract.json graphicAssets fonts (Amulya Variable); chosen by owner 2026-10-28 */
+  --brand-weight-display: 700;   /* source: brand/sources/figma-extract.json graphicAssets: Ranade Variable Bold is the most used style (we guessed) */
+  --brand-weight-body: 500;      /* source: brand/sources/figma-extract.json graphicAssets: Amulya Variable Medium (we guessed) */
+  --brand-weight-label: 500;     /* source: brand/sources/figma-extract.json graphicAssets: Amulya Variable Medium; labels use the body face (we guessed) */
+  --brand-tracking-display: -0.02em; /* source: brand/sources/figma-extract.json: Ranade Bold at -2% (8–12px) and Hanken Grotesk Bold 32–48px at -2% on Home (we guessed) */
+  --brand-radius: 16px;          /* source: brand/sources/figma-extract.json pagesHome cornerRadiiByCount: 16 is the most used radius (we guessed) */
+}
+
+/* BEGIN CURATED: scheme overrides */
+/* Accent #009FFF on paper is 2.57:1, too light for text. Text painted in the accent on paper uses Finblue L50. */
+.pg-frame[data-scheme="paper"] {
+  --pg-accent-text: #0074BA;     /* source: brand/sources/figma-extract.json variables "Finblue Light/Finblue L50"; 4.52:1 on #F2F4F5; accepted by owner 2026-10-28 */
+}
+/* Muted #59646B on ink #001F33 is 2.78:1. On ink, secondary text uses Cool Grey 40. */
+.pg-frame[data-scheme="ink"] {
+  --pg-muted: #87949B;           /* source: brand/sources/figma-extract.json variables "Cool Grey/Cool Grey 40"; 5.42:1 on #001F33 (we guessed) */
+}

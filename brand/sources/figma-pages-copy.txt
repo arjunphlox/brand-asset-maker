@@ -1,0 +1,190 @@
+1 CLICK PAY BY CUSTOMER
+1_CLICK_PAY_BY_CUSTOMER
+85% avg. cost savings over Credit Cards
+85% cheaper than cards
+85% cheaper, many times simpler
+A universe of possibilities
+API traffic secured by HTTPS with industry-standard ciphers Customers can view and rotate API keys through Finverse’s customer dashboard
+AUTO RECURRING PAYMENTS
+AUTO RECURRING PAYMENTS FOR YOUR BUSINESS
+AUTO_RECURRING_PAYMENTS
+Access data of 10 Major Banks
+Add in your Average Monthly Transactions, Size of transactions, Minimum Value.
+Aliquip laboris proident pariatur. Do reprehenderit nulla velit aliqua non veniam fugiat ex sunt. Commodo do nisi dolor anim reprehenderit deserunt cillu.
+An intuitive API and dashboard to help your teams collect payments and access bank data automagically, at a fraction of the cost.
+Annual security awareness training Multi-factor Authentication (MFA) for all system access, including physical security keys Granular, fully-auditable access controls Processes to ensure timely granting and revoking of access privileges Workstation antivirus and endpoint compliance systems
+Auto Reconciliation (outstanding bal)
+Auto collect payment for your invoices
+Auto debits help you save all those costly service hours chasing late payments and reminding customers.
+Auto reconciliation for every outstanding balance
+Automate Account to Account Payments. Everything you need to receive and send money on the fastest rails at the lowest rates.
+Automate Local Collect
+Automatically collect payment when an invoice is due, from your customer’s bank account.
+Bank App OTP Push Payment
+Bank payments and data to power your business in Asia-Pacific
+Be rest assured on full compliance
+Behind the typical process, there can be…
+Business expense categories explained
+Calculate Costs ››
+Can I try a demo before signing up?
+Check bank account balances
+Check latest status of mandates and collections
+Code end points are shown here
+Collect &amp; Reconcile directly on Xero Invoices
+Collect Recurring Payments
+Collect anytime convenient for you or customer
+Collect from any HK bank account
+Collect funds on due date from user
+Collect on Xero Invoices
+Collect payments from any bank account automatically and cut the transaction fees up to 85%.
+Collect recurring payments
+Compare your costs vs when you switch over to Finverse
+Confirming mandate with bank and user
+Connect Finverse to your Xero invoices and collect payments from your customers automatically.
+Connect with over 150+ Banks in HK &amp; SEA
+Create account mandate for direct debit
+Customer Customization
+Designed for Developers
+Developer Portal Documentation Support
+Don’t see your bank?
+Don’t see your question answered?
+Dropoffs due to transfer actions outside apps
+Easily see status of any payment from any customer, any time. And reconciliation is automatic if connected to your account.
+Easy for your customers to make auto recurring payments, with a single click or without lifting a finger. Up to you.
+Easy to plug-in. Even more so, to collect.
+Embedding bank payments into your processes minimises fees and maximises automation. Until now, it was also hard to implement.
+Empower consumers and businesses to access their financial data anywhere.
+Enable users to send money abroad with ease, by debiting from their linked bank account.
+Enables auto-pay or click-to-pay
+Enables auto-pay or click-to-pay on your product
+Encryption and Authentication
+End User Privacy Policy
+End User Privacy Policy End User Terms of Service: Data Services End User Terms of Service: Payment Services
+End User Terms of Service: Data Services
+End User Terms of Service: Payment Services
+Even faster collect on Xero Invoices
+Everything you need to receive and send money on the fastest rails at the lowest rates, with a first-class user experience.
+Experience instant payments
+FIXING CREDIT PAYMENTS WITH FINVERSE
+Fine tuned down to the penny
+Finverse Technologies Limited
+Finverse Technologies Ltd.
+Finverse collects direct bank payments — means no card fees. With admin time eliminated, the savings add up.
+Finverse implements a comprehensive set of security policies, reviewed and accepted annually by all employees and contractors, which include the following measures:
+Finverse implements security controls mapped to ISO 27001 standards and monitored through a leading 3rd-party compliance and security automation platform, which continuously monitors our systems, tools and employees to help us remain compliant and improve our security posture over time. We comply with data processing and privacy regulations in our respective markets, as outlined in our Privacy Policy.
+Finverse implements significant infrastructure-level security measures to ensure system security, integrity and availability, including:
+Finverse operates a vulnerability discovery rewards program. If you believe you have discovered a vulnerability or would like to participate in our rewards program, please reach out to security@finverse.com.
+Finverse uses multiple security layers to protect your personal information and connect to payment networks.
+Finverse will send payments only to the recipient you authorize.
+Finverse’s bank account aggregation API covers over 40 banks in 6 markets.
+For Hong Kong and Singapore
+For Medium to Larger Volume Businesses
+Founded in 2020 and headquarterd in Hong Kong, we are on a mission to build the future of Open Banking in Asia-Pacific.
+Governance, Risk, Compliance, and Privacy
+Granular team member roles in Finverse’s customer dashboard allow team owners to tightly control access scopes and minimize the risk of human errors and bad actors
+HK and Singapore Banks Data API
+Handling payments for your business in typical ways involves doing multiple tasks, checking various sources and going through high transaction fees (3.5% + 2.3HKD).
+Hong Kong &amp; Singapore Bank Data API
+Hong Kong English (UK)
+Hong Kong and Singapore Banks Data API
+How long does a transfer or migration take?
+How to create an online payment system for small business
+Human errors and wasted service hours coordinating
+Inability to upsell or cross-sell on demand
+Increase on-time loan, card, and BNPL repayments, by enrolling borrowers in direct debit.
+Increase on-time loan, card, and BNPL repayments, by offering direct debit as repayment method.
+Increase on-time loan, card, and BNPL repayments, by offering direct debit as repayment.
+Industry Best-Practices in Practice
+Industry-standard system hardening and security best practices (such as CIS) to avoid misconfigurations and weak security configurations Extensive use of secret and encryption key management solutions to ensure appropriate handling of access configurations and sensitive data Continuous monitoring of our infrastructure and codebase using industry-standard security scanners to ensure our infrastructure and resources are securely configured and any vulnerabilities are quickly discovered and remediated Continuous monitoring of public information for new vulnerabilities and threat actors System access provisioned according to the Principle of Least Privilege. Elevated permissions are granted on a per-user basis, tightly scoped, and automatically revoked Infrastructure changes vetted through change controls which ensure updates are reviewed, scanned for security issues, tested, approved, logged, and audited Data backups to ensure operational continuity
+Infrastructure Security
+Instant, automatic, simple
+Investments &amp; Insurance
+Keep admin tasks to the ‘min’.
+Keeping admin tasks to the ‘min’.
+Know your costs right away
+Learn how to enable loan recovery with a single click.
+Lost revenue and cash flow opportunities
+Low cost way to collect high volume payments
+MEDIUM TO LARGE BUSINESSES
+Match Payment to Screenshot
+Memorably easy to use and integrate
+Monitor payment status in real time
+Name &amp; Designation
+No Payee or Amount errors
+No setup, monthly or hidden fees.
+O1CN01O8kiPE1zwNCGNQ57q_!!6000000006778-2-tps-5233-2050.png_ 1
+ONE TIME AUTHORISATION FROM CUSTOMER
+Onboard and verify counterparties
+One Platform Endless Possibilities
+One Platform endless possibilities
+One platform. Endless possibilities!
+Open banking API specifications: simplifying a technical resource
+Organizational Security
+Our proactive approach to protecting data decreases the risk of security incidents and increases peace of mind when enabling financial data and payment access.
+PARTNERSHIPS WITH BANKS
+Pay a flat 0.5% per transaction
+Pay for only what you use.
+Payments API to automate pay
+Payments API: Automate Account to Account Payments
+Poor repetitive customer experience and control
+Pricing About Blog Playbooks
+Pricing About Team Blog
+RECEIVE PAYMENT FROM 115 BANKS
+Real time fee reporting
+Recurring payments at low cost
+Recurring payments at super low cost
+Removes payment friction and errors
+Removes payment friction and errors by customers
+Repeat for every payment
+Retrieve account info from over 40 Asian banks.
+Retrieve real-time financial account information with user consent, from over 40 Asian banks.
+Robust Bank API for Hongkong &amp; Singapore
+SMALL TO MEDIUM BUSINESSES
+Saves 85% cost on average compared to credit cards
+Saves 85% cost on average vs credit cards
+Scaling Nerd Wallet’s Data API
+Secure SDLC (Software Development Lifecycle)
+Security is in our DNA
+See automatic status updates at ease
+See documentation ››
+Send and receive payments
+Setup Autopay for any bank in HK &amp; SG
+Setup auto-pay on your app or platform.
+Ship more quickly with powerful and easy-to-use APIs and webhooks.
+Stay covered across scenarios
+Strong encryption in transit (≥TLS 1.2) and at rest (≥AES 256 bit) Authentication for customer API integrations via API keys Authentication for Finverse’s customer dashboard via Auth0, a leading 3rd party access management platform, supporting common single sign-on (SSO) and social login methods
+Supports Personal, Business
+THE COLLECT API ADVANTAGE
+TYPICAL PUSH PAYMENTS
+The Payments and Banking Platform
+The lowest cost way to collect high-volume payments
+The lowest rates, with a first-class user experience.
+The payments and banking platform for HongKong and Singapore.
+Transact at low cost, high speed
+Trigger FPS for one-off collection
+Trigger fund collection from bank account
+Upsell or cross-sell easily at the click of a button
+Upsell/cross-sell easily
+Using tech products can be daunting and we are here to make this process easier with this guide.
+View List of Banks &gt;
+WORKS WITH ALL MAJOR BANKS
+We apply industry best practices to handle your money and data. Strict organizational measures, access controls, encryption and infrastructure security practices enable Finverse to securely move money and handle financial data.
+We build data infrastructure (APIs) for an open-banking world, focusing on Asia-Pacific financial institutions.
+We connect to various bank APIs to most effectively and successfully enable pull payments from all 115 banks in Hong Kong (including virtual banks)
+We perform comprehensive scanning in our application development, including static application security testing (SAST), dynamic application security testing (DAST), and software composition analysis (SCA) We maintain a stringent change management system to ensure code quality, accountability, and separation of duties.
+We provide easy ways for consumers and businesses to link their financial accounts so they can put their recurring payments on autopilot. By allowing end-users to enrol in direct debit bank payments, we enable businesses to reduce churn, increase upsell and cross-sell, while cutting transaction fees by up to 85%.
+We use Finverse to set up payments from your bank
+What are Account to Account payments?
+What currencies are typically supported?
+When invoice is due, automatically collects payment from your customer’s bank account.
+With Finverse APIs, you can
+With Finverse APIs, you can…
+With Finverse APIs, you get super simple payment flow which enables you to collect payments on time, automate recurring payments and reconcile, all at a fraction of cost.
+You wil receive notifications for any payments you make.
+calculator embed comes here
+curl --request POST \  -u ORGANIZATION_ID:API_KEY \  --url https://app.moderntreasury.com/api/counterparties \  -H &#39;Content-Type: application/json&#39; \  -d &#39;{  &quot;name&quot;: &quot;Kenner, Bach &amp; Ledeen&quot;,  &quot;accounts&quot;: [{  &quot;account_type&quot;: &quot;checking&quot;,  &quot;routing_details&quot;: [{  &quot;routing_number_type&quot;: &quot;aba&quot;,  &quot;routing_number&quot;: &quot;026009593&quot;  }],  &quot;account_details&quot;: [{  &quot;account_number&quot;: &quot;123456789&quot;  }]  }]  }&#39;
+debited automatically
+si:Arrow_downward_square
+si:Credit_card_detailed
+si:Dashboard_customize
+“Finverse has surpassed my expectations in HK, and I’ve made the decision to move all my subscription billing to this platform for the long haul. The product is a joy to use.”

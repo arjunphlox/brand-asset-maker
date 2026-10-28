@@ -1,0 +1,34 @@
+{
+  "file": "https://www.figma.com/design/FKuOXyABg2J5dmd4kGIS2F/Finverse---Visual-Direction---Design",
+  "readOn": "2026-10-28",
+  "readWith": "Figma MCP (get_variable_defs, use_figma read-only)",
+  "variables": {
+    "nodeRead": "166:2863 (Style Guide page, colour frame)",
+    "note": "Variable names for Cool Grey are one step off the on-canvas swatch labels (variable 'Cool Grey 0' = #F2F4F5, swatch label 'Cool Grey 10' = #F2F4F5). Hex values agree; names differ.",
+    "values": {"Finblue Light/Finblue L10":"#EBF7FF","Finblue Light/Finblue L20":"#BAEEFF","Finblue Light/Finblue L30":"#67CFFF","Finblue Light/Finblue L40":"#009FFF","Finblue Light/Finblue L50":"#0074BA","Finblue Light/Finblue L60":"#004E7D","Finblue Light/Finblue L70":"#003250","Finblue Light/Finblue L80":"#001F33","Finblue Dark/Finblue D10":"#001F33","Finblue Dark/Finblue D20":"#052C45","Finblue Dark/Finblue D30":"#0F3C59","Finblue Dark/Finblue D40":"#225474","Finblue Dark/Finblue D50":"#77A3BE","Finblue Dark/Finblue D60":"#A2C4D9","Finblue Dark/Finblue D70":"#C7DFED","Finblue Dark/Finblue D80":"#EBF7FF","Cool Grey/Cool Grey 0":"#F2F4F5","Cool Grey/Cool Grey 10":"#EBEEEF","Cool Grey/Cool Grey 20":"#D5DBDF","Cool Grey/Cool Grey 30":"#B3BDC3","Cool Grey/Cool Grey 40":"#87949B","Cool Grey / Cool Grey 50":"#59646B","Cool Grey/Cool Grey 60":"#2D3337","Cool Grey/Cool Grey 70":"#08090A"}
+  },
+  "textStyles": "none defined (getLocalTextStylesAsync returned [])",
+  "logo": {
+    "componentSet": "Logo (Components page)",
+    "variants": {
+      "Logo Color=Blue (1:32)": "#009FFF",
+      "Logo Color=Dark Blue (712:4791)": "#001F33",
+      "Logo Color=Light Blue (712:4848)": "#EBF7FF",
+      "Logo Color=Light Grey (712:4810)": "#F2F4F5",
+      "Logo Color=Dark Grey (712:4829)": "#08090A"
+    },
+    "size": "790.4 x 144.7",
+    "wordmark": "Finverse (outlined in the component; also the layer name 'Finverse Logo')"
+  },
+  "pagesHome": {
+    "node": "1:2 'Home' on page 'Pages'",
+    "fontsByCharacterCount": [["Hanken Grotesk / Medium / 20 / 0%",453],["Hanken Grotesk / Medium / 16 / 0%",420],["Hanken Grotesk / Medium / 18 / 0%",390],["Hanken Grotesk / Bold / 48 / -2%",233],["Hanken Grotesk / Bold / 32 / -2%",92],["Hanken Grotesk / Bold / 14 / 10%",83],["Hanken Grotesk / SemiBold / 16 / 0%",76],["Hanken Grotesk / SemiBold / 20 / 0%",68],["Hanken Grotesk / SemiBold / 24 / -2%",31],["Hanken Grotesk / Bold / 24 / -2%",27]],
+    "textColoursByCharacterCount": [["#001F33",1735],["#59646B",83],["#FFFFFF",36],["#004E7D",27],["#87949B",26]],
+    "fillsByArea": [["#F2F4F5",2200],["#001F33",1240],["#EBF7FF",571],["#D5DBDF",13],["#009FFF",9],["#A2C4D9",7]],
+    "cornerRadiiByCount": [["16",12],["20.48",7],["4",6],["5.12",5]]
+  },
+  "graphicAssets": {
+    "node": "page 756:4771 'Graphic Assets'",
+    "fontsBySegmentCount": [["Ranade Variable / Bold / 8 / -2%",321],["Ranade Variable / Bold / 10 / 0%",300],["Ranade Variable / Bold / 10 / -2%",234],["Ranade Variable / Bold / 12 / -2%",215],["Amulya Variable / Medium Italic / 10 / 0%",150],["Ranade Variable / Medium / 16 / 0%",128],["Ranade Variable / Bold / 20 / 0%",112],["Amulya Variable / Medium / 10 / 0%",97],["Ranade Variable / Medium / 14 / 0%",65],["Ranade Variable / Bold / 40 / 0%",8]]
+  }
+}

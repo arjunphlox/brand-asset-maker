@@ -1,0 +1,12 @@
+{
+  "name": "Finverse",
+  "wordmark": "Finverse",
+  "logo": "brand/assets/logo.svg",
+  "logoReversed": "brand/assets/logo-reversed.svg",
+  "source": {
+    "name": "brand/sources/figma-extract.json logo.wordmark (Figma layer 'Finverse Logo')",
+    "wordmark": "brand/sources/figma-logo-blue.svg (the wordmark is outlined in the logo; spelling from the Figma layer name and page copy, brand/sources/figma-pages-copy.txt)",
+    "logo": "brand/sources/figma-logo-blue.svg",
+    "logoReversed": "brand/sources/figma-logo-light-blue.svg; chosen by owner 2026-10-28"
+  }
+}

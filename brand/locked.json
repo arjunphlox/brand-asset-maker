@@ -1,0 +1,24 @@
+{
+  "contractVersion": "1.6",
+  "tokens": {
+    "--brand-paper": { "status": "locked", "source": "brand/sources/figma-extract.json Cool Grey 0 (#F2F4F5); role confirmed by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-ink": { "status": "locked", "source": "brand/sources/figma-extract.json Finblue L80 (#001F33); role confirmed by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-accent": { "status": "locked", "source": "brand/sources/figma-extract.json Finblue L40 (#009FFF); role confirmed by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-accent-ink": { "status": "locked", "source": "brand/sources/figma-extract.json Finblue L80 (#001F33); role confirmed by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-muted": { "status": "locked", "source": "brand/sources/figma-extract.json Cool Grey 50 (#59646B); role confirmed by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-font-display": { "status": "locked", "source": "brand/sources/figma-extract.json graphicAssets (Ranade Variable); chosen by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-font-body": { "status": "locked", "source": "brand/sources/figma-extract.json graphicAssets (Amulya Variable); chosen by owner, brand/intake.log.md 2026-10-28" },
+    "--brand-weight-display": { "status": "derived", "source": "read from brand/sources/figma-extract.json graphicAssets: Ranade Variable Bold most used" },
+    "--brand-weight-body": { "status": "derived", "source": "read from brand/sources/figma-extract.json graphicAssets: Amulya Variable Medium" },
+    "--brand-weight-label": { "status": "derived", "source": "read from brand/sources/figma-extract.json graphicAssets: Amulya Variable Medium" },
+    "--brand-tracking-display": { "status": "derived", "source": "read from brand/sources/figma-extract.json: -2% on Ranade Bold small sizes and Hanken Grotesk Bold headlines" },
+    "--brand-radius": { "status": "derived", "source": "read from brand/sources/figma-extract.json pagesHome: 16px most used corner radius" },
+    "--pg-accent-text (paper scheme)": { "status": "locked", "source": "brand/sources/figma-extract.json Finblue L50 (#0074BA); accepted by owner with the colour roles, brand/intake.log.md 2026-10-28" },
+    "--pg-muted (ink scheme)": { "status": "derived", "source": "brand/sources/figma-extract.json Cool Grey 40 (#87949B); picked for 5.42:1 on ink" }
+  },
+  "assets": {
+    "logo.svg": { "sha256": "c73902b535c69b5de714ed32dcf35032f00120e651e411901bbdc179e33a25cf", "status": "locked", "source": "brand/sources/figma-logo-blue.svg, Figma component 'Logo Color=Blue' (1:32), bytes unchanged" },
+    "logo-reversed.svg": { "sha256": "ca83fe59b7a9db5d35335d8d2c7bf15ecc325a0525b7a0b6d179e63d587c726f", "status": "locked", "source": "brand/sources/figma-logo-light-blue.svg, Figma component 'Logo Color=Light Blue' (712:4848), bytes unchanged; named the reversed mark by owner 2026-10-28" }
+  },
+  "fonts": { "source": "free", "families": ["Ranade", "Amulya"], "status": "derived" }
+}

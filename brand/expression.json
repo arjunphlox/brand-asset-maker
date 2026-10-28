@@ -1,0 +1,9 @@
+{
+  "contractVersion": "1.6",
+  "words": [
+    { "word": "simple", "degree": "very", "status": "locked", "source": "intake question 10, owner 2026-10-28" },
+    { "word": "calm", "degree": "clearly", "status": "locked", "source": "intake question 10, owner 2026-10-28" }
+  ],
+  "faces": {},
+  "prefer": {}
+}

@@ -32,8 +32,8 @@ No themes (no `roles.json`). No `--brand-logo-variant` yet: the blue logo vanish
 
 - Display (h1, h2, h3, data): **Ranade**, weight 700.
 - Body and label: **Amulya**, weight 500.
-- Policy path (b), a named free font: Fontshare, https://www.fontshare.com/fonts/ranade and https://www.fontshare.com/fonts/amulya. Licence: ITF Free Font License, to confirm from the downloaded licence file.
-- Files: `brand/fonts/Ranade-Variable.woff2`, `brand/fonts/Amulya-Variable.woff2`. **Not downloaded yet**: every post fails `font-loaded` until they are there.
+- Policy path (b), a named free font: Fontshare, https://www.fontshare.com/fonts/ranade and https://www.fontshare.com/fonts/amulya. Licence: ITF Free Font License (FFL) 2.0 (`brand/fonts/FFL.txt`).
+- Files: `brand/fonts/Ranade-Variable.woff2`, `brand/fonts/Amulya-Variable.woff2`, on this machine only (the FFL forbids a public repo; they are in `.gitignore`). Both loaded in headless Chromium on 2026-10-28. A fresh clone must download them (see `fonts.md`).
 - Fonts status: we guessed (`fonts.status: derived` in `locked.json`).
 
 Source: [fonts.md](fonts.md)
@@ -81,6 +81,6 @@ You said is `locked` and we guessed is `derived` in `locked.json`. Picking a pos
 
 - Character words: **very simple**, **clearly calm** (both you said, [expression.json](expression.json)).
 - Both words sit on one scale in the map: simple ↔ busy (calm is a synonym of simple). A post is read once on that scale; "very" is agreement 0.7 or more, "clearly" 0.4 to 0.7, so one post cannot hit both strengths exactly. Your call which one leads.
-- Display face class: not stated; measured from the face once the font files load.
+- Display face class: not stated; measured from the face when the first post is measured.
 - Brand file and past posts: not measured (no fonts on disk, no past posts).
 - Preferred look per layout: none yet (comes after the first contact sheet).

@@ -1,3 +1,9 @@
 out/
 bam-data.js
 node_modules/
+
+# Font files: ITF Free Font License forbids publishing them in a repository (brand/fonts/FFL.txt). Kept local.
+brand/fonts/*.woff2
+brand/fonts/*.woff
+brand/fonts/*.ttf
+brand/fonts/*.otf

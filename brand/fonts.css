@@ -1,15 +1,15 @@
-/* Finverse fonts. Policy path (b), see brand/fonts.md. Files go in brand/fonts/ (not downloaded yet). */
+/* Finverse fonts. Policy path (b), see brand/fonts.md. Files in brand/fonts/ are local only (licence forbids a public repo), see brand/fonts.md. */
 @font-face {
   font-family: "Ranade";                                       /* source: brand/sources/figma-extract.json graphicAssets (Ranade Variable) */
   src: url("fonts/Ranade-Variable.woff2") format("woff2");     /* source: https://www.fontshare.com/fonts/ranade */
-  font-weight: 1 1000;                                         /* any weight: the variable file serves its own axis range */
+  font-weight: 100 700;                                        /* source: Ranade_Complete/Fonts/WEB/css/ranade.css (Fontshare download) */
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Amulya";                                       /* source: brand/sources/figma-extract.json graphicAssets (Amulya Variable) */
   src: url("fonts/Amulya-Variable.woff2") format("woff2");     /* source: https://www.fontshare.com/fonts/amulya */
-  font-weight: 1 1000;                                         /* any weight: the variable file serves its own axis range */
+  font-weight: 300 700;                                        /* source: Amulya_Complete/Fonts/WEB/css/amulya.css (Fontshare download) */
   font-style: normal;
   font-display: block;
 }
